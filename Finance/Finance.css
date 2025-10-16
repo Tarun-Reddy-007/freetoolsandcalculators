@@ -76,7 +76,7 @@ body, html {
 }
 
 .top-banner, .bottom-banner {
-  height: 20vh;
+  height: 26vh;
   background: #f2f2f2;
   display: flex;
   align-items: center;

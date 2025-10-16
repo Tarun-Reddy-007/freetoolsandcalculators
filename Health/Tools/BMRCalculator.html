@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="BMRCalculator.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+  <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="bmr-tool-section">
+      <div class="bmr-card">
+        <div class="bmr-title-row">
+          <h1 class="bmr-title">BMR Calculator</h1>
+          <button type="button" class="bmr-info-trigger" aria-describedby="bmrInfoPanel" title="What is BMR?" tabindex="0">i</button>
+          <div class="bmr-info-flyout" id="bmrInfoPanel" role="tooltip" aria-hidden="true">
+            <h2>What is BMR?</h2>
+            <p>BMR (Basal Metabolic Rate) is the number of calories your body needs at rest to maintain vital functions (breathing, circulation, cell repair).</p>
+            <p class="bmr-sub">Based on the Mifflin-St Jeor Equation:</p>
+            <ul class="bmr-equations">
+              <li><strong>Male:</strong> 10xW + 6.25xH - 5xAge + 5</li>
+              <li><strong>Female:</strong> 10xW + 6.25xH - 5xAge - 161</li>
+            </ul>
+            <p class="bmr-disclaimer">Estimates only. Consult a professional for medical or nutritional guidance.</p>
+          </div>
+        </div>
+        <div class="bmr-interaction-row">
+          <form id="bmrForm" class="bmr-form">
+            <div class="input-group">
+              <label for="sex">Sex</label>
+              <div class="input-row">
+                <select id="sex" name="sex" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="age">Age</label>
+              <div class="input-row">
+                <input type="number" id="age" name="age" min="10" max="100" placeholder="Age" required>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="height">Height</label>
+              <div class="input-row">
+                <input type="number" id="height" name="height" min="50" max="250" placeholder="Height" required>
+                <select id="heightUnit" name="heightUnit">
+                  <option value="cm">cm</option>
+                  <option value="ft">ft/in</option>
+                </select>
+              </div>
+              <div class="input-row" id="inchesRow" style="display:none;">
+                <input type="number" id="heightInches" name="heightInches" min="0" max="11" placeholder="Inches">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="weight">Weight</label>
+              <div class="input-row">
+                <input type="number" id="weight" name="weight" min="30" max="300" placeholder="Weight" required>
+                <select id="weightUnit" name="weightUnit">
+                  <option value="kg">kg</option>
+                  <option value="lb">lb</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="activity">Activity Level (Optional)</label>
+              <div class="input-row">
+                <select id="activity" name="activity">
+                  <option value="">-- choose --</option>
+                  <option value="1.2">Sedentary (office)</option>
+                  <option value="1.375">Light (1-3 workouts)</option>
+                  <option value="1.55">Moderate (3-5 workouts)</option>
+                  <option value="1.725">Active (6-7 workouts)</option>
+                  <option value="1.9">Very Active (physical job + training)</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="bmr-btn">Calculate BMR</button>
+          </form>
+          <div class="bmr-result-container" id="bmrResultContainer" style="display:none;">
+            <div class="bmr-result">
+              <span class="bmr-value" id="bmrValue">--</span>
+              <span class="bmr-label">BMR kcal/day</span>
+            </div>
+            <div class="bmr-progress-wrapper">
+              <div class="bmr-progress-bar">
+                <div class="bmr-progress" id="bmrProgress"></div>
+              </div>
+              <div class="bmr-scale">
+                <span>Low</span><span>High</span>
+              </div>
+            </div>
+            <div class="bmr-tdee" id="bmrTdee" style="display:none;">
+              <span class="tdee-value" id="tdeeValue"></span>
+              <span class="tdee-label">Estimated Daily Calories</span>
+            </div>
+            <div class="bmr-tips" id="bmrTips"></div>
+          </div>
+        </div>
+      </div>
+    </div></section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }
+
+    const heightUnit = document.getElementById('heightUnit');
+    const heightInput = document.getElementById('height');
+    const inchesRow = document.getElementById('inchesRow');
+    const bmrForm = document.getElementById('bmrForm');
+    const bmrResultContainer = document.getElementById('bmrResultContainer');
+    const bmrValueEl = document.getElementById('bmrValue');
+    const bmrProgress = document.getElementById('bmrProgress');
+    const bmrTdee = document.getElementById('bmrTdee');
+    const tdeeValue = document.getElementById('tdeeValue');
+    const bmrTips = document.getElementById('bmrTips');
+
+    heightUnit.addEventListener('change', () => {
+      if (heightUnit.value === 'ft') { inchesRow.style.display = 'flex'; heightInput.placeholder = 'Feet'; }
+      else { inchesRow.style.display = 'none'; heightInput.placeholder = 'Height'; }
+    });
+
+    function toCm(feetVal, inchVal) { return (feetVal * 30.48) + (inchVal * 2.54); }
+    function toKg(lb) { return lb * 0.453592; }
+
+    bmrForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const sex = document.getElementById('sex').value;
+      const age = parseInt(document.getElementById('age').value, 10);
+      let heightCm;
+      if (heightUnit.value === 'cm') { heightCm = parseFloat(heightInput.value); }
+      else {
+        const feet = parseFloat(heightInput.value); const inches = parseFloat(document.getElementById('heightInches').value) || 0; heightCm = toCm(feet, inches);
+      }
+      const weightUnit = document.getElementById('weightUnit').value;
+      let weightKg = parseFloat(document.getElementById('weight').value);
+      if (weightUnit === 'lb') weightKg = toKg(weightKg);
+      if (!heightCm || !weightKg || !age || heightCm < 50 || weightKg < 30) { bmrResultContainer.style.display = 'none'; bmrResultContainer.classList.remove('show'); return; }
+
+      let bmr = (10 * weightKg) + (6.25 * heightCm) - (5 * age) + (sex === 'male' ? 5 : -161);
+      bmrValueEl.textContent = Math.round(bmr);
+
+      const min = 900, max = 2600; const clamped = Math.min(max, Math.max(min, bmr));
+      const percent = ((clamped - min) / (max - min)) * 100;
+      bmrProgress.style.width = percent + '%';
+      bmrProgress.style.background = percent < 33 ? '#2196f3' : percent < 66 ? '#4caf50' : '#ff9800';
+
+      const activity = document.getElementById('activity').value;
+      if (activity) {
+        const tdee = bmr * parseFloat(activity);
+        tdeeValue.textContent = Math.round(tdee) + ' kcal/day';
+        bmrTdee.style.display = 'flex';
+      } else {
+        bmrTdee.style.display = 'none';
+      }
+
+      let tips;
+      if (activity) tips = 'TDEE shown using the selected activity factor.';
+      else tips = 'Select an activity level to estimate total daily calories.';
+      bmrTips.textContent = tips;
+
+      bmrResultContainer.style.display = 'block';
+      setTimeout(()=>{ bmrResultContainer.classList.add('show'); bmrResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 50);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="ColorCodeConverter.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="ccc-section">
+      <div class="ccc-card">
+        <div class="ccc-title-row">
+          <h1 class="ccc-title">Color Code Converter</h1>
+          <button type="button" class="ccc-info-trigger" aria-describedby="cccInfo" title="How color codes are converted" tabindex="0">i</button>
+          <div class="ccc-info-flyout" id="cccInfo" role="tooltip" aria-hidden="true">
+            <h2>How Color Codes Are Converted</h2>
+            <p>This tool converts between HEX and RGB color codes. Select the conversion mode, enter a value, and see the result instantly. The color preview updates for valid codes.</p>
+            <ul>
+              <li>HEX to RGB or RGB to HEX (choose mode)</li>
+              <li>Live color preview</li>
+              <li>Input validation</li>
+            </ul>
+            <p class="disclaimer">For web and design use. Results are informational only.</p>
+          </div>
+        </div>
+        <div class="ccc-interaction-row">
+          <form id="colorForm" class="ccc-form" autocomplete="off">
+            <div class="input-group">
+              <label for="modeSelect">Conversion Mode</label>
+              <div class="input-row">
+                <select id="modeSelect">
+                  <option value="hex2rgb">HEX to RGB</option>
+                  <option value="rgb2hex">RGB to HEX</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group" id="hexGroup">
+              <label for="hexInput">HEX Code</label>
+              <div class="input-row">
+                <input type="text" id="hexInput" placeholder="#1a2b3c" maxlength="7" />
+              </div>
+            </div>
+            <div class="input-group" id="rgbGroup" style="display:none;">
+              <label for="rgbInput">RGB Code</label>
+              <div class="input-row">
+                <input type="text" id="rgbInput" placeholder="26,43,60" maxlength="11" />
+              </div>
+            </div>
+            <button type="submit" class="ccc-btn">Convert</button>
+          </form>
+          <div class="ccc-result-container" id="colorResult" style="display:none;">
+            <div class="ccc-color-preview" id="colorPreview"></div>
+            <div class="ccc-breakdown" id="colorBreakdown"></div>
+            <div class="ccc-disclaimer">HEX and RGB values are shown above. Preview is approximate.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const hexInput = document.getElementById('hexInput');
+    const rgbInput = document.getElementById('rgbInput');
+    const form = document.getElementById('colorForm');
+    const resultBox = document.getElementById('colorResult');
+    const colorPreview = document.getElementById('colorPreview');
+    const breakdownEl = document.getElementById('colorBreakdown');
+    const modeSelect = document.getElementById('modeSelect');
+    const hexGroup = document.getElementById('hexGroup');
+    const rgbGroup = document.getElementById('rgbGroup');
+
+    function hexToRgb(hex) {
+      hex = hex.replace(/^#/, '');
+      if (hex.length === 3) hex = hex.split('').map(x => x + x).join('');
+      if (!/^[0-9a-f]{6}$/i.test(hex)) return null;
+      const num = parseInt(hex, 16);
+      return [num >> 16, (num >> 8) & 255, num & 255];
+    }
+    function rgbToHex(r, g, b) {
+      if ([r, g, b].some(x => isNaN(x) || x < 0 || x > 255)) return null;
+      return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+    }
+
+    // Show/hide input fields based on mode
+    modeSelect.addEventListener('change', function() {
+      if (modeSelect.value === 'hex2rgb') {
+        hexGroup.style.display = '';
+        rgbGroup.style.display = 'none';
+        rgbInput.value = '';
+      } else {
+        hexGroup.style.display = 'none';
+        rgbGroup.style.display = '';
+        hexInput.value = '';
+      }
+      resultBox.style.display = 'none';
+      breakdownEl.innerHTML = '';
+      colorPreview.style.background = '#fff';
+    });
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let rgbArr = null, hexVal = null;
+      breakdownEl.innerHTML = '';
+      if (modeSelect.value === 'hex2rgb') {
+        let hex = hexInput.value.trim();
+        rgbArr = hexToRgb(hex);
+        if (rgbArr) {
+          hexVal = '#' + hex.replace(/^#/, '').padStart(6, '0');
+        }
+      } else {
+        let rgb = rgbInput.value.trim();
+        rgbArr = rgb.split(',').map(x => parseInt(x.trim(), 10));
+        if (rgbArr.length === 3 && rgbArr.every(x => !isNaN(x) && x >= 0 && x <= 255)) {
+          hexVal = rgbToHex(...rgbArr);
+        } else {
+          rgbArr = null;
+        }
+      }
+      if (rgbArr && hexVal) {
+        colorPreview.style.background = hexVal;
+        breakdownEl.innerHTML = modeSelect.value === 'hex2rgb'
+          ? `<div class=\"ccc-row\"><span>HEX</span><span>${hexVal.toUpperCase()}</span></div><div class=\"ccc-row\"><span>RGB</span><span>${rgbArr.join(', ')}</span></div>`
+          : `<div class=\"ccc-row\"><span>RGB</span><span>${rgbArr.join(', ')}</span></div><div class=\"ccc-row\"><span>HEX</span><span>${hexVal.toUpperCase()}</span></div>`;
+        resultBox.style.display = 'flex';
+        setTimeout(() => { resultBox.classList.add('show'); resultBox.scrollIntoView({behavior:'smooth',block:'center'}); }, 50);
+      } else {
+        resultBox.style.display = 'none';
+        alert('Please enter a valid ' + (modeSelect.value === 'hex2rgb' ? 'HEX' : 'RGB') + ' color code.');
+      }
+    });
+  </script>
+</body>
+</html>

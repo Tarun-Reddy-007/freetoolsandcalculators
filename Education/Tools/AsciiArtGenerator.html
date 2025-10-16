@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="AsciiArtGenerator.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="aag-section">
+      <div class="aag-card">
+        <div class="aag-title-row">
+          <h1 class="aag-title">ASCII Art Generator</h1>
+          <button type="button" class="aag-info-trigger" aria-describedby="aagInfo" title="How ASCII art is generated" tabindex="0">i</button>
+          <div class="aag-info-flyout" id="aagInfo" role="tooltip" aria-hidden="true">
+            <h2>How ASCII Art Is Generated</h2>
+            <p>This tool converts your text into simple ASCII art. Paste or type your text and see it transformed instantly.</p>
+            <ul>
+              <li>Works with any text</li>
+              <li>Instant ASCII preview</li>
+              <li>Copy and use anywhere</li>
+            </ul>
+            <p class="disclaimer">All generation is local. No data is sent anywhere.</p>
+          </div>
+        </div>
+        <div class="aag-interaction-row">
+          <form id="aagForm" class="aag-form" autocomplete="off" onsubmit="return false;">
+            <div class="input-group">
+              <label for="aagInput">Enter Text</label>
+              <div class="input-row">
+                <textarea id="aagInput" rows="5" placeholder="Type your text here..." required></textarea>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="aagStyle">Art Style</label>
+              <select id="aagStyle" class="aag-style-select">
+                <option value="simple">Simple Block</option>
+                <option value="banner">Banner</option>
+                <option value="shadow">Shadow</option>
+                <option value="bubble">Bubble</option>
+                <option value="slant">Slant</option>
+                <option value="complex">Complex (Pattern)</option>
+              </select>
+            </div>
+            <button type="button" class="aag-btn" id="aagGenBtn">Generate ASCII Art</button>
+          </form>
+          <div class="aag-result-container" id="aagResult" style="display:none;">
+            <div class="aag-main-result">
+              <pre class="aag-ascii" id="aagAscii"></pre>
+            </div>
+            <div class="aag-breakdown" id="aagBreakdown"></div>
+            <div class="aag-tips" id="aagTips"></div>
+            <div class="aag-disclaimer">All ASCII art is generated locally in your browser.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const inputEl = document.getElementById('aagInput');
+    const genBtn = document.getElementById('aagGenBtn');
+    const resultBox = document.getElementById('aagResult');
+    const asciiEl = document.getElementById('aagAscii');
+    const breakdownEl = document.getElementById('aagBreakdown');
+    const tipsEl = document.getElementById('aagTips');
+
+    // ASCII Art Generators
+    function simpleAsciiArt(text) {
+      if (!text.trim()) return "";
+      const lines = text.toUpperCase().split('\n').map(line => '  ' + line.split('').join(' ') + '  ');
+      const width = Math.max(...lines.map(l=>l.length));
+      const border = '+' + '-'.repeat(width) + '+';
+      return [border, ...lines.map(l=> '|' + l.padEnd(width) + '|'), border].join('\n');
+    }
+
+    function bannerAsciiArt(text) {
+      // Large block letters (A-Z, 0-9, space only, fallback to simple)
+      const font = {
+        'A': ['  ___  ',' / _ \\ ','/ /_\\ \\','|  _  |','|_| |_|'],
+        'B': ['______ ','| ___ \\','| |_/ /','| ___ \\','|_|_/ /'],
+        'C': [' _____','/  __|','| |   ','| |__ ','\\____|'],
+        'D': ['____  ','|  _ \\ ','| | | |','| |_| |','|____/ '],
+        'E': [' _____','| ____','|  _| ','| |__ ','|____|'],
+        'F': [' _____','|  ___','| |_  ','|  _| ','|_|   '],
+        'G': [' _____','/  __|','| | __','| |_ |','\\____|'],
+        'H': [' _   _ ','| | | |','| |_| |','|  _  |','|_| |_|'],
+        'I': [' ___ ','|_  |','  | |','  | |',' |_/ '],
+        'J': ['   ___','  |_  |','    | |','/\\_/ /','\\___/ '],
+        'K': ['_   __','| | / /','| |/ / ','|    \\ ','|_|\\_\\'],
+        'L': [' _    ','| |   ','| |   ','| |__ ','|____|'],
+        'M': ['__  __','|  \\/  |','| |\\/| |','| |  | |','|_|  |_|'],
+        'N': ['_   _ ','| \\ | |','|  \\| |','| |\\  |','|_| \\_|'],
+        'O': [' _____ ','/  _  \\','| | | |','| |_| |','\\_____/'],
+        'P': ['______ ','| ___ \\','| |_/ /','|  __/ ','|_|   '],
+        'Q': [' _____ ','/  _  \\','| | | |','| |_| |','\\__\\_\\\\'],
+        'R': ['______ ','| ___ \\','| |_/ /','|    / ','|_|\\_\\ '],
+        'S': [' _____','/  ___|','\\ `--. ',' `--. \\','\\____/'],
+        'T': ['______','|_   _|','  | |  ','  | |  ','  |_|  '],
+        'U': ['_   _ ','| | | |','| | | |','| |_| |','\\_____/'],
+        'V': ['_   _ ','| | | |','| | | |','| |_| |',' \\___/ '],
+        'W': ['_    _ ','| |  | |','| |  | |','| |/\\| |','\\_/  \\_/'],
+        'X': ['__   __','\\ \\ / /',' \\ V / ',' /   \\ ','/_/\\_\\'],
+        'Y': ['__   __','\\ \\ / /',' \\ V / ','  | |  ','  |_|  '],
+        'Z': ['______','    / /','   / / ','  / /  ',' /_/   '],
+        '0': [' _____ ','/  _  \\','| | | |','| |_| |','\\_____/'],
+        '1': ['  _ ',' / |',' | |',' | |',' |_|'],
+        '2': [' ____ ','|___ \\','  __) |',' / __/ ','|_____|'],
+        '3': [' _____','|___ /','  |_ \\',' ___) |','|____/'],
+        '4': [' _  _ ','| || |','| || |_','|__   _|','   |_| '],
+        '5': [' ____ ','| ___|','|___ \\',' ___) |','|____/'],
+        '6': ['  __  ',' / /  ','/ /_  ','|  _ \\ ','\\___/ '],
+        '7': [' _____','|___  |','   / / ','  / /  ',' /_/   '],
+        '8': ['  ___ ',' ( _ )','/ _ \\','| (_) |',' \\___/ '],
+        '9': ['  ___ ',' / _ \\','| (_) |',' \\__, |','   /_/ '],
+        ' ': ['  ','  ','  ','  ','  ']
+      };
+      text = text.toUpperCase();
+      const lines = Array(5).fill('');
+      for (let char of text) {
+        const art = font[char] || font[' '];
+        for (let i=0;i<5;i++) lines[i] += art[i] + '  ';
+      }
+      return lines.join('\n');
+    }
+
+    function shadowAsciiArt(text) {
+      // Shadow effect: offset shadow with #
+      if (!text.trim()) return "";
+      const base = simpleAsciiArt(text);
+      const lines = base.split('\n');
+      const shadow = lines.map((l,i)=>i===0?'':(' '.repeat(2)+l.replace(/[^|+\-]/g,'#')));
+      return lines.map((l,i)=>i===lines.length-1?l:l+'\n'+shadow[i+1]).join('');
+    }
+
+    function bubbleAsciiArt(text) {
+      // Bubble letters (rounded, only A-Z, fallback to simple)
+      const font = {
+        'A': ['  ___  ',' (o o) ','(  V  )',' \   / ','  `-`  '],
+        'B': [' ___ ','(o o)','(  -)','(o o)',' --- '],
+        'C': ['  ___',' (o  ','(    ',' (o  ','  ---'],
+        'D': [' ___ ','(o  )','(   )','(o  )',' --- '],
+        'E': [' ___ ','(o  ','( - ','(o  ',' --- '],
+        'F': [' ___ ','(o  ','( - ','(   ',' --- '],
+        'G': [' ___ ','(o  ','(  -)','(o o)',' --- '],
+        'H': [' _ _ ','(o o)','(   )','(o o)',' --- '],
+        'I': [' _ ','( )',' | ','( )',' - '],
+        'J': ['   _ ','  ( )','   | ','(o )',' -- '],
+        'K': [' _  _','(o / ','( -  ','(o \ ',' --- '],
+        'L': [' _   ','(   ','(   ','(o  ',' --- '],
+        'M': [' _   _ ','(o) (o)','(     )','(     )',' --- '],
+        'N': [' _   _','(o\ (o','(   )','(o  )',' --- '],
+        'O': [' ___ ','(o o)','(   )','(o o)',' --- '],
+        'P': [' ___ ','(o o)','( - ','(   ',' --- '],
+        'Q': [' ___ ','(o o)','(   )','(o o)',' ---\\'],
+        'R': [' ___ ','(o o)','( - ','(o \ ',' --- '],
+        'S': [' ___ ','(o  ',' --- ','  o)',' --- '],
+        'T': [' ___ ','  |  ','  |  ','  |  ',' --- '],
+        'U': [' _ _ ','(   )','(   )','(o o)',' --- '],
+        'V': [' _ _ ','(   )','(   )',' (o) ','  -  '],
+        'W': ['_     _','(     )','(     )','(o) (o)',' --- '],
+        'X': ['_   _','(o o)','  X  ','(o o)',' --- '],
+        'Y': ['_   _','(o o)','  |  ','  |  ',' --- '],
+        'Z': [' ___ ','   o)','  o  ',' (o  ',' --- '],
+        ' ': ['  ','  ','  ','  ','  ']
+      };
+      text = text.toUpperCase();
+      const lines = Array(5).fill('');
+      for (let char of text) {
+        const art = font[char] || font[' '];
+        for (let i=0;i<5;i++) lines[i] += art[i] + '  ';
+      }
+      return lines.join('\n');
+    }
+
+    function slantAsciiArt(text) {
+      // Slanted text
+      if (!text.trim()) return "";
+      const lines = text.split('\n');
+      return lines.map((line,i)=>' '.repeat(i*2)+line.split('').join(' ')).join('\n');
+    }
+
+    function complexAsciiArt(text) {
+      // Complex: pattern fill (checkerboard)
+      if (!text.trim()) return "";
+      const chars = ['#','@','%','*','+','='];
+      const lines = text.toUpperCase().split('\n');
+      return lines.map((line,li)=>{
+        return line.split('').map((c,ci)=>{
+          if (c===' ') return '  ';
+          return chars[(li+ci)%chars.length]+c+chars[(li+ci+1)%chars.length];
+        }).join('');
+      }).join('\n');
+    }
+
+    function generateAsciiArt(text, style) {
+      switch(style) {
+        case 'banner': return bannerAsciiArt(text);
+        case 'shadow': return shadowAsciiArt(text);
+        case 'bubble': return bubbleAsciiArt(text);
+        case 'slant': return slantAsciiArt(text);
+        case 'complex': return complexAsciiArt(text);
+        default: return simpleAsciiArt(text);
+      }
+    }
+
+    genBtn.addEventListener('click', function() {
+      const text = inputEl.value;
+      const style = document.getElementById('aagStyle').value;
+      if (!text.trim()) return;
+      const art = generateAsciiArt(text, style);
+      asciiEl.textContent = art;
+      breakdownEl.innerHTML = `<div class="aag-row"><span>Lines</span><span>${text.split('\\n').length}</span></div>
+        <div class="aag-row"><span>Characters</span><span>${text.length}</span></div>
+        <div class="aag-row"><span>Style</span><span>${style.charAt(0).toUpperCase()+style.slice(1)}</span></div>`;
+      tipsEl.textContent = "Tip: Try different styles for unique effects!";
+      resultBox.style.display = 'flex';
+      setTimeout(()=>{resultBox.classList.add('show');},50);
+    });
+  </script>
+</body>
+</html>

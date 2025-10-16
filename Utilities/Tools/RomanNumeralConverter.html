@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="RomanNumeralConverter.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="rn-section">
+      <div class="rn-card">
+        <div class="rn-title-row">
+          <h1 class="rn-title">Roman Numeral Converter</h1>
+          <button type="button" class="rn-info-trigger" aria-describedby="rnInfo" title="How conversion works" tabindex="0">i</button>
+          <div class="rn-info-flyout" id="rnInfo" role="tooltip" aria-hidden="true">
+            <h2>How Conversion Works</h2>
+            <p>This tool converts numbers to Roman numerals and vice versa. Enter a number (1-3999) or a valid Roman numeral.</p>
+            <ul>
+              <li>Supports both directions</li>
+              <li>Validates input</li>
+              <li>Shows conversion steps</li>
+            </ul>
+            <p class="disclaimer">Roman numerals above 3999 are not standard.</p>
+          </div>
+        </div>
+        <div class="rn-interaction-row">
+          <form id="rnForm" class="rn-form" autocomplete="off">
+            <div class="input-group">
+              <label for="rnInput">Number or Roman Numeral</label>
+              <div class="input-row">
+                <input type="text" id="rnInput" required placeholder="e.g. 1987 or MCMLXXXVII" />
+              </div>
+            </div>
+            <button type="submit" class="rn-btn">Convert</button>
+          </form>
+          <div class="rn-result-container" id="rnResult" style="display:none;">
+            <div class="rn-main-result">
+              <span class="rn-value" id="rnValue">--</span>
+              <span class="rn-label" id="rnLabel">Result</span>
+            </div>
+            <div class="rn-breakdown" id="rnBreakdown"></div>
+            <div class="rn-tips" id="rnTips"></div>
+            <div class="rn-disclaimer">Roman numerals are case-insensitive. Only standard forms supported.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const form = document.getElementById('rnForm');
+    const inputEl = document.getElementById('rnInput');
+    const resultBox = document.getElementById('rnResult');
+    const valueEl = document.getElementById('rnValue');
+    const labelEl = document.getElementById('rnLabel');
+    const breakdownEl = document.getElementById('rnBreakdown');
+    const tipsEl = document.getElementById('rnTips');
+
+    function toRoman(num) {
+      if (num < 1 || num > 3999) return null;
+      const map = [
+        {val:1000,sym:'M'},{val:900,sym:'CM'},{val:500,sym:'D'},{val:400,sym:'CD'},
+        {val:100,sym:'C'},{val:90,sym:'XC'},{val:50,sym:'L'},{val:40,sym:'XL'},
+        {val:10,sym:'X'},{val:9,sym:'IX'},{val:5,sym:'V'},{val:4,sym:'IV'},{val:1,sym:'I'}
+      ];
+      let res = '', n = num, steps = [];
+      for (let i = 0; i < map.length; i++) {
+        while (n >= map[i].val) {
+          res += map[i].sym;
+          steps.push(`${map[i].val} → ${map[i].sym}`);
+          n -= map[i].val;
+        }
+      }
+      return {roman: res, steps};
+    }
+
+    function fromRoman(str) {
+      str = str.toUpperCase();
+      const map = {'M':1000,'D':500,'C':100,'L':50,'X':10,'V':5,'I':1};
+      let prev = 0, total = 0, steps = [];
+      for (let i = str.length-1; i >= 0; i--) {
+        let curr = map[str[i]];
+        if (!curr) return null;
+        if (curr < prev) {
+          total -= curr;
+          steps.push(`-${curr} (${str[i]})`);
+        } else {
+          total += curr;
+          steps.push(`+${curr} (${str[i]})`);
+        }
+        prev = curr;
+      }
+      steps.reverse();
+      // Validate by re-encoding
+      const check = toRoman(total);
+      if (!check || check.roman !== str) return null;
+      return {number: total, steps};
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const val = inputEl.value.trim();
+      if (!val) return;
+      let result, breakdown = "", tips = "";
+      if (/^\d+$/.test(val)) {
+        // Number to Roman
+        const num = parseInt(val, 10);
+        result = toRoman(num);
+        if (!result) {
+          valueEl.textContent = "--";
+          labelEl.textContent = "Invalid Number";
+          breakdownEl.innerHTML = "";
+          tipsEl.textContent = "Enter a number between 1 and 3999.";
+        } else {
+          valueEl.textContent = result.roman;
+          labelEl.textContent = "Roman Numeral";
+          breakdown = "<b>Breakdown:</b><br>" + result.steps.join(", ");
+          tips = "Tip: Roman numerals are usually written in uppercase.";
+          breakdownEl.innerHTML = breakdown;
+          tipsEl.textContent = tips;
+        }
+      } else if (/^[ivxlcdm]+$/i.test(val)) {
+        // Roman to Number
+        result = fromRoman(val);
+        if (!result) {
+          valueEl.textContent = "--";
+          labelEl.textContent = "Invalid Roman Numeral";
+          breakdownEl.innerHTML = "";
+          tipsEl.textContent = "Enter a valid Roman numeral (e.g. MCMLXXXVII).";
+        } else {
+          valueEl.textContent = result.number;
+          labelEl.textContent = "Number";
+          breakdown = "<b>Breakdown:</b><br>" + result.steps.join(", ");
+          tips = "Tip: Only standard forms are accepted.";
+          breakdownEl.innerHTML = breakdown;
+          tipsEl.textContent = tips;
+        }
+      } else {
+        valueEl.textContent = "--";
+        labelEl.textContent = "Invalid Input";
+        breakdownEl.innerHTML = "";
+        tipsEl.textContent = "Enter a number (1-3999) or a valid Roman numeral.";
+      }
+      resultBox.style.display = 'flex';
+      setTimeout(()=>{resultBox.classList.add('show');resultBox.scrollIntoView({behavior:'smooth',block:'center'});},50);
+    });
+  </script>
+</body>
+</html>

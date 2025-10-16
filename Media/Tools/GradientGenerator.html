@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="GradientGenerator.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="gg-section">
+      <div class="gg-card">
+        <div class="gg-title-row">
+          <h1 class="gg-title">Gradient Generator</h1>
+          <button type="button" class="gg-info-trigger" aria-describedby="ggInfo" title="How gradients are generated" tabindex="0">i</button>
+          <div class="gg-info-flyout" id="ggInfo" role="tooltip" aria-hidden="true">
+            <h2>How Gradients Are Generated</h2>
+            <p>This tool lets you create beautiful CSS gradients. Choose the gradient type, direction, and colors. The preview and CSS code update instantly.</p>
+            <ul>
+              <li>Linear and radial gradients</li>
+              <li>Custom direction/angle</li>
+              <li>Live preview and CSS code</li>
+            </ul>
+            <p class="disclaimer">For web and design use. Results are informational only.</p>
+          </div>
+        </div>
+        <div class="gg-interaction-row">
+          <form id="gradientForm" class="gg-form" autocomplete="off">
+            <div class="input-group">
+              <label for="typeSelect">Gradient Type</label>
+              <div class="input-row">
+                <select id="typeSelect">
+                  <option value="linear">Linear</option>
+                  <option value="radial">Radial</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group" id="directionGroup">
+              <label for="directionSelect">Direction</label>
+              <div class="input-row">
+                <select id="directionSelect">
+                  <option value="to right">Left → Right</option>
+                  <option value="to left">Right → Left</option>
+                  <option value="to bottom">Top → Bottom</option>
+                  <option value="to top">Bottom → Top</option>
+                  <option value="135deg">Diagonal (↘)</option>
+                  <option value="45deg">Diagonal (↗)</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Colors</label>
+              <div class="input-row">
+                <input type="color" id="color1" value="#2196f3" />
+                <input type="color" id="color2" value="#e3f2fd" />
+                <button type="button" id="addColor" title="Add color" class="gg-addcolor-btn">+</button>
+                <button type="button" id="removeColor" title="Remove color" class="gg-removecolor-btn">-</button>
+              </div>
+            </div>
+            <div class="input-group" id="extraColors"></div>
+            <button type="submit" class="gg-btn">Generate Gradient</button>
+          </form>
+          <div class="gg-result-container" id="gradientResult" style="display:none;">
+            <div class="gg-gradient-preview" id="gradientPreview"></div>
+            <div class="gg-breakdown" id="gradientBreakdown"></div>
+            <div class="gg-disclaimer">Copy and use the CSS code above.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const typeSelect = document.getElementById('typeSelect');
+    const directionGroup = document.getElementById('directionGroup');
+    const directionSelect = document.getElementById('directionSelect');
+    const color1 = document.getElementById('color1');
+    const color2 = document.getElementById('color2');
+    const addColorBtn = document.getElementById('addColor');
+    const removeColorBtn = document.getElementById('removeColor');
+    const extraColors = document.getElementById('extraColors');
+    const form = document.getElementById('gradientForm');
+    const resultBox = document.getElementById('gradientResult');
+    const preview = document.getElementById('gradientPreview');
+    const breakdown = document.getElementById('gradientBreakdown');
+
+    let colorInputs = [color1, color2];
+
+    // Show/hide direction for radial
+    typeSelect.addEventListener('change', function() {
+      if (typeSelect.value === 'radial') {
+        directionGroup.style.display = 'none';
+      } else {
+        directionGroup.style.display = '';
+      }
+      showResult();
+    });
+
+    // Add/remove color stops
+    addColorBtn.addEventListener('click', function() {
+      if (colorInputs.length >= 16) return;
+      const input = document.createElement('input');
+      input.type = 'color';
+      input.value = '#ffffff';
+      input.className = 'gg-extra-color';
+      extraColors.appendChild(input);
+      colorInputs.push(input);
+      showResult();
+    });
+    removeColorBtn.addEventListener('click', function() {
+      if (colorInputs.length <= 2) return;
+      const last = colorInputs.pop();
+      extraColors.removeChild(last);
+      showResult();
+    });
+
+    // Update on color change
+    [color1, color2, extraColors].forEach(el => {
+      el.addEventListener('input', showResult, true);
+    });
+
+    directionSelect.addEventListener('change', showResult);
+    typeSelect.addEventListener('change', showResult);
+
+    function getColors() {
+      return colorInputs.map(input => input.value);
+    }
+
+    function getGradientCSS() {
+      const type = typeSelect.value;
+      const colors = getColors().join(', ');
+      if (type === 'linear') {
+        return `linear-gradient(${directionSelect.value}, ${colors})`;
+      } else {
+        return `radial-gradient(circle, ${colors})`;
+      }
+    }
+
+    function showResult(e) {
+      const css = getGradientCSS();
+      preview.style.background = css;
+      breakdown.innerHTML = `<div class="gg-row"><span></span><span style="font-size:.9em;word-break:break-all;">background: ${css};</span></div>`;
+      resultBox.style.display = 'flex';
+      setTimeout(() => { resultBox.classList.add('show'); }, 30);
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      showResult();
+      preview.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+
+    // Initial preview
+    showResult();
+  </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="WaterIntakeCalculator.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="water-tool-section">
+      <div class="water-card">
+        <div class="water-title-row">
+          <h1 class="water-title">Daily Water Intake Calculator</h1>
+          <button type="button" class="water-info-trigger" aria-describedby="waterInfoPanel" title="About" tabindex="0">i</button>
+          <div class="water-info-flyout" id="waterInfoPanel" role="tooltip" aria-hidden="true">
+            <h2>Why Water Intake Matters</h2>
+            <p>This tool estimates an individualized daily water goal using body weight, activity, climate, pregnancy/nursing, and caffeine modifiers.</p>
+            <p class="water-sub">Base Formula</p>
+            <p>Base need ≈ <strong>35 ml per kg</strong> of body weight (general guideline, mid‑range of 30–40 ml).</p>
+            <p class="water-sub">Adjustments</p>
+            <ul style="list-style:none; padding:0; margin:0 0 10px 0; font-size:.8rem; display:grid; gap:4px;">
+              <li>+ 350 ml per 30 min of exercise (sweat)</li>
+              <li>+ 5-10% for hot / very dry climate</li>
+              <li>+ 300 ml if pregnant; + 700 ml if nursing</li>
+              <li>- ~150 ml per 200 mg caffeine (optional offset)</li>
+            </ul>
+            <p class="water-disclaimer">Estimates only. Medical conditions (kidney, heart, endocrine) may alter needs—consult a professional.</p>
+          </div>
+        </div>
+        <div class="water-interaction-row">
+          <form id="waterForm" class="water-form">
+            <div class="input-group">
+              <label for="weight">Weight</label>
+              <div class="input-row">
+                <input type="number" id="weight" name="weight" placeholder="Weight" min="30" max="300" required>
+                <select id="weightUnit" name="weightUnit">
+                  <option value="kg">kg</option>
+                  <option value="lb">lb</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="exercise">Daily Exercise (minutes)</label>
+              <div class="input-row">
+                <input type="number" id="exercise" name="exercise" placeholder="0" min="0" max="300">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="climate">Climate</label>
+              <div class="input-row">
+                <select id="climate" name="climate">
+                  <option value="normal">Temperate</option>
+                  <option value="hot">Hot / Humid</option>
+                  <option value="dry">Hot / Dry</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="status">Pregnancy / Nursing</label>
+              <div class="input-row">
+                <select id="status" name="status">
+                  <option value="none">None</option>
+                  <option value="pregnant">Pregnant</option>
+                  <option value="nursing">Nursing</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="caffeine">Caffeine (mg)</label>
+              <div class="input-row">
+                <input type="number" id="caffeine" name="caffeine" placeholder="0" min="0" max="1000">
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="goalUnit">Output Unit</label>
+              <div class="input-row">
+                <select id="goalUnit" name="goalUnit">
+                  <option value="ml">ml</option>
+                  <option value="L">Liters</option>
+                  <option value="oz">US fl oz</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="water-btn">Calculate</button>
+          </form>
+          <div class="water-result-container" id="waterResultContainer" style="display:none;">
+            <div class="water-result">
+              <span class="water-value" id="waterValue">--</span>
+              <span class="water-label" id="waterUnitLabel">ml / day</span>
+            </div>
+            <div class="water-progress-wrapper">
+              <div class="water-progress-bar"><div class="water-progress" id="waterProgress"></div></div>
+              <div class="water-scale"><span>Low</span><span>High</span></div>
+            </div>
+            <div class="water-alt-values" id="waterAlt" style="display:none;"></div>
+            <div class="water-breakdown" id="waterBreakdown"></div>
+            <div class="water-tips" id="waterTips"></div>
+            <div class="water-disclaimer-bottom">Includes estimated adjustments. Listen to thirst. Upper safe limits vary.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+    const waterForm = document.getElementById('waterForm');
+    const waterResultContainer = document.getElementById('waterResultContainer');
+    const waterValueEl = document.getElementById('waterValue');
+    const waterUnitLabel = document.getElementById('waterUnitLabel');
+    const waterProgress = document.getElementById('waterProgress');
+    const waterBreakdown = document.getElementById('waterBreakdown');
+    const waterTips = document.getElementById('waterTips');
+    const waterAlt = document.getElementById('waterAlt');
+
+    function toKg(lb){ return lb * 0.45359237; }
+    function mlToOz(ml){ return ml / 29.5735; }
+
+    waterForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const weightUnit = document.getElementById('weightUnit').value;
+      const goalUnit = document.getElementById('goalUnit').value;
+      let weight = parseFloat(document.getElementById('weight').value);
+      if(!weight || weight < 30){ waterResultContainer.style.display='none'; waterResultContainer.classList.remove('show'); return; }
+      if(weightUnit === 'lb') weight = toKg(weight);
+
+      const exercise = parseFloat(document.getElementById('exercise').value) || 0; // minutes
+      const climate = document.getElementById('climate').value;
+      const status = document.getElementById('status').value;
+      const caffeine = parseFloat(document.getElementById('caffeine').value) || 0; // mg
+
+      // Base 35 ml / kg
+      let base = weight * 35; // ml
+      let exerciseAdd = Math.max(0, Math.floor(exercise / 30)) * 350; // ml per 30 min
+      // Climate multiplier
+      let climateFactor = 0; // additive percentage
+      if(climate === 'hot') climateFactor = 0.07; // +7%
+      else if(climate === 'dry') climateFactor = 0.1; // +10%
+      let climateAdd = base * climateFactor;
+
+      let statusAdd = 0;
+      if(status === 'pregnant') statusAdd = 300;
+      else if(status === 'nursing') statusAdd = 700;
+
+      let caffeineOffset = Math.floor(caffeine / 200) * 150; // optional offset
+
+      let totalMl = base + exerciseAdd + climateAdd + statusAdd - caffeineOffset;
+      if(totalMl < 1000) totalMl = Math.max(totalMl, 1000); // floor sensible
+      const originalMl = totalMl;
+
+      // Progress bar scale (rough typical adult range 1500 - 5000 ml)
+      const min = 1500, max = 5000; const clamped = Math.min(max, Math.max(min, totalMl));
+      const percent = ((clamped - min) / (max - min)) * 100;
+      waterProgress.style.width = percent + '%';
+      waterProgress.style.background = percent < 33 ? '#2196f3' : percent < 66 ? '#4caf50' : '#ff9800';
+
+      // Output formatting
+      let displayValue, unitLabel;
+      if(goalUnit === 'ml'){ displayValue = Math.round(totalMl); unitLabel = 'ml / day'; }
+      else if(goalUnit === 'L'){ displayValue = (totalMl / 1000).toFixed(2); unitLabel = 'L / day'; }
+      else { displayValue = mlToOz(totalMl).toFixed(1); unitLabel = 'fl oz / day'; }
+      waterValueEl.textContent = displayValue;
+      waterUnitLabel.textContent = unitLabel;
+
+      // Alternate values block
+      const altLiters = (originalMl / 1000).toFixed(2) + ' L';
+      const altOz = mlToOz(originalMl).toFixed(1) + ' fl oz';
+      const altCups = (originalMl / 240).toFixed(1) + ' cups (~240ml)';
+      waterAlt.style.display = 'flex';
+      waterAlt.innerHTML = `<div class="alt-line">≈ ${Math.round(originalMl)} ml total</div><div class="alt-line">${altLiters} | ${altOz} | ${altCups}</div>`;
+
+      // Breakdown
+      waterBreakdown.innerHTML = ''+
+        `<span><strong>Base</strong><span>${Math.round(base)} ml</span></span>`+
+        `<span><strong>Exercise</strong><span>${exerciseAdd} ml</span></span>`+
+        `<span><strong>Climate</strong><span>${Math.round(climateAdd)} ml</span></span>`+
+        `<span><strong>Status</strong><span>${statusAdd} ml</span></span>`+
+        `<span><strong>Caffeine offset</strong><span>-${caffeineOffset} ml</span></span>`+
+        `<span><strong>Total</strong><span>${Math.round(originalMl)} ml</span></span>`;
+
+      // Tips
+      let tip;
+      if(percent < 25) tip = 'Hydration goal is on the low end; verify all factors included.';
+      else if(percent < 60) tip = 'Solid mid-range intake—adjust for thirst & urine color (pale yellow).';
+      else if(percent < 85) tip = 'Higher hydration need—ensure electrolytes if heavy sweating.';
+      else tip = 'Very high volume—avoid overhydration; spread intake & consider sodium balance.';
+      waterTips.textContent = tip;
+
+      waterResultContainer.style.display = 'flex';
+      setTimeout(()=>{ waterResultContainer.classList.add('show'); waterResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+    });
+  </script>
+</body>
+</html>

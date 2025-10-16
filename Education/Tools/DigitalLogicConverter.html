@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="DigitalLogicConverter.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner">
+    
+  </header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="dlc-section">
+      <div class="dlc-card">
+        <div class="dlc-title-row">
+          <h1 class="dlc-title">Digital Logic Converter</h1>
+          <button type="button" class="dlc-info-trigger" aria-describedby="dlcInfo" title="How conversion works" tabindex="0">i</button>
+          <div class="dlc-info-flyout" id="dlcInfo" role="tooltip" aria-hidden="true">
+            <h2>How Digital Logic Conversion Works</h2>
+            <p>This tool converts numbers between Binary, Decimal, Octal, and Hexadecimal systems. Enter a value and select the base to see instant conversions.</p>
+            <ul>
+              <li>Supports Binary, Decimal, Octal, Hexadecimal</li>
+              <li>Instant conversion as you type</li>
+              <li>Input validation for each base</li>
+            </ul>
+            <p class="disclaimer">For educational use. Results are approximate for large numbers.</p>
+          </div>
+        </div>
+        <div class="dlc-interaction-row">
+          <form id="logicForm" class="dlc-form" autocomplete="off">
+            <div class="input-group">
+              <label for="inputValue">Input Value</label>
+              <div class="input-row">
+                <input type="text" id="inputValue" required placeholder="Enter value" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="inputBase">Input Base</label>
+              <div class="input-row">
+                <select id="inputBase">
+                  <option value="bin">Binary</option>
+                  <option value="dec" selected>Decimal</option>
+                  <option value="oct">Octal</option>
+                  <option value="hex">Hexadecimal</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="dlc-btn">Convert</button>
+          </form>
+          <div class="dlc-result-container" id="logicResult" style="display:none;">
+            <div class="dlc-main-result">
+              <span class="dlc-result-label">Decimal:</span>
+              <span class="dlc-result-value" id="decResult">--</span>
+            </div>
+            <div class="dlc-breakdown" id="dlcBreakdown"></div>
+            <div class="dlc-disclaimer">For educational purposes only.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    const inputValueEl = document.getElementById('inputValue');
+    const inputBaseEl = document.getElementById('inputBase');
+    const form = document.getElementById('logicForm');
+    const resultBox = document.getElementById('logicResult');
+    const decResult = document.getElementById('decResult');
+    const breakdownEl = document.getElementById('dlcBreakdown');
+
+    function parseInput(value, base) {
+      try {
+        if (base === 'bin' && !/^[01]+$/.test(value)) return null;
+        if (base === 'oct' && !/^[0-7]+$/.test(value)) return null;
+        if (base === 'dec' && !/^\d+$/.test(value)) return null;
+        if (base === 'hex' && !/^[0-9a-fA-F]+$/.test(value)) return null;
+        return parseInt(value, base === 'bin' ? 2 : base === 'oct' ? 8 : base === 'dec' ? 10 : 16);
+      } catch { return null; }
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const val = inputValueEl.value.trim();
+      const base = inputBaseEl.value;
+      const num = parseInput(val, base);
+      if (val === '' || num === null || isNaN(num)) {
+        alert('Invalid input for selected base.');
+        return;
+      }
+      decResult.textContent = num;
+      breakdownEl.innerHTML = '';
+      const breakdownData = [
+        ['Binary', num.toString(2)],
+        ['Octal', num.toString(8)],
+        ['Decimal', num.toString(10)],
+        ['Hexadecimal', num.toString(16).toUpperCase()]
+      ];
+      breakdownData.forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'dlc-row';
+        div.innerHTML = `<span>${r[0]}</span><span>${r[1]}</span>`;
+        breakdownEl.appendChild(div);
+      });
+      resultBox.style.display = 'flex';
+      setTimeout(() => {
+        resultBox.classList.add('show');
+        resultBox.scrollIntoView({behavior:'smooth',block:'center'});
+      }, 50);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="ProteinIntakeCalculator.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner">
+    
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+  <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="protein-tool-section">
+      <div class="protein-card">
+        <div class="protein-title-row">
+          <h1 class="protein-title">Protein Intake Calculator</h1>
+          <button type="button" class="protein-info-trigger" aria-describedby="proteinInfoPanel" title="About" tabindex="0">i</button>
+          <div class="protein-info-flyout" id="proteinInfoPanel" role="tooltip" aria-hidden="true">
+            <h2>Why Protein?</h2>
+            <p>Protein supports muscle repair, hormonal signaling, immune function, satiety and metabolic health. Needs scale with lean mass, training stress, energy deficit and age.</p>
+            <p class="protein-sub">General Evidence-Based Ranges</p>
+            <p><strong>Minimal:</strong> 0.8 g/kg (RDA – prevents deficiency).<br><strong>General Health:</strong> 1.0–1.4 g/kg.<br><strong>Muscle Gain / Active:</strong> 1.4–1.8 g/kg.<br><strong>Fat Loss (lean preservation):</strong> 1.6–2.2 g/kg.<br><strong>High Demand / Athletes:</strong> up to ~2.4 g/kg (sometimes transiently).</p>
+            <p class="protein-disclaimer">Individualization matters: consult a professional for medical or clinical conditions.</p>
+          </div>
+        </div>
+        <div class="protein-interaction-row">
+          <form id="proteinForm" class="protein-form">
+            <div class="input-group">
+              <label for="sex">Sex (Optional)</label>
+              <div class="input-row">
+                <select id="sex" name="sex">
+                  <option value="">--</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="weight">Body Weight</label>
+              <div class="input-row">
+                <input type="number" id="weight" min="30" max="250" placeholder="Weight" required>
+                <select id="weightUnit">
+                  <option value="kg">kg</option>
+                  <option value="lb">lb</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="goal">Primary Goal</label>
+              <div class="input-row">
+                <select id="goal" required>
+                  <option value="health">General Health</option>
+                  <option value="muscle">Build Muscle</option>
+                  <option value="fatloss">Fat Loss / Cut</option>
+                  <option value="performance">Performance</option>
+                  <option value="maintenance">Maintenance / Recomp</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="training">Training Frequency</label>
+              <div class="input-row">
+                <select id="training" required>
+                  <option value="low">0-2 days</option>
+                  <option value="moderate">3-4 days</option>
+                  <option value="high">5-6 days</option>
+                  <option value="veryhigh">Daily / 2-a-days</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="bodyfat">Body Fat % (Optional)</label>
+              <div class="input-row">
+                <input type="number" id="bodyfat" min="3" max="60" placeholder="%">
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Show Bands</label>
+              <div class="method-options" id="bandOptions">
+                <label><input type="checkbox" value="low" checked> Low</label>
+                <label><input type="checkbox" value="mid" checked> Mid</label>
+                <label><input type="checkbox" value="high" checked> High</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="meals">Meals / Day</label>
+              <div class="input-row">
+                <input type="number" id="meals" min="1" max="10" value="3">
+              </div>
+            </div>
+            <button type="submit" class="protein-btn">Calculate</button>
+          </form>
+          <div class="protein-result-container" id="proteinResultContainer" style="display:none;">
+            <div class="protein-result"><span class="protein-value" id="proteinPrimaryValue">--</span><span class="protein-label" id="proteinPrimaryLabel">Median g/day</span></div>
+            <div class="protein-progress-wrapper"><div class="protein-progress-bar"><div class="protein-progress" id="proteinProgress"></div></div><div class="protein-scale"><span>Lower</span><span>Higher</span></div></div>
+            <div class="protein-breakdown" id="proteinBreakdown"></div>
+            <div class="protein-extra" id="proteinExtra"></div>
+            <div class="protein-tips" id="proteinTips"></div>
+            <div class="protein-disclaimer-bottom">Adequate hydration & micronutrients support optimal protein utilization.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+    const proteinForm = document.getElementById('proteinForm');
+    const proteinResultContainer = document.getElementById('proteinResultContainer');
+    const proteinPrimaryValue = document.getElementById('proteinPrimaryValue');
+    const proteinPrimaryLabel = document.getElementById('proteinPrimaryLabel');
+    const proteinProgress = document.getElementById('proteinProgress');
+    const proteinBreakdown = document.getElementById('proteinBreakdown');
+    const proteinExtra = document.getElementById('proteinExtra');
+    const proteinTips = document.getElementById('proteinTips');
+
+    function toKg(lb){ return lb*0.45359237; }
+    function median(vals){ const s=[...vals].sort((a,b)=>a-b); const n=s.length; return n? (n%2? s[(n-1)/2] : (s[n/2-1]+s[n/2])/2) : 0; }
+
+    proteinForm.addEventListener('submit', e => {
+      e.preventDefault();
+      let weight = parseFloat(document.getElementById('weight').value); if(!weight || weight<30){ proteinResultContainer.style.display='none'; proteinResultContainer.classList.remove('show'); return; }
+      if(document.getElementById('weightUnit').value==='lb') weight = toKg(weight);
+      const goal = document.getElementById('goal').value;
+      const training = document.getElementById('training').value;
+      const bodyfat = parseFloat(document.getElementById('bodyfat').value) || null;
+      const meals = parseInt(document.getElementById('meals').value,10) || 3;
+      const selectedBands = [...document.querySelectorAll('#bandOptions input:checked')].map(c=>c.value);
+      if(selectedBands.length===0){ proteinBreakdown.innerHTML='<div class="row">Select at least one band.</div>'; proteinResultContainer.style.display='flex'; return; }
+
+      // Base multipliers by goal
+      const goalRanges = {
+        health:[1.0,1.4], muscle:[1.4,1.8], fatloss:[1.6,2.2], performance:[1.6,2.4], maintenance:[1.2,1.8]
+      };
+      let range = goalRanges[goal] || [1.0,1.4];
+
+      // Adjust for training frequency
+      const trainingAdj = {low:0, moderate:0.1, high:0.2, veryhigh:0.3};
+      const add = trainingAdj[training] || 0;
+      range = [range[0]+add, range[1]+add];
+
+      // Adjust if very low or high body fat (lean mass proxy) – simplistic
+      if(bodyfat){
+        if(bodyfat < 12) range = [range[0]+0.1, range[1]+0.15];
+        else if(bodyfat > 30) range = [range[0]-0.1, range[1]-0.1];
+      }
+
+      // Construct three bands: low (lower bound), mid (midpoint), high (upper bound)
+      const lowVal = range[0]*weight;
+      const highVal = range[1]*weight;
+      const midVal = (lowVal+highVal)/2;
+      const bands = { low: lowVal, mid: midVal, high: highVal };
+      const outputs = selectedBands.map(b=>({band:b, grams:bands[b]}));
+
+      const med = median(outputs.map(o=>o.grams));
+      proteinPrimaryValue.textContent = Math.round(med) + ' g';
+      proteinPrimaryLabel.textContent = 'Median g/day';
+
+      proteinBreakdown.innerHTML = outputs.map(o => `<div class="row"><span class="method">${o.band.toUpperCase()}</span><span>${Math.round(o.grams)} g</span></div>`).join('');
+
+      // Per-meal distribution & g/lb reference
+      const perMeal = med / meals;
+      const perKg = med / weight;
+      const perLb = perKg / 2.20462;
+      proteinExtra.innerHTML = `
+        <div class="stat"><span class="label">Meals</span><span class="value">${meals}</span></div>
+        <div class="stat"><span class="label">Per Meal</span><span class="value">${Math.round(perMeal)}</span></div>
+        <div class="stat"><span class="label">g/kg</span><span class="value">${perKg.toFixed(2)}</span></div>
+        <div class="stat"><span class="label">g/lb</span><span class="value">${perLb.toFixed(2)}</span></div>
+      `;
+
+      // Progress mapping across 0.8 - 2.4 g/kg
+      const min=0.8*weight, max=2.4*weight; const clamp=Math.min(max, Math.max(min, med)); const pct=((clamp-min)/(max-min))*100; proteinProgress.style.width=pct+'%'; proteinProgress.style.background = pct<33? '#2196f3': pct<66? '#4caf50':'#ff9800';
+
+      let tip;
+      if(perMeal < 20) tip='Consider spreading protein to reach ~20–40 g per meal for muscle protein synthesis.';
+      else if(perMeal > 60) tip='Large single boluses may not yield extra benefit; consider distributing intake more evenly.';
+      else tip='Solid distribution. Pair each meal with quality leucine-rich sources.';
+      proteinTips.textContent = tip;
+
+      proteinResultContainer.style.display='flex';
+      setTimeout(()=>{ proteinResultContainer.classList.add('show'); proteinResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="LoanEMICalculator.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="emi-section">
+      <div class="emi-card">
+        <div class="emi-title-row">
+          <h1 class="emi-title">Loan EMI Calculator</h1>
+          <button type="button" class="emi-info-trigger" aria-describedby="emiInfoPanel" tabindex="0">i</button>
+          <div id="emiInfoPanel" class="emi-info-flyout" role="tooltip" aria-hidden="true">
+            <h2>About EMI</h2>
+            <p>EMI (Equated Monthly Installment) is the fixed payment you make every month until the loan is repaid. It consists of principal + interest components that shift over time.</p>
+            <ul>
+              <li>Formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
+              <li>P = Principal, r = monthly interest rate, n = total months</li>
+              <li>Processing fee added to upfront cost; not part of principal (optionally)</li>
+              <li>Extra monthly payments reduce interest & shorten tenure</li>
+            </ul>
+            <p class="disclaimer">Approximation only. Actual schedules may vary by lender.</p>
+          </div>
+        </div>
+        <div class="emi-interaction-row">
+          <form id="emiForm" class="emi-form" autocomplete="off">
+            <div class="input-group">
+              <label for="currency">Currency</label>
+              <div class="input-row">
+                <select id="currency" name="currency">
+                  <option value="INR" selected>INR</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="principal">Loan Principal</label>
+              <div class="input-row"><input type="number" id="principal" min="0" placeholder="e.g. 2500000" required /></div>
+            </div>
+            <div class="input-group">
+              <label for="rate">Annual Interest Rate (%)</label>
+              <div class="input-row"><input type="number" id="rate" min="0.1" step="0.01" placeholder="e.g. 8.25" required /></div>
+            </div>
+            <div class="input-group">
+              <label for="tenure">Tenure (Years)</label>
+              <div class="input-row"><input type="number" id="tenure" min="1" max="40" value="20" required /></div>
+              <div class="emi-inline-buttons" data-group="tenureBtns">
+                <button type="button" class="active" data-val="20">20y</button>
+                <button type="button" data-val="25">25y</button>
+                <button type="button" data-val="30">30y</button>
+                <button type="button" data-val="15">15y</button>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="processingFee">Processing Fee (%)</label>
+              <div class="input-row"><input type="number" id="processingFee" min="0" step="0.01" value="0" /></div>
+            </div>
+            <div class="input-group">
+              <label for="extraPayment">Extra Monthly Payment (Optional)</label>
+              <div class="input-row"><input type="number" id="extraPayment" min="0" value="0" /></div>
+              <div class="emi-small-hint">Applied in addition to EMI each month</div>
+            </div>
+            <div class="input-group">
+              <label for="startMonth">Start Month (for extra)</label>
+              <div class="input-row"><input type="number" id="startMonth" min="1" value="1" /></div>
+              <div class="emi-small-hint">Month number extra payment begins</div>
+            </div>
+            <button type="submit" class="emi-btn">Calculate EMI</button>
+          </form>
+          <div id="emiResultContainer" class="emi-result-container">
+            <div class="emi-main-result">
+              <span id="emiValue" class="emi-main-value">--</span>
+              <span class="emi-main-label">Monthly EMI</span>
+              <span id="emiWithExtra" class="emi-sub-value" style="display:none;"></span>
+            </div>
+            <div class="emi-progress-wrapper">
+              <div class="emi-progress-bar"><div id="emiProgress" class="emi-progress"></div></div>
+              <div class="emi-scale"><span>Low</span><span>High</span></div>
+            </div>
+            <div id="emiBreakdown" class="emi-breakdown"></div>
+            <div id="emiStats" class="emi-stats-grid"></div>
+            <div id="emiTips" class="emi-tips"></div>
+            <div class="emi-disclaimer">Illustrative only. Extra payment model approximated.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+    const emiForm = document.getElementById('emiForm');
+    const resultContainer = document.getElementById('emiResultContainer');
+    const emiValueEl = document.getElementById('emiValue');
+    const emiWithExtraEl = document.getElementById('emiWithExtra');
+    const breakdownEl = document.getElementById('emiBreakdown');
+    const statsEl = document.getElementById('emiStats');
+    const tipsEl = document.getElementById('emiTips');
+    const progressEl = document.getElementById('emiProgress');
+
+    function currencySymbol(cur){ switch(cur){ case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
+    function fmtMoney(v, cur){ const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined,{maximumFractionDigits:0}); }
+
+    function calcEmi(P, rateAnnual, years){ const r = (rateAnnual/100)/12; const n = years*12; if(r===0) return P/n; const pow = Math.pow(1+r, n); return P * r * pow / (pow - 1); }
+
+    function simulateWithExtra(P, rateAnnual, years, extra, startMonth){
+      if(extra <= 0) return { months: years*12, interest: 0, interestSaved: 0 };
+      const r = (rateAnnual/100)/12; const n = years*12; const baseEmi = calcEmi(P, rateAnnual, years); let balance=P; let month=0; let interestPaid=0; while(balance>0 && month< n+600){ month++; const interest = balance*r; let pay = baseEmi + (month>=startMonth?extra:0); if(pay> balance+interest) pay = balance+interest; const principalComp = pay - interest; balance -= principalComp; interestPaid += interest; }
+      const totalBaseInterest = (baseEmi * n) - P; const interestSaved = totalBaseInterest - interestPaid; return { months: month, interest: interestPaid, interestSaved: interestSaved<0?0:interestSaved };
+    }
+
+    function setActive(groupAttr, btn){ const selector='[data-group="'+groupAttr+'"] button'; document.querySelectorAll(selector).forEach(b=>b.classList.remove('active')); btn.classList.add('active'); }
+    document.querySelectorAll('[data-group="tenureBtns"] button').forEach(btn=>{ btn.addEventListener('click',()=>{ setActive('tenureBtns', btn); document.getElementById('tenure').value=btn.getAttribute('data-val'); }); });
+
+    emiForm.addEventListener('submit', e=>{
+      e.preventDefault();
+      const currency = document.getElementById('currency').value;
+      const principal = parseFloat(document.getElementById('principal').value)||0;
+      const rate = parseFloat(document.getElementById('rate').value)||0;
+      const tenure = parseInt(document.getElementById('tenure').value,10)||0;
+      const processingFeePct = parseFloat(document.getElementById('processingFee').value)||0;
+      const extra = parseFloat(document.getElementById('extraPayment').value)||0;
+      const startMonth = parseInt(document.getElementById('startMonth').value,10)||1;
+      if(principal<=0 || rate<=0 || tenure<=0){ resultContainer.style.display='none'; resultContainer.classList.remove('show'); return; }
+
+      const emi = calcEmi(principal, rate, tenure);
+      emiValueEl.textContent = fmtMoney(Math.round(emi), currency);
+
+      const n = tenure*12; const totalPayment = emi * n; const totalInterest = totalPayment - principal;
+      const processingFeeAmount = principal * (processingFeePct/100);
+      const totalCostWithFee = totalPayment + processingFeeAmount;
+
+      // Extra payment simulation
+      const sim = simulateWithExtra(principal, rate, tenure, extra, startMonth);
+      let emiExtraTxt='';
+      if(extra>0){
+        emiExtraTxt = '+ Extra: ' + fmtMoney(extra, currency) + ' (Int Saved ' + fmtMoney(sim.interestSaved, currency) + ', Months ' + sim.months + ')';
+        emiWithExtraEl.style.display='block';
+        emiWithExtraEl.textContent = emiExtraTxt;
+      } else { emiWithExtraEl.style.display='none'; }
+
+      // Progress heuristic based on EMI size by currency
+      let scaleMax = 200000; if(currency==='USD' || currency==='EUR' || currency==='GBP') scaleMax = 5000; // adjust typical EMI scale
+      const pct = Math.min(100, (emi/scaleMax)*100); progressEl.style.width = pct + '%'; progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
+
+      // Breakdown
+      breakdownEl.innerHTML='';
+      const rows = [
+        ['Principal', fmtMoney(principal, currency)],
+        ['Annual Rate', rate.toFixed(2)+'%'],
+        ['Tenure (months)', n],
+        ['Processing Fee', fmtMoney(processingFeeAmount, currency)],
+        ['Total Cost (w/ fee)', fmtMoney(totalCostWithFee, currency)],
+        ['Total Interest', fmtMoney(totalInterest, currency)]
+      ];
+      rows.forEach(r=>{ const d=document.createElement('div'); d.className='emi-row'; d.innerHTML='<span>'+r[0]+'</span><span>'+r[1]+'</span>'; breakdownEl.appendChild(d); });
+
+      // Stats
+      statsEl.innerHTML='';
+      const stats=[
+        {lbl:'Interest % of P', val: (totalInterest/principal*100).toFixed(1)+'%'},
+        {lbl:'Proc. Fee %', val: processingFeePct.toFixed(2)+'%'},
+        {lbl:'Monthly EMI', val: fmtMoney(Math.round(emi), currency)},
+        {lbl:'Total Pay', val: fmtMoney(Math.round(totalPayment), currency)},
+        {lbl:'Eff. Months', val: sim.months !== tenure*12 ? sim.months : n},
+        {lbl:'Saved Int', val: extra>0?fmtMoney(sim.interestSaved, currency):fmtMoney(0, currency)}
+      ];
+      stats.forEach(s=>{ const c=document.createElement('div'); c.className='emi-stat'; c.innerHTML='<span class="val">'+s.val+'</span><span class="lbl">'+s.lbl+'</span>'; statsEl.appendChild(c); });
+
+      // Tips
+      let tip='';
+      if(extra>0){ tip += 'Extra payments accelerate principal reduction; confirm lender allows prepayments without penalty. '; }
+      if(processingFeePct>0){ tip += 'Include processing fee in upfront budget planning. '; }
+      if(!tip) tip = 'Try adjusting tenure or rate to see impact on EMI & total interest.';
+      tipsEl.textContent = tip;
+
+      resultContainer.style.display='flex';
+      setTimeout(()=>{ resultContainer.classList.add('show'); resultContainer.scrollIntoView({behavior:'smooth',block:'center'}); },40);
+    });
+  </script>
+</body>
+</html>

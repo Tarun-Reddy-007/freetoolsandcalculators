@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="WordCharacterCounter.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="wcc-section">
+      <div class="wcc-card">
+        <div class="wcc-title-row">
+          <h1 class="wcc-title">Word & Character Counter</h1>
+          <button type="button" class="wcc-info-trigger" aria-describedby="wccInfo" title="How counting works" tabindex="0">i</button>
+          <div class="wcc-info-flyout" id="wccInfo" role="tooltip" aria-hidden="true">
+            <h2>How Counting Works</h2>
+            <p>This tool counts words, characters, sentences, and more as you type or paste text. Useful for essays, tweets, SEO, and more.</p>
+            <ul>
+              <li>Counts words, characters, sentences, lines</li>
+              <li>Live updates as you type</li>
+              <li>Works fully in your browser</li>
+            </ul>
+            <p class="disclaimer">No data is sent anywhere. All counting is local.</p>
+          </div>
+        </div>
+        <div class="wcc-interaction-row">
+          <form id="wccForm" class="wcc-form" autocomplete="off" onsubmit="return false;">
+            <div class="input-group">
+              <label for="wccInput">Enter Text</label>
+              <div class="input-row">
+                <textarea id="wccInput" rows="7" placeholder="Type or paste your text here..." required></textarea>
+              </div>
+            </div>
+          </form>
+          <div class="wcc-result-container" id="wccResult" style="display:none;">
+            <div class="wcc-main-result">
+              <span class="wcc-value" id="wccMain">0</span>
+              <span class="wcc-label">Words</span>
+            </div>
+            <div class="wcc-breakdown" id="wccBreakdown"></div>
+            <div class="wcc-tips" id="wccTips"></div>
+            <div class="wcc-disclaimer">All counts are approximate. No text is stored or sent.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const inputEl = document.getElementById('wccInput');
+    const resultBox = document.getElementById('wccResult');
+    const mainValue = document.getElementById('wccMain');
+    const breakdownEl = document.getElementById('wccBreakdown');
+    const tipsEl = document.getElementById('wccTips');
+
+    function countAll(text) {
+      const chars = text.length;
+      const charsNoSpace = text.replace(/\s/g, '').length;
+      const words = (text.trim().match(/\b\w+\b/g) || []).length;
+      const lines = text.split(/\r\n|\r|\n/).length;
+      const sentences = (text.match(/[\w\)][.?!](\s|$)/g) || []).length;
+      return {chars, charsNoSpace, words, lines, sentences};
+    }
+
+    function updateCounts() {
+      const text = inputEl.value;
+      const {chars, charsNoSpace, words, lines, sentences} = countAll(text);
+      mainValue.textContent = words;
+      breakdownEl.innerHTML = `
+        <div class="wcc-row"><span>Characters (with spaces)</span><span>${chars}</span></div>
+        <div class="wcc-row"><span>Characters (no spaces)</span><span>${charsNoSpace}</span></div>
+        <div class="wcc-row"><span>Sentences</span><span>${sentences}</span></div>
+        <div class="wcc-row"><span>Lines</span><span>${lines}</span></div>
+      `;
+      tipsEl.textContent = "Tip: Paste or type your text to get instant counts.";
+      resultBox.style.display = 'flex';
+      setTimeout(()=>{resultBox.classList.add('show');},50);
+    }
+
+    inputEl.addEventListener('input', updateCounts);
+  </script>
+</body>
+</html>

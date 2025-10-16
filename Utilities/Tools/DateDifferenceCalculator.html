@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="DateDifferenceCalculator.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="dd-section">
+      <div class="dd-card">
+        <div class="dd-title-row">
+          <h1 class="dd-title">Date Difference Calculator</h1>
+          <button type="button" class="dd-info-trigger" aria-describedby="ddInfo" title="How difference is computed" tabindex="0">i</button>
+          <div class="dd-info-flyout" id="ddInfo" role="tooltip" aria-hidden="true">
+            <h2>About This Tool</h2>
+            <p>Computes the elapsed time between two calendar dates using exact year / month / day borrowing logic, accounting for leap years.</p>
+            <ul>
+              <li>Years / Months / Days breakdown</li>
+              <li>Total days, weeks, hours, minutes</li>
+              <li>Business days (Mon-Fri, optional holidays)</li>
+              <li>Progress through interval</li>
+            </ul>
+            <p class="disclaimer">For planning & reference only; not legal record.</p>
+          </div>
+        </div>
+        <div class="dd-interaction-row">
+          <form id="ddForm" class="dd-form" autocomplete="off">
+            <div class="input-group">
+              <label for="startDate">Start Date</label>
+              <div class="input-row"><input type="date" id="startDate" required /></div>
+            </div>
+            <div class="input-group">
+              <label for="endDate">End Date</label>
+              <div class="input-row"><input type="date" id="endDate" required /></div>
+              <div class="inline-toggle"><input type="checkbox" id="useTodayEnd" /> <label for="useTodayEnd">Use today as end</label></div>
+            </div>
+            <div class="input-group">
+              <label for="holidayList">Holidays (comma YYYY-MM-DD)</label>
+              <div class="input-row"><input type="text" id="holidayList" placeholder="2025-01-01,2025-12-25" /></div>
+              <div class="inline-toggle"><input type="checkbox" id="countWeekends" checked /> <label for="countWeekends">Include weekends in totals</label></div>
+            </div>
+            <div class="input-group">
+              <label for="milestonePct">Milestone % (optional)</label>
+              <div class="input-row"><input type="number" id="milestonePct" min="1" max="99" placeholder="e.g. 50" /></div>
+            </div>
+            <button type="submit" class="dd-btn">Calculate Difference</button>
+          </form>
+          <div class="dd-result-container" id="ddResult" style="display:none;">
+            <div class="dd-main-result">
+              <span class="dd-span-value" id="ddMain">--</span>
+              <span class="dd-span-label">Total Days</span>
+            </div>
+            <div class="dd-progress-wrapper" id="ddProgressWrap" style="display:none;">
+              <div class="dd-progress-bar"><div class="dd-progress" id="ddProgress"></div></div>
+              <div class="dd-scale"><span>Start</span><span>End</span></div>
+            </div>
+            <div class="dd-breakdown" id="ddBreakdown"></div>
+            <div class="dd-stats-grid" id="ddStats"></div>
+            <div class="dd-tips" id="ddTips"></div>
+            <div class="dd-disclaimer">Approximate; excludes leap seconds.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const startEl=document.getElementById('startDate');
+    const endEl=document.getElementById('endDate');
+    const useTodayEndEl=document.getElementById('useTodayEnd');
+    const form=document.getElementById('ddForm');
+    const resultBox=document.getElementById('ddResult');
+    const mainVal=document.getElementById('ddMain');
+    const breakdownEl=document.getElementById('ddBreakdown');
+    const statsEl=document.getElementById('ddStats');
+    const tipsEl=document.getElementById('ddTips');
+    const progress=document.getElementById('ddProgress');
+    const progressWrap=document.getElementById('ddProgressWrap');
+    const holidayListEl=document.getElementById('holidayList');
+    const countWeekendsEl=document.getElementById('countWeekends');
+    const milestonePctEl=document.getElementById('milestonePct');
+
+    // Prefill end date with today
+    (function init(){const today=new Date();endEl.value=today.toISOString().substring(0,10);})();
+    useTodayEndEl.addEventListener('change',()=>{if(useTodayEndEl.checked){const t=new Date();endEl.value=t.toISOString().substring(0,10);endEl.disabled=true;}else{endEl.disabled=false;}});
+
+    function diffDetailed(start,end){let y=end.getFullYear()-start.getFullYear();let m=end.getMonth()-start.getMonth();let d=end.getDate()-start.getDate();if(d<0){const prevMonth=new Date(end.getFullYear(),end.getMonth(),0);d+=prevMonth.getDate();m--;}if(m<0){m+=12;y--;}return {years:y,months:m,days:d};}
+    function totalDays(start,end){return Math.floor((end-start)/86400000);} // ms per day
+    function businessDays(start,end,holidays,settleWeekends){let count=0;let cur=new Date(start);while(cur<end){const day=cur.getDay();const iso=cur.toISOString().substring(0,10);const isWeekend=(day===0||day===6);if((settleWeekends||!isWeekend) && !holidays.has(iso)){count++;}cur.setDate(cur.getDate()+1);}return count;}
+    function parseHolidays(str){const set=new Set();if(!str) return set;str.split(',').map(s=>s.trim()).forEach(s=>{if(/^\d{4}-\d{2}-\d{2}$/.test(s)) set.add(s);});return set;}
+    function milestoneDate(start,end,pct){const span=end-start;return new Date(start.getTime()+span*(pct/100));}
+
+    form.addEventListener('submit',e=>{e.preventDefault();
+      if(!startEl.value||!endEl.value){return;}
+      const start=new Date(startEl.value+'T00:00:00');
+      let end=new Date(endEl.value+'T00:00:00');
+      if(useTodayEndEl.checked){const t=new Date();end=new Date(t.getFullYear(),t.getMonth(),t.getDate());}
+      if(end<start){alert('End date must be after start date.');return;}
+      // For inclusive handling choose difference end-start then add 1 day for total calendar days
+      const total=totalDays(start,end)+1;
+      mainVal.textContent=total.toLocaleString();
+
+      const det=diffDetailed(start,end);
+      breakdownEl.innerHTML='';
+      const breakdownData=[['Exact',det.years+'y '+det.months+'m '+det.days+'d'],['Months',det.years*12+det.months],['Weeks',Math.floor(total/7)],[ 'Days',total.toLocaleString()]];
+      breakdownData.forEach(r=>{const div=document.createElement('div');div.className='dd-row';div.innerHTML='<span>'+r[0]+'</span><span>'+r[1]+'</span>';breakdownEl.appendChild(div);});
+
+      // Stats
+      statsEl.innerHTML='';
+      const holidays=parseHolidays(holidayListEl.value);
+      const bizDays=businessDays(start,end,holidays,countWeekendsEl.checked); // end exclusive inside; ensure inclusive by adding last day if qualifies
+      const hrs=total*24; const mins=hrs*60; const secs=mins*60;
+      const milestonePct=parseFloat(milestonePctEl.value);
+      let milestoneInfo='';
+      if(milestonePct && milestonePct>0 && milestonePct<100){const md=milestoneDate(start,end,milestonePct);milestoneInfo=md.toISOString().substring(0,10);} 
+      const stats=[{lbl:'Business Days',val:bizDays.toLocaleString()},{lbl:'Hours',val:hrs.toLocaleString()},{lbl:'Minutes',val:mins.toLocaleString()},{lbl:'Seconds',val:secs.toLocaleString()}];
+      if(milestoneInfo) stats.push({lbl:milestonePct+'% Milestone',val:milestoneInfo});
+      stats.forEach(s=>{const card=document.createElement('div');card.className='dd-stat';card.innerHTML='<span class="val">'+s.val+'</span><span class="lbl">'+s.lbl+'</span>';statsEl.appendChild(card);});
+
+      // Progress: if end in future relative to today -> show progress today
+      const today=new Date(); const todayMid=new Date(today.getFullYear(),today.getMonth(),today.getDate());
+      if(todayMid>=start && todayMid<=end){const elapsed=totalDays(start,todayMid)+1;const pct=(elapsed/total)*100;progress.style.width=pct+'%';progress.style.background=pct<33?'#2196f3':pct<66?'#4caf50':'#ff9800';progressWrap.style.display='block';} else {progressWrap.style.display='none';}
+
+      // Tips
+      let tip='Inclusive day count shown (adds 1). '; tip+=countWeekendsEl.checked?'Weekends counted. ':'Weekends excluded from business days.'; if(holidayListEl.value.trim()) tip+=' Holidays excluded: '+holidayListEl.value.trim()+'.'; if(milestoneInfo) tip+=' '+milestonePct+'% milestone falls on '+milestoneInfo+'.'; tipsEl.textContent=tip;
+
+      resultBox.style.display='flex'; setTimeout(()=>{resultBox.classList.add('show');resultBox.scrollIntoView({behavior:'smooth',block:'center'});},40);
+    });
+  </script>
+</body>
+</html>

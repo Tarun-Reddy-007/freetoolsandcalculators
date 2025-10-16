@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="HeartRateZoneCalculator.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="hrz-tool-section">
+      <div class="hrz-card">
+        <div class="hrz-title-row">
+          <h1 class="hrz-title">Heart Rate Zone Calculator</h1>
+          <button type="button" class="hrz-info-trigger" aria-describedby="hrzInfoPanel" title="About" tabindex="0">i</button>
+          <div class="hrz-info-flyout" id="hrzInfoPanel" role="tooltip" aria-hidden="true">
+            <h2>About Zones</h2>
+            <p>Heart rate training zones are intensity ranges based on estimated maximum heart rate (HRmax) or heart rate reserve (HRR). They help structure endurance, fat oxidation, and performance training.</p>
+            <p class="hrz-sub">Common Formulas</p>
+            <p><strong>220 - Age:</strong> Simple HRmax estimate. <br><strong>Tanaka:</strong> 208 - 0.7 × Age (often closer for adults).<br><strong>Karvonen (HRR):</strong> Uses (HRmax - Resting HR) × % + Resting HR.</p>
+            <p class="hrz-disclaimer">Estimates only; individual lab or field testing is more accurate.</p>
+          </div>
+        </div>
+        <div class="hrz-interaction-row">
+          <form id="hrzForm" class="hrz-form">
+            <div class="input-group">
+              <label for="age">Age</label>
+              <div class="input-row">
+                <input type="number" id="age" min="10" max="90" placeholder="Age" required>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="resting">Resting HR (Optional)</label>
+              <div class="input-row">
+                <input type="number" id="resting" min="30" max="120" placeholder="Rest bpm">
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Methods</label>
+              <div class="hrz-methods" id="methodOptions">
+                <label><input type="checkbox" value="220" checked> 220-Age</label>
+                <label><input type="checkbox" value="tanaka" checked> Tanaka</label>
+                <label><input type="checkbox" value="karvonen" checked> Karvonen</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="customMax">Custom HRmax (Optional)</label>
+              <div class="input-row">
+                <input type="number" id="customMax" min="100" max="230" placeholder="Custom Max">
+              </div>
+            </div>
+            <button type="submit" class="hrz-btn">Calculate Zones</button>
+          </form>
+          <div class="hrz-result-container" id="hrzResultContainer" style="display:none;">
+            <div class="hrz-result"><span class="hrz-value" id="hrzPrimaryValue">--</span><span class="hrz-label" id="hrzPrimaryLabel">Avg HRmax</span></div>
+            <div class="hrz-progress-wrapper">
+              <div class="hrz-progress-bar"><div class="hrz-progress" id="hrzProgress"></div></div>
+              <div class="hrz-scale"><span>Low</span><span>Near Max</span></div>
+            </div>
+            <div class="hrz-extra" id="hrzExtra"></div>
+            <div class="hrz-zones" id="hrzZones"></div>
+            <div class="hrz-tips" id="hrzTips"></div>
+            <div class="hrz-disclaimer-bottom">Warm up properly; stop if dizzy, in pain, or unwell.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+    const hrzForm = document.getElementById('hrzForm');
+    const hrzResultContainer = document.getElementById('hrzResultContainer');
+    const hrzPrimaryValue = document.getElementById('hrzPrimaryValue');
+    const hrzPrimaryLabel = document.getElementById('hrzPrimaryLabel');
+    const hrzProgress = document.getElementById('hrzProgress');
+    const hrzExtra = document.getElementById('hrzExtra');
+    const hrzZones = document.getElementById('hrzZones');
+    const hrzTips = document.getElementById('hrzTips');
+
+    function median(arr){ const s=[...arr].sort((a,b)=>a-b); const n=s.length; return n? (n%2? s[(n-1)/2] : (s[n/2-1]+s[n/2])/2) : 0; }
+
+    function computeMax(method, age){
+      if(method==='220') return 220 - age;
+      if(method==='tanaka') return 208 - 0.7*age;
+      return null;
+    }
+
+    hrzForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const age = parseInt(document.getElementById('age').value,10);
+      if(!age || age<10 || age>90){ hrzResultContainer.style.display='none'; hrzResultContainer.classList.remove('show'); return; }
+      const rest = parseInt(document.getElementById('resting').value,10) || null;
+      const custom = parseInt(document.getElementById('customMax').value,10) || null;
+      const selected = [...document.querySelectorAll('#methodOptions input:checked')].map(c=>c.value);
+      if(selected.length===0 && !custom){ hrzResultContainer.style.display='none'; return; }
+
+      const maxes=[]; selected.forEach(m=>{ const val=computeMax(m, age); if(val) maxes.push(val); }); if(custom) maxes.push(custom);
+      if(maxes.length===0){ hrzResultContainer.style.display='none'; return; }
+      const avg = median(maxes);
+      hrzPrimaryValue.textContent = Math.round(avg) + ' bpm';
+      hrzPrimaryLabel.textContent = 'Median HRmax';
+
+      // Progress bar map 120-210 bpm typical adult range
+      const min=120, max=210; const clamp=Math.min(max, Math.max(min, avg)); const pct=((clamp-min)/(max-min))*100; hrzProgress.style.width=pct+'%'; hrzProgress.style.background = pct<33? '#2196f3': pct<66? '#4caf50':'#ff9800';
+
+      // Extra stats
+      let hrr = null; if(rest && avg>rest) hrr = avg - rest;
+      const easy = Math.round(avg*0.6), tempo=Math.round(avg*0.85);
+      hrzExtra.innerHTML = [
+        `<div class="stat"><span class="label">Age</span><span class="value">${age}</span></div>`,
+        rest? `<div class="stat"><span class="label">Rest HR</span><span class="value">${rest}</span></div>`:'' ,
+        `<div class="stat"><span class="label">HRmax Low</span><span class="value">${Math.round(Math.min(...maxes))}</span></div>`,
+        `<div class="stat"><span class="label">HRmax High</span><span class="value">${Math.round(Math.max(...maxes))}</span></div>`,
+        hrr? `<div class="stat"><span class="label">HRR</span><span class="value">${hrr}</span></div>`:'',
+        `<div class="stat"><span class="label">Z2 Upper</span><span class="value">${easy}</span></div>`,
+        `<div class="stat"><span class="label">Tempo Ref</span><span class="value">${tempo}</span></div>`
+      ].filter(Boolean).join('');
+
+      // Zones (using HRR if rest available & Karvonen selected, else %HRmax)
+      const useHrr = rest && selected.includes('karvonen');
+      const maxRef = avg;
+      const reserve = useHrr? (maxRef - rest) : null;
+      const zoneDefs = [
+        {name:'Z1', pct:[0.5,0.6], intensity:'Recovery'},
+        {name:'Z2', pct:[0.6,0.7], intensity:'Endurance'},
+        {name:'Z3', pct:[0.7,0.8], intensity:'Tempo / Aerobic'},
+        {name:'Z4', pct:[0.8,0.9], intensity:'Lactate / Threshold'},
+        {name:'Z5', pct:[0.9,1.0], intensity:'VO2 / Max'}
+      ];
+      hrzZones.innerHTML = zoneDefs.map(z=>{
+        let low, high;
+        if(useHrr){ low = Math.round(rest + reserve * z.pct[0]); high = Math.round(rest + reserve * z.pct[1]); }
+        else { low = Math.round(maxRef * z.pct[0]); high = Math.round(maxRef * z.pct[1]); }
+        return `<div class="zone-row"><span class="z-name">${z.name}</span><span class="z-range">${low}-${high} bpm</span><span class="z-intensity">${z.intensity}</span></div>`;
+      }).join('');
+
+      // Tips
+      let tip;
+      if(useHrr) tip='Zones use Karvonen (HRR) because resting HR was provided.';
+      else tip='Add resting HR & keep Karvonen checked to personalize zones.';
+      hrzTips.textContent = tip;
+
+      hrzResultContainer.style.display='flex';
+      setTimeout(()=>{ hrzResultContainer.classList.add('show'); hrzResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+    });
+  </script>
+</body>
+</html>

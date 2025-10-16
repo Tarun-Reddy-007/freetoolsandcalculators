@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="BMICalculator.css">
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+  <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+  <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="bmi-tool-section">
+      <div class="bmi-card">
+        <div class="bmi-title-row">
+          <h1 class="bmi-title">BMI Calculator</h1>
+          <button type="button" class="bmi-info-trigger" aria-describedby="bmiInfoPanel" title="What is BMI?" tabindex="0">i</button>
+          <div class="bmi-info-flyout" id="bmiInfoPanel" role="tooltip" aria-hidden="true">
+            <h2>What is BMI?</h2>
+            <p>BMI (Body Mass Index) estimates body fat using height & weight. It helps classify: underweight, normal, overweight or obese.</p>
+            <ul class="bmi-categories-inline">
+              <li><span class="bmi-cat under">Under</span> &lt; 18.5</li>
+              <li><span class="bmi-cat normal">Normal</span> 18.5-24.9</li>
+              <li><span class="bmi-cat over">Over</span> 25-29.9</li>
+              <li><span class="bmi-cat obese">Obese</span> ≥ 30</li>
+            </ul>
+            <p class="bmi-disclaimer">BMI is a screening metric; consult a professional for full assessment.</p>
+          </div>
+        </div>
+  <div class="bmi-interaction-row">
+  <form id="bmiForm" class="bmi-form">
+          <div class="input-group">
+            <label for="height">Height</label>
+            <div class="input-row">
+              <input type="number" id="height" name="height" min="50" max="250" placeholder="Height" required>
+              <select id="heightUnit" name="heightUnit">
+                <option value="cm">cm</option>
+                <option value="ft">ft/in</option>
+              </select>
+            </div>
+            <div class="input-row" id="inchesRow" style="display:none;">
+              <input type="number" id="heightInches" name="heightInches" min="0" max="11" placeholder="Inches">
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="weight">Weight</label>
+            <div class="input-row">
+              <input type="number" id="weight" name="weight" min="20" max="300" placeholder="Weight" required>
+              <select id="weightUnit" name="weightUnit">
+                <option value="kg">kg</option>
+                <option value="lb">lb</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="bmi-btn">Calculate BMI</button>
+        </form>
+        <div class="bmi-result-container" id="bmiResultContainer" style="display:none;">
+          <div class="bmi-result">
+            <span class="bmi-value" id="bmiValue">--</span>
+            <span class="bmi-category" id="bmiCategory">--</span>
+          </div>
+          <div class="bmi-progress-bar">
+            <div class="bmi-progress" id="bmiProgress"></div>
+          </div>
+          <div class="bmi-tips" id="bmiTips"></div>
+        </div>
+  </div>
+      </div>
+      </div> 
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active"); 
+    }
+
+    const heightUnit = document.getElementById('heightUnit');
+    const heightInput = document.getElementById('height');
+    const inchesRow = document.getElementById('inchesRow');
+    const bmiForm = document.getElementById('bmiForm');
+    const bmiResultContainer = document.getElementById('bmiResultContainer');
+    const bmiValue = document.getElementById('bmiValue');
+    const bmiCategory = document.getElementById('bmiCategory');
+    const bmiProgress = document.getElementById('bmiProgress');
+    const bmiTips = document.getElementById('bmiTips');
+
+    heightUnit.addEventListener('change', function() {
+      if (heightUnit.value === 'ft') {
+        inchesRow.style.display = 'flex';
+        heightInput.placeholder = 'Feet';
+      } else {
+        inchesRow.style.display = 'none';
+        heightInput.placeholder = 'Height';
+      }
+    });
+
+    bmiForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let heightCm;
+      if (heightUnit.value === 'cm') {
+        heightCm = parseFloat(heightInput.value);
+      } else {
+        const feet = parseFloat(heightInput.value);
+        const inches = parseFloat(document.getElementById('heightInches').value) || 0;
+        heightCm = (feet * 30.48) + (inches * 2.54);
+      }
+      let weightKg;
+      if (document.getElementById('weightUnit').value === 'kg') {
+        weightKg = parseFloat(document.getElementById('weight').value);
+      } else {
+        weightKg = parseFloat(document.getElementById('weight').value) * 0.453592;
+      }
+      if (!heightCm || !weightKg || heightCm < 50 || weightKg < 20) {
+        bmiResultContainer.style.display = 'none';
+        return;
+      }
+      const bmi = weightKg / ((heightCm / 100) ** 2);
+      bmiValue.textContent = bmi.toFixed(1);
+      let category = '';
+      let color = '';
+      let percent = 0;
+      let tips = '';
+      if (bmi < 18.5) {
+        category = 'Underweight';
+        color = '#2196f3';
+        percent = Math.max(0, (bmi / 30) * 100);
+        tips = 'Consider a balanced diet and consult a healthcare provider.';
+      } else if (bmi < 25) {
+        category = 'Normal';
+        color = '#4caf50';
+        percent = ((bmi - 18.5) / (30 - 18.5)) * 100;
+        tips = 'Great job! Maintain your healthy lifestyle.';
+      } else if (bmi < 30) {
+        category = 'Overweight';
+        color = '#ff9800';
+        percent = ((bmi - 25) / (30 - 18.5)) * 100;
+        tips = 'Consider regular exercise and a healthy diet.';
+      } else {
+        category = 'Obese';
+        color = '#f44336';
+        percent = 100;
+        tips = 'Consult a healthcare provider for advice.';
+      }
+      bmiCategory.textContent = category;
+      bmiCategory.style.color = color;
+      bmiProgress.style.width = percent + '%';
+      bmiProgress.style.background = color;
+      bmiTips.textContent = tips;
+      bmiResultContainer.style.display = 'block';
+      bmiResultContainer.classList.add('show');
+    });
+  </script>
+</body>
+</html>

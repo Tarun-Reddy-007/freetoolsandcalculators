@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="CarLoanEMICalculator.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner">
+    
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="emi-tool-section">
+      <div class="emi-card">
+        <div class="emi-title-row">
+          <h1 class="emi-title">Car Loan EMI Calculator</h1>
+          <button type="button" class="emi-info-trigger" aria-describedby="emiInfo" title="What is EMI?" tabindex="0">i</button>
+          <div class="emi-info-flyout" id="emiInfo" role="tooltip" aria-hidden="true">
+            <h2>About EMI</h2>
+            <p>EMI (Equated Monthly Instalment) is the fixed payment amount you make every month toward a loan (principal + interest).</p>
+            <ul>
+              <li><strong>Formula:</strong> EMI = P × r × (1+r)^n / ((1+r)^n - 1)</li>
+              <li>P = Principal, r = Monthly Interest Rate, n = Number of Months</li>
+            </ul>
+            <p class="emi-disclaimer">Indicative values only. Check exact costs with your lender. Rates may include processing fees, insurance, taxes.</p>
+          </div>
+        </div>
+        <div class="emi-interaction-row">
+          <form id="emiForm" class="emi-form">
+            <div class="input-group">
+              <label for="loanAmount">Loan Amount</label>
+              <div class="input-row">
+                <input type="number" id="loanAmount" min="1000" step="500" placeholder="e.g. 15000" required />
+                <select id="currency">
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="INR">INR</option>
+                </select>
+              </div>
+              <div class="emi-inline-note">Principal (net financed amount)</div>
+            </div>
+            <div class="input-group">
+              <label for="interestRate">Annual Interest Rate (%)</label>
+              <div class="input-row">
+                <input type="number" id="interestRate" min="0.1" max="40" step="0.01" placeholder="e.g. 7.5" required />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="loanTenure">Loan Tenure</label>
+              <div class="input-row">
+                <input type="number" id="loanTenure" min="1" max="30" placeholder="Years" required />
+                <select id="tenureUnit">
+                  <option value="years">Years</option>
+                  <option value="months">Months</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="downPayment">Down Payment (Optional)</label>
+              <div class="input-row">
+                <input type="number" id="downPayment" min="0" step="100" placeholder="e.g. 3000" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="processingFee">Processing Fee (%) (Optional)</label>
+              <div class="input-row">
+                <input type="number" id="processingFee" min="0" max="10" step="0.1" placeholder="e.g. 1" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="extraPayment">Monthly Extra Payment (Optional)</label>
+              <div class="input-row">
+                <input type="number" id="extraPayment" min="0" step="10" placeholder="e.g. 50" />
+              </div>
+            </div>
+            <button type="submit" class="emi-btn">Calculate EMI</button>
+          </form>
+          <div class="emi-result-container" id="emiResultContainer" style="display:none;">
+            <div class="emi-primary-result">
+              <span class="emi-value" id="emiValue">--</span>
+              <span class="emi-label">Monthly EMI</span>
+            </div>
+            <div class="emi-progress-wrapper">
+              <div class="emi-progress-bar"><div class="emi-progress" id="emiProgress"></div></div>
+              <div class="emi-scale"><span>Lower</span><span>Higher</span></div>
+            </div>
+            <div class="emi-breakdown" id="emiBreakdown"></div>
+            <div class="emi-extra-stats" id="emiExtraStats"></div>
+            <div class="emi-tips" id="emiTips"></div>
+            <div class="emi-disclaimer-box">Taxes, insurance & variable fees not included.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+    const emiForm = document.getElementById('emiForm');
+    const emiResultContainer = document.getElementById('emiResultContainer');
+    const emiValueEl = document.getElementById('emiValue');
+    const emiProgress = document.getElementById('emiProgress');
+    const emiBreakdown = document.getElementById('emiBreakdown');
+    const emiExtraStats = document.getElementById('emiExtraStats');
+    const emiTips = document.getElementById('emiTips');
+
+    function currencySymbol(code){ switch(code){ case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; case 'INR': return '₹'; default: return code + ' '; } }
+
+    function formatMoney(val, cur){ return currencySymbol(cur) + Number(val).toLocaleString(undefined,{minimumFractionDigits:2, maximumFractionDigits:2}); }
+
+    function calculateEMI(P, annualRate, months){ if(annualRate === 0) return P / months; const r = annualRate / 12 / 100; return P * r * Math.pow(1+r, months) / (Math.pow(1+r, months) - 1); }
+
+    function amortizationWithExtra(P, annualRate, months, extra){ const r = annualRate / 12 / 100; let balance = P; let month = 0; let totalInterest = 0; let scheduleMonths = 0; if(r === 0){ // simple division
+        const base = P / months; while(balance > 0 && month < 1200){ const pay = Math.min(base + extra, balance); balance -= pay; month++; }
+        scheduleMonths = month; return { totalInterest: 0, months: scheduleMonths }; }
+      while(balance > 0 && month < 1200){ const interestPortion = balance * r; let emiBase = calculateEMI(balance, annualRate, months - month); let payment = emiBase + extra; if(payment <= interestPortion){ // avoid negative amortization
+          payment = interestPortion + 1; }
+        const principalPortion = payment - interestPortion; balance -= principalPortion; totalInterest += interestPortion; month++; if(month > 600 && months > 600) break; }
+      scheduleMonths = month; return { totalInterest, months: scheduleMonths }; }
+
+    emiForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const currency = document.getElementById('currency').value;
+      let principal = parseFloat(document.getElementById('loanAmount').value);
+      const annualRate = parseFloat(document.getElementById('interestRate').value);
+      const tenureVal = parseFloat(document.getElementById('loanTenure').value);
+      const tenureUnit = document.getElementById('tenureUnit').value;
+      const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
+      const procFeeRate = parseFloat(document.getElementById('processingFee').value) || 0;
+      const extraPayment = parseFloat(document.getElementById('extraPayment').value) || 0;
+
+      if(!principal || !annualRate || !tenureVal){ emiResultContainer.style.display='none'; emiResultContainer.classList.remove('show'); return; }
+
+      principal = Math.max(0, principal - downPayment);
+      let months = tenureUnit === 'years' ? Math.round(tenureVal * 12) : Math.round(tenureVal);
+      if(months < 1) months = 1;
+
+      const processingFee = principal * (procFeeRate/100);
+      const emi = calculateEMI(principal, annualRate, months);
+
+      // Without extra payment totals
+      const totalPayableBase = emi * months + processingFee + (downPayment > 0 ? downPayment : 0);
+      const totalInterestBase = totalPayableBase - (downPayment + processingFee + principal);
+
+      // With extra payments effect (approx)
+      let extraStats = null;
+      if(extraPayment > 0){
+        const amort = amortizationWithExtra(principal, annualRate, months, extraPayment);
+        const monthsWithExtra = amort.months;
+        const totalInterestWithExtra = amort.totalInterest;
+        const savedMonths = months - monthsWithExtra;
+        const savedInterest = totalInterestBase - totalInterestWithExtra;
+        extraStats = { monthsWithExtra, totalInterestWithExtra, savedMonths, savedInterest };
+      }
+
+      emiValueEl.textContent = formatMoney(emi, currency);
+
+      // Progress bar scale heuristic (map monthly EMI range: 100 -> 2500)
+      const min = 100; const max = 2500; const clamped = Math.min(max, Math.max(min, emi));
+      const percent = ((clamped - min)/(max-min))*100;
+      emiProgress.style.width = percent + '%';
+      emiProgress.style.background = percent < 33 ? '#2196f3' : percent < 66 ? '#4caf50' : '#ff9800';
+
+      // Breakdown
+      emiBreakdown.innerHTML = '';
+      const rows = [
+        ['Principal Financed', formatMoney(principal, currency)],
+        ['Down Payment', downPayment ? formatMoney(downPayment, currency) : '—'],
+        ['Processing Fee', processingFee ? formatMoney(processingFee, currency) : '—'],
+        ['Annual Rate', annualRate.toFixed(2) + '%'],
+        ['Tenure', months + ' months'],
+        ['Base Monthly EMI', formatMoney(emi, currency)],
+        ['Total Payable', formatMoney(totalPayableBase, currency)],
+        ['Total Interest', formatMoney(totalInterestBase, currency)]
+      ];
+      rows.forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'emi-breakdown-row';
+        div.innerHTML = `<span>${r[0]}</span><span class="value">${r[1]}</span>`;
+        emiBreakdown.appendChild(div);
+      });
+
+      // Extra stats grid
+      emiExtraStats.innerHTML = '';
+      const statItems = [
+        { label:'Interest % of Principal', val: ((totalInterestBase/principal)*100).toFixed(1)+'%' },
+        { label:'Processing Fee %', val: procFeeRate ? procFeeRate.toFixed(2)+'%' : '—' },
+        { label:'Down %', val: downPayment? ((downPayment/(principal+downPayment))*100).toFixed(1)+'%' : '—' },
+      ];
+      if(extraStats){
+        statItems.push({ label:'Months Saved', val: extraStats.savedMonths > 0 ? extraStats.savedMonths : '0' });
+        statItems.push({ label:'Interest Saved', val: extraStats.savedInterest>0? formatMoney(extraStats.savedInterest, currency): '—' });
+        statItems.push({ label:'New Duration', val: extraStats.monthsWithExtra + ' mo' });
+      }
+      statItems.forEach(s => {
+        const d = document.createElement('div');
+        d.className = 'emi-stat';
+        d.innerHTML = `<span class="label">${s.label}</span><span class="val">${s.val}</span>`;
+        emiExtraStats.appendChild(d);
+      });
+
+      // Tips logic
+      let tipsText;
+      if(extraStats && extraStats.savedMonths > 0){
+        tipsText = `Extra payment of ${formatMoney(extraPayment, currency)} shortens your loan by ${extraStats.savedMonths} month${extraStats.savedMonths!==1?'s':''}.`;
+        if(extraStats.savedInterest > 0){ tipsText += ` Interest saved: ${formatMoney(extraStats.savedInterest, currency)}.`; }
+      } else if(extraPayment > 0){
+        tipsText = 'Extra payment applied, but impact is minimal at current settings.';
+      } else {
+        tipsText = 'Try adding a small monthly extra payment to see interest savings and reduced tenure.';
+      }
+      if(procFeeRate > 0){ tipsText += ' Processing fee added to total cost.'; }
+      emiTips.textContent = tipsText;
+
+      emiResultContainer.style.display='flex';
+      setTimeout(()=>{ emiResultContainer.classList.add('show'); emiResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 50);
+    });
+  </script>
+</body>
+</html>

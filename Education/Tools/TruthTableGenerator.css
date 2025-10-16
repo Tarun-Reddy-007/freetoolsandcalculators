@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.top-banner,
+.bottom-banner {
+    height: 20vh;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ad-space {
+    background: #ddd;
+    color: #333;
+    border: 1px dashed #888;
+    width: 95%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color .3s;
+}
+
+.nav-links a:hover {
+    color: #010056;
+}
+
+.hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    min-height: 66vh;
+}
+
+.left-banner {
+    width: 20%;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ttg-section {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 24px 24px;
+    background: linear-gradient(120deg, #e3f2fd 0%, #f5f5f5 100%);
+}
+
+.ttg-card {
+    background: none;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ttg-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.ttg-title {
+    font-size: 2.15rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #0066cc;
+}
+
+.ttg-info-trigger {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0066cc;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e3f2fd 70%);
+    color: #0066cc;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    transition: transform .35s, box-shadow .35s;
+}
+
+.ttg-info-trigger:hover,
+.ttg-info-trigger:focus-visible {
+    transform: translateY(-3px) scale(1.06);
+    outline: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+}
+
+.ttg-info-trigger:active {
+    transform: scale(.93);
+}
+
+.ttg-info-flyout {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: #ffffffee;
+    backdrop-filter: blur(6px);
+    border: 1px solid #c5d8e6;
+    border-radius: 18px;
+    padding: 18px 20px 16px;
+    width: min(620px, 90vw);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px) scale(.98);
+    transition: opacity .55s, transform .55s;
+    z-index: 40;
+}
+
+.ttg-title-row:hover .ttg-info-flyout,
+.ttg-info-trigger:focus+.ttg-info-flyout,
+.ttg-info-trigger:focus-visible+.ttg-info-flyout {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.ttg-info-flyout h2 {
+    font-size: 1.15rem;
+    color: #0066cc;
+    margin-bottom: 6px;
+}
+
+.ttg-info-flyout p {
+    font-size: .9rem;
+    color: #222;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.ttg-info-flyout ul {
+    list-style: disc;
+    margin: 0 0 10px 18px;
+    padding: 0;
+    font-size: .8rem;
+}
+
+.ttg-info-flyout .disclaimer {
+    font-size: .62rem;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    opacity: .85;
+}
+
+.ttg-interaction-row {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+@media (min-width:980px) {
+    .ttg-interaction-row {
+        flex-wrap: nowrap;
+    }
+}
+
+.ttg-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #e3f2fd;
+    border-radius: 14px;
+    padding: 18px 16px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+
+.ttg-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ttg-form label {
+    font-size: .95rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.ttg-form .input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.ttg-form input[type=text] {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #b0bec5;
+    font-size: .95rem;
+    background: #f7fafd;
+    color: #222;
+    transition: border .3s;
+}
+
+.ttg-form input:focus {
+    border: 1.5px solid #0066cc;
+    outline: none;
+}
+
+.ttg-btn {
+    margin-top: 4px;
+    padding: 11px 0;
+    background: linear-gradient(90deg, #0066cc 60%, #333 100%);
+    color: #fff;
+    font-size: 1.02rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    transition: background .35s, transform .25s;
+}
+
+.ttg-btn:hover {
+    background: linear-gradient(90deg, #004a94 60%, #111 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.ttg-result-container {
+    width: 100%;
+    max-width: 360px;
+    background: linear-gradient(140deg, #f0f7ff 0%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 18px 16px 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: scale(.95) translateY(40px);
+    pointer-events: none;
+    transition: opacity .7s cubic-bezier(.42, 0, .58, 1), transform .7s cubic-bezier(.42, 0, .58, 1);
+}
+
+.ttg-result-container.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+    animation: acPop 1.05s cubic-bezier(.42, 0, .58, 1);
+}
+
+.ttg-main-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 14px;
+    width: 100%;
+}
+
+.ttg-result-label {
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #0066cc;
+    letter-spacing: .6px;
+}
+
+.ttg-table-wrapper {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.ttg-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+}
+
+.ttg-table th,
+.ttg-table td {
+    border: 1px solid #b0bec5;
+    padding: 6px 10px;
+    font-size: .85rem;
+    text-align: center;
+}
+
+.ttg-table th {
+    background: #e3f2fd;
+    color: #0066cc;
+}
+
+.ttg-table tr:nth-child(even) {
+    background: #f7fafd;
+}
+
+.ttg-table tr:nth-child(odd) {
+    background: #fff;
+}
+
+.ttg-disclaimer {
+    margin-top: 10px;
+    font-size: .55rem;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #555;
+    text-align: center;
+}
+
+@keyframes acPop {
+    0% {
+        opacity: 0;
+        transform: scale(.8) translateY(60px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@media (min-width:900px) {
+    .bottom-banner {
+        display: none;
+    }
+}
+@media (max-width:900px) {
+    .left-banner {
+        display: none;
+    }
+
+    .ttg-section {
+        padding: 30px 14px;
+    }
+}
+
+@media (max-width:700px) {
+    .ttg-form {
+        max-width: 100%;
+    }
+
+    .ttg-result-container {
+        max-width: 100%;
+    }
+
+    .ttg-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width:850px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #0066cc;
+        position: absolute;
+        top: 157px;
+        width: 30%;
+        padding: 10px 0 10px 14px;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.layout-shell {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content-row {
+    flex: 1 1 auto;
+    display: flex;
+    min-height: 0;
+}
+
+.scroll-panel {
+background: linear-gradient(120deg, #e3f2fd 0%, #f5f5f5 100%);
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0 0 8px 0;
+}

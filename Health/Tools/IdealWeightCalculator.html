@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="IdealWeightCalculator.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="ideal-tool-section">
+      <div class="ideal-card">
+        <div class="ideal-title-row">
+          <h1 class="ideal-title">Ideal Weight Calculator</h1>
+          <button type="button" class="ideal-info-trigger" aria-describedby="idealInfoPanel" title="About" tabindex="0">i</button>
+          <div class="ideal-info-flyout" id="idealInfoPanel" role="tooltip" aria-hidden="true">
+            <h2>What Is 'Ideal Weight'?</h2>
+            <p>There is no single perfect number. This tool gives estimates from common formulas plus a BMI-based healthy range to inform—not prescribe—goals.</p>
+            <p class="ideal-sub">Formulas Included</p>
+            <p>
+              <strong>Devine (1974)</strong>, <strong>Robinson (1983)</strong>, <strong>Miller (1983)</strong>, <strong>Hamwi (1964)</strong> — all linear height models originally for medication dosing or population norms.
+            </p>
+            <p class="ideal-disclaimer">Estimates only; body composition, frame, age, ethnicity, muscle mass & health status matter more.</p>
+          </div>
+        </div>
+        <div class="ideal-interaction-row">
+          <form id="idealForm" class="ideal-form">
+            <div class="input-group">
+              <label for="sex">Sex</label>
+              <div class="input-row">
+                <select id="sex" name="sex">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group" id="heightGroup">
+              <label for="height">Height</label>
+              <div class="input-row">
+                <input type="number" id="height" name="height" min="120" max="230" placeholder="Height" required>
+                <select id="heightUnit" name="heightUnit">
+                  <option value="cm">cm</option>
+                  <option value="ft">ft/in</option>
+                </select>
+              </div>
+              <div class="input-row" id="inchesRow" style="display:none;">
+                <input type="number" id="heightInches" name="heightInches" min="0" max="11" placeholder="Inches">
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Show Formulas</label>
+              <div class="formula-options" id="formulaOptions">
+                <label><input type="checkbox" value="devine" checked> Devine</label>
+                <label><input type="checkbox" value="robinson" checked> Robinson</label>
+                <label><input type="checkbox" value="miller" checked> Miller</label>
+                <label><input type="checkbox" value="hamwi" checked> Hamwi</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="bmiLow">Custom BMI Range (Optional)</label>
+              <div class="input-row">
+                <input type="number" id="bmiLow" placeholder="Low BMI (e.g. 18.5)" step="0.1" min="10" max="30">
+                <input type="number" id="bmiHigh" placeholder="High BMI (e.g. 24.9)" step="0.1" min="15" max="40">
+              </div>
+            </div>
+            <button type="submit" class="ideal-btn">Calculate</button>
+          </form>
+          <div class="ideal-result-container" id="idealResultContainer" style="display:none;">
+            <div class="ideal-result">
+              <span class="ideal-value" id="idealPrimaryValue">--</span>
+              <span class="ideal-label" id="idealPrimaryLabel">Median Estimate (kg)</span>
+            </div>
+            <div class="ideal-progress-wrapper">
+              <div class="ideal-progress-bar"><div class="ideal-progress" id="idealProgress"></div></div>
+              <div class="ideal-scale"><span>Lighter</span><span>Heavier</span></div>
+            </div>
+            <div class="ideal-breakdown" id="idealBreakdown"></div>
+            <div class="ideal-bmi-range" id="idealBmiRange"></div>
+            <div class="ideal-tips" id="idealTips"></div>
+            <div class="ideal-disclaimer-bottom">Not medical advice. Discuss goals with a qualified professional.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+    const heightUnit = document.getElementById('heightUnit');
+    const heightInput = document.getElementById('height');
+    const inchesRow = document.getElementById('inchesRow');
+    const idealForm = document.getElementById('idealForm');
+    const idealResultContainer = document.getElementById('idealResultContainer');
+    const idealPrimaryValue = document.getElementById('idealPrimaryValue');
+    const idealPrimaryLabel = document.getElementById('idealPrimaryLabel');
+    const idealProgress = document.getElementById('idealProgress');
+    const idealBreakdown = document.getElementById('idealBreakdown');
+    const idealBmiRange = document.getElementById('idealBmiRange');
+    const idealTips = document.getElementById('idealTips');
+
+    heightUnit.addEventListener('change', () => {
+      if(heightUnit.value === 'ft'){ inchesRow.style.display='flex'; heightInput.placeholder='Feet'; }
+      else { inchesRow.style.display='none'; heightInput.placeholder='Height'; }
+    });
+
+    function toCm(feetVal, inchVal){ return (feetVal * 30.48) + (inchVal * 2.54); }
+
+    const formulaFns = {
+      devine: (sex, cm) => { // kg
+        const inches = cm / 2.54; const baseIn = sex==='male'?50:45.5; const over = Math.max(0, inches - 60); return baseIn + 2.3 * over; },
+      robinson: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex==='male'?52:49) + (sex==='male'?1.9:1.7) * over; },
+      miller: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex==='male'?56.2:53.1) + (sex==='male'?1.41:1.36) * over; },
+      hamwi: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex==='male'?48:45.5) + (sex==='male'?2.7:2.2) * over; }
+    };
+
+    function median(values){ const sorted=[...values].sort((a,b)=>a-b); const n=sorted.length; if(!n) return 0; if(n%2) return sorted[(n-1)/2]; return (sorted[n/2-1]+sorted[n/2])/2; }
+
+    idealForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const sex = document.getElementById('sex').value;
+      let heightCm;
+      if(heightUnit.value==='cm'){ heightCm = parseFloat(heightInput.value); }
+      else { const feet = parseFloat(heightInput.value); const inches = parseFloat(document.getElementById('heightInches').value)||0; heightCm = toCm(feet, inches); }
+      if(!heightCm || heightCm < 120 || heightCm > 250){ idealResultContainer.style.display='none'; idealResultContainer.classList.remove('show'); return; }
+
+      // Collect selected formulas
+      const selected = [...document.querySelectorAll('#formulaOptions input:checked')].map(c=>c.value);
+      if(selected.length===0){ idealBreakdown.innerHTML='<div class="row">Select at least one formula.</div>'; idealResultContainer.style.display='flex'; return; }
+
+      const results = selected.map(key => { const val = formulaFns[key](sex, heightCm); return { key, value: val }; });
+      const values = results.map(r=>r.value);
+      const med = median(values);
+      idealPrimaryValue.textContent = med.toFixed(1);
+      idealPrimaryLabel.textContent = 'Median Estimate (kg)';
+
+      // Build breakdown
+      idealBreakdown.innerHTML = results.map(r => `<div class="row"><span class="method">${r.key.toUpperCase()}</span><span>${r.value.toFixed(1)} kg</span></div>`).join('');
+
+      // BMI range
+      let bmiLow = parseFloat(document.getElementById('bmiLow').value); let bmiHigh = parseFloat(document.getElementById('bmiHigh').value);
+      if(!(bmiLow>0) || !(bmiHigh>0) || bmiHigh <= bmiLow){ bmiLow=18.5; bmiHigh=24.9; }
+      const m2 = (heightCm/100)**2;
+      const weightLow = bmiLow * m2; const weightHigh = bmiHigh * m2;
+      idealBmiRange.textContent = `BMI ${bmiLow.toFixed(1)}–${bmiHigh.toFixed(1)} => ${weightLow.toFixed(1)} – ${weightHigh.toFixed(1)} kg`;
+
+      // Progress bar mapping across BMI band
+      const min = weightLow; const max = weightHigh; const clamped = Math.min(max, Math.max(min, med)); const percent = ((clamped - min) / (max - min)) * 100;
+      idealProgress.style.width = percent + '%';
+      idealProgress.style.background = percent < 33 ? '#2196f3' : percent < 66 ? '#4caf50' : '#ff9800';
+
+      // Tips
+      let tip;
+      if(med < weightLow) tip = 'Median formula estimate is below healthy BMI band—ensure adequate nutrition & muscle mass.';
+      else if(med > weightHigh) tip = 'Median estimate sits above typical BMI band—consider composition (muscle vs. fat).';
+      else tip = 'Median estimate is inside your selected BMI band—focus on strength, sleep, and sustainable habits.';
+      idealTips.textContent = tip;
+
+      idealResultContainer.style.display='flex';
+      setTimeout(()=>{ idealResultContainer.classList.add('show'); idealResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+    });
+  </script>
+</body>
+</html>

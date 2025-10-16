@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="AgeCalculator.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="ac-section">
+      <div class="ac-card">
+        <div class="ac-title-row">
+          <h1 class="ac-title">Age Calculator</h1>
+          <button type="button" class="ac-info-trigger" aria-describedby="acInfo" title="How age is computed" tabindex="0">i</button>
+          <div class="ac-info-flyout" id="acInfo" role="tooltip" aria-hidden="true">
+            <h2>How Your Exact Age Is Calculated</h2>
+            <p>This tool calculates your chronological age from your Date of Birth to the Selected Date (defaults to today) using calendar math (accounting for leap years).</p>
+            <ul>
+              <li>Years, months, days difference</li>
+              <li>Total days lived (incl. leap days)</li>
+              <li>Total weeks & hours</li>
+              <li>Next birthday countdown</li>
+            </ul>
+            <p class="disclaimer">Informational only. Not for legal age verification.</p>
+          </div>
+        </div>
+        <div class="ac-interaction-row">
+          <form id="ageForm" class="ac-form" autocomplete="off">
+            <div class="input-group">
+              <label for="dob">Date of Birth</label>
+              <div class="input-row"><input type="date" id="dob" required /></div>
+            </div>
+            <div class="input-group">
+              <label for="asof">As of Date (optional)</label>
+              <div class="input-row"><input type="date" id="asof" /></div>
+              <div class="inline-toggle"><input type="checkbox" id="useToday" checked /> <label for="useToday">Use today</label></div>
+            </div>
+            <div class="input-group">
+              <label for="lifeExp">Target Life Expectancy (yrs, optional)</label>
+              <div class="input-row"><input type="number" min="1" max="130" id="lifeExp" placeholder="e.g. 80" /></div>
+            </div>
+            <button type="submit" class="ac-btn">Calculate Age</button>
+          </form>
+          <div class="ac-result-container" id="ageResult" style="display:none;">
+            <div class="ac-main-result">
+              <span class="ac-age-value" id="ageMain">--</span>
+              <span class="ac-age-label">Years Old</span>
+            </div>
+            <div class="ac-progress-wrapper" id="lifeProgressWrap" style="display:none;">
+              <div class="ac-progress-bar"><div class="ac-progress" id="lifeProgress"></div></div>
+              <div class="ac-scale"><span>Born</span><span>Target</span></div>
+            </div>
+            <div class="ac-breakdown" id="ageBreakdown"></div>
+            <div class="ac-stats-grid" id="ageStats"></div>
+            <div class="ac-tips" id="ageTips"></div>
+            <div class="ac-disclaimer">Approximate figures; leap seconds ignored.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const dobEl=document.getElementById('dob');
+    const asofEl=document.getElementById('asof');
+    const useTodayEl=document.getElementById('useToday');
+    const form=document.getElementById('ageForm');
+    const resultBox=document.getElementById('ageResult');
+    const ageMain=document.getElementById('ageMain');
+    const breakdownEl=document.getElementById('ageBreakdown');
+    const statsEl=document.getElementById('ageStats');
+    const tipsEl=document.getElementById('ageTips');
+    const lifeExpEl=document.getElementById('lifeExp');
+    const lifeProgress=document.getElementById('lifeProgress');
+    const lifeProgressWrap=document.getElementById('lifeProgressWrap');
+
+    // Default as-of date to today visually
+    (function init(){const today=new Date();asofEl.value=today.toISOString().substring(0,10);})();
+    useTodayEl.addEventListener('change',()=>{if(useTodayEl.checked){const t=new Date();asofEl.value=t.toISOString().substring(0,10);asofEl.disabled=true;}else{asofEl.disabled=false;}});useTodayEl.dispatchEvent(new Event('change'));
+
+    function diffDetailed(start,end){ // returns object
+      let y=end.getFullYear()-start.getFullYear();
+      let m=end.getMonth()-start.getMonth();
+      let d=end.getDate()-start.getDate();
+      if(d<0){ // borrow from previous month
+        const prevMonth=new Date(end.getFullYear(),end.getMonth(),0); // last day previous month
+        d+=prevMonth.getDate();
+        m--;}
+      if(m<0){m+=12;y--;}
+      return {years:y,months:m,days:d};
+    }
+    function totalDays(start,end){return Math.floor((end-start)/86400000);} // ms in day
+    function isLeap(year){return (year%4===0 && year%100!==0)||year%400===0;}
+    function nextBirthday(dob,asof){const year=asof.getFullYear();let nb=new Date(year,dob.getMonth(),dob.getDate());if(nb<asof||nb.getTime()===asof.getTime()){nb=new Date(year+1,dob.getMonth(),dob.getDate());}return nb;}
+
+    form.addEventListener('submit',e=>{e.preventDefault();
+      const dobVal=dobEl.value; if(!dobVal) return; const dob=new Date(dobVal+'T00:00:00'); if(isNaN(dob)) return;
+      let asofDate=new Date(asofEl.value+'T00:00:00'); if(useTodayEl.checked){const t=new Date(); asofDate=new Date(t.getFullYear(),t.getMonth(),t.getDate());}
+      if(asofDate<dob){alert('As of date must be after Date of Birth.');return;}
+      const det=diffDetailed(dob,asofDate);
+      const daysLived=totalDays(dob,asofDate);
+      const weeks=Math.floor(daysLived/7);
+      const hours=daysLived*24;
+      const minutes=hours*60;
+      const seconds=minutes*60;
+      const ageFloat=daysLived/365.2425; // tropical year approx
+      ageMain.textContent=det.years;
+
+      // Breakdown list
+      breakdownEl.innerHTML='';
+      const breakdownData=[['Exact',''+det.years+'y '+det.months+'m '+det.days+'d'],['Months',''+(det.years*12+det.months)],['Weeks',weeks.toLocaleString()],['Days',daysLived.toLocaleString()],['Hours',hours.toLocaleString()]];
+      breakdownData.forEach(r=>{const div=document.createElement('div');div.className='ac-row';div.innerHTML='<span>'+r[0]+'</span><span>'+r[1]+'</span>';breakdownEl.appendChild(div);});
+
+      // Stats
+      statsEl.innerHTML='';
+      const leapYears=[];for(let y=dob.getFullYear();y<=asofDate.getFullYear();y++){if(isLeap(y)) leapYears.push(y);}const leapsCount=leapYears.length;const nextB=nextBirthday(dob,asofDate);const daysToNext=totalDays(asofDate,nextB);const percentYear=((365.2425-daysToNext)/365.2425)*100;
+      const stats=[{lbl:'Age (yrs)',val:ageFloat.toFixed(2)},{lbl:'Days to Next Bday',val:daysToNext},{lbl:'% Current Year',val:percentYear.toFixed(1)+'%'},{lbl:'Leap Yrs Seen',val:leapsCount},{lbl:'Minutes',val:minutes.toLocaleString()},{lbl:'Seconds',val:seconds.toLocaleString()}];
+      stats.forEach(s=>{const card=document.createElement('div');card.className='ac-stat';card.innerHTML='<span class="val">'+s.val+'</span><span class="lbl">'+s.lbl+'</span>';statsEl.appendChild(card);});
+
+      // Life expectancy progress
+      const lifeExp=parseFloat(lifeExpEl.value); if(lifeExp && lifeExp>0){const pct=Math.min(100,(ageFloat/lifeExp)*100);lifeProgress.style.width=pct+'%';lifeProgress.style.background=pct<33?'#2196f3':pct<66?'#4caf50':'#ff9800';lifeProgressWrap.style.display='block';} else {lifeProgressWrap.style.display='none';}
+
+      // Tips
+      let tip='Age is calculated using actual calendar differences. '; if(lifeExp){const yrsLeft=Math.max(0,(lifeExp-ageFloat));tip+='Approx. '+yrsLeft.toFixed(1)+' years until target life expectancy.';}else{tip+='Add a life expectancy to visualize progress.';} tip+=' '+daysToNext+' days until your next birthday.'; tipsEl.textContent=tip;
+
+      // Show box animated
+      resultBox.style.display='flex'; setTimeout(()=>{resultBox.classList.add('show');resultBox.scrollIntoView({behavior:'smooth',block:'center'});},50);
+    });
+  </script>
+</body>
+</html>

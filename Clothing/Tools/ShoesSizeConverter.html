@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="ShoeSizeConverter.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="ssc-section">
+      <div class="ssc-card">
+        <div class="ssc-title-row">
+          <h1 class="ssc-title">Shoe Size Converter</h1>
+          <button type="button" class="ssc-info-trigger" aria-describedby="sscInfo" title="How shoe size conversion works" tabindex="0">i</button>
+          <div class="ssc-info-flyout" id="sscInfo" role="tooltip" aria-hidden="true">
+            <h2>How Shoe Size Conversion Works</h2>
+            <p>This tool converts shoe sizes between different international standards (US, UK, EU, JP) for men, women, and kids. Select your gender, region, and size to see the equivalent in other regions.</p>
+            <ul>
+              <li>Supports Men, Women, Kids</li>
+              <li>Converts between US, UK, EU, JP</li>
+              <li>For common shoe sizes</li>
+            </ul>
+            <p class="disclaimer">For reference only. Always check brand-specific charts for best fit.</p>
+          </div>
+        </div>
+        <div class="ssc-interaction-row">
+          <form id="shoeForm" class="ssc-form" autocomplete="off">
+            <div class="input-group">
+              <label for="gender">Gender</label>
+              <div class="input-row">
+                <select id="gender" required>
+                  <option value="men">Men</option>
+                  <option value="women">Women</option>
+                  <option value="kids">Kids</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="fromRegion">From Region</label>
+              <div class="input-row">
+                <select id="fromRegion" required>
+                  <option value="us">US</option>
+                  <option value="uk">UK</option>
+                  <option value="eu">EU</option>
+                  <option value="jp">JP</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="fromSize">Your Size</label>
+              <div class="input-row">
+                <select id="fromSize" required>
+                  <option value="">Select size...</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="ssc-btn">Convert Size</button>
+          </form>
+          <div class="ssc-result-container" id="sscResult" style="display:none;">
+            <div class="ssc-main-result">
+              <span class="ssc-size-value" id="sscMain">--</span>
+              <span class="ssc-size-label">Equivalent Sizes</span>
+            </div>
+            <div class="ssc-breakdown" id="sscBreakdown"></div>
+            <div class="ssc-tips" id="sscTips"></div>
+            <div class="ssc-disclaimer">For guidance only. Sizing may vary by brand.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    // Shoe size tables
+    const shoeTables = {
+      men: [
+        {us: "6", uk: "5.5", eu: "39", jp: "24"},
+        {us: "7", uk: "6.5", eu: "40", jp: "25"},
+        {us: "8", uk: "7.5", eu: "41", jp: "26"},
+        {us: "9", uk: "8.5", eu: "42", jp: "27"},
+        {us: "10", uk: "9.5", eu: "43", jp: "28"},
+        {us: "11", uk: "10.5", eu: "44", jp: "29"},
+        {us: "12", uk: "11.5", eu: "45", jp: "30"}
+      ],
+      women: [
+        {us: "5", uk: "3", eu: "36", jp: "22"},
+        {us: "6", uk: "4", eu: "37", jp: "23"},
+        {us: "7", uk: "5", eu: "38", jp: "24"},
+        {us: "8", uk: "6", eu: "39", jp: "25"},
+        {us: "9", uk: "7", eu: "40", jp: "26"},
+        {us: "10", uk: "8", eu: "41", jp: "27"}
+      ],
+      kids: [
+        {us: "10C", uk: "9", eu: "27", jp: "16.5"},
+        {us: "11C", uk: "10", eu: "28", jp: "17.5"},
+        {us: "12C", uk: "11", eu: "29", jp: "18.5"},
+        {us: "13C", uk: "12", eu: "30", jp: "19.5"},
+        {us: "1Y", uk: "13", eu: "32", jp: "20.5"},
+        {us: "2Y", uk: "1", eu: "33", jp: "21.5"},
+        {us: "3Y", uk: "2", eu: "34", jp: "22.5"}
+      ]
+    };
+
+    function normalizeSize(size) {
+      return String(size).trim().toUpperCase().replace(/\s+/g, "");
+    }
+
+    function getAvailableShoeSizes(gender, fromRegion) {
+      const table = shoeTables[gender];
+      if (!table) return [];
+      const sizes = table.map(row => row[fromRegion]);
+      return Array.from(new Set(sizes)).sort((a, b) => {
+        const na = parseFloat(a), nb = parseFloat(b);
+        if (!isNaN(na) && !isNaN(nb)) return na - nb;
+        return a.localeCompare(b);
+      });
+    }
+
+    function findShoeConversion(gender, fromRegion, fromSize) {
+      const table = shoeTables[gender];
+      if (!table) return null;
+      const normSize = normalizeSize(fromSize);
+      for (const row of table) {
+        if (normalizeSize(row[fromRegion]) === normSize) {
+          return row;
+        }
+      }
+      return null;
+    }
+
+    const form = document.getElementById('shoeForm');
+    const resultBox = document.getElementById('sscResult');
+    const sizeMain = document.getElementById('sscMain');
+    const breakdownEl = document.getElementById('sscBreakdown');
+    const tipsEl = document.getElementById('sscTips');
+    const fromSizeSelect = document.getElementById('fromSize');
+
+    function updateShoeSizeOptions() {
+      const gender = document.getElementById('gender').value;
+      const fromRegion = document.getElementById('fromRegion').value;
+      const sizes = getAvailableShoeSizes(gender, fromRegion);
+      fromSizeSelect.innerHTML = '<option value=\"\">Select size...</option>';
+      sizes.forEach(size => {
+        const opt = document.createElement('option');
+        opt.value = size;
+        opt.textContent = size;
+        fromSizeSelect.appendChild(opt);
+      });
+    }
+
+    document.getElementById('gender').addEventListener('change', updateShoeSizeOptions);
+    document.getElementById('fromRegion').addEventListener('change', updateShoeSizeOptions);
+
+    // Initialize on page load
+    updateShoeSizeOptions();
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const gender = document.getElementById('gender').value;
+      const fromRegion = document.getElementById('fromRegion').value;
+      const fromSize = document.getElementById('fromSize').value;
+
+      const conversion = findShoeConversion(gender, fromRegion, fromSize);
+
+      if (conversion) {
+        sizeMain.textContent = `US: ${conversion.us} | UK: ${conversion.uk} | EU: ${conversion.eu} | JP: ${conversion.jp}`;
+        breakdownEl.innerHTML = `
+          <div class="ssc-row"><span>US</span><span>${conversion.us}</span></div>
+          <div class="ssc-row"><span>UK</span><span>${conversion.uk}</span></div>
+          <div class="ssc-row"><span>EU</span><span>${conversion.eu}</span></div>
+          <div class="ssc-row"><span>JP</span><span>${conversion.jp}</span></div>
+        `;
+        tipsEl.textContent = 'Always check the brand’s official size chart for best fit.';
+      } else {
+        sizeMain.textContent = 'N/A';
+        breakdownEl.innerHTML = `<div class="ssc-row"><span>No conversion found for input size.</span></div>`;
+        tipsEl.textContent = 'Please check your input or try a different size. Not all sizes are available for all regions/types.';
+      }
+      resultBox.style.display = 'flex';
+      setTimeout(() => {
+        resultBox.classList.add('show');
+        resultBox.scrollIntoView({behavior:'smooth',block:'center'});
+      }, 50);
+    });
+  </script>
+</body>
+</html>

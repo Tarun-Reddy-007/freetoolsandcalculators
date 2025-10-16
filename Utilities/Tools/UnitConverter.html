@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="UnitConverter.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="uc-section">
+      <div class="uc-card">
+        <div class="uc-title-row">
+          <h1 class="uc-title">Unit Converter</h1>
+          <button type="button" class="uc-info-trigger" aria-describedby="ucInfo" title="How conversion works" tabindex="0">i</button>
+          <div class="uc-info-flyout" id="ucInfo" role="tooltip" aria-hidden="true">
+            <h2>How Conversion Works</h2>
+            <p>This tool converts between common units for length, mass, temperature, and more. Enter a value, select units, and get instant results.</p>
+            <ul>
+              <li>Supports length, mass, temperature, area, volume</li>
+              <li>Accurate and instant conversion</li>
+              <li>Shows conversion formula</li>
+            </ul>
+            <p class="disclaimer">All calculations are done locally in your browser.</p>
+          </div>
+        </div>
+        <div class="uc-interaction-row">
+          <form id="ucForm" class="uc-form" autocomplete="off">
+            <div class="input-group">
+              <label for="ucValue">Value</label>
+              <div class="input-row">
+                <input type="number" id="ucValue" required placeholder="Enter value" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="ucCategory">Category</label>
+              <div class="input-row">
+                <select id="ucCategory" required>
+                  <option value="length">Length</option>
+                  <option value="mass">Mass</option>
+                  <option value="temperature">Temperature</option>
+                  <option value="area">Area</option>
+                  <option value="volume">Volume</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="ucFrom">From</label>
+              <div class="input-row">
+                <select id="ucFrom"></select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="ucTo">To</label>
+              <div class="input-row">
+                <select id="ucTo"></select>
+              </div>
+            </div>
+            <button type="submit" class="uc-btn">Convert</button>
+          </form>
+          <div class="uc-result-container" id="ucResult" style="display:none;">
+            <div class="uc-main-result">
+              <span class="uc-value" id="ucValueResult">--</span>
+              <span class="uc-label" id="ucLabelResult">Result</span>
+            </div>
+            <div class="uc-breakdown" id="ucBreakdown"></div>
+            <div class="uc-tips" id="ucTips"></div>
+            <div class="uc-disclaimer">All conversions are approximate. Double-check for critical uses.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    // Unit definitions
+    const units = {
+      length: [
+        {name:"Meter (m)", value:"m", toBase:v=>v, fromBase:v=>v},
+        {name:"Kilometer (km)", value:"km", toBase:v=>v*1000, fromBase:v=>v/1000},
+        {name:"Centimeter (cm)", value:"cm", toBase:v=>v/100, fromBase:v=>v*100},
+        {name:"Millimeter (mm)", value:"mm", toBase:v=>v/1000, fromBase:v=>v*1000},
+        {name:"Mile (mi)", value:"mi", toBase:v=>v*1609.344, fromBase:v=>v/1609.344},
+        {name:"Yard (yd)", value:"yd", toBase:v=>v*0.9144, fromBase:v=>v/0.9144},
+        {name:"Foot (ft)", value:"ft", toBase:v=>v*0.3048, fromBase:v=>v/0.3048},
+        {name:"Inch (in)", value:"in", toBase:v=>v*0.0254, fromBase:v=>v/0.0254}
+      ],
+      mass: [
+        {name:"Kilogram (kg)", value:"kg", toBase:v=>v, fromBase:v=>v},
+        {name:"Gram (g)", value:"g", toBase:v=>v/1000, fromBase:v=>v*1000},
+        {name:"Milligram (mg)", value:"mg", toBase:v=>v/1e6, fromBase:v=>v*1e6},
+        {name:"Pound (lb)", value:"lb", toBase:v=>v*0.45359237, fromBase:v=>v/0.45359237},
+        {name:"Ounce (oz)", value:"oz", toBase:v=>v*0.0283495231, fromBase:v=>v/0.0283495231}
+      ],
+      temperature: [
+        {name:"Celsius (°C)", value:"C", toBase:v=>v, fromBase:v=>v},
+        {name:"Fahrenheit (°F)", value:"F", toBase:v=>(v-32)*5/9, fromBase:v=>v*9/5+32},
+        {name:"Kelvin (K)", value:"K", toBase:v=>v-273.15, fromBase:v=>v+273.15}
+      ],
+      area: [
+        {name:"Square Meter (m²)", value:"m2", toBase:v=>v, fromBase:v=>v},
+        {name:"Square Kilometer (km²)", value:"km2", toBase:v=>v*1e6, fromBase:v=>v/1e6},
+        {name:"Square Centimeter (cm²)", value:"cm2", toBase:v=>v/10000, fromBase:v=>v*10000},
+        {name:"Square Millimeter (mm²)", value:"mm2", toBase:v=>v/1e6, fromBase:v=>v*1e6},
+        {name:"Hectare (ha)", value:"ha", toBase:v=>v*10000, fromBase:v=>v/10000},
+        {name:"Acre (ac)", value:"ac", toBase:v=>v*4046.85642, fromBase:v=>v/4046.85642}
+      ],
+      volume: [
+        {name:"Cubic Meter (m³)", value:"m3", toBase:v=>v, fromBase:v=>v},
+        {name:"Liter (L)", value:"L", toBase:v=>v/1000, fromBase:v=>v*1000},
+        {name:"Milliliter (mL)", value:"mL", toBase:v=>v/1e6, fromBase:v=>v*1e6},
+        {name:"Cubic Centimeter (cm³)", value:"cm3", toBase:v=>v/1e6, fromBase:v=>v*1e6},
+        {name:"Cubic Inch (in³)", value:"in3", toBase:v=>v*0.000016387064, fromBase:v=>v/0.000016387064},
+        {name:"Cubic Foot (ft³)", value:"ft3", toBase:v=>v*0.0283168466, fromBase:v=>v/0.0283168466},
+        {name:"Gallon (US gal)", value:"gal", toBase:v=>v*0.00378541178, fromBase:v=>v/0.00378541178}
+      ]
+    };
+
+    const ucCategory = document.getElementById('ucCategory');
+    const ucFrom = document.getElementById('ucFrom');
+    const ucTo = document.getElementById('ucTo');
+    const ucForm = document.getElementById('ucForm');
+    const ucValue = document.getElementById('ucValue');
+    const resultBox = document.getElementById('ucResult');
+    const valueResult = document.getElementById('ucValueResult');
+    const labelResult = document.getElementById('ucLabelResult');
+    const breakdownEl = document.getElementById('ucBreakdown');
+    const tipsEl = document.getElementById('ucTips');
+
+    function populateUnits(category) {
+      ucFrom.innerHTML = "";
+      ucTo.innerHTML = "";
+      units[category].forEach(u => {
+        const opt1 = document.createElement('option');
+        opt1.value = u.value;
+        opt1.textContent = u.name;
+        ucFrom.appendChild(opt1);
+        const opt2 = document.createElement('option');
+        opt2.value = u.value;
+        opt2.textContent = u.name;
+        ucTo.appendChild(opt2);
+      });
+      ucTo.selectedIndex = 1;
+    }
+
+    ucCategory.addEventListener('change', function() {
+      populateUnits(this.value);
+    });
+
+    // Initial population
+    populateUnits(ucCategory.value);
+
+    ucForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const val = parseFloat(ucValue.value);
+      const cat = ucCategory.value;
+      const from = ucFrom.value;
+      const to = ucTo.value;
+      if (isNaN(val)) return;
+      let fromUnit = units[cat].find(u=>u.value===from);
+      let toUnit = units[cat].find(u=>u.value===to);
+      let result, breakdown = "", tips = "";
+      if (cat === "temperature") {
+        // Convert to Celsius, then to target
+        let celsius = fromUnit.toBase(val);
+        result = toUnit.fromBase(celsius);
+        breakdown = `<b>Formula:</b> ${fromUnit.name} → Celsius → ${toUnit.name}`;
+        tips = "Tip: Temperature conversions are not linear like other units.";
+      } else {
+        // Convert to base, then to target
+        let base = fromUnit.toBase(val);
+        result = toUnit.fromBase(base);
+        breakdown = `<b>Formula:</b> ${val} ${fromUnit.value} = ${result} ${toUnit.value}`;
+        tips = "Tip: All conversions are approximate.";
+      }
+      valueResult.textContent = +result.toFixed(8);
+      labelResult.textContent = `${toUnit.name}`;
+      breakdownEl.innerHTML = breakdown;
+      tipsEl.textContent = tips;
+      resultBox.style.display = 'flex';
+      setTimeout(()=>{resultBox.classList.add('show');resultBox.scrollIntoView({behavior:'smooth',block:'center'});},50);
+    });
+  </script>
+</body>
+</html>

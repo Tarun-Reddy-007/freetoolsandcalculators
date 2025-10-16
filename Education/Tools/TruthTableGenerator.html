@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="TruthTableGenerator.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner">
+    
+  </header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="ttg-section">
+      <div class="ttg-card">
+        <div class="ttg-title-row">
+          <h1 class="ttg-title">Truth Table Generator</h1>
+          <button type="button" class="ttg-info-trigger" aria-describedby="ttgInfo" title="How it works" tabindex="0">i</button>
+          <div class="ttg-info-flyout" id="ttgInfo" role="tooltip" aria-hidden="true">
+            <h2>How the Truth Table Generator Works</h2>
+            <p>Enter a logical expression (e.g., <code>A &amp; B | !C</code>) and variable names. The tool will generate a complete truth table for all input combinations.</p>
+            <ul>
+              <li>Supports AND (&amp;), OR (|), NOT (!), XOR (^)</li>
+              <li>Up to 5 variables</li>
+              <li>Instant table generation</li>
+            </ul>
+            <p class="disclaimer">For educational use. Complex expressions may be limited.</p>
+          </div>
+        </div>
+        <div class="ttg-interaction-row">
+          <form id="ttgForm" class="ttg-form" autocomplete="off">
+            <div class="input-group">
+              <label for="variables">Variables (comma separated, e.g. A,B,C)</label>
+              <div class="input-row">
+                <input type="text" id="variables" required placeholder="A,B,C" />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="expression">Logical Expression</label>
+              <div class="input-row">
+                <input type="text" id="expression" required placeholder="A & B | !C" />
+              </div>
+            </div>
+            <button type="submit" class="ttg-btn">Generate Table</button>
+          </form>
+          <div class="ttg-result-container" id="ttgResult" style="display:none;">
+            <div class="ttg-main-result">
+              <span class="ttg-result-label">Truth Table</span>
+            </div>
+            <div class="ttg-table-wrapper" id="ttgTable"></div>
+            <div class="ttg-disclaimer">For educational purposes only.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    function parseVars(str) {
+      return str.split(',').map(v => v.trim()).filter(Boolean).slice(0, 5);
+    }
+
+    function getCombinations(vars) {
+      const n = vars.length, rows = [];
+      for (let i = 0; i < (1 << n); i++) {
+        const row = {};
+        vars.forEach((v, j) => row[v] = !!(i & (1 << (n - j - 1))));
+        rows.push(row);
+      }
+      return rows;
+    }
+
+    function safeEval(expr, vars, row) {
+      let e = expr;
+      vars.forEach(v => {
+        const re = new RegExp('\\b' + v + '\\b', 'g');
+        e = e.replace(re, row[v] ? '1' : '0');
+      });
+      e = e.replace(/!/g, '!');
+      e = e.replace(/&/g, '&&');
+      e = e.replace(/\|/g, '||');
+      e = e.replace(/\^/g, '^');
+      try {
+        // XOR handling
+        if (e.includes('^')) {
+          // Only supports binary XOR for simplicity
+          e = e.replace(/([01])\s*\^\s*([01])/g, (m,a,b)=> (a^b));
+        }
+        // eslint-disable-next-line no-eval
+        return !!eval(e.replace(/!/g, '!'));
+      } catch { return false; }
+    }
+
+    document.getElementById('ttgForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const vars = parseVars(document.getElementById('variables').value);
+      const expr = document.getElementById('expression').value;
+      if (!vars.length || !expr) return;
+      const rows = getCombinations(vars);
+      const table = document.createElement('table');
+      table.className = 'ttg-table';
+      const thead = document.createElement('thead');
+      const headRow = document.createElement('tr');
+      vars.forEach(v => {
+        const th = document.createElement('th');
+        th.textContent = v;
+        headRow.appendChild(th);
+      });
+      const th = document.createElement('th');
+      th.textContent = expr;
+      headRow.appendChild(th);
+      thead.appendChild(headRow);
+      table.appendChild(thead);
+      const tbody = document.createElement('tbody');
+      rows.forEach(row => {
+        const tr = document.createElement('tr');
+        vars.forEach(v => {
+          const td = document.createElement('td');
+          td.textContent = row[v] ? '1' : '0';
+          tr.appendChild(td);
+        });
+        const td = document.createElement('td');
+        td.textContent = safeEval(expr, vars, row) ? '1' : '0';
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      const tableWrap = document.getElementById('ttgTable');
+      tableWrap.innerHTML = '';
+      tableWrap.appendChild(table);
+      const resultBox = document.getElementById('ttgResult');
+      resultBox.style.display = 'flex';
+      setTimeout(() => {
+        resultBox.classList.add('show');
+        resultBox.scrollIntoView({behavior:'smooth',block:'center'});
+      }, 50);
+    });
+  </script>
+</body>
+</html>

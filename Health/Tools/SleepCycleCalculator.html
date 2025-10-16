@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="SleepCycleCalculator.css">
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="sleep-tool-section">
+      <div class="sleep-card">
+        <div class="sleep-title-row">
+          <h1 class="sleep-title">Sleep Cycle Calculator</h1>
+          <button type="button" class="sleep-info-trigger" aria-describedby="sleepInfoPanel" title="About" tabindex="0">i</button>
+          <div class="sleep-info-flyout" id="sleepInfoPanel" role="tooltip" aria-hidden="true">
+            <h2>How It Works</h2>
+            <p>This tool helps you target wake or bed times aligned with complete ~90‑minute sleep cycles (stages N1 → N2 → N3 → REM). Finishing cycles can reduce grogginess.</p>
+            <p class="sleep-sub">Assumptions</p>
+            <p>1 sleep cycle ≈ 90 min (range 80–110). Average sleep latency (time to fall asleep) default 15 min—adjust if needed.</p>
+            <p class="sleep-sub">Modes</p>
+            <ul style="list-style:none; padding:0; margin:0 0 10px 0; font-size:.8rem; display:grid; gap:4px;">
+              <li><strong>Wake Time Given:</strong> suggests bed times to complete 3–7 cycles.</li>
+              <li><strong>Bed Time Given:</strong> suggests wake times after 3–7 cycles.</li>
+              <li><strong>Target Sleep Duration:</strong> returns cycle count with closest fit.</li>
+            </ul>
+            <p class="sleep-disclaimer">Estimates only. Individual sleep architecture varies. Prioritize total sleep & consistency.</p>
+          </div>
+        </div>
+        <div class="sleep-interaction-row">
+          <form id="sleepForm" class="sleep-form">
+            <div class="input-group with-info">
+              <div class="field-label-row"><label>Mode</label><button type="button" class="field-info-trigger" aria-describedby="infoMode" tabindex="0">i</button><div class="field-info-flyout" id="infoMode" role="tooltip" aria-hidden="true">Choose what you already know: <strong>Wake</strong> time to find bed times, <strong>Bed</strong> time to find wake times, or a <strong>Target Duration</strong> to see how many full cycles that is.</div></div>
+              <div class="radio-row" role="radiogroup" aria-label="Mode">
+                <label><input type="radio" name="mode" value="wake" checked> Wake Time Known</label>
+                <label><input type="radio" name="mode" value="bed"> Bed Time Known</label>
+                <label><input type="radio" name="mode" value="duration"> Target Duration</label>
+              </div>
+            </div>
+            <div class="input-group with-info" id="wakeGroup">
+              <div class="field-label-row"><label for="wakeTime">Wake Time</label><button type="button" class="field-info-trigger" aria-describedby="infoWake" tabindex="0">i</button><div class="field-info-flyout" id="infoWake" role="tooltip" aria-hidden="true">Enter the time you <strong>need to wake up</strong>. We'll work backward adding cycles plus your sleep latency to suggest bed times.</div></div>
+              <div class="input-row">
+                <input type="time" id="wakeTime" name="wakeTime" value="07:00">
+              </div>
+            </div>
+            <div class="input-group with-info" id="bedGroup" style="display:none;">
+              <div class="field-label-row"><label for="bedTime">Bed Time</label><button type="button" class="field-info-trigger" aria-describedby="infoBed" tabindex="0">i</button><div class="field-info-flyout" id="infoBed" role="tooltip" aria-hidden="true">Enter when you <strong>plan to get into bed</strong>. We'll add latency then cycles to project optimal wake times.</div></div>
+              <div class="input-row">
+                <input type="time" id="bedTime" name="bedTime" value="22:30">
+              </div>
+            </div>
+            <div class="input-group with-info" id="durationGroup" style="display:none;">
+              <div class="field-label-row"><label for="targetHours">Target Duration (hours)</label><button type="button" class="field-info-trigger" aria-describedby="infoDuration" tabindex="0">i</button><div class="field-info-flyout" id="infoDuration" role="tooltip" aria-hidden="true">Desired <strong>sleep time (not time in bed)</strong>. We'll divide by cycle length to estimate how many full cycles that is.</div></div>
+              <div class="input-row">
+                <input type="number" id="targetHours" name="targetHours" min="3" max="12" step="0.5" placeholder="7.5">
+              </div>
+            </div>
+            <div class="input-group with-info">
+              <div class="field-label-row"><label for="latency">Sleep Latency (min)</label><button type="button" class="field-info-trigger" aria-describedby="infoLatency" tabindex="0">i</button><div class="field-info-flyout" id="infoLatency" role="tooltip" aria-hidden="true">Average minutes it takes you to <strong>fall asleep after lights out</strong>. Typical is 10–20. Increase if you often lie awake.</div></div>
+              <div class="input-row">
+                <input type="number" id="latency" name="latency" min="0" max="90" value="15">
+              </div>
+            </div>
+            <div class="input-group with-info">
+              <div class="field-label-row"><label for="cycleLength">Cycle Length (min)</label><button type="button" class="field-info-trigger" aria-describedby="infoCycle" tabindex="0">i</button><div class="field-info-flyout" id="infoCycle" role="tooltip" aria-hidden="true">Approximate length of one <strong>sleep cycle</strong>. Default 90. Shorter if you naturally wake earlier; longer if your REM runs late.</div></div>
+              <div class="input-row">
+                <input type="number" id="cycleLength" name="cycleLength" min="70" max="120" value="90">
+              </div>
+            </div>
+            <div class="input-group with-info">
+              <div class="field-label-row"><label for="quality">Recent Sleep Quality</label><button type="button" class="field-info-trigger" aria-describedby="infoQuality" tabindex="0">i</button><div class="field-info-flyout" id="infoQuality" role="tooltip" aria-hidden="true">A quick self‑rating guiding the tip message. <strong>Poor</strong>: consider an extra cycle. <strong>Great</strong>: consistency over extra time.</div></div>
+              <div class="input-row">
+                <select id="quality" name="quality">
+                  <option value="normal">Normal</option>
+                  <option value="poor">Poor (need more)</option>
+                  <option value="great">Great (slightly less ok)</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="sleep-btn">Calculate</button>
+          </form>
+          <div class="sleep-result-container" id="sleepResultContainer" style="display:none;">
+            <div class="sleep-result">
+              <span class="sleep-value" id="sleepPrimaryValue">--</span>
+              <span class="sleep-label" id="sleepPrimaryLabel">Suggested Times</span>
+            </div>
+            <div class="sleep-progress-wrapper">
+              <div class="sleep-progress-bar"><div class="sleep-progress" id="sleepProgress"></div></div>
+              <div class="sleep-scale"><span>Short</span><span>Long</span></div>
+            </div>
+            <div class="sleep-cycles-list" id="cyclesList"></div>
+            <div class="sleep-tips" id="sleepTips"></div>
+            <div class="sleep-disclaimer-bottom">Cycle model is approximate; focus on consistent schedule & adequate total sleep.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+
+  <script>
+    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+    const sleepForm = document.getElementById('sleepForm');
+    const sleepResultContainer = document.getElementById('sleepResultContainer');
+    const sleepPrimaryValue = document.getElementById('sleepPrimaryValue');
+    const sleepPrimaryLabel = document.getElementById('sleepPrimaryLabel');
+    const sleepProgress = document.getElementById('sleepProgress');
+    const cyclesList = document.getElementById('cyclesList');
+    const sleepTips = document.getElementById('sleepTips');
+
+    const modeRadios = [...document.querySelectorAll('input[name=mode]')];
+    const wakeGroup = document.getElementById('wakeGroup');
+    const bedGroup = document.getElementById('bedGroup');
+    const durationGroup = document.getElementById('durationGroup');
+
+    modeRadios.forEach(r => r.addEventListener('change', () => {
+      const mode = document.querySelector('input[name=mode]:checked').value;
+      wakeGroup.style.display = mode === 'wake' ? 'block' : 'none';
+      bedGroup.style.display = mode === 'bed' ? 'block' : 'none';
+      durationGroup.style.display = mode === 'duration' ? 'block' : 'none';
+    }));
+
+    function parseTime(hhmm){ if(!hhmm) return null; const [h,m] = hhmm.split(':').map(x=>parseInt(x,10)); return h*60+m; }
+    function formatTime(totalMinutes){ totalMinutes = (totalMinutes % (24*60) + 24*60) % (24*60); const h = Math.floor(totalMinutes/60); const m = totalMinutes%60; const h12 = ((h+11)%12)+1; const ampm = h<12 ? 'AM':'PM'; return `${h12}:${m.toString().padStart(2,'0')} ${ampm}`; }
+
+    function buildCycles(startMinutes, cycleLength, latency, countMin=3,countMax=7, direction='backward'){
+      const cycles = [];
+      for(let c=countMin;c<=countMax;c++){
+        const totalSleep = c * cycleLength; // minutes of sleep only
+        if(direction==='backward'){
+          const bed = startMinutes - latency - totalSleep; // bed time
+          const duration = totalSleep/60; // hours asleep
+          cycles.push({cycles:c, bedMinutes:bed, wakeMinutes:startMinutes, durationHours:duration});
+        } else if(direction==='forward') {
+          const wake = startMinutes + latency + totalSleep; // wake time
+          const duration = totalSleep/60;
+            cycles.push({cycles:c, bedMinutes:startMinutes, wakeMinutes:wake, durationHours:duration});
+        }
+      }
+      return cycles;
+    }
+
+    sleepForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const mode = document.querySelector('input[name=mode]:checked').value;
+      const latency = parseInt(document.getElementById('latency').value,10) || 0;
+      let cycleLength = parseInt(document.getElementById('cycleLength').value,10) || 90;
+      cycleLength = Math.min(120, Math.max(70, cycleLength));
+      const quality = document.getElementById('quality').value;
+
+      cyclesList.innerHTML = '';
+      let tip = '';
+      if(mode==='wake'){
+        const wake = parseTime(document.getElementById('wakeTime').value);
+        if(wake==null){ return; }
+        const sets = buildCycles(wake, cycleLength, latency, 3, 7, 'backward');
+        sets.reverse(); // show longest first maybe nicer
+        sets.forEach(s => {
+          const li = document.createElement('div');
+          li.className='cycle-item';
+          li.innerHTML = `<span><strong>${s.cycles} cycles</strong> (${(s.durationHours).toFixed(1)} h sleep)</span><span class="cycle-count">Bed: ${formatTime(s.bedMinutes)}</span>`;
+          cyclesList.appendChild(li);
+        });
+        sleepPrimaryValue.textContent = formatTime(sets[Math.floor(sets.length/2)].bedMinutes);
+        sleepPrimaryLabel.textContent = 'Mid Option Bed Time';
+        tip = 'Choose a bed time that gives you 4–6 full cycles; allow latency before first cycle.';
+      } else if(mode==='bed') {
+        const bed = parseTime(document.getElementById('bedTime').value);
+        if(bed==null){ return; }
+        const sets = buildCycles(bed, cycleLength, latency, 3, 7, 'forward');
+        sets.forEach(s => {
+          const li = document.createElement('div');
+          li.className='cycle-item';
+          li.innerHTML = `<span><strong>${s.cycles} cycles</strong> (${(s.durationHours).toFixed(1)} h sleep)</span><span class="cycle-count">Wake: ${formatTime(s.wakeMinutes)}</span>`;
+          cyclesList.appendChild(li);
+        });
+        sleepPrimaryValue.textContent = formatTime(sets[Math.floor(sets.length/2)].wakeMinutes);
+        sleepPrimaryLabel.textContent = 'Mid Option Wake Time';
+        tip = 'Aim to wake after a full cycle; avoid the middle of deep sleep (N3).';
+      } else { // duration
+        const targetHours = parseFloat(document.getElementById('targetHours').value) || 7.5;
+        const cyclesFloat = (targetHours*60)/cycleLength; // including only sleep time
+        const bestCycles = Math.round(cyclesFloat);
+        const actualSleep = bestCycles*cycleLength/60;
+        sleepPrimaryValue.textContent = `${bestCycles} cycles`;
+        sleepPrimaryLabel.textContent = `${actualSleep.toFixed(1)} h sleep (~${(actualSleep+latency/60).toFixed(1)} h in bed)`;
+        tip = 'Adjust cycle length or latency if this differs from your actual experience.';
+      }
+
+      // Progress bar: map total recommended range 4.5h to 9h (sleep only)
+      let representativeHours = 0;
+      if(mode==='duration'){
+        representativeHours = parseFloat(sleepPrimaryLabel.textContent)||0; // fallback
+      } else {
+        // derive from middle selection cyclesList midpoint
+        const items = cyclesList.querySelectorAll('.cycle-item');
+        if(items.length){
+          const mid = items[Math.floor(items.length/2)].innerText; // parse hours inside parentheses
+          const match = mid.match(/\(([^h]+) h/);
+          if(match) representativeHours = parseFloat(match[1]);
+        }
+      }
+      representativeHours = representativeHours || 7; // default if parsing failed
+      const minH = 4.5, maxH = 9; const clampH = Math.min(maxH, Math.max(minH, representativeHours));
+      const percent = ((clampH - minH)/(maxH - minH))*100;
+      sleepProgress.style.width = percent + '%';
+      sleepProgress.style.background = percent < 33 ? '#2196f3' : percent < 66 ? '#4caf50' : '#ff9800';
+
+      // Quality influence tip augmentation
+      if(quality==='poor') tip += ' Since recent sleep was poor, err toward +1 extra cycle if possible.';
+      else if(quality==='great') tip += ' Great recent sleep—consistency beats chasing more time.';
+      sleepTips.textContent = tip;
+
+      sleepResultContainer.style.display='flex';
+      setTimeout(()=>{ sleepResultContainer.classList.add('show'); sleepResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+    });
+  </script>
+</body>
+</html>

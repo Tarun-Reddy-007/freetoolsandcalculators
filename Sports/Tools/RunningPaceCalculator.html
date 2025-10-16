@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="RunningPaceCalculator.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../Sports.html">Sports</a>
+      <a href="../../Clothing/Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="rpc-section">
+      <div class="rpc-card">
+        <div class="rpc-title-row">
+          <h1 class="rpc-title">Running Pace Calculator</h1>
+          <button type="button" class="rpc-info-trigger" aria-describedby="rpcInfo" title="How pace is calculated" tabindex="0">i</button>
+          <div class="rpc-info-flyout" id="rpcInfo" role="tooltip" aria-hidden="true">
+            <h2>How Pace Is Calculated</h2>
+            <p>This tool calculates your running pace per kilometer or mile based on your distance and total time. Useful for runners, coaches, and race planning.</p>
+            <ul>
+              <li>Supports km and miles</li>
+              <li>Shows pace per km/mile and speed</li>
+              <li>Breakdown of splits</li>
+            </ul>
+            <p class="disclaimer">All calculations are approximate. For training use only.</p>
+          </div>
+        </div>
+        <div class="rpc-interaction-row">
+          <form id="rpcForm" class="rpc-form" autocomplete="off">
+            <div class="input-group">
+              <label for="rpcDistance">Distance</label>
+              <div class="input-row">
+                <input type="number" id="rpcDistance" min="0.01" step="any" required placeholder="e.g. 10" />
+                <select id="rpcUnit">
+                  <option value="km">km</option>
+                  <option value="mi">mile</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label>Total Time</label>
+              <div class="input-row">
+                <input type="number" id="rpcHours" min="0" max="23" placeholder="hh" style="width:60px;" /> :
+                <input type="number" id="rpcMinutes" min="0" max="59" placeholder="mm" style="width:60px;" /> :
+                <input type="number" id="rpcSeconds" min="0" max="59" placeholder="ss" style="width:60px;" />
+              </div>
+            </div>
+            <button type="submit" class="rpc-btn">Calculate Pace</button>
+          </form>
+          <div class="rpc-result-container" id="rpcResult" style="display:none;">
+            <div class="rpc-main-result">
+              <span class="rpc-value" id="rpcMain">--</span>
+              <span class="rpc-label" id="rpcLabel">Pace</span>
+            </div>
+            <div class="rpc-breakdown" id="rpcBreakdown"></div>
+            <div class="rpc-tips" id="rpcTips"></div>
+            <div class="rpc-disclaimer">All results are approximate. For training use only.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+    const form = document.getElementById('rpcForm');
+    const distanceEl = document.getElementById('rpcDistance');
+    const unitEl = document.getElementById('rpcUnit');
+    const hoursEl = document.getElementById('rpcHours');
+    const minutesEl = document.getElementById('rpcMinutes');
+    const secondsEl = document.getElementById('rpcSeconds');
+    const resultBox = document.getElementById('rpcResult');
+    const mainValue = document.getElementById('rpcMain');
+    const labelValue = document.getElementById('rpcLabel');
+    const breakdownEl = document.getElementById('rpcBreakdown');
+    const tipsEl = document.getElementById('rpcTips');
+
+    function pad(n){return n<10?'0'+n:n;}
+    function formatPace(sec){
+      const m = Math.floor(sec/60);
+      const s = Math.round(sec%60);
+      return `${pad(m)}:${pad(s)} min`;
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const dist = parseFloat(distanceEl.value);
+      const unit = unitEl.value;
+      const h = parseInt(hoursEl.value)||0;
+      const m = parseInt(minutesEl.value)||0;
+      const s = parseInt(secondsEl.value)||0;
+      if(isNaN(dist) || dist<=0) return;
+      const totalSec = h*3600 + m*60 + s;
+      if(totalSec<=0) return;
+      const paceSec = totalSec/dist;
+      const paceStr = formatPace(paceSec) + `/${unit}`;
+      mainValue.textContent = paceStr;
+      labelValue.textContent = `Pace per ${unit}`;
+      // Speed
+      const speed = (dist/(totalSec/3600)).toFixed(2);
+      // Breakdown
+      breakdownEl.innerHTML = `
+        <div class="rpc-row"><span>Total Distance</span><span>${dist} ${unit}</span></div>
+        <div class="rpc-row"><span>Total Time</span><span>${pad(h)}:${pad(m)}:${pad(s)}</span></div>
+        <div class="rpc-row"><span>Average Speed</span><span>${speed} ${unit}/h</span></div>
+        <div class="rpc-row"><span>Pace</span><span>${paceStr}</span></div>
+      `;
+      tipsEl.textContent = "Tip: Use this to plan your race or training splits.";
+      resultBox.style.display = 'flex';
+      setTimeout(()=>{resultBox.classList.add('show');},50);
+    });
+  </script>
+</body>
+</html>

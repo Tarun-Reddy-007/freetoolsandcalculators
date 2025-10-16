@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>FreeOnlineCalculators</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="ClothesSizeConverter.css" />
+</head>
+<body>
+  <div class="layout-shell">
+  <header class="top-banner"></header>
+  <nav class="navbar">
+    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+    <div class="nav-links" id="navLinks">
+      <a href="../../index.html">Home</a>
+      <a href="../../Health/Health.html">Health</a>
+      <a href="../../Fitness/Fitness.html">Fitness</a>
+      <a href="../../Sports/Sports.html">Sports</a>
+      <a href="../Clothing.html">Clothing</a>
+      <a href="../../Finance/Finance.html">Finance</a>
+      <a href="../../Utilities/Utilities.html">Utilities</a>
+      <a href="../../Education/Education.html">Education</a>
+      <a href="../../Media/Media.html">Media</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+  <div class="content-row">
+    <aside class="left-banner"></aside>
+    <section class="scroll-panel">
+      <div class="cs-section">
+      <div class="cs-card">
+        <div class="cs-title-row">
+          <h1 class="cs-title">Clothes Size Converter</h1>
+          <button type="button" class="cs-info-trigger" aria-describedby="csInfo" title="How size conversion works" tabindex="0">i</button>
+          <div class="cs-info-flyout" id="csInfo" role="tooltip" aria-hidden="true">
+            <h2>How Size Conversion Works</h2>
+            <p>This tool converts clothing sizes between different international standards (US, UK, EU, etc.) for men, women, and kids. Select your region and size to see the equivalent in other regions.</p>
+            <ul>
+              <li>Supports Men, Women, Kids</li>
+              <li>Converts between US, UK, EU, and more</li>
+              <li>For shirts, pants, and dresses</li>
+            </ul>
+            <p class="disclaimer">For reference only. Always check brand-specific charts for best fit.</p>
+          </div>
+        </div>
+        <div class="cs-interaction-row">
+          <form id="sizeForm" class="cs-form" autocomplete="off">
+            <div class="input-group">
+              <label for="category">Category</label>
+              <div class="input-row">
+                <select id="category" required>
+                  <option value="men">Men</option>
+                  <option value="women">Women</option>
+                  <option value="kids">Kids</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="item">Clothing Type</label>
+              <div class="input-row">
+                <select id="item" required>
+                  <option value="shirt">Shirt/Top</option>
+                  <option value="pants">Pants/Jeans</option>
+                  <option value="dress">Dress</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="fromRegion">From Region</label>
+              <div class="input-row">
+                <select id="fromRegion" required>
+                  <option value="us">US</option>
+                  <option value="uk">UK</option>
+                  <option value="eu">EU</option>
+                  <option value="jp">JP</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="fromSize">Your Size</label>
+              <div class="input-row">
+                <select id="fromSize" required>
+                  <option value="">Select size...</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="cs-btn">Convert Size</button>
+          </form>
+          <div class="cs-result-container" id="sizeResult" style="display:none;">
+            <div class="cs-main-result">
+              <span class="cs-size-value" id="sizeMain">--</span>
+              <span class="cs-size-label">Equivalent Sizes</span>
+            </div>
+            <div class="cs-breakdown" id="sizeBreakdown"></div>
+            <div class="cs-tips" id="sizeTips"></div>
+            <div class="cs-disclaimer">For guidance only. Sizing may vary by brand.</div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+  <footer class="bottom-banner"></footer>
+  </div>
+  <script>
+  function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+
+  // Size conversion tables
+  const sizeTables = {
+      men: {
+        shirt: [
+          // US, UK, EU, JP
+          {us: "XS", uk: "34", eu: "44", jp: "87"},
+          {us: "S",  uk: "36", eu: "46", jp: "91"},
+          {us: "M",  uk: "38", eu: "48", jp: "95"},
+          {us: "L",  uk: "40", eu: "50", jp: "99"},
+          {us: "XL", uk: "42", eu: "52", jp: "104"},
+          {us: "XXL",uk: "44", eu: "54", jp: "108"}
+        ],
+        pants: [
+          // US(inch), UK, EU, JP
+          {us: "28", uk: "28", eu: "44", jp: "71"},
+          {us: "30", uk: "30", eu: "46", jp: "76"},
+          {us: "32", uk: "32", eu: "48", jp: "81"},
+          {us: "34", uk: "34", eu: "50", jp: "86"},
+          {us: "36", uk: "36", eu: "52", jp: "91"},
+          {us: "38", uk: "38", eu: "54", jp: "96"}
+        ],
+        dress: [
+          // Not typical for men, but map to suit jackets
+          {us: "34", uk: "34", eu: "44", jp: "87"},
+          {us: "36", uk: "36", eu: "46", jp: "91"},
+          {us: "38", uk: "38", eu: "48", jp: "95"},
+          {us: "40", uk: "40", eu: "50", jp: "99"},
+          {us: "42", uk: "42", eu: "52", jp: "104"},
+          {us: "44", uk: "44", eu: "54", jp: "108"}
+        ]
+      },
+      women: {
+        shirt: [
+          {us: "2", uk: "6", eu: "34", jp: "5"},
+          {us: "4", uk: "8", eu: "36", jp: "7"},
+          {us: "6", uk: "10", eu: "38", jp: "9"},
+          {us: "8", uk: "12", eu: "40", jp: "11"},
+          {us: "10", uk: "14", eu: "42", jp: "13"},
+          {us: "12", uk: "16", eu: "44", jp: "15"},
+          {us: "14", uk: "18", eu: "46", jp: "17"}
+        ],
+        pants: [
+          {us: "2", uk: "6", eu: "34", jp: "5"},
+          {us: "4", uk: "8", eu: "36", jp: "7"},
+          {us: "6", uk: "10", eu: "38", jp: "9"},
+          {us: "8", uk: "12", eu: "40", jp: "11"},
+          {us: "10", uk: "14", eu: "42", jp: "13"},
+          {us: "12", uk: "16", eu: "44", jp: "15"},
+          {us: "14", uk: "18", eu: "46", jp: "17"}
+        ],
+        dress: [
+          {us: "2", uk: "6", eu: "34", jp: "5"},
+          {us: "4", uk: "8", eu: "36", jp: "7"},
+          {us: "6", uk: "10", eu: "38", jp: "9"},
+          {us: "8", uk: "12", eu: "40", jp: "11"},
+          {us: "10", uk: "14", eu: "42", jp: "13"},
+          {us: "12", uk: "16", eu: "44", jp: "15"},
+          {us: "14", uk: "18", eu: "46", jp: "17"}
+        ]
+      },
+      kids: {
+        shirt: [
+          {us: "4", uk: "3", eu: "98", jp: "100"},
+          {us: "5", uk: "4", eu: "104", jp: "110"},
+          {us: "6", uk: "5", eu: "110", jp: "120"},
+          {us: "7", uk: "6", eu: "116", jp: "130"},
+          {us: "8", uk: "7", eu: "122", jp: "140"},
+          {us: "10", uk: "9", eu: "140", jp: "150"}
+        ],
+        pants: [
+          {us: "4", uk: "3", eu: "98", jp: "100"},
+          {us: "5", uk: "4", eu: "104", jp: "110"},
+          {us: "6", uk: "5", eu: "110", jp: "120"},
+          {us: "7", uk: "6", eu: "116", jp: "130"},
+          {us: "8", uk: "7", eu: "122", jp: "140"},
+          {us: "10", uk: "9", eu: "140", jp: "150"}
+        ],
+        dress: [
+          {us: "4", uk: "3", eu: "98", jp: "100"},
+          {us: "5", uk: "4", eu: "104", jp: "110"},
+          {us: "6", uk: "5", eu: "110", jp: "120"},
+          {us: "7", uk: "6", eu: "116", jp: "130"},
+          {us: "8", uk: "7", eu: "122", jp: "140"},
+          {us: "10", uk: "9", eu: "140", jp: "150"}
+        ]
+      }
+    };
+
+    function normalizeSize(size) {
+      return String(size).trim().toUpperCase().replace(/\s+/g, "");
+    }
+
+    function findConversion(category, item, fromRegion, fromSize) {
+      const table = sizeTables[category][item];
+      if (!table) return null;
+      const normSize = normalizeSize(fromSize);
+      for (const row of table) {
+        if (normalizeSize(row[fromRegion]) === normSize) {
+          return row;
+        }
+      }
+      return null;
+    }
+
+    function getAvailableSizes(category, item, fromRegion) {
+      const table = sizeTables[category]?.[item];
+      if (!table) return [];
+      // Get unique sizes for the selected region
+      const sizes = table.map(row => row[fromRegion]);
+      // Remove duplicates and sort
+      return Array.from(new Set(sizes)).sort((a, b) => {
+        // Try numeric sort if possible
+        const na = parseFloat(a), nb = parseFloat(b);
+        if (!isNaN(na) && !isNaN(nb)) return na - nb;
+        return a.localeCompare(b);
+      });
+    }
+
+    const form = document.getElementById('sizeForm');
+    const resultBox = document.getElementById('sizeResult');
+    const sizeMain = document.getElementById('sizeMain');
+    const breakdownEl = document.getElementById('sizeBreakdown');
+    const tipsEl = document.getElementById('sizeTips');
+    const fromSizeSelect = document.getElementById('fromSize');
+
+    function updateSizeOptions() {
+      const category = document.getElementById('category').value;
+      const item = document.getElementById('item').value;
+      const fromRegion = document.getElementById('fromRegion').value;
+      const sizes = getAvailableSizes(category, item, fromRegion);
+      fromSizeSelect.innerHTML = '<option value="">Select size...</option>';
+      sizes.forEach(size => {
+        const opt = document.createElement('option');
+        opt.value = size;
+        opt.textContent = size;
+        fromSizeSelect.appendChild(opt);
+      });
+    }
+
+    document.getElementById('category').addEventListener('change', updateSizeOptions);
+    document.getElementById('item').addEventListener('change', updateSizeOptions);
+    document.getElementById('fromRegion').addEventListener('change', updateSizeOptions);
+
+    // Initialize on page load
+    updateSizeOptions();
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const category = document.getElementById('category').value;
+      const item = document.getElementById('item').value;
+      const fromRegion = document.getElementById('fromRegion').value;
+      const fromSize = document.getElementById('fromSize').value;
+
+      const conversion = findConversion(category, item, fromRegion, fromSize);
+
+      if (conversion) {
+        sizeMain.textContent = `US: ${conversion.us} | UK: ${conversion.uk} | EU: ${conversion.eu} | JP: ${conversion.jp}`;
+        breakdownEl.innerHTML = `
+          <div class="cs-row"><span>US</span><span>${conversion.us}</span></div>
+          <div class="cs-row"><span>UK</span><span>${conversion.uk}</span></div>
+          <div class="cs-row"><span>EU</span><span>${conversion.eu}</span></div>
+          <div class="cs-row"><span>JP</span><span>${conversion.jp}</span></div>
+        `;
+        tipsEl.textContent = 'Always check the brand’s official size chart for best fit.';
+      } else {
+        sizeMain.textContent = 'N/A';
+        breakdownEl.innerHTML = `<div class="cs-row"><span>No conversion found for input size.</span></div>`;
+        tipsEl.textContent = 'Please check your input or try a different size. Not all sizes are available for all regions/types.';
+      }
+      resultBox.style.display = 'flex';
+      setTimeout(() => {
+        resultBox.classList.add('show');
+        resultBox.scrollIntoView({behavior:'smooth',block:'center'});
+      }, 50);
+    });
+  </script>
+</body>
+</html>

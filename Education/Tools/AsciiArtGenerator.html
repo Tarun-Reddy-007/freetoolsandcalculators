@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>ASCII Art Generator | Free Text to ASCII Banner Styles</title>
-  <meta name="description" content="Free ASCII Art Generator: Convert text into multiple banner styles (simple, shadow, bubble, slant, complex). Instant preview, copy-ready output, no data stored.">
-  <meta name="keywords" content="ASCII art generator,text to ASCII,banner text generator,ASCII banner,online ASCII converter,create ASCII art,free ASCII tool">
+  <meta name="description"
+    content="Free ASCII Art Generator: Convert text into multiple banner styles (simple, shadow, bubble, slant, complex). Instant preview, copy-ready output, no data stored.">
+  <meta name="keywords"
+    content="ASCII art generator,text to ASCII,banner text generator,ASCII banner,online ASCII converter,create ASCII art,free ASCII tool">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,141 +16,169 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="ASCII Art Generator | Free Text to ASCII Styles">
-  <meta property="og:description" content="Type text and instantly transform into ASCII banner styles. Copy and use anywhere.">
+  <meta property="og:description"
+    content="Type text and instantly transform into ASCII banner styles. Copy and use anywhere.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Education/Tools/AsciiArtGenerator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Education/ascii_art_generator.jpg">
   <meta property="og:image:alt" content="ASCII art generator interface showing text to ASCII conversion">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ASCII Art Generator | Free Text to ASCII Styles">
-  <meta name="twitter:description" content="Generate ASCII banners in multiple styles instantly. No sign-up, no storage.">
+  <meta name="twitter:description"
+    content="Generate ASCII banners in multiple styles instantly. No sign-up, no storage.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Education/ascii_art_generator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="AsciiArtGenerator.css" />
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Education.html">Education</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>ASCII Art Generator</span></li>
-        </ol>
-      </nav>
-      <main class="aag-section" aria-labelledby="ascii-art-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="aag-card">
-        <div class="aag-title-row">
-          <h1 class="aag-title" id="ascii-art-main-title">ASCII Art Generator</h1>
-          <button type="button" class="aag-info-trigger" aria-describedby="aagInfo" title="How ASCII art is generated" tabindex="0">i</button>
-          <div class="aag-info-flyout" id="aagInfo" role="tooltip" aria-hidden="true">
-            <h2>How ASCII Art Is Generated</h2>
-            <p>This tool converts your text into simple ASCII art. Paste or type your text and see it transformed instantly.</p>
-            <ul>
-              <li>Works with any text</li>
-              <li>Instant ASCII preview</li>
-              <li>Copy and use anywhere</li>
-            </ul>
-            <p class="disclaimer">All generation is local. No data is sent anywhere.</p>
-          </div>
-        </div>
-        <div class="aag-interaction-row">
-          <form id="aagForm" class="aag-form" autocomplete="off" onsubmit="return false;">
-            <div class="input-group">
-              <label for="aagInput">Enter Text</label>
-              <div class="input-row">
-                <textarea id="aagInput" rows="5" placeholder="Type your text here..." required></textarea>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Education.html">Education</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>ASCII Art Generator</span></li>
+          </ol>
+        </nav>
+        <main class="aag-section" aria-labelledby="ascii-art-main-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="aag-card">
+            <div class="aag-title-row">
+              <h1 class="aag-title" id="ascii-art-main-title">ASCII Art Generator</h1>
+              <button type="button" class="aag-info-trigger" aria-describedby="aagInfo"
+                title="How ASCII art is generated" tabindex="0">i</button>
+              <div class="aag-info-flyout" id="aagInfo" role="tooltip" aria-hidden="true">
+                <h2>How ASCII Art Is Generated</h2>
+                <p>This tool converts your text into simple ASCII art. Paste or type your text and see it transformed
+                  instantly.</p>
+                <ul>
+                  <li>Works with any text</li>
+                  <li>Instant ASCII preview</li>
+                  <li>Copy and use anywhere</li>
+                </ul>
+                <p class="disclaimer">All generation is local. No data is sent anywhere.</p>
               </div>
             </div>
-            <div class="input-group">
-              <label for="aagStyle">Art Style</label>
-              <select id="aagStyle" class="aag-style-select">
-                <option value="simple">Simple Block</option>
-                <option value="banner">Banner</option>
-                <option value="shadow">Shadow</option>
-                <option value="bubble">Bubble</option>
-                <option value="slant">Slant</option>
-                <option value="complex">Complex (Pattern)</option>
-              </select>
+            <div class="aag-interaction-row">
+              <form id="aagForm" class="aag-form" autocomplete="off" onsubmit="return false;">
+                <div class="input-group">
+                  <label for="aagInput">Enter Text</label>
+                  <div class="input-row">
+                    <textarea id="aagInput" rows="5" placeholder="Type your text here..." required></textarea>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="aagStyle">Art Style</label>
+                  <select id="aagStyle" class="aag-style-select">
+                    <option value="simple">Simple Block</option>
+                    <option value="banner">Banner</option>
+                    <option value="shadow">Shadow</option>
+                    <option value="bubble">Bubble</option>
+                    <option value="slant">Slant</option>
+                    <option value="complex">Complex (Pattern)</option>
+                  </select>
+                </div>
+                <button type="button" class="aag-btn" id="aagGenBtn">Generate ASCII Art</button>
+              </form>
+              <div class="aag-result-container" id="aagResult" style="display:none;">
+                <div class="aag-main-result">
+                  <pre class="aag-ascii" id="aagAscii"></pre>
+                </div>
+                <div class="aag-breakdown" id="aagBreakdown"></div>
+                <div class="aag-tips" id="aagTips"></div>
+                <div class="aag-disclaimer">All ASCII art is generated locally in your browser.</div>
+              </div>
             </div>
-            <button type="button" class="aag-btn" id="aagGenBtn">Generate ASCII Art</button>
-          </form>
-          <div class="aag-result-container" id="aagResult" style="display:none;">
-            <div class="aag-main-result">
-              <pre class="aag-ascii" id="aagAscii"></pre>
-            </div>
-            <div class="aag-breakdown" id="aagBreakdown"></div>
-            <div class="aag-tips" id="aagTips"></div>
-            <div class="aag-disclaimer">All ASCII art is generated locally in your browser.</div>
           </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-education-tools">
+            <h2 id="related-education-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
+              Related Education & Logic Tools</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
+              <li><a href="DigitalLogicConverter.html" style="text-decoration:none;">Digital Logic Converter</a></li>
+              <li><a href="TruthTableGenerator.html" style="text-decoration:none;">Truth Table Generator</a></li>
+            </ul>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="ascii-faq-heading">
+            <h2 id="ascii-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">ASCII
+              Art Generator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is ASCII art?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">ASCII art uses standard text characters to visually
+                    represent words or shapes. Early computing used it before rich graphics were common.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How does this generator work?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Your text is processed locally into chosen style patterns
+                    (spacing, borders, stylized glyph maps) then rendered instantly—no server calls.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Which ASCII styles are supported?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Simple block, banner, shadow, bubble, slant and a complex
+                    pattern style. Each uses different spacing or custom glyph outlines.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can I convert images to ASCII with this?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Not in this version—only text. Image-to-ASCII would
+                    require pixel sampling logic not included here.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Is my text stored or sent anywhere?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">No. All processing happens in your browser; nothing is
+                    transmitted or saved remotely.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I use or share the ASCII art?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Select and copy the output block (or use right‑click
+                    copy) then paste into README files, chat, code comments or terminals.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-education-tools">
-          <h2 id="related-education-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Education & Logic Tools</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
-            <li><a href="DigitalLogicConverter.html" style="text-decoration:none;">Digital Logic Converter</a></li>
-            <li><a href="TruthTableGenerator.html" style="text-decoration:none;">Truth Table Generator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="ascii-faq-heading">
-          <h2 id="ascii-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">ASCII Art Generator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is ASCII art?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">ASCII art uses standard text characters to visually represent words or shapes. Early computing used it before rich graphics were common.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How does this generator work?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Your text is processed locally into chosen style patterns (spacing, borders, stylized glyph maps) then rendered instantly—no server calls.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Which ASCII styles are supported?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Simple block, banner, shadow, bubble, slant and a complex pattern style. Each uses different spacing or custom glyph outlines.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Can I convert images to ASCII with this?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Not in this version—only text. Image-to-ASCII would require pixel sampling logic not included here.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Is my text stored or sent anywhere?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">No. All processing happens in your browser; nothing is transmitted or saved remotely.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I use or share the ASCII art?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Select and copy the output block (or use right‑click copy) then paste into README files, chat, code comments or terminals.</p></div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
-    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const inputEl = document.getElementById('aagInput');
     const genBtn = document.getElementById('aagGenBtn');
@@ -160,57 +191,57 @@
     function simpleAsciiArt(text) {
       if (!text.trim()) return "";
       const lines = text.toUpperCase().split('\n').map(line => '  ' + line.split('').join(' ') + '  ');
-      const width = Math.max(...lines.map(l=>l.length));
+      const width = Math.max(...lines.map(l => l.length));
       const border = '+' + '-'.repeat(width) + '+';
-      return [border, ...lines.map(l=> '|' + l.padEnd(width) + '|'), border].join('\n');
+      return [border, ...lines.map(l => '|' + l.padEnd(width) + '|'), border].join('\n');
     }
 
     function bannerAsciiArt(text) {
       // Large block letters (A-Z, 0-9, space only, fallback to simple)
       const font = {
-        'A': ['  ___  ',' / _ \\ ','/ /_\\ \\','|  _  |','|_| |_|'],
-        'B': ['______ ','| ___ \\','| |_/ /','| ___ \\','|_|_/ /'],
-        'C': [' _____','/  __|','| |   ','| |__ ','\\____|'],
-        'D': ['____  ','|  _ \\ ','| | | |','| |_| |','|____/ '],
-        'E': [' _____','| ____','|  _| ','| |__ ','|____|'],
-        'F': [' _____','|  ___','| |_  ','|  _| ','|_|   '],
-        'G': [' _____','/  __|','| | __','| |_ |','\\____|'],
-        'H': [' _   _ ','| | | |','| |_| |','|  _  |','|_| |_|'],
-        'I': [' ___ ','|_  |','  | |','  | |',' |_/ '],
-        'J': ['   ___','  |_  |','    | |','/\\_/ /','\\___/ '],
-        'K': ['_   __','| | / /','| |/ / ','|    \\ ','|_|\\_\\'],
-        'L': [' _    ','| |   ','| |   ','| |__ ','|____|'],
-        'M': ['__  __','|  \\/  |','| |\\/| |','| |  | |','|_|  |_|'],
-        'N': ['_   _ ','| \\ | |','|  \\| |','| |\\  |','|_| \\_|'],
-        'O': [' _____ ','/  _  \\','| | | |','| |_| |','\\_____/'],
-        'P': ['______ ','| ___ \\','| |_/ /','|  __/ ','|_|   '],
-        'Q': [' _____ ','/  _  \\','| | | |','| |_| |','\\__\\_\\\\'],
-        'R': ['______ ','| ___ \\','| |_/ /','|    / ','|_|\\_\\ '],
-        'S': [' _____','/  ___|','\\ `--. ',' `--. \\','\\____/'],
-        'T': ['______','|_   _|','  | |  ','  | |  ','  |_|  '],
-        'U': ['_   _ ','| | | |','| | | |','| |_| |','\\_____/'],
-        'V': ['_   _ ','| | | |','| | | |','| |_| |',' \\___/ '],
-        'W': ['_    _ ','| |  | |','| |  | |','| |/\\| |','\\_/  \\_/'],
-        'X': ['__   __','\\ \\ / /',' \\ V / ',' /   \\ ','/_/\\_\\'],
-        'Y': ['__   __','\\ \\ / /',' \\ V / ','  | |  ','  |_|  '],
-        'Z': ['______','    / /','   / / ','  / /  ',' /_/   '],
-        '0': [' _____ ','/  _  \\','| | | |','| |_| |','\\_____/'],
-        '1': ['  _ ',' / |',' | |',' | |',' |_|'],
-        '2': [' ____ ','|___ \\','  __) |',' / __/ ','|_____|'],
-        '3': [' _____','|___ /','  |_ \\',' ___) |','|____/'],
-        '4': [' _  _ ','| || |','| || |_','|__   _|','   |_| '],
-        '5': [' ____ ','| ___|','|___ \\',' ___) |','|____/'],
-        '6': ['  __  ',' / /  ','/ /_  ','|  _ \\ ','\\___/ '],
-        '7': [' _____','|___  |','   / / ','  / /  ',' /_/   '],
-        '8': ['  ___ ',' ( _ )','/ _ \\','| (_) |',' \\___/ '],
-        '9': ['  ___ ',' / _ \\','| (_) |',' \\__, |','   /_/ '],
-        ' ': ['  ','  ','  ','  ','  ']
+        'A': ['  ___  ', ' / _ \\ ', '/ /_\\ \\', '|  _  |', '|_| |_|'],
+        'B': ['______ ', '| ___ \\', '| |_/ /', '| ___ \\', '|_|_/ /'],
+        'C': [' _____', '/  __|', '| |   ', '| |__ ', '\\____|'],
+        'D': ['____  ', '|  _ \\ ', '| | | |', '| |_| |', '|____/ '],
+        'E': [' _____', '| ____', '|  _| ', '| |__ ', '|____|'],
+        'F': [' _____', '|  ___', '| |_  ', '|  _| ', '|_|   '],
+        'G': [' _____', '/  __|', '| | __', '| |_ |', '\\____|'],
+        'H': [' _   _ ', '| | | |', '| |_| |', '|  _  |', '|_| |_|'],
+        'I': [' ___ ', '|_  |', '  | |', '  | |', ' |_/ '],
+        'J': ['   ___', '  |_  |', '    | |', '/\\_/ /', '\\___/ '],
+        'K': ['_   __', '| | / /', '| |/ / ', '|    \\ ', '|_|\\_\\'],
+        'L': [' _    ', '| |   ', '| |   ', '| |__ ', '|____|'],
+        'M': ['__  __', '|  \\/  |', '| |\\/| |', '| |  | |', '|_|  |_|'],
+        'N': ['_   _ ', '| \\ | |', '|  \\| |', '| |\\  |', '|_| \\_|'],
+        'O': [' _____ ', '/  _  \\', '| | | |', '| |_| |', '\\_____/'],
+        'P': ['______ ', '| ___ \\', '| |_/ /', '|  __/ ', '|_|   '],
+        'Q': [' _____ ', '/  _  \\', '| | | |', '| |_| |', '\\__\\_\\\\'],
+        'R': ['______ ', '| ___ \\', '| |_/ /', '|    / ', '|_|\\_\\ '],
+        'S': [' _____', '/  ___|', '\\ `--. ', ' `--. \\', '\\____/'],
+        'T': ['______', '|_   _|', '  | |  ', '  | |  ', '  |_|  '],
+        'U': ['_   _ ', '| | | |', '| | | |', '| |_| |', '\\_____/'],
+        'V': ['_   _ ', '| | | |', '| | | |', '| |_| |', ' \\___/ '],
+        'W': ['_    _ ', '| |  | |', '| |  | |', '| |/\\| |', '\\_/  \\_/'],
+        'X': ['__   __', '\\ \\ / /', ' \\ V / ', ' /   \\ ', '/_/\\_\\'],
+        'Y': ['__   __', '\\ \\ / /', ' \\ V / ', '  | |  ', '  |_|  '],
+        'Z': ['______', '    / /', '   / / ', '  / /  ', ' /_/   '],
+        '0': [' _____ ', '/  _  \\', '| | | |', '| |_| |', '\\_____/'],
+        '1': ['  _ ', ' / |', ' | |', ' | |', ' |_|'],
+        '2': [' ____ ', '|___ \\', '  __) |', ' / __/ ', '|_____|'],
+        '3': [' _____', '|___ /', '  |_ \\', ' ___) |', '|____/'],
+        '4': [' _  _ ', '| || |', '| || |_', '|__   _|', '   |_| '],
+        '5': [' ____ ', '| ___|', '|___ \\', ' ___) |', '|____/'],
+        '6': ['  __  ', ' / /  ', '/ /_  ', '|  _ \\ ', '\\___/ '],
+        '7': [' _____', '|___  |', '   / / ', '  / /  ', ' /_/   '],
+        '8': ['  ___ ', ' ( _ )', '/ _ \\', '| (_) |', ' \\___/ '],
+        '9': ['  ___ ', ' / _ \\', '| (_) |', ' \\__, |', '   /_/ '],
+        ' ': ['  ', '  ', '  ', '  ', '  ']
       };
       text = text.toUpperCase();
       const lines = Array(5).fill('');
       for (let char of text) {
         const art = font[char] || font[' '];
-        for (let i=0;i<5;i++) lines[i] += art[i] + '  ';
+        for (let i = 0; i < 5; i++) lines[i] += art[i] + '  ';
       }
       return lines.join('\n');
     }
@@ -220,46 +251,46 @@
       if (!text.trim()) return "";
       const base = simpleAsciiArt(text);
       const lines = base.split('\n');
-      const shadow = lines.map((l,i)=>i===0?'':(' '.repeat(2)+l.replace(/[^|+\-]/g,'#')));
-      return lines.map((l,i)=>i===lines.length-1?l:l+'\n'+shadow[i+1]).join('');
+      const shadow = lines.map((l, i) => i === 0 ? '' : (' '.repeat(2) + l.replace(/[^|+\-]/g, '#')));
+      return lines.map((l, i) => i === lines.length - 1 ? l : l + '\n' + shadow[i + 1]).join('');
     }
 
     function bubbleAsciiArt(text) {
       // Bubble letters (rounded, only A-Z, fallback to simple)
       const font = {
-        'A': ['  ___  ',' (o o) ','(  V  )',' \   / ','  `-`  '],
-        'B': [' ___ ','(o o)','(  -)','(o o)',' --- '],
-        'C': ['  ___',' (o  ','(    ',' (o  ','  ---'],
-        'D': [' ___ ','(o  )','(   )','(o  )',' --- '],
-        'E': [' ___ ','(o  ','( - ','(o  ',' --- '],
-        'F': [' ___ ','(o  ','( - ','(   ',' --- '],
-        'G': [' ___ ','(o  ','(  -)','(o o)',' --- '],
-        'H': [' _ _ ','(o o)','(   )','(o o)',' --- '],
-        'I': [' _ ','( )',' | ','( )',' - '],
-        'J': ['   _ ','  ( )','   | ','(o )',' -- '],
-        'K': [' _  _','(o / ','( -  ','(o \ ',' --- '],
-        'L': [' _   ','(   ','(   ','(o  ',' --- '],
-        'M': [' _   _ ','(o) (o)','(     )','(     )',' --- '],
-        'N': [' _   _','(o\ (o','(   )','(o  )',' --- '],
-        'O': [' ___ ','(o o)','(   )','(o o)',' --- '],
-        'P': [' ___ ','(o o)','( - ','(   ',' --- '],
-        'Q': [' ___ ','(o o)','(   )','(o o)',' ---\\'],
-        'R': [' ___ ','(o o)','( - ','(o \ ',' --- '],
-        'S': [' ___ ','(o  ',' --- ','  o)',' --- '],
-        'T': [' ___ ','  |  ','  |  ','  |  ',' --- '],
-        'U': [' _ _ ','(   )','(   )','(o o)',' --- '],
-        'V': [' _ _ ','(   )','(   )',' (o) ','  -  '],
-        'W': ['_     _','(     )','(     )','(o) (o)',' --- '],
-        'X': ['_   _','(o o)','  X  ','(o o)',' --- '],
-        'Y': ['_   _','(o o)','  |  ','  |  ',' --- '],
-        'Z': [' ___ ','   o)','  o  ',' (o  ',' --- '],
-        ' ': ['  ','  ','  ','  ','  ']
+        'A': ['  ___  ', ' (o o) ', '(  V  )', ' \   / ', '  `-`  '],
+        'B': [' ___ ', '(o o)', '(  -)', '(o o)', ' --- '],
+        'C': ['  ___', ' (o  ', '(    ', ' (o  ', '  ---'],
+        'D': [' ___ ', '(o  )', '(   )', '(o  )', ' --- '],
+        'E': [' ___ ', '(o  ', '( - ', '(o  ', ' --- '],
+        'F': [' ___ ', '(o  ', '( - ', '(   ', ' --- '],
+        'G': [' ___ ', '(o  ', '(  -)', '(o o)', ' --- '],
+        'H': [' _ _ ', '(o o)', '(   )', '(o o)', ' --- '],
+        'I': [' _ ', '( )', ' | ', '( )', ' - '],
+        'J': ['   _ ', '  ( )', '   | ', '(o )', ' -- '],
+        'K': [' _  _', '(o / ', '( -  ', '(o \ ', ' --- '],
+        'L': [' _   ', '(   ', '(   ', '(o  ', ' --- '],
+        'M': [' _   _ ', '(o) (o)', '(     )', '(     )', ' --- '],
+        'N': [' _   _', '(o\ (o', '(   )', '(o  )', ' --- '],
+        'O': [' ___ ', '(o o)', '(   )', '(o o)', ' --- '],
+        'P': [' ___ ', '(o o)', '( - ', '(   ', ' --- '],
+        'Q': [' ___ ', '(o o)', '(   )', '(o o)', ' ---\\'],
+        'R': [' ___ ', '(o o)', '( - ', '(o \ ', ' --- '],
+        'S': [' ___ ', '(o  ', ' --- ', '  o)', ' --- '],
+        'T': [' ___ ', '  |  ', '  |  ', '  |  ', ' --- '],
+        'U': [' _ _ ', '(   )', '(   )', '(o o)', ' --- '],
+        'V': [' _ _ ', '(   )', '(   )', ' (o) ', '  -  '],
+        'W': ['_     _', '(     )', '(     )', '(o) (o)', ' --- '],
+        'X': ['_   _', '(o o)', '  X  ', '(o o)', ' --- '],
+        'Y': ['_   _', '(o o)', '  |  ', '  |  ', ' --- '],
+        'Z': [' ___ ', '   o)', '  o  ', ' (o  ', ' --- '],
+        ' ': ['  ', '  ', '  ', '  ', '  ']
       };
       text = text.toUpperCase();
       const lines = Array(5).fill('');
       for (let char of text) {
         const art = font[char] || font[' '];
-        for (let i=0;i<5;i++) lines[i] += art[i] + '  ';
+        for (let i = 0; i < 5; i++) lines[i] += art[i] + '  ';
       }
       return lines.join('\n');
     }
@@ -268,24 +299,24 @@
       // Slanted text
       if (!text.trim()) return "";
       const lines = text.split('\n');
-      return lines.map((line,i)=>' '.repeat(i*2)+line.split('').join(' ')).join('\n');
+      return lines.map((line, i) => ' '.repeat(i * 2) + line.split('').join(' ')).join('\n');
     }
 
     function complexAsciiArt(text) {
       // Complex: pattern fill (checkerboard)
       if (!text.trim()) return "";
-      const chars = ['#','@','%','*','+','='];
+      const chars = ['#', '@', '%', '*', '+', '='];
       const lines = text.toUpperCase().split('\n');
-      return lines.map((line,li)=>{
-        return line.split('').map((c,ci)=>{
-          if (c===' ') return '  ';
-          return chars[(li+ci)%chars.length]+c+chars[(li+ci+1)%chars.length];
+      return lines.map((line, li) => {
+        return line.split('').map((c, ci) => {
+          if (c === ' ') return '  ';
+          return chars[(li + ci) % chars.length] + c + chars[(li + ci + 1) % chars.length];
         }).join('');
       }).join('\n');
     }
 
     function generateAsciiArt(text, style) {
-      switch(style) {
+      switch (style) {
         case 'banner': return bannerAsciiArt(text);
         case 'shadow': return shadowAsciiArt(text);
         case 'bubble': return bubbleAsciiArt(text);
@@ -295,7 +326,7 @@
       }
     }
 
-    genBtn.addEventListener('click', function() {
+    genBtn.addEventListener('click', function () {
       const text = inputEl.value;
       const style = document.getElementById('aagStyle').value;
       if (!text.trim()) return;
@@ -303,14 +334,15 @@
       asciiEl.textContent = art;
       breakdownEl.innerHTML = `<div class="aag-row"><span>Lines</span><span>${text.split('\\n').length}</span></div>
         <div class="aag-row"><span>Characters</span><span>${text.length}</span></div>
-        <div class="aag-row"><span>Style</span><span>${style.charAt(0).toUpperCase()+style.slice(1)}</span></div>`;
+        <div class="aag-row"><span>Style</span><span>${style.charAt(0).toUpperCase() + style.slice(1)}</span></div>`;
       tipsEl.textContent = "Tip: Try different styles for unique effects!";
       resultBox.style.display = 'flex';
-      setTimeout(()=>{resultBox.classList.add('show');},50);
+      setTimeout(() => { resultBox.classList.add('show'); }, 50);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Education","item":"https://freetoolsandcalculators.com/Education/Education.html"},{"@type":"ListItem","position":3,"name":"ASCII Art Generator","item":"https://freetoolsandcalculators.com/Education/Tools/AsciiArtGenerator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Education/Tools/AsciiArtGenerator.html","url":"https://freetoolsandcalculators.com/Education/Tools/AsciiArtGenerator.html","name":"ASCII Art Generator | Free Text to ASCII Banner Styles","description":"Convert text to ASCII art in multiple styles (simple, banner, shadow, bubble, slant, complex) locally in your browser.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"ASCII Art Generator","applicationCategory":"EducationalApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Education/Tools/AsciiArtGenerator.html","description":"Generates multi-style ASCII banner text instantly with local processing.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is ASCII art?","acceptedAnswer":{"@type":"Answer","text":"ASCII art uses standard characters to visually represent words or shapes from early computing era."}},{"@type":"Question","name":"How does this generator work?","acceptedAnswer":{"@type":"Answer","text":"Text is mapped to style patterns and rendered client-side with no server calls."}},{"@type":"Question","name":"Which ASCII styles are supported?","acceptedAnswer":{"@type":"Answer","text":"Simple, banner, shadow, bubble, slant and complex pattern styles."}},{"@type":"Question","name":"Can I convert images to ASCII with this?","acceptedAnswer":{"@type":"Answer","text":"Not currently; only text is supported in this version."}},{"@type":"Question","name":"Is my text stored or sent anywhere?","acceptedAnswer":{"@type":"Answer","text":"No; all processing remains in the browser."}},{"@type":"Question","name":"How can I use or share the ASCII art?","acceptedAnswer":{"@type":"Answer","text":"Copy the output and paste in documents, code comments, chat or markdown files."}}]}]}
   </script>
 </body>
+
 </html>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Color Code Converter | HEX ↔ RGB Online Tool</title>
-  <meta name="description" content="Free Color Code Converter: Instantly convert HEX to RGB and RGB to HEX with validation and live preview. Includes shorthand support, FAQs and related design tools." />
-  <meta name="keywords" content="color code converter, hex to rgb, rgb to hex, color picker, web design tool, front-end utilities" />
+  <meta name="description"
+    content="Free Color Code Converter: Instantly convert HEX to RGB and RGB to HEX with validation and live preview. Includes shorthand support, FAQs and related design tools." />
+  <meta name="keywords"
+    content="color code converter, hex to rgb, rgb to hex, color picker, web design tool, front-end utilities" />
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,148 +16,165 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Color Code Converter | HEX ↔ RGB Tool" />
-  <meta property="og:description" content="Convert HEX and RGB color codes instantly with preview, validation and shorthand expansion." />
+  <meta property="og:description"
+    content="Convert HEX and RGB color codes instantly with preview, validation and shorthand expansion." />
   <meta property="og:url" content="https://freetoolsandcalculators.com/Media/Tools/ColorCodeConverter.html" />
   <meta property="og:site_name" content="FreeToolsandCalculators" />
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Media/color_code_converter.jpg" />
   <meta property="og:image:alt" content="Interface of color code converter showing HEX and RGB values" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Color Code Converter | HEX ↔ RGB Tool" />
-  <meta name="twitter:description" content="Free online HEX to RGB and RGB to HEX conversion with preview & validation." />
+  <meta name="twitter:description"
+    content="Free online HEX to RGB and RGB to HEX conversion with preview & validation." />
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Media/color_code_converter.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="ColorCodeConverter.css" />
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Media.html">Media</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Color Code Converter</span></li>
-        </ol>
-      </nav>
-      <main class="ccc-section" aria-labelledby="color-code-converter-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="ccc-card">
-        <div class="ccc-title-row">
-          <h1 class="ccc-title" id="color-code-converter-title">Color Code Converter</h1>
-          <button type="button" class="ccc-info-trigger" aria-describedby="cccInfo" title="How color codes are converted" tabindex="0">i</button>
-          <div class="ccc-info-flyout" id="cccInfo" role="tooltip" aria-hidden="true">
-            <h2>How Color Codes Are Converted</h2>
-            <p>This tool converts between HEX and RGB color codes. Select the conversion mode, enter a value, and see the result instantly. The color preview updates for valid codes.</p>
-            <ul>
-              <li>HEX to RGB or RGB to HEX (choose mode)</li>
-              <li>Live color preview</li>
-              <li>Input validation</li>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Media.html">Media</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Color Code Converter</span></li>
+          </ol>
+        </nav>
+        <main class="ccc-section" aria-labelledby="color-code-converter-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="ccc-card">
+            <div class="ccc-title-row">
+              <h1 class="ccc-title" id="color-code-converter-title">Color Code Converter</h1>
+              <button type="button" class="ccc-info-trigger" aria-describedby="cccInfo"
+                title="How color codes are converted" tabindex="0">i</button>
+              <div class="ccc-info-flyout" id="cccInfo" role="tooltip" aria-hidden="true">
+                <h2>How Color Codes Are Converted</h2>
+                <p>This tool converts between HEX and RGB color codes. Select the conversion mode, enter a value, and
+                  see the result instantly. The color preview updates for valid codes.</p>
+                <ul>
+                  <li>HEX to RGB or RGB to HEX (choose mode)</li>
+                  <li>Live color preview</li>
+                  <li>Input validation</li>
+                </ul>
+                <p class="disclaimer">For web and design use. Results are informational only.</p>
+              </div>
+            </div>
+            <div class="ccc-interaction-row">
+              <form id="colorForm" class="ccc-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="modeSelect">Conversion Mode</label>
+                  <div class="input-row">
+                    <select id="modeSelect">
+                      <option value="hex2rgb">HEX to RGB</option>
+                      <option value="rgb2hex">RGB to HEX</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group" id="hexGroup">
+                  <label for="hexInput">HEX Code</label>
+                  <div class="input-row">
+                    <input type="text" id="hexInput" placeholder="#1a2b3c" maxlength="7" />
+                  </div>
+                </div>
+                <div class="input-group" id="rgbGroup" style="display:none;">
+                  <label for="rgbInput">RGB Code</label>
+                  <div class="input-row">
+                    <input type="text" id="rgbInput" placeholder="26,43,60" maxlength="11" />
+                  </div>
+                </div>
+                <button type="submit" class="ccc-btn">Convert</button>
+              </form>
+              <div class="ccc-result-container" id="colorResult" style="display:none;">
+                <div class="ccc-color-preview" id="colorPreview"></div>
+                <div class="ccc-breakdown" id="colorBreakdown"></div>
+                <div class="ccc-disclaimer">HEX and RGB values are shown above. Preview is approximate.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-media-tools">
+            <h2 id="related-media-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
+              Related Design & Media Tools</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="Clothing/Tools/GradientGenerator.html" style="text-decoration:none;">Gradient Generator</a>
+              </li>
             </ul>
-            <p class="disclaimer">For web and design use. Results are informational only.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="color-code-faq-heading">
+            <h2 id="color-code-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">
+              Color Code Converter FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How do I convert HEX to RGB?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Select HEX to RGB, enter a valid HEX (e.g. #1a2b3c or
+                    #abc shorthand). The tool parses the hexadecimal pairs into decimal red, green and blue values.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Does it support 3-digit shorthand HEX codes?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Shorthand like #abc expands to #aabbcc before
+                    conversion. Each digit is duplicated.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is the difference between HEX and RGB formats?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">HEX is base‑16 string representation (#RRGGBB). RGB lists
+                    decimal intensities (0–255) for red, green, blue. Both encode the same color space for web use.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why might the preview look slightly different on screens?
+                </h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Display calibration, ICC profiles, brightness and
+                    contrast settings influence perceived color, though the numeric values remain precise.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Common mistakes when entering RGB values?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Values outside 0–255 range, missing commas, extra spaces,
+                    or mixing percentage formats. This tool expects three integers separated by commas.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="ccc-interaction-row">
-          <form id="colorForm" class="ccc-form" autocomplete="off">
-            <div class="input-group">
-              <label for="modeSelect">Conversion Mode</label>
-              <div class="input-row">
-                <select id="modeSelect">
-                  <option value="hex2rgb">HEX to RGB</option>
-                  <option value="rgb2hex">RGB to HEX</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group" id="hexGroup">
-              <label for="hexInput">HEX Code</label>
-              <div class="input-row">
-                <input type="text" id="hexInput" placeholder="#1a2b3c" maxlength="7" />
-              </div>
-            </div>
-            <div class="input-group" id="rgbGroup" style="display:none;">
-              <label for="rgbInput">RGB Code</label>
-              <div class="input-row">
-                <input type="text" id="rgbInput" placeholder="26,43,60" maxlength="11" />
-              </div>
-            </div>
-            <button type="submit" class="ccc-btn">Convert</button>
-          </form>
-          <div class="ccc-result-container" id="colorResult" style="display:none;">
-            <div class="ccc-color-preview" id="colorPreview"></div>
-            <div class="ccc-breakdown" id="colorBreakdown"></div>
-            <div class="ccc-disclaimer">HEX and RGB values are shown above. Preview is approximate.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-media-tools">
-          <h2 id="related-media-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Design & Media Tools</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="Clothing/Tools/GradientGenerator.html" style="text-decoration:none;">Gradient Generator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="color-code-faq-heading">
-          <h2 id="color-code-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Color Code Converter FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How do I convert HEX to RGB?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Select HEX to RGB, enter a valid HEX (e.g. #1a2b3c or #abc shorthand). The tool parses the hexadecimal pairs into decimal red, green and blue values.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Does it support 3-digit shorthand HEX codes?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes. Shorthand like #abc expands to #aabbcc before conversion. Each digit is duplicated.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is the difference between HEX and RGB formats?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">HEX is base‑16 string representation (#RRGGBB). RGB lists decimal intensities (0–255) for red, green, blue. Both encode the same color space for web use.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Why might the preview look slightly different on screens?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Display calibration, ICC profiles, brightness and contrast settings influence perceived color, though the numeric values remain precise.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Common mistakes when entering RGB values?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Values outside 0–255 range, missing commas, extra spaces, or mixing percentage formats. This tool expects three integers separated by commas.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
-    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const hexInput = document.getElementById('hexInput');
     const rgbInput = document.getElementById('rgbInput');
@@ -179,7 +199,7 @@
     }
 
     // Show/hide input fields based on mode
-    modeSelect.addEventListener('change', function() {
+    modeSelect.addEventListener('change', function () {
       if (modeSelect.value === 'hex2rgb') {
         hexGroup.style.display = '';
         rgbGroup.style.display = 'none';
@@ -219,7 +239,7 @@
           ? `<div class=\"ccc-row\"><span>HEX</span><span>${hexVal.toUpperCase()}</span></div><div class=\"ccc-row\"><span>RGB</span><span>${rgbArr.join(', ')}</span></div>`
           : `<div class=\"ccc-row\"><span>RGB</span><span>${rgbArr.join(', ')}</span></div><div class=\"ccc-row\"><span>HEX</span><span>${hexVal.toUpperCase()}</span></div>`;
         resultBox.style.display = 'flex';
-        setTimeout(() => { resultBox.classList.add('show'); resultBox.scrollIntoView({behavior:'smooth',block:'center'}); }, 50);
+        setTimeout(() => { resultBox.classList.add('show'); resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50);
       } else {
         resultBox.style.display = 'none';
         alert('Please enter a valid ' + (modeSelect.value === 'hex2rgb' ? 'HEX' : 'RGB') + ' color code.');
@@ -230,4 +250,5 @@
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Media","item":"https://freetoolsandcalculators.com/Media/Media.html"},{"@type":"ListItem","position":3,"name":"Color Code Converter","item":"https://freetoolsandcalculators.com/Media/Tools/ColorCodeConverter.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Media/Tools/ColorCodeConverter.html","url":"https://freetoolsandcalculators.com/Media/Tools/ColorCodeConverter.html","name":"Color Code Converter | HEX ↔ RGB","description":"Convert between HEX and RGB codes with validation, shorthand expansion and live preview.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Color Code Converter","applicationCategory":"DesignApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Media/Tools/ColorCodeConverter.html","description":"Instant HEX ↔ RGB conversion utility with color preview and input validation.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert HEX to RGB?","acceptedAnswer":{"@type":"Answer","text":"Enter HEX (#RRGGBB or #RGB). The tool parses and outputs decimal RGB values."}},{"@type":"Question","name":"Does it support 3-digit shorthand HEX codes?","acceptedAnswer":{"@type":"Answer","text":"Yes, #abc expands to #aabbcc automatically."}},{"@type":"Question","name":"What is the difference between HEX and RGB formats?","acceptedAnswer":{"@type":"Answer","text":"HEX is base16 string; RGB lists decimal components 0–255 for the same color."}},{"@type":"Question","name":"Why might the preview look slightly different on screens?","acceptedAnswer":{"@type":"Answer","text":"Variations in display calibration and viewing conditions."}},{"@type":"Question","name":"Common mistakes when entering RGB values?","acceptedAnswer":{"@type":"Answer","text":"Out-of-range numbers, missing commas or using percentages instead of 0–255 integers."}}]}]}
   </script>
 </body>
+
 </html>

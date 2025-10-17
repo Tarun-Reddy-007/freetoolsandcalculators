@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ideal Weight Calculator | Devine, Robinson, Miller, Hamwi & Healthy BMI Range</title>
-  <meta name="description" content="Free Ideal Weight Calculator showing Devine, Robinson, Miller, Hamwi formula estimates plus healthy BMI weight range. Understand differences and set informed goals.">
-  <meta name="keywords" content="ideal weight calculator, Devine formula, Robinson formula, Miller formula, Hamwi formula, healthy BMI range, target weight, weight goals, health calculators">
+  <meta name="description"
+    content="Free Ideal Weight Calculator showing Devine, Robinson, Miller, Hamwi formula estimates plus healthy BMI weight range. Understand differences and set informed goals.">
+  <meta name="keywords"
+    content="ideal weight calculator, Devine formula, Robinson formula, Miller formula, Hamwi formula, healthy BMI range, target weight, weight goals, health calculators">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,172 +16,210 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ideal Weight Calculator | Multiple Formula Estimates & BMI Range">
-  <meta property="og:description" content="Compare Devine, Robinson, Miller, Hamwi ideal weight formulas and view a healthy BMI range with tips.">
+  <meta property="og:description"
+    content="Compare Devine, Robinson, Miller, Hamwi ideal weight formulas and view a healthy BMI range with tips.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Health/Tools/IdealWeightCalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Health/ideal_weight_calculator.jpg">
   <meta property="og:image:alt" content="Ideal weight calculator interface showing formula results and BMI range">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ideal Weight Calculator | Multiple Formula Estimates & BMI Range">
-  <meta name="twitter:description" content="Devine, Robinson, Miller, Hamwi formula results plus healthy BMI range & goal tips.">
+  <meta name="twitter:description"
+    content="Devine, Robinson, Miller, Hamwi formula results plus healthy BMI range & goal tips.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Health/ideal_weight_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="IdealWeightCalculator.css">
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Health.html">Health</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Ideal Weight Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="ideal-tool-section" aria-labelledby="ideal-main-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="ideal-card">
+            <div class="ideal-title-row">
+              <h1 class="ideal-title" id="ideal-main-title">Ideal Weight Calculator</h1>
+              <button type="button" class="ideal-info-trigger" aria-describedby="idealInfoPanel" title="About"
+                tabindex="0">i</button>
+              <div class="ideal-info-flyout" id="idealInfoPanel" role="tooltip" aria-hidden="true">
+                <h2>What Is 'Ideal Weight'?</h2>
+                <p>There is no single perfect number. This tool gives estimates from common formulas plus a BMI-based
+                  healthy range to inform—not prescribe—goals.</p>
+                <p class="ideal-sub">Formulas Included</p>
+                <p>
+                  <strong>Devine (1974)</strong>, <strong>Robinson (1983)</strong>, <strong>Miller (1983)</strong>,
+                  <strong>Hamwi (1964)</strong> — all linear height models originally for medication dosing or
+                  population norms.
+                </p>
+                <p class="ideal-disclaimer">Estimates only; body composition, frame, age, ethnicity, muscle mass &
+                  health status matter more.</p>
+              </div>
+            </div>
+            <div class="ideal-interaction-row">
+              <form id="idealForm" class="ideal-form">
+                <div class="input-group">
+                  <label for="sex">Sex</label>
+                  <div class="input-row">
+                    <select id="sex" name="sex">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group" id="heightGroup">
+                  <label for="height">Height</label>
+                  <div class="input-row">
+                    <input type="number" id="height" name="height" min="120" max="230" placeholder="Height" required>
+                    <select id="heightUnit" name="heightUnit">
+                      <option value="cm">cm</option>
+                      <option value="ft">ft/in</option>
+                    </select>
+                  </div>
+                  <div class="input-row" id="inchesRow" style="display:none;">
+                    <input type="number" id="heightInches" name="heightInches" min="0" max="11" placeholder="Inches">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label>Show Formulas</label>
+                  <div class="formula-options" id="formulaOptions">
+                    <label><input type="checkbox" value="devine" checked> Devine</label>
+                    <label><input type="checkbox" value="robinson" checked> Robinson</label>
+                    <label><input type="checkbox" value="miller" checked> Miller</label>
+                    <label><input type="checkbox" value="hamwi" checked> Hamwi</label>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="bmiLow">Custom BMI Range (Optional)</label>
+                  <div class="input-row">
+                    <input type="number" id="bmiLow" placeholder="Low BMI (e.g. 18.5)" step="0.1" min="10" max="30">
+                    <input type="number" id="bmiHigh" placeholder="High BMI (e.g. 24.9)" step="0.1" min="15" max="40">
+                  </div>
+                </div>
+                <button type="submit" class="ideal-btn">Calculate</button>
+              </form>
+              <div class="ideal-result-container" id="idealResultContainer" style="display:none;">
+                <div class="ideal-result">
+                  <span class="ideal-value" id="idealPrimaryValue">--</span>
+                  <span class="ideal-label" id="idealPrimaryLabel">Median Estimate (kg)</span>
+                </div>
+                <div class="ideal-progress-wrapper">
+                  <div class="ideal-progress-bar">
+                    <div class="ideal-progress" id="idealProgress"></div>
+                  </div>
+                  <div class="ideal-scale"><span>Lighter</span><span>Heavier</span></div>
+                </div>
+                <div class="ideal-breakdown" id="idealBreakdown"></div>
+                <div class="ideal-bmi-range" id="idealBmiRange"></div>
+                <div class="ideal-tips" id="idealTips"></div>
+                <div class="ideal-disclaimer-bottom">Not medical advice. Discuss goals with a qualified professional.
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
+            <h2 id="related-health-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="BMICalculator.html" style="text-decoration:none;">BMI Calculator</a></li>
+              <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
+              <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
+              <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a>
+              </li>
+              <li><a href="WaterIntakeCalculator.html" style="text-decoration:none;">Daily Water Intake Calculator</a>
+              </li>
+              <li><a href="SleepCycleCalculator.html" style="text-decoration:none;">Sleep Cycle Calculator</a></li>
+            </ul>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="ideal-faq-heading">
+            <h2 id="ideal-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Ideal
+              Weight Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How do the ideal weight formulas differ?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Devine, Robinson, Miller and Hamwi use linear height
+                    adjustments with sex-specific bases; differences arise from original clinical contexts and data
+                    sets.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Are ideal weight formulas outdated?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">They are still referenced but were not designed for
+                    individualized physique goals; body composition and health markers matter more today.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What factors influence a healthy weight besides height?
+                </h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Muscle mass, bone structure, genetics, age, ethnicity,
+                    hormones, lifestyle and medical conditions all affect a healthy target weight.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Should I focus on ideal weight or body composition?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Prioritize sustainable habits and body composition (fat
+                    vs lean mass). Formula weights are reference points, not absolute goals.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How often should I recalculate ideal weight?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Height in adults is stable; revisit estimates only when
+                    refining goals or after major composition changes (muscle gain or loss).</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is a safe rate of weight change?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Common guidance: loss ~0.5–1% body weight per week; gain
+                    (lean focus) ~0.25–0.5% per week depending on training status.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Health.html">Health</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Ideal Weight Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="ideal-tool-section" aria-labelledby="ideal-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="ideal-card">
-        <div class="ideal-title-row">
-          <h1 class="ideal-title" id="ideal-main-title">Ideal Weight Calculator</h1>
-          <button type="button" class="ideal-info-trigger" aria-describedby="idealInfoPanel" title="About" tabindex="0">i</button>
-          <div class="ideal-info-flyout" id="idealInfoPanel" role="tooltip" aria-hidden="true">
-            <h2>What Is 'Ideal Weight'?</h2>
-            <p>There is no single perfect number. This tool gives estimates from common formulas plus a BMI-based healthy range to inform—not prescribe—goals.</p>
-            <p class="ideal-sub">Formulas Included</p>
-            <p>
-              <strong>Devine (1974)</strong>, <strong>Robinson (1983)</strong>, <strong>Miller (1983)</strong>, <strong>Hamwi (1964)</strong> — all linear height models originally for medication dosing or population norms.
-            </p>
-            <p class="ideal-disclaimer">Estimates only; body composition, frame, age, ethnicity, muscle mass & health status matter more.</p>
-          </div>
-        </div>
-        <div class="ideal-interaction-row">
-          <form id="idealForm" class="ideal-form">
-            <div class="input-group">
-              <label for="sex">Sex</label>
-              <div class="input-row">
-                <select id="sex" name="sex">
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group" id="heightGroup">
-              <label for="height">Height</label>
-              <div class="input-row">
-                <input type="number" id="height" name="height" min="120" max="230" placeholder="Height" required>
-                <select id="heightUnit" name="heightUnit">
-                  <option value="cm">cm</option>
-                  <option value="ft">ft/in</option>
-                </select>
-              </div>
-              <div class="input-row" id="inchesRow" style="display:none;">
-                <input type="number" id="heightInches" name="heightInches" min="0" max="11" placeholder="Inches">
-              </div>
-            </div>
-            <div class="input-group">
-              <label>Show Formulas</label>
-              <div class="formula-options" id="formulaOptions">
-                <label><input type="checkbox" value="devine" checked> Devine</label>
-                <label><input type="checkbox" value="robinson" checked> Robinson</label>
-                <label><input type="checkbox" value="miller" checked> Miller</label>
-                <label><input type="checkbox" value="hamwi" checked> Hamwi</label>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="bmiLow">Custom BMI Range (Optional)</label>
-              <div class="input-row">
-                <input type="number" id="bmiLow" placeholder="Low BMI (e.g. 18.5)" step="0.1" min="10" max="30">
-                <input type="number" id="bmiHigh" placeholder="High BMI (e.g. 24.9)" step="0.1" min="15" max="40">
-              </div>
-            </div>
-            <button type="submit" class="ideal-btn">Calculate</button>
-          </form>
-          <div class="ideal-result-container" id="idealResultContainer" style="display:none;">
-            <div class="ideal-result">
-              <span class="ideal-value" id="idealPrimaryValue">--</span>
-              <span class="ideal-label" id="idealPrimaryLabel">Median Estimate (kg)</span>
-            </div>
-            <div class="ideal-progress-wrapper">
-              <div class="ideal-progress-bar"><div class="ideal-progress" id="idealProgress"></div></div>
-              <div class="ideal-scale"><span>Lighter</span><span>Heavier</span></div>
-            </div>
-            <div class="ideal-breakdown" id="idealBreakdown"></div>
-            <div class="ideal-bmi-range" id="idealBmiRange"></div>
-            <div class="ideal-tips" id="idealTips"></div>
-            <div class="ideal-disclaimer-bottom">Not medical advice. Discuss goals with a qualified professional.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
-          <h2 id="related-health-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="BMICalculator.html" style="text-decoration:none;">BMI Calculator</a></li>
-            <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
-            <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
-            <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a></li>
-            <li><a href="WaterIntakeCalculator.html" style="text-decoration:none;">Daily Water Intake Calculator</a></li>
-            <li><a href="SleepCycleCalculator.html" style="text-decoration:none;">Sleep Cycle Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="ideal-faq-heading">
-          <h2 id="ideal-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Ideal Weight Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How do the ideal weight formulas differ?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Devine, Robinson, Miller and Hamwi use linear height adjustments with sex-specific bases; differences arise from original clinical contexts and data sets.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Are ideal weight formulas outdated?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">They are still referenced but were not designed for individualized physique goals; body composition and health markers matter more today.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What factors influence a healthy weight besides height?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Muscle mass, bone structure, genetics, age, ethnicity, hormones, lifestyle and medical conditions all affect a healthy target weight.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Should I focus on ideal weight or body composition?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Prioritize sustainable habits and body composition (fat vs lean mass). Formula weights are reference points, not absolute goals.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How often should I recalculate ideal weight?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Height in adults is stable; revisit estimates only when refining goals or after major composition changes (muscle gain or loss).</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is a safe rate of weight change?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Common guidance: loss ~0.5–1% body weight per week; gain (lean focus) ~0.25–0.5% per week depending on training status.</p></div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const heightUnit = document.getElementById('heightUnit');
     const heightInput = document.getElementById('height');
@@ -193,36 +234,37 @@
     const idealTips = document.getElementById('idealTips');
 
     heightUnit.addEventListener('change', () => {
-      if(heightUnit.value === 'ft'){ inchesRow.style.display='flex'; heightInput.placeholder='Feet'; }
-      else { inchesRow.style.display='none'; heightInput.placeholder='Height'; }
+      if (heightUnit.value === 'ft') { inchesRow.style.display = 'flex'; heightInput.placeholder = 'Feet'; }
+      else { inchesRow.style.display = 'none'; heightInput.placeholder = 'Height'; }
     });
 
-    function toCm(feetVal, inchVal){ return (feetVal * 30.48) + (inchVal * 2.54); }
+    function toCm(feetVal, inchVal) { return (feetVal * 30.48) + (inchVal * 2.54); }
 
     const formulaFns = {
       devine: (sex, cm) => { // kg
-        const inches = cm / 2.54; const baseIn = sex==='male'?50:45.5; const over = Math.max(0, inches - 60); return baseIn + 2.3 * over; },
-      robinson: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex==='male'?52:49) + (sex==='male'?1.9:1.7) * over; },
-      miller: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex==='male'?56.2:53.1) + (sex==='male'?1.41:1.36) * over; },
-      hamwi: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex==='male'?48:45.5) + (sex==='male'?2.7:2.2) * over; }
+        const inches = cm / 2.54; const baseIn = sex === 'male' ? 50 : 45.5; const over = Math.max(0, inches - 60); return baseIn + 2.3 * over;
+      },
+      robinson: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex === 'male' ? 52 : 49) + (sex === 'male' ? 1.9 : 1.7) * over; },
+      miller: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex === 'male' ? 56.2 : 53.1) + (sex === 'male' ? 1.41 : 1.36) * over; },
+      hamwi: (sex, cm) => { const inches = cm / 2.54; const over = Math.max(0, inches - 60); return (sex === 'male' ? 48 : 45.5) + (sex === 'male' ? 2.7 : 2.2) * over; }
     };
 
-    function median(values){ const sorted=[...values].sort((a,b)=>a-b); const n=sorted.length; if(!n) return 0; if(n%2) return sorted[(n-1)/2]; return (sorted[n/2-1]+sorted[n/2])/2; }
+    function median(values) { const sorted = [...values].sort((a, b) => a - b); const n = sorted.length; if (!n) return 0; if (n % 2) return sorted[(n - 1) / 2]; return (sorted[n / 2 - 1] + sorted[n / 2]) / 2; }
 
     idealForm.addEventListener('submit', e => {
       e.preventDefault();
       const sex = document.getElementById('sex').value;
       let heightCm;
-      if(heightUnit.value==='cm'){ heightCm = parseFloat(heightInput.value); }
-      else { const feet = parseFloat(heightInput.value); const inches = parseFloat(document.getElementById('heightInches').value)||0; heightCm = toCm(feet, inches); }
-      if(!heightCm || heightCm < 120 || heightCm > 250){ idealResultContainer.style.display='none'; idealResultContainer.classList.remove('show'); return; }
+      if (heightUnit.value === 'cm') { heightCm = parseFloat(heightInput.value); }
+      else { const feet = parseFloat(heightInput.value); const inches = parseFloat(document.getElementById('heightInches').value) || 0; heightCm = toCm(feet, inches); }
+      if (!heightCm || heightCm < 120 || heightCm > 250) { idealResultContainer.style.display = 'none'; idealResultContainer.classList.remove('show'); return; }
 
       // Collect selected formulas
-      const selected = [...document.querySelectorAll('#formulaOptions input:checked')].map(c=>c.value);
-      if(selected.length===0){ idealBreakdown.innerHTML='<div class="row">Select at least one formula.</div>'; idealResultContainer.style.display='flex'; return; }
+      const selected = [...document.querySelectorAll('#formulaOptions input:checked')].map(c => c.value);
+      if (selected.length === 0) { idealBreakdown.innerHTML = '<div class="row">Select at least one formula.</div>'; idealResultContainer.style.display = 'flex'; return; }
 
       const results = selected.map(key => { const val = formulaFns[key](sex, heightCm); return { key, value: val }; });
-      const values = results.map(r=>r.value);
+      const values = results.map(r => r.value);
       const med = median(values);
       idealPrimaryValue.textContent = med.toFixed(1);
       idealPrimaryLabel.textContent = 'Median Estimate (kg)';
@@ -232,8 +274,8 @@
 
       // BMI range
       let bmiLow = parseFloat(document.getElementById('bmiLow').value); let bmiHigh = parseFloat(document.getElementById('bmiHigh').value);
-      if(!(bmiLow>0) || !(bmiHigh>0) || bmiHigh <= bmiLow){ bmiLow=18.5; bmiHigh=24.9; }
-      const m2 = (heightCm/100)**2;
+      if (!(bmiLow > 0) || !(bmiHigh > 0) || bmiHigh <= bmiLow) { bmiLow = 18.5; bmiHigh = 24.9; }
+      const m2 = (heightCm / 100) ** 2;
       const weightLow = bmiLow * m2; const weightHigh = bmiHigh * m2;
       idealBmiRange.textContent = `BMI ${bmiLow.toFixed(1)}–${bmiHigh.toFixed(1)} => ${weightLow.toFixed(1)} – ${weightHigh.toFixed(1)} kg`;
 
@@ -244,17 +286,18 @@
 
       // Tips
       let tip;
-      if(med < weightLow) tip = 'Median formula estimate is below healthy BMI band—ensure adequate nutrition & muscle mass.';
-      else if(med > weightHigh) tip = 'Median estimate sits above typical BMI band—consider composition (muscle vs. fat).';
+      if (med < weightLow) tip = 'Median formula estimate is below healthy BMI band—ensure adequate nutrition & muscle mass.';
+      else if (med > weightHigh) tip = 'Median estimate sits above typical BMI band—consider composition (muscle vs. fat).';
       else tip = 'Median estimate is inside your selected BMI band—focus on strength, sleep, and sustainable habits.';
       idealTips.textContent = tip;
 
-      idealResultContainer.style.display='flex';
-      setTimeout(()=>{ idealResultContainer.classList.add('show'); idealResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+      idealResultContainer.style.display = 'flex';
+      setTimeout(() => { idealResultContainer.classList.add('show'); idealResultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
 </body>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Health","item":"https://freetoolsandcalculators.com/Health/Health.html"},{"@type":"ListItem","position":3,"name":"Ideal Weight Calculator","item":"https://freetoolsandcalculators.com/Health/Tools/IdealWeightCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Health/Tools/IdealWeightCalculator.html","url":"https://freetoolsandcalculators.com/Health/Tools/IdealWeightCalculator.html","name":"Ideal Weight Calculator | Multiple Formula Estimates & BMI Range","description":"Ideal weight calculator comparing Devine, Robinson, Miller and Hamwi formulas plus healthy BMI range.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Ideal Weight Calculator","applicationCategory":"HealthApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Health/Tools/IdealWeightCalculator.html","description":"Estimate ideal weight via Devine, Robinson, Miller, Hamwi formulas and BMI band.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do the ideal weight formulas differ?","acceptedAnswer":{"@type":"Answer","text":"Each formula applies a sex-specific base weight with linear increments per inch over 5 feet from different historical data sets."}},{"@type":"Question","name":"Are ideal weight formulas outdated?","acceptedAnswer":{"@type":"Answer","text":"They remain references but were not built for individualized physique goals; composition and health indicators are more useful."}},{"@type":"Question","name":"What factors influence a healthy weight besides height?","acceptedAnswer":{"@type":"Answer","text":"Muscle, bone structure, genetics, age, ethnicity, hormones and lifestyle impact healthy weight."}},{"@type":"Question","name":"Should I focus on ideal weight or body composition?","acceptedAnswer":{"@type":"Answer","text":"Body composition offers better insight; ideal weight formulas supply generalized benchmarks."}},{"@type":"Question","name":"How often should I recalculate ideal weight?","acceptedAnswer":{"@type":"Answer","text":"Adults rarely need recalculation unless goals or composition shift significantly."}},{"@type":"Question","name":"What is a safe rate of weight change?","acceptedAnswer":{"@type":"Answer","text":"Fat loss ~0.5–1% per week; lean mass gain ~0.25–0.5% per week depending on training status."}}]}]}
 </script>
+
 </html>

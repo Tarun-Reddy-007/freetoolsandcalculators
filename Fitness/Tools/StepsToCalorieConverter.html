@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Steps to Calories Converter | Estimate Walking & Running Energy Burn</title>
-  <meta name="description" content="Free Steps to Calories Converter: Enter steps, height, weight, pace & terrain to estimate calories burned. Includes stride estimation, kcal per step/km, tips & related fitness calculators.">
-  <meta name="keywords" content="steps to calories, step calorie calculator, walking calories, running calories, stride length estimate, fitness calculator, energy burn tool">
+  <meta name="description"
+    content="Free Steps to Calories Converter: Enter steps, height, weight, pace & terrain to estimate calories burned. Includes stride estimation, kcal per step/km, tips & related fitness calculators.">
+  <meta name="keywords"
+    content="steps to calories, step calorie calculator, walking calories, running calories, stride length estimate, fitness calculator, energy burn tool">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,196 +16,224 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Steps to Calories Converter | Estimate Energy Burn">
-  <meta property="og:description" content="Convert steps into estimated calories using stride length, MET pace, weight & terrain adjustments.">
+  <meta property="og:description"
+    content="Convert steps into estimated calories using stride length, MET pace, weight & terrain adjustments.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Fitness/Tools/StepsToCalorieConverter.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Fitness/steps_to_calorie_converter.jpg">
   <meta property="og:image:alt" content="Steps to calories converter interface showing input fields and calorie result">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Steps to Calories Converter | Estimate Energy Burn">
-  <meta name="twitter:description" content="Enter steps, height, weight & pace to estimate calories burned. Get kcal per step and distance metrics.">
-  <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Fitness/steps_to_calorie_converter.jpg">
+  <meta name="twitter:description"
+    content="Enter steps, height, weight & pace to estimate calories burned. Get kcal per step and distance metrics.">
+  <meta name="twitter:image"
+    content="https://freetoolsandcalculators.com/Images/Fitness/steps_to_calorie_converter.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="StepsToCalorieConverter.css">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner">
-    
-  </header>
+    <header class="top-banner">
 
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-  <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
+    </header>
+
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Fitness.html">Fitness</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Steps to Calories Converter</span></li>
+          </ol>
+        </nav>
+        <main class="steps-tool-section" aria-labelledby="steps-calorie-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="steps-card">
+            <div class="steps-title-row">
+              <h1 class="steps-title" id="steps-calorie-title">Steps to Calories Converter</h1>
+              <button type="button" class="steps-info-trigger" aria-describedby="stepsInfoPanel" title="About"
+                tabindex="0">i</button>
+              <div class="steps-info-flyout" id="stepsInfoPanel" role="tooltip" aria-hidden="true">
+                <h2>How It Estimates Energy</h2>
+                <p>Calories from steps are approximated using distance (steps × stride) and an activity energy cost
+                  (MET-based) scaled by weight. Stride length is estimated if not provided.</p>
+                <p class="steps-sub">Assumptions</p>
+                <p>Average stride ~0.415 × height (female) or 0.413 × height (male) in cm (converted). MET multipliers
+                  vary by pace selection.</p>
+                <p class="steps-disclaimer">Rough estimate. Terrain, biomechanics & efficiency cause variation.</p>
+              </div>
+            </div>
+            <div class="steps-interaction-row">
+              <form id="stepsForm" class="steps-form">
+                <div class="input-group">
+                  <label for="sex">Sex (stride est.)</label>
+                  <div class="input-row">
+                    <select id="sex">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="height">Height</label>
+                  <div class="input-row">
+                    <input type="number" id="height" min="120" max="230" placeholder="Height" required>
+                    <select id="heightUnit">
+                      <option value="cm">cm</option>
+                      <option value="ft">ft/in</option>
+                    </select>
+                  </div>
+                  <div class="input-row" id="inchesRow" style="display:none;">
+                    <input type="number" id="heightInches" min="0" max="11" placeholder="Inches">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="weight">Weight</label>
+                  <div class="input-row">
+                    <input type="number" id="weight" min="35" max="250" placeholder="Weight" required>
+                    <select id="weightUnit">
+                      <option value="kg">kg</option>
+                      <option value="lb">lb</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="steps">Steps</label>
+                  <div class="input-row">
+                    <input type="number" id="steps" min="1" max="100000" placeholder="Steps" required>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="stride">Stride Length (Optional)</label>
+                  <div class="input-row">
+                    <input type="number" id="stride" min="20" max="150" placeholder="cm">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label>Walking Pace</label>
+                  <div class="pace-options" id="paceOptions">
+                    <label><input type="radio" name="pace" value="easy" checked> Easy</label>
+                    <label><input type="radio" name="pace" value="brisk"> Brisk</label>
+                    <label><input type="radio" name="pace" value="fast"> Fast</label>
+                    <label><input type="radio" name="pace" value="run"> Run</label>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="incline">Incline / Terrain</label>
+                  <div class="input-row">
+                    <select id="incline">
+                      <option value="flat">Flat</option>
+                      <option value="rolling">Rolling</option>
+                      <option value="hilly">Hilly</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="steps-btn">Convert</button>
+              </form>
+              <div class="steps-result-container" id="stepsResultContainer" style="display:none;">
+                <div class="steps-result"><span class="steps-value" id="stepsPrimaryValue">--</span><span
+                    class="steps-label" id="stepsPrimaryLabel">Calories Burned</span></div>
+                <div class="steps-progress-wrapper">
+                  <div class="steps-progress-bar">
+                    <div class="steps-progress" id="stepsProgress"></div>
+                  </div>
+                  <div class="steps-scale"><span>Low</span><span>Higher</span></div>
+                </div>
+                <div class="steps-breakdown" id="stepsBreakdown"></div>
+                <div class="steps-extra" id="stepsExtra"></div>
+                <div class="steps-tips" id="stepsTips"></div>
+                <div class="steps-disclaimer-bottom">Calorie figures are approximate; wearable sensors refine accuracy.
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-fitness-calculators">
+            <h2 id="related-fitness-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Fitness & Health
+              Calculators</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="ProteinIntakeCalculator.html" style="text-decoration:none;">Protein Intake Calculator</a>
+              </li>
+            </ul>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="steps-faq-heading">
+            <h2 id="steps-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Steps
+              to Calories FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How does the converter turn steps into calories?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">It estimates distance from steps × stride length, assigns
+                    a MET value based on pace plus terrain factor, then applies Calories = MET × weight (kg) × hours.
+                  </p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How accurate is this calorie estimate?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">It is a reasonable approximation. Individual
+                    biomechanics, stride variability, ground surface, footwear and metabolic differences can shift real
+                    values.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Do stride length and pace really matter?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Longer stride increases distance per step; faster
+                    pace elevates MET, raising calorie expenditure for the same step count.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I make my estimate more precise?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Measure your true stride over a known distance, use
+                    actual pace (GPS), and consider heart rate data or a validated wearable for refinement.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is a good daily step goal?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Common guidance centers around 7,000–10,000 steps for
+                    general health, adjusted for baseline fitness, age and intensity of other activities.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
 
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Fitness.html">Fitness</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Steps to Calories Converter</span></li>
-        </ol>
-      </nav>
-      <main class="steps-tool-section" aria-labelledby="steps-calorie-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="steps-card">
-        <div class="steps-title-row">
-          <h1 class="steps-title" id="steps-calorie-title">Steps to Calories Converter</h1>
-            <button type="button" class="steps-info-trigger" aria-describedby="stepsInfoPanel" title="About" tabindex="0">i</button>
-            <div class="steps-info-flyout" id="stepsInfoPanel" role="tooltip" aria-hidden="true">
-              <h2>How It Estimates Energy</h2>
-              <p>Calories from steps are approximated using distance (steps × stride) and an activity energy cost (MET-based) scaled by weight. Stride length is estimated if not provided.</p>
-              <p class="steps-sub">Assumptions</p>
-              <p>Average stride ~0.415 × height (female) or 0.413 × height (male) in cm (converted). MET multipliers vary by pace selection.</p>
-              <p class="steps-disclaimer">Rough estimate. Terrain, biomechanics & efficiency cause variation.</p>
-            </div>
-        </div>
-        <div class="steps-interaction-row">
-          <form id="stepsForm" class="steps-form">
-            <div class="input-group">
-              <label for="sex">Sex (stride est.)</label>
-              <div class="input-row">
-                <select id="sex">
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="height">Height</label>
-              <div class="input-row">
-                <input type="number" id="height" min="120" max="230" placeholder="Height" required>
-                <select id="heightUnit">
-                  <option value="cm">cm</option>
-                  <option value="ft">ft/in</option>
-                </select>
-              </div>
-              <div class="input-row" id="inchesRow" style="display:none;">
-                <input type="number" id="heightInches" min="0" max="11" placeholder="Inches">
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="weight">Weight</label>
-              <div class="input-row">
-                <input type="number" id="weight" min="35" max="250" placeholder="Weight" required>
-                <select id="weightUnit">
-                  <option value="kg">kg</option>
-                  <option value="lb">lb</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="steps">Steps</label>
-              <div class="input-row">
-                <input type="number" id="steps" min="1" max="100000" placeholder="Steps" required>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="stride">Stride Length (Optional)</label>
-              <div class="input-row">
-                <input type="number" id="stride" min="20" max="150" placeholder="cm">
-              </div>
-            </div>
-            <div class="input-group">
-              <label>Walking Pace</label>
-              <div class="pace-options" id="paceOptions">
-                <label><input type="radio" name="pace" value="easy" checked> Easy</label>
-                <label><input type="radio" name="pace" value="brisk"> Brisk</label>
-                <label><input type="radio" name="pace" value="fast"> Fast</label>
-                <label><input type="radio" name="pace" value="run"> Run</label>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="incline">Incline / Terrain</label>
-              <div class="input-row">
-                <select id="incline">
-                  <option value="flat">Flat</option>
-                  <option value="rolling">Rolling</option>
-                  <option value="hilly">Hilly</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="steps-btn">Convert</button>
-          </form>
-          <div class="steps-result-container" id="stepsResultContainer" style="display:none;">
-            <div class="steps-result"><span class="steps-value" id="stepsPrimaryValue">--</span><span class="steps-label" id="stepsPrimaryLabel">Calories Burned</span></div>
-            <div class="steps-progress-wrapper"><div class="steps-progress-bar"><div class="steps-progress" id="stepsProgress"></div></div><div class="steps-scale"><span>Low</span><span>Higher</span></div></div>
-            <div class="steps-breakdown" id="stepsBreakdown"></div>
-            <div class="steps-extra" id="stepsExtra"></div>
-            <div class="steps-tips" id="stepsTips"></div>
-            <div class="steps-disclaimer-bottom">Calorie figures are approximate; wearable sensors refine accuracy.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-fitness-calculators">
-          <h2 id="related-fitness-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Fitness & Health Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="ProteinIntakeCalculator.html" style="text-decoration:none;">Protein Intake Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="steps-faq-heading">
-          <h2 id="steps-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Steps to Calories FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How does the converter turn steps into calories?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">It estimates distance from steps × stride length, assigns a MET value based on pace plus terrain factor, then applies Calories = MET × weight (kg) × hours.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How accurate is this calorie estimate?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">It is a reasonable approximation. Individual biomechanics, stride variability, ground surface, footwear and metabolic differences can shift real values.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Do stride length and pace really matter?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes. Longer stride increases distance per step; faster pace elevates MET, raising calorie expenditure for the same step count.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I make my estimate more precise?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Measure your true stride over a known distance, use actual pace (GPS), and consider heart rate data or a validated wearable for refinement.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is a good daily step goal?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Common guidance centers around 7,000–10,000 steps for general health, adjusted for baseline fitness, age and intensity of other activities.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-
-  <footer class="bottom-banner"></footer>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const heightUnit = document.getElementById('heightUnit');
     const heightInput = document.getElementById('height');
@@ -215,15 +246,16 @@
     const stepsExtra = document.getElementById('stepsExtra');
     const stepsTips = document.getElementById('stepsTips');
 
-    heightUnit.addEventListener('change', ()=>{ if(heightUnit.value==='ft'){ inchesRow.style.display='flex'; heightInput.placeholder='Feet'; } else { inchesRow.style.display='none'; heightInput.placeholder='Height'; } });
-    function toCm(ft,inch){ return (ft*30.48)+(inch*2.54); }
-    function toKg(lb){ return lb*0.45359237; }
+    heightUnit.addEventListener('change', () => { if (heightUnit.value === 'ft') { inchesRow.style.display = 'flex'; heightInput.placeholder = 'Feet'; } else { inchesRow.style.display = 'none'; heightInput.placeholder = 'Height'; } });
+    function toCm(ft, inch) { return (ft * 30.48) + (inch * 2.54); }
+    function toKg(lb) { return lb * 0.45359237; }
 
-    function estimateStride(sex, heightCm){ // in cm
-      return (sex==='female'?0.415:0.413) * heightCm; }
+    function estimateStride(sex, heightCm) { // in cm
+      return (sex === 'female' ? 0.415 : 0.413) * heightCm;
+    }
 
-    function paceMet(pace){
-      switch(pace){
+    function paceMet(pace) {
+      switch (pace) {
         case 'easy': return 2.8; // ~2 mph
         case 'brisk': return 3.5; // ~3-3.5 mph
         case 'fast': return 4.3; // ~4+ mph power walk
@@ -232,27 +264,28 @@
       }
     }
 
-    function inclineFactor(val){ if(val==='rolling') return 1.05; if(val==='hilly') return 1.12; return 1; }
+    function inclineFactor(val) { if (val === 'rolling') return 1.05; if (val === 'hilly') return 1.12; return 1; }
 
-    function caloriesFromMet(met, weightKg, durationHours){
+    function caloriesFromMet(met, weightKg, durationHours) {
       // Standard: Calories = MET * weight(kg) * hours
-      return met * weightKg * durationHours; }
+      return met * weightKg * durationHours;
+    }
 
     stepsForm.addEventListener('submit', e => {
       e.preventDefault();
       const sex = document.getElementById('sex').value;
-      let heightCm; if(heightUnit.value==='cm'){ heightCm=parseFloat(heightInput.value); } else { const ft=parseFloat(heightInput.value); const inch=parseFloat(document.getElementById('heightInches').value)||0; heightCm=toCm(ft, inch); }
-      let weightKg=parseFloat(document.getElementById('weight').value); if(document.getElementById('weightUnit').value==='lb') weightKg=toKg(weightKg);
-      const steps = parseInt(document.getElementById('steps').value,10);
+      let heightCm; if (heightUnit.value === 'cm') { heightCm = parseFloat(heightInput.value); } else { const ft = parseFloat(heightInput.value); const inch = parseFloat(document.getElementById('heightInches').value) || 0; heightCm = toCm(ft, inch); }
+      let weightKg = parseFloat(document.getElementById('weight').value); if (document.getElementById('weightUnit').value === 'lb') weightKg = toKg(weightKg);
+      const steps = parseInt(document.getElementById('steps').value, 10);
       const strideIn = parseFloat(document.getElementById('stride').value) || null; // cm if provided
       const pace = document.querySelector('input[name="pace"]:checked').value;
       const incline = document.getElementById('incline').value;
-      if(!heightCm || !weightKg || !steps){ stepsResultContainer.style.display='none'; stepsResultContainer.classList.remove('show'); return; }
+      if (!heightCm || !weightKg || !steps) { stepsResultContainer.style.display = 'none'; stepsResultContainer.classList.remove('show'); return; }
 
       const strideCm = strideIn || estimateStride(sex, heightCm);
       const distanceKm = (steps * strideCm) / 100000; // cm -> km
       // Estimate speed from pace label and distance/time inference: assign typical speeds
-      const speedMap = { easy:3.2, brisk:5.0, fast:6.4, run:8.5 }; // km/h typical
+      const speedMap = { easy: 3.2, brisk: 5.0, fast: 6.4, run: 8.5 }; // km/h typical
       const speed = speedMap[pace] || 4.5;
       const hours = distanceKm / speed;
       const met = paceMet(pace) * inclineFactor(incline);
@@ -261,7 +294,7 @@
       stepsPrimaryValue.textContent = Math.round(calories) + ' kcal';
 
       // Progress mapping 50 - 1200 kcal
-      const min=50, max=1200; const clamped=Math.min(max, Math.max(min, calories)); const pct=((clamped-min)/(max-min))*100; stepsProgress.style.width=pct+'%'; stepsProgress.style.background=pct<33?'#2196f3':pct<66?'#4caf50':'#ff9800';
+      const min = 50, max = 1200; const clamped = Math.min(max, Math.max(min, calories)); const pct = ((clamped - min) / (max - min)) * 100; stepsProgress.style.width = pct + '%'; stepsProgress.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
 
       stepsBreakdown.innerHTML = `
         <div class="row"><span class="key">Steps</span><span>${steps.toLocaleString()}</span></div>
@@ -281,17 +314,18 @@
       `;
 
       let tip;
-      if(hours < 0.25) tip='Short bout—consider accumulating multiple walks for cardio benefits.';
-      else if(hours < 1) tip='Nice duration; consistency improves metabolic and cardiovascular markers.';
-      else tip='Extended effort—ensure hydration and varied terrain to reduce overuse risk.';
+      if (hours < 0.25) tip = 'Short bout—consider accumulating multiple walks for cardio benefits.';
+      else if (hours < 1) tip = 'Nice duration; consistency improves metabolic and cardiovascular markers.';
+      else tip = 'Extended effort—ensure hydration and varied terrain to reduce overuse risk.';
       stepsTips.textContent = tip;
 
-      stepsResultContainer.style.display='flex';
-      setTimeout(()=>{ stepsResultContainer.classList.add('show'); stepsResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+      stepsResultContainer.style.display = 'flex';
+      setTimeout(() => { stepsResultContainer.classList.add('show'); stepsResultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Fitness","item":"https://freetoolsandcalculators.com/Fitness/Fitness.html"},{"@type":"ListItem","position":3,"name":"Steps to Calories Converter","item":"https://freetoolsandcalculators.com/Fitness/Tools/StepsToCalorieConverter.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Fitness/Tools/StepsToCalorieConverter.html","url":"https://freetoolsandcalculators.com/Fitness/Tools/StepsToCalorieConverter.html","name":"Steps to Calories Converter | Walking & Running Energy Burn","description":"Estimate calories burned from steps using stride length, MET-based pace and terrain adjustment with distance and per-step metrics.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Steps to Calories Converter","applicationCategory":"FitnessApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Fitness/Tools/StepsToCalorieConverter.html","description":"Converts user steps to an estimated calorie burn with stride estimation, MET pace factors, distance and speed outputs.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the converter turn steps into calories?","acceptedAnswer":{"@type":"Answer","text":"It estimates distance, applies a MET for pace & terrain, then uses Calories = MET × weight × hours."}},{"@type":"Question","name":"How accurate is this calorie estimate?","acceptedAnswer":{"@type":"Answer","text":"Approximate only; biomechanics, terrain and metabolic variance influence real burn."}},{"@type":"Question","name":"Do stride length and pace really matter?","acceptedAnswer":{"@type":"Answer","text":"Yes. Longer stride increases distance; faster pace raises MET and energy expenditure."}},{"@type":"Question","name":"How can I make my estimate more precise?","acceptedAnswer":{"@type":"Answer","text":"Calibrate stride over known distance, track actual speed, add heart rate or wearable data."}},{"@type":"Question","name":"What is a good daily step goal?","acceptedAnswer":{"@type":"Answer","text":"Common range 7,000–10,000 steps; personalize based on fitness level and other activity."}}]}]}
   </script>
 </body>
+
 </html>

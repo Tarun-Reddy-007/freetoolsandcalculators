@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Water Intake Calculator | Personalized Hydration Goal</title>
-  <meta name="description" content="Free Daily Water Intake Calculator: Estimate personalized hydration needs using weight, exercise, climate, pregnancy/nursing & caffeine adjustments. Output in ml, liters or ounces.">
-  <meta name="keywords" content="water intake calculator,daily water needs,hydration calculator,drink water goal,personalized hydration,how much water,health calculator,free online calculators">
+  <meta name="description"
+    content="Free Daily Water Intake Calculator: Estimate personalized hydration needs using weight, exercise, climate, pregnancy/nursing & caffeine adjustments. Output in ml, liters or ounces.">
+  <meta name="keywords"
+    content="water intake calculator,daily water needs,hydration calculator,drink water goal,personalized hydration,how much water,health calculator,free online calculators">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,203 +16,225 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Daily Water Intake Calculator | Hydration Goal">
-  <meta property="og:description" content="Calculate daily water needs from weight, exercise, climate & more. See breakdown and tips for better hydration.">
+  <meta property="og:description"
+    content="Calculate daily water needs from weight, exercise, climate & more. See breakdown and tips for better hydration.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Health/Tools/WaterIntakeCalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Health/water_intake_calculator.jpg">
   <meta property="og:image:alt" content="Daily water intake calculator interface showing hydration result">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Daily Water Intake Calculator | Hydration Goal">
-  <meta name="twitter:description" content="Personalize hydration target with weight, exercise, climate, pregnancy & caffeine factors.">
+  <meta name="twitter:description"
+    content="Personalize hydration target with weight, exercise, climate, pregnancy & caffeine factors.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Health/water_intake_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="WaterIntakeCalculator.css">
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Health.html">Health</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Daily Water Intake Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="water-tool-section" aria-labelledby="water-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="water-card">
-        <div class="water-title-row">
-          <h1 class="water-title" id="water-main-title">Daily Water Intake Calculator</h1>
-          <button type="button" class="water-info-trigger" aria-describedby="waterInfoPanel" title="About" tabindex="0">i</button>
-          <div class="water-info-flyout" id="waterInfoPanel" role="tooltip" aria-hidden="true">
-            <h2>Why Water Intake Matters</h2>
-            <p>This tool estimates an individualized daily water goal using body weight, activity, climate, pregnancy/nursing, and caffeine modifiers.</p>
-            <p class="water-sub">Base Formula</p>
-            <p>Base need ≈ <strong>35 ml per kg</strong> of body weight (general guideline, mid‑range of 30–40 ml).</p>
-            <p class="water-sub">Adjustments</p>
-            <ul style="list-style:none; padding:0; margin:0 0 10px 0; font-size:.8rem; display:grid; gap:4px;">
-              <li>+ 350 ml per 30 min of exercise (sweat)</li>
-              <li>+ 5-10% for hot / very dry climate</li>
-              <li>+ 300 ml if pregnant; + 700 ml if nursing</li>
-              <li>- ~150 ml per 200 mg caffeine (optional offset)</li>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Health.html">Health</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Daily Water Intake Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="water-tool-section" aria-labelledby="water-main-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="water-card">
+            <div class="water-title-row">
+              <h1 class="water-title" id="water-main-title">Daily Water Intake Calculator</h1>
+              <button type="button" class="water-info-trigger" aria-describedby="waterInfoPanel" title="About"
+                tabindex="0">i</button>
+              <div class="water-info-flyout" id="waterInfoPanel" role="tooltip" aria-hidden="true">
+                <h2>Why Water Intake Matters</h2>
+                <p>This tool estimates an individualized daily water goal using body weight, activity, climate,
+                  pregnancy/nursing, and caffeine modifiers.</p>
+                <p class="water-sub">Base Formula</p>
+                <p>Base need ≈ <strong>35 ml per kg</strong> of body weight (general guideline, mid‑range of 30–40 ml).
+                </p>
+                <p class="water-sub">Adjustments</p>
+                <ul style="list-style:none; padding:0; margin:0 0 10px 0; font-size:.8rem; display:grid; gap:4px;">
+                  <li>+ 350 ml per 30 min of exercise (sweat)</li>
+                  <li>+ 5-10% for hot / very dry climate</li>
+                  <li>+ 300 ml if pregnant; + 700 ml if nursing</li>
+                  <li>- ~150 ml per 200 mg caffeine (optional offset)</li>
+                </ul>
+                <p class="water-disclaimer">Estimates only. Medical conditions (kidney, heart, endocrine) may alter
+                  needs—consult a professional.</p>
+              </div>
+            </div>
+            <div class="water-interaction-row">
+              <form id="waterForm" class="water-form">
+                <div class="input-group">
+                  <label for="weight">Weight</label>
+                  <div class="input-row">
+                    <input type="number" id="weight" name="weight" placeholder="Weight" min="30" max="300" required>
+                    <select id="weightUnit" name="weightUnit">
+                      <option value="kg">kg</option>
+                      <option value="lb">lb</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="exercise">Daily Exercise (minutes)</label>
+                  <div class="input-row">
+                    <input type="number" id="exercise" name="exercise" placeholder="0" min="0" max="300">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="climate">Climate</label>
+                  <div class="input-row">
+                    <select id="climate" name="climate">
+                      <option value="normal">Temperate</option>
+                      <option value="hot">Hot / Humid</option>
+                      <option value="dry">Hot / Dry</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="status">Pregnancy / Nursing</label>
+                  <div class="input-row">
+                    <select id="status" name="status">
+                      <option value="none">None</option>
+                      <option value="pregnant">Pregnant</option>
+                      <option value="nursing">Nursing</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="caffeine">Caffeine (mg)</label>
+                  <div class="input-row">
+                    <input type="number" id="caffeine" name="caffeine" placeholder="0" min="0" max="1000">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="goalUnit">Output Unit</label>
+                  <div class="input-row">
+                    <select id="goalUnit" name="goalUnit">
+                      <option value="ml">ml</option>
+                      <option value="L">Liters</option>
+                      <option value="oz">US fl oz</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="water-btn">Calculate</button>
+              </form>
+              <div class="water-result-container" id="waterResultContainer" style="display:none;">
+                <div class="water-result">
+                  <span class="water-value" id="waterValue">--</span>
+                  <span class="water-label" id="waterUnitLabel">ml / day</span>
+                </div>
+                <div class="water-progress-wrapper">
+                  <div class="water-progress-bar">
+                    <div class="water-progress" id="waterProgress"></div>
+                  </div>
+                  <div class="water-scale"><span>Low</span><span>High</span></div>
+                </div>
+                <div class="water-alt-values" id="waterAlt" style="display:none;"></div>
+                <div class="water-breakdown" id="waterBreakdown"></div>
+                <div class="water-tips" id="waterTips"></div>
+                <div class="water-disclaimer-bottom">Includes estimated adjustments. Listen to thirst. Upper safe limits
+                  vary.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
+            <h2 id="related-health-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="BMICalculator.html" style="text-decoration:none;">BMI Calculator</a></li>
+              <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
+              <li><a href="IdealWeightCalculator.html" style="text-decoration:none;">Ideal Weight Calculator</a></li>
+              <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
+              <li><a href="SleepCycleCalculator.html" style="text-decoration:none;">Sleep Cycle Calculator</a></li>
+              <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a>
+              </li>
             </ul>
-            <p class="water-disclaimer">Estimates only. Medical conditions (kidney, heart, endocrine) may alter needs—consult a professional.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="water-faq-heading">
+            <h2 id="water-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Daily
+              Water Intake Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How much water should I drink daily?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Needs vary; a mid guideline is ~35 ml per kg. The
+                    calculator adjusts for exercise, climate, pregnancy/nursing & caffeine.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Does coffee count toward hydration?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes, most beverages contribute. High caffeine has a mild
+                    diuretic effect; an optional offset is applied here per 200 mg.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Should I adjust water intake for exercise?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Approx +350 ml per 30 minutes of sweat‑producing
+                    activity helps replace fluid losses.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What are signs of dehydration?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Dark urine, dry mouth, headache, fatigue, dizziness,
+                    infrequent urination. Persistent symptoms warrant medical advice.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can you drink too much water?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Excessive rapid intake can dilute sodium
+                    (hyponatremia). Spread intake; include electrolytes if volumes are high.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How should I pace water intake?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Distribute across the day: morning priming, steady
+                    daytime sips, extra around exercise, taper slightly before bed.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="water-interaction-row">
-          <form id="waterForm" class="water-form">
-            <div class="input-group">
-              <label for="weight">Weight</label>
-              <div class="input-row">
-                <input type="number" id="weight" name="weight" placeholder="Weight" min="30" max="300" required>
-                <select id="weightUnit" name="weightUnit">
-                  <option value="kg">kg</option>
-                  <option value="lb">lb</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="exercise">Daily Exercise (minutes)</label>
-              <div class="input-row">
-                <input type="number" id="exercise" name="exercise" placeholder="0" min="0" max="300">
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="climate">Climate</label>
-              <div class="input-row">
-                <select id="climate" name="climate">
-                  <option value="normal">Temperate</option>
-                  <option value="hot">Hot / Humid</option>
-                  <option value="dry">Hot / Dry</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="status">Pregnancy / Nursing</label>
-              <div class="input-row">
-                <select id="status" name="status">
-                  <option value="none">None</option>
-                  <option value="pregnant">Pregnant</option>
-                  <option value="nursing">Nursing</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="caffeine">Caffeine (mg)</label>
-              <div class="input-row">
-                <input type="number" id="caffeine" name="caffeine" placeholder="0" min="0" max="1000">
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="goalUnit">Output Unit</label>
-              <div class="input-row">
-                <select id="goalUnit" name="goalUnit">
-                  <option value="ml">ml</option>
-                  <option value="L">Liters</option>
-                  <option value="oz">US fl oz</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="water-btn">Calculate</button>
-          </form>
-          <div class="water-result-container" id="waterResultContainer" style="display:none;">
-            <div class="water-result">
-              <span class="water-value" id="waterValue">--</span>
-              <span class="water-label" id="waterUnitLabel">ml / day</span>
-            </div>
-            <div class="water-progress-wrapper">
-              <div class="water-progress-bar"><div class="water-progress" id="waterProgress"></div></div>
-              <div class="water-scale"><span>Low</span><span>High</span></div>
-            </div>
-            <div class="water-alt-values" id="waterAlt" style="display:none;"></div>
-            <div class="water-breakdown" id="waterBreakdown"></div>
-            <div class="water-tips" id="waterTips"></div>
-            <div class="water-disclaimer-bottom">Includes estimated adjustments. Listen to thirst. Upper safe limits vary.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
-          <h2 id="related-health-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="BMICalculator.html" style="text-decoration:none;">BMI Calculator</a></li>
-            <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
-            <li><a href="IdealWeightCalculator.html" style="text-decoration:none;">Ideal Weight Calculator</a></li>
-            <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
-            <li><a href="SleepCycleCalculator.html" style="text-decoration:none;">Sleep Cycle Calculator</a></li>
-            <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="water-faq-heading">
-          <h2 id="water-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Daily Water Intake Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How much water should I drink daily?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Needs vary; a mid guideline is ~35 ml per kg. The calculator adjusts for exercise, climate, pregnancy/nursing & caffeine.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Does coffee count toward hydration?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes, most beverages contribute. High caffeine has a mild diuretic effect; an optional offset is applied here per 200 mg.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Should I adjust water intake for exercise?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes. Approx +350 ml per 30 minutes of sweat‑producing activity helps replace fluid losses.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What are signs of dehydration?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Dark urine, dry mouth, headache, fatigue, dizziness, infrequent urination. Persistent symptoms warrant medical advice.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Can you drink too much water?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes. Excessive rapid intake can dilute sodium (hyponatremia). Spread intake; include electrolytes if volumes are high.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How should I pace water intake?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Distribute across the day: morning priming, steady daytime sips, extra around exercise, taper slightly before bed.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const waterForm = document.getElementById('waterForm');
     const waterResultContainer = document.getElementById('waterResultContainer');
@@ -220,16 +245,16 @@
     const waterTips = document.getElementById('waterTips');
     const waterAlt = document.getElementById('waterAlt');
 
-    function toKg(lb){ return lb * 0.45359237; }
-    function mlToOz(ml){ return ml / 29.5735; }
+    function toKg(lb) { return lb * 0.45359237; }
+    function mlToOz(ml) { return ml / 29.5735; }
 
     waterForm.addEventListener('submit', e => {
       e.preventDefault();
       const weightUnit = document.getElementById('weightUnit').value;
       const goalUnit = document.getElementById('goalUnit').value;
       let weight = parseFloat(document.getElementById('weight').value);
-      if(!weight || weight < 30){ waterResultContainer.style.display='none'; waterResultContainer.classList.remove('show'); return; }
-      if(weightUnit === 'lb') weight = toKg(weight);
+      if (!weight || weight < 30) { waterResultContainer.style.display = 'none'; waterResultContainer.classList.remove('show'); return; }
+      if (weightUnit === 'lb') weight = toKg(weight);
 
       const exercise = parseFloat(document.getElementById('exercise').value) || 0; // minutes
       const climate = document.getElementById('climate').value;
@@ -241,18 +266,18 @@
       let exerciseAdd = Math.max(0, Math.floor(exercise / 30)) * 350; // ml per 30 min
       // Climate multiplier
       let climateFactor = 0; // additive percentage
-      if(climate === 'hot') climateFactor = 0.07; // +7%
-      else if(climate === 'dry') climateFactor = 0.1; // +10%
+      if (climate === 'hot') climateFactor = 0.07; // +7%
+      else if (climate === 'dry') climateFactor = 0.1; // +10%
       let climateAdd = base * climateFactor;
 
       let statusAdd = 0;
-      if(status === 'pregnant') statusAdd = 300;
-      else if(status === 'nursing') statusAdd = 700;
+      if (status === 'pregnant') statusAdd = 300;
+      else if (status === 'nursing') statusAdd = 700;
 
       let caffeineOffset = Math.floor(caffeine / 200) * 150; // optional offset
 
       let totalMl = base + exerciseAdd + climateAdd + statusAdd - caffeineOffset;
-      if(totalMl < 1000) totalMl = Math.max(totalMl, 1000); // floor sensible
+      if (totalMl < 1000) totalMl = Math.max(totalMl, 1000); // floor sensible
       const originalMl = totalMl;
 
       // Progress bar scale (rough typical adult range 1500 - 5000 ml)
@@ -263,8 +288,8 @@
 
       // Output formatting
       let displayValue, unitLabel;
-      if(goalUnit === 'ml'){ displayValue = Math.round(totalMl); unitLabel = 'ml / day'; }
-      else if(goalUnit === 'L'){ displayValue = (totalMl / 1000).toFixed(2); unitLabel = 'L / day'; }
+      if (goalUnit === 'ml') { displayValue = Math.round(totalMl); unitLabel = 'ml / day'; }
+      else if (goalUnit === 'L') { displayValue = (totalMl / 1000).toFixed(2); unitLabel = 'L / day'; }
       else { displayValue = mlToOz(totalMl).toFixed(1); unitLabel = 'fl oz / day'; }
       waterValueEl.textContent = displayValue;
       waterUnitLabel.textContent = unitLabel;
@@ -277,28 +302,29 @@
       waterAlt.innerHTML = `<div class="alt-line">≈ ${Math.round(originalMl)} ml total</div><div class="alt-line">${altLiters} | ${altOz} | ${altCups}</div>`;
 
       // Breakdown
-      waterBreakdown.innerHTML = ''+
-        `<span><strong>Base</strong><span>${Math.round(base)} ml</span></span>`+
-        `<span><strong>Exercise</strong><span>${exerciseAdd} ml</span></span>`+
-        `<span><strong>Climate</strong><span>${Math.round(climateAdd)} ml</span></span>`+
-        `<span><strong>Status</strong><span>${statusAdd} ml</span></span>`+
-        `<span><strong>Caffeine offset</strong><span>-${caffeineOffset} ml</span></span>`+
+      waterBreakdown.innerHTML = '' +
+        `<span><strong>Base</strong><span>${Math.round(base)} ml</span></span>` +
+        `<span><strong>Exercise</strong><span>${exerciseAdd} ml</span></span>` +
+        `<span><strong>Climate</strong><span>${Math.round(climateAdd)} ml</span></span>` +
+        `<span><strong>Status</strong><span>${statusAdd} ml</span></span>` +
+        `<span><strong>Caffeine offset</strong><span>-${caffeineOffset} ml</span></span>` +
         `<span><strong>Total</strong><span>${Math.round(originalMl)} ml</span></span>`;
 
       // Tips
       let tip;
-      if(percent < 25) tip = 'Hydration goal is on the low end; verify all factors included.';
-      else if(percent < 60) tip = 'Solid mid-range intake—adjust for thirst & urine color (pale yellow).';
-      else if(percent < 85) tip = 'Higher hydration need—ensure electrolytes if heavy sweating.';
+      if (percent < 25) tip = 'Hydration goal is on the low end; verify all factors included.';
+      else if (percent < 60) tip = 'Solid mid-range intake—adjust for thirst & urine color (pale yellow).';
+      else if (percent < 85) tip = 'Higher hydration need—ensure electrolytes if heavy sweating.';
       else tip = 'Very high volume—avoid overhydration; spread intake & consider sodium balance.';
       waterTips.textContent = tip;
 
       waterResultContainer.style.display = 'flex';
-      setTimeout(()=>{ waterResultContainer.classList.add('show'); waterResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+      setTimeout(() => { waterResultContainer.classList.add('show'); waterResultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Health","item":"https://freetoolsandcalculators.com/Health/Health.html"},{"@type":"ListItem","position":3,"name":"Daily Water Intake Calculator","item":"https://freetoolsandcalculators.com/Health/Tools/WaterIntakeCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Health/Tools/WaterIntakeCalculator.html","url":"https://freetoolsandcalculators.com/Health/Tools/WaterIntakeCalculator.html","name":"Daily Water Intake Calculator | Personalized Hydration Goal","description":"Estimate individualized daily water requirement from weight, exercise, climate, pregnancy/nursing and caffeine factors with unit conversions.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Daily Water Intake Calculator","applicationCategory":"HealthApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Health/Tools/WaterIntakeCalculator.html","description":"Computes daily hydration goal using base ml/kg plus exercise, climate, status and caffeine modifiers with output conversions.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much water should I drink daily?","acceptedAnswer":{"@type":"Answer","text":"A mid guideline is ~35 ml/kg. The calculator adjusts for exercise, climate, pregnancy/nursing & caffeine."}},{"@type":"Question","name":"Does coffee count toward hydration?","acceptedAnswer":{"@type":"Answer","text":"Yes most beverages contribute; calculator applies a mild offset per 200 mg caffeine."}},{"@type":"Question","name":"Should I adjust water intake for exercise?","acceptedAnswer":{"@type":"Answer","text":"Add about 350 ml per 30 min of sweat‑producing exercise."}},{"@type":"Question","name":"What are signs of dehydration?","acceptedAnswer":{"@type":"Answer","text":"Dark urine, dry mouth, headache, fatigue, dizziness, infrequent urination."}},{"@type":"Question","name":"Can you drink too much water?","acceptedAnswer":{"@type":"Answer","text":"Yes; excessive rapid intake risks hyponatremia—spread consumption and include electrolytes if needed."}},{"@type":"Question","name":"How should I pace water intake?","acceptedAnswer":{"@type":"Answer","text":"Distribute sips through the day: morning, steady daytime, around exercise, taper before bed."}}]}]}
   </script>
 </body>
+
 </html>

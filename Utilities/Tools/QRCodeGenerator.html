@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>FreeOnlineCalculators</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="QRCodeGenerator.css" />
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <div class="qr-section">
-      <div class="qr-card">
-        <div class="qr-title-row">
-          <h1 class="qr-title">QR Code Generator</h1>
-          <button type="button" class="qr-info-trigger" aria-describedby="qrInfo" title="How QR codes are generated" tabindex="0">i</button>
-          <div class="qr-info-flyout" id="qrInfo" role="tooltip" aria-hidden="true">
-            <h2>How QR Codes Are Generated</h2>
-            <p>This tool creates a QR code from your text, URL, or any data you enter. The QR code can be scanned by any compatible device.</p>
-            <ul>
-              <li>Supports text, URLs, and more</li>
-              <li>Instant QR code preview</li>
-              <li>Download as PNG</li>
-              <li>Works fully in your browser</li>
-            </ul>
-            <p class="disclaimer">No data is sent to any server. All generation is local.</p>
-          </div>
-        </div>
-        <div class="qr-interaction-row">
-          <form id="qrForm" class="qr-form" autocomplete="off">
-            <div class="input-group">
-              <label for="qrInput">Text or URL</label>
-              <div class="input-row">
-                <input type="text" id="qrInput" required placeholder="Enter text or URL" />
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <div class="qr-section">
+          <div class="qr-card">
+            <div class="qr-title-row">
+              <h1 class="qr-title">QR Code Generator</h1>
+              <button type="button" class="qr-info-trigger" aria-describedby="qrInfo" title="How QR codes are generated"
+                tabindex="0">i</button>
+              <div class="qr-info-flyout" id="qrInfo" role="tooltip" aria-hidden="true">
+                <h2>How QR Codes Are Generated</h2>
+                <p>This tool creates a QR code from your text, URL, or any data you enter. The QR code can be scanned by
+                  any compatible device.</p>
+                <ul>
+                  <li>Supports text, URLs, and more</li>
+                  <li>Instant QR code preview</li>
+                  <li>Download as PNG</li>
+                  <li>Works fully in your browser</li>
+                </ul>
+                <p class="disclaimer">No data is sent to any server. All generation is local.</p>
               </div>
             </div>
-            <button type="submit" class="qr-btn">Generate QR Code</button>
-          </form>
-          <div class="qr-result-container" id="qrResult" style="display:none;">
-            <div class="qr-main-result">
-              <div id="qrCode"></div>
+            <div class="qr-interaction-row">
+              <form id="qrForm" class="qr-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="qrInput">Text or URL</label>
+                  <div class="input-row">
+                    <input type="text" id="qrInput" required placeholder="Enter text or URL" />
+                  </div>
+                </div>
+                <button type="submit" class="qr-btn">Generate QR Code</button>
+              </form>
+              <div class="qr-result-container" id="qrResult" style="display:none;">
+                <div class="qr-main-result">
+                  <div id="qrCode"></div>
+                </div>
+                <div class="qr-breakdown" id="qrBreakdown"></div>
+                <div class="qr-tips" id="qrTips"></div>
+                <div class="qr-disclaimer">QR code is generated locally and never uploaded.</div>
+                <button id="qrDownload" class="qr-btn" style="margin-top:10px;display:none;">Download PNG</button>
+              </div>
             </div>
-            <div class="qr-breakdown" id="qrBreakdown"></div>
-            <div class="qr-tips" id="qrTips"></div>
-            <div class="qr-disclaimer">QR code is generated locally and never uploaded.</div>
-            <button id="qrDownload" class="qr-btn" style="margin-top:10px;display:none;">Download PNG</button>
           </div>
         </div>
-      </div>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
   <script>
-    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const form = document.getElementById('qrForm');
     const inputEl = document.getElementById('qrInput');
@@ -85,29 +90,29 @@
     const downloadBtn = document.getElementById('qrDownload');
     let qr;
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
       const val = inputEl.value.trim();
-      if(!val) return;
+      if (!val) return;
       qrCodeDiv.innerHTML = "";
       qr = new QRCode(qrCodeDiv, {
         text: val,
         width: 200,
         height: 200,
-        colorDark : "#222",
-        colorLight : "#fff",
-        correctLevel : QRCode.CorrectLevel.H
+        colorDark: "#222",
+        colorLight: "#fff",
+        correctLevel: QRCode.CorrectLevel.H
       });
-      breakdownEl.innerHTML = `<div class="qr-row"><span>Content</span><span>${val.length > 30 ? val.slice(0,30)+'...' : val}</span></div>
+      breakdownEl.innerHTML = `<div class="qr-row"><span>Content</span><span>${val.length > 30 ? val.slice(0, 30) + '...' : val}</span></div>
         <div class="qr-row"><span>Type</span><span>${/^https?:\/\//.test(val) ? "URL" : "Text"}</span></div>
         <div class="qr-row"><span>Size</span><span>200 x 200 px</span></div>`;
       tipsEl.textContent = "Tip: You can scan this QR code with your phone or download it as an image.";
       resultBox.style.display = 'flex';
-      setTimeout(()=>{resultBox.classList.add('show');resultBox.scrollIntoView({behavior:'smooth',block:'center'});},50);
-      setTimeout(()=>{downloadBtn.style.display='inline-block';},500);
+      setTimeout(() => { resultBox.classList.add('show'); resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50);
+      setTimeout(() => { downloadBtn.style.display = 'inline-block'; }, 500);
     });
 
-    downloadBtn.addEventListener('click', function(){
+    downloadBtn.addEventListener('click', function () {
       // Find the canvas or img inside qrCodeDiv
       let img = qrCodeDiv.querySelector('img');
       let canvas = qrCodeDiv.querySelector('canvas');
@@ -123,4 +128,5 @@
     });
   </script>
 </body>
+
 </html>

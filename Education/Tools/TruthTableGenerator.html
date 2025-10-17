@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Truth Table Generator | Free Logic Expression to Table Converter</title>
-  <meta name="description" content="Free Truth Table Generator: Convert logical expressions into complete truth tables. Supports AND, OR, NOT, XOR with up to 5 variables plus educational FAQs.">
-  <meta name="keywords" content="truth table generator, logic calculator, boolean algebra, digital logic, AND OR NOT XOR, expression to table, education tools">
+  <meta name="description"
+    content="Free Truth Table Generator: Convert logical expressions into complete truth tables. Supports AND, OR, NOT, XOR with up to 5 variables plus educational FAQs.">
+  <meta name="keywords"
+    content="truth table generator, logic calculator, boolean algebra, digital logic, AND OR NOT XOR, expression to table, education tools">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,146 +16,161 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Truth Table Generator | Free Logic Conversion Tool">
-  <meta property="og:description" content="Enter a logical expression and variables to instantly build a truth table (+ Boolean logic FAQs).">
+  <meta property="og:description"
+    content="Enter a logical expression and variables to instantly build a truth table (+ Boolean logic FAQs).">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Education/Tools/TruthTableGenerator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Education/truth_table_generator.jpg">
   <meta property="og:image:alt" content="Truth table generator interface displaying logical variable combinations">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Truth Table Generator | Free Logic Tool">
-  <meta name="twitter:description" content="Generate Boolean truth tables from expressions (AND OR NOT XOR) with up to 5 variables.">
+  <meta name="twitter:description"
+    content="Generate Boolean truth tables from expressions (AND OR NOT XOR) with up to 5 variables.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Education/truth_table_generator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="TruthTableGenerator.css">
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner">
-    
-  </header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Education.html">Education</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Truth Table Generator</span></li>
-        </ol>
-      </nav>
-      <main class="ttg-section" aria-labelledby="ttg-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="ttg-card">
-        <div class="ttg-title-row">
-          <h1 class="ttg-title" id="ttg-main-title">Truth Table Generator</h1>
-          <button type="button" class="ttg-info-trigger" aria-describedby="ttgInfo" title="How it works" tabindex="0">i</button>
-          <div class="ttg-info-flyout" id="ttgInfo" role="tooltip" aria-hidden="true">
-            <h2>How the Truth Table Generator Works</h2>
-            <p>Enter a logical expression (e.g., <code>A &amp; B | !C</code>) and variable names. The tool will generate a complete truth table for all input combinations.</p>
-            <ul>
-              <li>Supports AND (&amp;), OR (|), NOT (!), XOR (^)</li>
-              <li>Up to 5 variables</li>
-              <li>Instant table generation</li>
+    <header class="top-banner">
+
+    </header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Education.html">Education</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Truth Table Generator</span></li>
+          </ol>
+        </nav>
+        <main class="ttg-section" aria-labelledby="ttg-main-title" itemscope itemtype="https://schema.org/WebPage">
+          <div class="ttg-card">
+            <div class="ttg-title-row">
+              <h1 class="ttg-title" id="ttg-main-title">Truth Table Generator</h1>
+              <button type="button" class="ttg-info-trigger" aria-describedby="ttgInfo" title="How it works"
+                tabindex="0">i</button>
+              <div class="ttg-info-flyout" id="ttgInfo" role="tooltip" aria-hidden="true">
+                <h2>How the Truth Table Generator Works</h2>
+                <p>Enter a logical expression (e.g., <code>A &amp; B | !C</code>) and variable names. The tool will
+                  generate a complete truth table for all input combinations.</p>
+                <ul>
+                  <li>Supports AND (&amp;), OR (|), NOT (!), XOR (^)</li>
+                  <li>Up to 5 variables</li>
+                  <li>Instant table generation</li>
+                </ul>
+                <p class="disclaimer">For educational use. Complex expressions may be limited.</p>
+              </div>
+            </div>
+            <div class="ttg-interaction-row">
+              <form id="ttgForm" class="ttg-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="variables">Variables (comma separated, e.g. A,B,C)</label>
+                  <div class="input-row">
+                    <input type="text" id="variables" required placeholder="A,B,C" />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="expression">Logical Expression</label>
+                  <div class="input-row">
+                    <input type="text" id="expression" required placeholder="A & B | !C" />
+                  </div>
+                </div>
+                <button type="submit" class="ttg-btn">Generate Table</button>
+              </form>
+              <div class="ttg-result-container" id="ttgResult" style="display:none;">
+                <div class="ttg-main-result">
+                  <span class="ttg-result-label">Truth Table</span>
+                </div>
+                <div class="ttg-table-wrapper" id="ttgTable"></div>
+                <div class="ttg-disclaimer">For educational purposes only.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 42px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-education-tools">
+            <h2 id="related-education-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
+              Related Education & Logic Tools</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="AsciiArtGenerator.html" style="text-decoration:none;">ASCII Art Generator</a></li>
+              <li><a href="DigitalLogicConverter.html" style="text-decoration:none;">Digital Logic Converter</a></li>
             </ul>
-            <p class="disclaimer">For educational use. Complex expressions may be limited.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="ttg-faq-heading">
+            <h2 id="ttg-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Truth
+              Table Generator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What operators are supported?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">AND (&amp;), OR (|), NOT (!), XOR (^) are supported for
+                    quick Boolean expression evaluation.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How many variables can I use?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Up to five variables are supported, generating 2^n rows
+                    for all possible input combinations.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How is the expression evaluated?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Variables are replaced with 1/0 then JavaScript logical
+                    operators are applied. XOR pairs are simplified before final evaluation.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why use a truth table?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Truth tables show every combination of inputs and the
+                    resulting output, helping verify logic design and reduce errors.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can I include parentheses?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes, standard parentheses control evaluation order for
+                    complex combined operations.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Are there expression limits?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Extremely long or malformed expressions may not parse;
+                    keep input concise for reliable results.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="ttg-interaction-row">
-          <form id="ttgForm" class="ttg-form" autocomplete="off">
-            <div class="input-group">
-              <label for="variables">Variables (comma separated, e.g. A,B,C)</label>
-              <div class="input-row">
-                <input type="text" id="variables" required placeholder="A,B,C" />
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="expression">Logical Expression</label>
-              <div class="input-row">
-                <input type="text" id="expression" required placeholder="A & B | !C" />
-              </div>
-            </div>
-            <button type="submit" class="ttg-btn">Generate Table</button>
-          </form>
-          <div class="ttg-result-container" id="ttgResult" style="display:none;">
-            <div class="ttg-main-result">
-              <span class="ttg-result-label">Truth Table</span>
-            </div>
-            <div class="ttg-table-wrapper" id="ttgTable"></div>
-            <div class="ttg-disclaimer">For educational purposes only.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 42px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-education-tools">
-          <h2 id="related-education-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Education & Logic Tools</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="AsciiArtGenerator.html" style="text-decoration:none;">ASCII Art Generator</a></li>
-            <li><a href="DigitalLogicConverter.html" style="text-decoration:none;">Digital Logic Converter</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="ttg-faq-heading">
-          <h2 id="ttg-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Truth Table Generator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What operators are supported?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">AND (&amp;), OR (|), NOT (!), XOR (^) are supported for quick Boolean expression evaluation.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How many variables can I use?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Up to five variables are supported, generating 2^n rows for all possible input combinations.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How is the expression evaluated?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Variables are replaced with 1/0 then JavaScript logical operators are applied. XOR pairs are simplified before final evaluation.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Why use a truth table?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Truth tables show every combination of inputs and the resulting output, helping verify logic design and reduce errors.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Can I include parentheses?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes, standard parentheses control evaluation order for complex combined operations.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Are there expression limits?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Extremely long or malformed expressions may not parse; keep input concise for reliable results.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
     function toggleMenu() {
@@ -187,14 +205,14 @@
         // XOR handling
         if (e.includes('^')) {
           // Only supports binary XOR for simplicity
-          e = e.replace(/([01])\s*\^\s*([01])/g, (m,a,b)=> (a^b));
+          e = e.replace(/([01])\s*\^\s*([01])/g, (m, a, b) => (a ^ b));
         }
         // eslint-disable-next-line no-eval
         return !!eval(e.replace(/!/g, '!'));
       } catch { return false; }
     }
 
-    document.getElementById('ttgForm').addEventListener('submit', function(e) {
+    document.getElementById('ttgForm').addEventListener('submit', function (e) {
       e.preventDefault();
       const vars = parseVars(document.getElementById('variables').value);
       const expr = document.getElementById('expression').value;
@@ -235,7 +253,7 @@
       resultBox.style.display = 'flex';
       setTimeout(() => {
         resultBox.classList.add('show');
-        resultBox.scrollIntoView({behavior:'smooth',block:'center'});
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 50);
     });
   </script>
@@ -243,4 +261,5 @@
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Education","item":"https://freetoolsandcalculators.com/Education/Education.html"},{"@type":"ListItem","position":3,"name":"Truth Table Generator","item":"https://freetoolsandcalculators.com/Education/Tools/TruthTableGenerator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Education/Tools/TruthTableGenerator.html","url":"https://freetoolsandcalculators.com/Education/Tools/TruthTableGenerator.html","name":"Truth Table Generator | Free Logic Expression to Table Converter","description":"Generate truth tables for AND, OR, NOT, XOR expressions with up to 5 variables.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Truth Table Generator","applicationCategory":"EducationalApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Education/Tools/TruthTableGenerator.html","description":"Interactive logic tool producing complete truth tables for Boolean expressions.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What operators are supported?","acceptedAnswer":{"@type":"Answer","text":"AND (&), OR (|), NOT (!), XOR (^) are supported."}},{"@type":"Question","name":"How many variables can I use?","acceptedAnswer":{"@type":"Answer","text":"Up to five variables, producing 2^n combinations."}},{"@type":"Question","name":"How is the expression evaluated?","acceptedAnswer":{"@type":"Answer","text":"Variables map to 1/0 then logical operators and XOR simplification are applied."}},{"@type":"Question","name":"Why use a truth table?","acceptedAnswer":{"@type":"Answer","text":"It lists all input combinations to verify correctness of logic designs."}},{"@type":"Question","name":"Can I include parentheses?","acceptedAnswer":{"@type":"Answer","text":"Yes, parentheses control evaluation order."}},{"@type":"Question","name":"Are there expression limits?","acceptedAnswer":{"@type":"Answer","text":"Extremely long or malformed expressions may not parse reliably."}}]}]}
   </script>
 </body>
+
 </html>

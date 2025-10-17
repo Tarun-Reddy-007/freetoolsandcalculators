@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sleep Cycle Calculator | Bed & Wake Times by 90-Minute Cycles</title>
-  <meta name="description" content="Free Sleep Cycle Calculator: Find optimal bed or wake times aligned with 90‑minute sleep cycles. Adjust latency & cycle length; plan 3–7 cycles for better mornings.">
-  <meta name="keywords" content="sleep cycle calculator,wake up time calculator,bed time calculator,sleep latency,sleep duration,90 minute cycles,health sleep tool,free online calculators">
+  <meta name="description"
+    content="Free Sleep Cycle Calculator: Find optimal bed or wake times aligned with 90‑minute sleep cycles. Adjust latency & cycle length; plan 3–7 cycles for better mornings.">
+  <meta name="keywords"
+    content="sleep cycle calculator,wake up time calculator,bed time calculator,sleep latency,sleep duration,90 minute cycles,health sleep tool,free online calculators">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,197 +16,257 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sleep Cycle Calculator | Optimize Bed & Wake Times">
-  <meta property="og:description" content="Enter wake or bed time to get ideal times after full 90‑minute cycles. Adjust latency & cycle length for personalized planning.">
+  <meta property="og:description"
+    content="Enter wake or bed time to get ideal times after full 90‑minute cycles. Adjust latency & cycle length for personalized planning.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Health/Tools/SleepCycleCalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Health/sleep_cycle_calculator.jpg">
   <meta property="og:image:alt" content="Sleep cycle calculator showing suggested bed and wake times">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sleep Cycle Calculator | Optimize Bed & Wake Times">
-  <meta name="twitter:description" content="Plan 3–7 sleep cycles. Choose wake, bed, or duration mode. Adjust latency for accurate results.">
+  <meta name="twitter:description"
+    content="Plan 3–7 sleep cycles. Choose wake, bed, or duration mode. Adjust latency for accurate results.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Health/sleep_cycle_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="SleepCycleCalculator.css">
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Health.html">Health</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Sleep Cycle Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="sleep-tool-section" aria-labelledby="sleep-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="sleep-card">
-        <div class="sleep-title-row">
-          <h1 class="sleep-title" id="sleep-main-title">Sleep Cycle Calculator</h1>
-          <button type="button" class="sleep-info-trigger" aria-describedby="sleepInfoPanel" title="About" tabindex="0">i</button>
-          <div class="sleep-info-flyout" id="sleepInfoPanel" role="tooltip" aria-hidden="true">
-            <h2>How It Works</h2>
-            <p>This tool helps you target wake or bed times aligned with complete ~90‑minute sleep cycles (stages N1 → N2 → N3 → REM). Finishing cycles can reduce grogginess.</p>
-            <p class="sleep-sub">Assumptions</p>
-            <p>1 sleep cycle ≈ 90 min (range 80–110). Average sleep latency (time to fall asleep) default 15 min—adjust if needed.</p>
-            <p class="sleep-sub">Modes</p>
-            <ul style="list-style:none; padding:0; margin:0 0 10px 0; font-size:.8rem; display:grid; gap:4px;">
-              <li><strong>Wake Time Given:</strong> suggests bed times to complete 3–7 cycles.</li>
-              <li><strong>Bed Time Given:</strong> suggests wake times after 3–7 cycles.</li>
-              <li><strong>Target Sleep Duration:</strong> returns cycle count with closest fit.</li>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Health.html">Health</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Sleep Cycle Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="sleep-tool-section" aria-labelledby="sleep-main-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="sleep-card">
+            <div class="sleep-title-row">
+              <h1 class="sleep-title" id="sleep-main-title">Sleep Cycle Calculator</h1>
+              <button type="button" class="sleep-info-trigger" aria-describedby="sleepInfoPanel" title="About"
+                tabindex="0">i</button>
+              <div class="sleep-info-flyout" id="sleepInfoPanel" role="tooltip" aria-hidden="true">
+                <h2>How It Works</h2>
+                <p>This tool helps you target wake or bed times aligned with complete ~90‑minute sleep cycles (stages N1
+                  → N2 → N3 → REM). Finishing cycles can reduce grogginess.</p>
+                <p class="sleep-sub">Assumptions</p>
+                <p>1 sleep cycle ≈ 90 min (range 80–110). Average sleep latency (time to fall asleep) default 15
+                  min—adjust if needed.</p>
+                <p class="sleep-sub">Modes</p>
+                <ul style="list-style:none; padding:0; margin:0 0 10px 0; font-size:.8rem; display:grid; gap:4px;">
+                  <li><strong>Wake Time Given:</strong> suggests bed times to complete 3–7 cycles.</li>
+                  <li><strong>Bed Time Given:</strong> suggests wake times after 3–7 cycles.</li>
+                  <li><strong>Target Sleep Duration:</strong> returns cycle count with closest fit.</li>
+                </ul>
+                <p class="sleep-disclaimer">Estimates only. Individual sleep architecture varies. Prioritize total sleep
+                  & consistency.</p>
+              </div>
+            </div>
+            <div class="sleep-interaction-row">
+              <form id="sleepForm" class="sleep-form">
+                <div class="input-group with-info">
+                  <div class="field-label-row"><label>Mode</label><button type="button" class="field-info-trigger"
+                      aria-describedby="infoMode" tabindex="0">i</button>
+                    <div class="field-info-flyout" id="infoMode" role="tooltip" aria-hidden="true">Choose what you
+                      already know: <strong>Wake</strong> time to find bed times, <strong>Bed</strong> time to find wake
+                      times, or a <strong>Target Duration</strong> to see how many full cycles that is.</div>
+                  </div>
+                  <div class="radio-row" role="radiogroup" aria-label="Mode">
+                    <label><input type="radio" name="mode" value="wake" checked> Wake Time Known</label>
+                    <label><input type="radio" name="mode" value="bed"> Bed Time Known</label>
+                    <label><input type="radio" name="mode" value="duration"> Target Duration</label>
+                  </div>
+                </div>
+                <div class="input-group with-info" id="wakeGroup">
+                  <div class="field-label-row"><label for="wakeTime">Wake Time</label><button type="button"
+                      class="field-info-trigger" aria-describedby="infoWake" tabindex="0">i</button>
+                    <div class="field-info-flyout" id="infoWake" role="tooltip" aria-hidden="true">Enter the time you
+                      <strong>need to wake up</strong>. We'll work backward adding cycles plus your sleep latency to
+                      suggest bed times.</div>
+                  </div>
+                  <div class="input-row">
+                    <input type="time" id="wakeTime" name="wakeTime" value="07:00">
+                  </div>
+                </div>
+                <div class="input-group with-info" id="bedGroup" style="display:none;">
+                  <div class="field-label-row"><label for="bedTime">Bed Time</label><button type="button"
+                      class="field-info-trigger" aria-describedby="infoBed" tabindex="0">i</button>
+                    <div class="field-info-flyout" id="infoBed" role="tooltip" aria-hidden="true">Enter when you
+                      <strong>plan to get into bed</strong>. We'll add latency then cycles to project optimal wake
+                      times.</div>
+                  </div>
+                  <div class="input-row">
+                    <input type="time" id="bedTime" name="bedTime" value="22:30">
+                  </div>
+                </div>
+                <div class="input-group with-info" id="durationGroup" style="display:none;">
+                  <div class="field-label-row"><label for="targetHours">Target Duration (hours)</label><button
+                      type="button" class="field-info-trigger" aria-describedby="infoDuration" tabindex="0">i</button>
+                    <div class="field-info-flyout" id="infoDuration" role="tooltip" aria-hidden="true">Desired
+                      <strong>sleep time (not time in bed)</strong>. We'll divide by cycle length to estimate how many
+                      full cycles that is.</div>
+                  </div>
+                  <div class="input-row">
+                    <input type="number" id="targetHours" name="targetHours" min="3" max="12" step="0.5"
+                      placeholder="7.5">
+                  </div>
+                </div>
+                <div class="input-group with-info">
+                  <div class="field-label-row"><label for="latency">Sleep Latency (min)</label><button type="button"
+                      class="field-info-trigger" aria-describedby="infoLatency" tabindex="0">i</button>
+                    <div class="field-info-flyout" id="infoLatency" role="tooltip" aria-hidden="true">Average minutes it
+                      takes you to <strong>fall asleep after lights out</strong>. Typical is 10–20. Increase if you
+                      often lie awake.</div>
+                  </div>
+                  <div class="input-row">
+                    <input type="number" id="latency" name="latency" min="0" max="90" value="15">
+                  </div>
+                </div>
+                <div class="input-group with-info">
+                  <div class="field-label-row"><label for="cycleLength">Cycle Length (min)</label><button type="button"
+                      class="field-info-trigger" aria-describedby="infoCycle" tabindex="0">i</button>
+                    <div class="field-info-flyout" id="infoCycle" role="tooltip" aria-hidden="true">Approximate length
+                      of one <strong>sleep cycle</strong>. Default 90. Shorter if you naturally wake earlier; longer if
+                      your REM runs late.</div>
+                  </div>
+                  <div class="input-row">
+                    <input type="number" id="cycleLength" name="cycleLength" min="70" max="120" value="90">
+                  </div>
+                </div>
+                <div class="input-group with-info">
+                  <div class="field-label-row"><label for="quality">Recent Sleep Quality</label><button type="button"
+                      class="field-info-trigger" aria-describedby="infoQuality" tabindex="0">i</button>
+                    <div class="field-info-flyout" id="infoQuality" role="tooltip" aria-hidden="true">A quick
+                      self‑rating guiding the tip message. <strong>Poor</strong>: consider an extra cycle.
+                      <strong>Great</strong>: consistency over extra time.</div>
+                  </div>
+                  <div class="input-row">
+                    <select id="quality" name="quality">
+                      <option value="normal">Normal</option>
+                      <option value="poor">Poor (need more)</option>
+                      <option value="great">Great (slightly less ok)</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="sleep-btn">Calculate</button>
+              </form>
+              <div class="sleep-result-container" id="sleepResultContainer" style="display:none;">
+                <div class="sleep-result">
+                  <span class="sleep-value" id="sleepPrimaryValue">--</span>
+                  <span class="sleep-label" id="sleepPrimaryLabel">Suggested Times</span>
+                </div>
+                <div class="sleep-progress-wrapper">
+                  <div class="sleep-progress-bar">
+                    <div class="sleep-progress" id="sleepProgress"></div>
+                  </div>
+                  <div class="sleep-scale"><span>Short</span><span>Long</span></div>
+                </div>
+                <div class="sleep-cycles-list" id="cyclesList"></div>
+                <div class="sleep-tips" id="sleepTips"></div>
+                <div class="sleep-disclaimer-bottom">Cycle model is approximate; focus on consistent schedule & adequate
+                  total sleep.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
+            <h2 id="related-health-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="BMICalculator.html" style="text-decoration:none;">BMI Calculator</a></li>
+              <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
+              <li><a href="IdealWeightCalculator.html" style="text-decoration:none;">Ideal Weight Calculator</a></li>
+              <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
+              <li><a href="WaterIntakeCalculator.html" style="text-decoration:none;">Daily Water Intake Calculator</a>
+              </li>
+              <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a>
+              </li>
             </ul>
-            <p class="sleep-disclaimer">Estimates only. Individual sleep architecture varies. Prioritize total sleep & consistency.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="sleep-faq-heading">
+            <h2 id="sleep-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Sleep
+              Cycle Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How does the Sleep Cycle Calculator work?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">You choose a mode (wake time, bed time, or target
+                    duration). The tool applies your latency and multiplies full 90‑minute cycles (adjustable) to list
+                    optimal times.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Is a sleep cycle always 90 minutes?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">No. Typical range is 80–110 minutes. 90 is a workable
+                    average. You can adjust cycle length if your personal pattern differs.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How many sleep cycles should I aim for?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Most adults benefit from 5–6 full cycles (≈7.5–9 h in bed
+                    with latency). 3–4 cycles are short and 7 cycles occasionally help recovery.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is sleep latency?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Latency is the time it takes to fall asleep after lights
+                    out (often 10–20 min). Adjusting it refines bed and wake time estimates.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Should I wake exactly at cycle end?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Use the listed windows as guides; slight variation is
+                    fine. Prioritize adequate total sleep and consistent schedule over precision.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I improve sleep quality?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Maintain a regular schedule, limit late caffeine, keep a
+                    dark cool room, get daylight exposure, manage stress, and avoid heavy screens before bed.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="sleep-interaction-row">
-          <form id="sleepForm" class="sleep-form">
-            <div class="input-group with-info">
-              <div class="field-label-row"><label>Mode</label><button type="button" class="field-info-trigger" aria-describedby="infoMode" tabindex="0">i</button><div class="field-info-flyout" id="infoMode" role="tooltip" aria-hidden="true">Choose what you already know: <strong>Wake</strong> time to find bed times, <strong>Bed</strong> time to find wake times, or a <strong>Target Duration</strong> to see how many full cycles that is.</div></div>
-              <div class="radio-row" role="radiogroup" aria-label="Mode">
-                <label><input type="radio" name="mode" value="wake" checked> Wake Time Known</label>
-                <label><input type="radio" name="mode" value="bed"> Bed Time Known</label>
-                <label><input type="radio" name="mode" value="duration"> Target Duration</label>
-              </div>
-            </div>
-            <div class="input-group with-info" id="wakeGroup">
-              <div class="field-label-row"><label for="wakeTime">Wake Time</label><button type="button" class="field-info-trigger" aria-describedby="infoWake" tabindex="0">i</button><div class="field-info-flyout" id="infoWake" role="tooltip" aria-hidden="true">Enter the time you <strong>need to wake up</strong>. We'll work backward adding cycles plus your sleep latency to suggest bed times.</div></div>
-              <div class="input-row">
-                <input type="time" id="wakeTime" name="wakeTime" value="07:00">
-              </div>
-            </div>
-            <div class="input-group with-info" id="bedGroup" style="display:none;">
-              <div class="field-label-row"><label for="bedTime">Bed Time</label><button type="button" class="field-info-trigger" aria-describedby="infoBed" tabindex="0">i</button><div class="field-info-flyout" id="infoBed" role="tooltip" aria-hidden="true">Enter when you <strong>plan to get into bed</strong>. We'll add latency then cycles to project optimal wake times.</div></div>
-              <div class="input-row">
-                <input type="time" id="bedTime" name="bedTime" value="22:30">
-              </div>
-            </div>
-            <div class="input-group with-info" id="durationGroup" style="display:none;">
-              <div class="field-label-row"><label for="targetHours">Target Duration (hours)</label><button type="button" class="field-info-trigger" aria-describedby="infoDuration" tabindex="0">i</button><div class="field-info-flyout" id="infoDuration" role="tooltip" aria-hidden="true">Desired <strong>sleep time (not time in bed)</strong>. We'll divide by cycle length to estimate how many full cycles that is.</div></div>
-              <div class="input-row">
-                <input type="number" id="targetHours" name="targetHours" min="3" max="12" step="0.5" placeholder="7.5">
-              </div>
-            </div>
-            <div class="input-group with-info">
-              <div class="field-label-row"><label for="latency">Sleep Latency (min)</label><button type="button" class="field-info-trigger" aria-describedby="infoLatency" tabindex="0">i</button><div class="field-info-flyout" id="infoLatency" role="tooltip" aria-hidden="true">Average minutes it takes you to <strong>fall asleep after lights out</strong>. Typical is 10–20. Increase if you often lie awake.</div></div>
-              <div class="input-row">
-                <input type="number" id="latency" name="latency" min="0" max="90" value="15">
-              </div>
-            </div>
-            <div class="input-group with-info">
-              <div class="field-label-row"><label for="cycleLength">Cycle Length (min)</label><button type="button" class="field-info-trigger" aria-describedby="infoCycle" tabindex="0">i</button><div class="field-info-flyout" id="infoCycle" role="tooltip" aria-hidden="true">Approximate length of one <strong>sleep cycle</strong>. Default 90. Shorter if you naturally wake earlier; longer if your REM runs late.</div></div>
-              <div class="input-row">
-                <input type="number" id="cycleLength" name="cycleLength" min="70" max="120" value="90">
-              </div>
-            </div>
-            <div class="input-group with-info">
-              <div class="field-label-row"><label for="quality">Recent Sleep Quality</label><button type="button" class="field-info-trigger" aria-describedby="infoQuality" tabindex="0">i</button><div class="field-info-flyout" id="infoQuality" role="tooltip" aria-hidden="true">A quick self‑rating guiding the tip message. <strong>Poor</strong>: consider an extra cycle. <strong>Great</strong>: consistency over extra time.</div></div>
-              <div class="input-row">
-                <select id="quality" name="quality">
-                  <option value="normal">Normal</option>
-                  <option value="poor">Poor (need more)</option>
-                  <option value="great">Great (slightly less ok)</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="sleep-btn">Calculate</button>
-          </form>
-          <div class="sleep-result-container" id="sleepResultContainer" style="display:none;">
-            <div class="sleep-result">
-              <span class="sleep-value" id="sleepPrimaryValue">--</span>
-              <span class="sleep-label" id="sleepPrimaryLabel">Suggested Times</span>
-            </div>
-            <div class="sleep-progress-wrapper">
-              <div class="sleep-progress-bar"><div class="sleep-progress" id="sleepProgress"></div></div>
-              <div class="sleep-scale"><span>Short</span><span>Long</span></div>
-            </div>
-            <div class="sleep-cycles-list" id="cyclesList"></div>
-            <div class="sleep-tips" id="sleepTips"></div>
-            <div class="sleep-disclaimer-bottom">Cycle model is approximate; focus on consistent schedule & adequate total sleep.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
-          <h2 id="related-health-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="BMICalculator.html" style="text-decoration:none;">BMI Calculator</a></li>
-            <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
-            <li><a href="IdealWeightCalculator.html" style="text-decoration:none;">Ideal Weight Calculator</a></li>
-            <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
-            <li><a href="WaterIntakeCalculator.html" style="text-decoration:none;">Daily Water Intake Calculator</a></li>
-            <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="sleep-faq-heading">
-          <h2 id="sleep-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Sleep Cycle Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How does the Sleep Cycle Calculator work?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">You choose a mode (wake time, bed time, or target duration). The tool applies your latency and multiplies full 90‑minute cycles (adjustable) to list optimal times.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Is a sleep cycle always 90 minutes?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">No. Typical range is 80–110 minutes. 90 is a workable average. You can adjust cycle length if your personal pattern differs.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How many sleep cycles should I aim for?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Most adults benefit from 5–6 full cycles (≈7.5–9 h in bed with latency). 3–4 cycles are short and 7 cycles occasionally help recovery.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is sleep latency?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Latency is the time it takes to fall asleep after lights out (often 10–20 min). Adjusting it refines bed and wake time estimates.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Should I wake exactly at cycle end?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Use the listed windows as guides; slight variation is fine. Prioritize adequate total sleep and consistent schedule over precision.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I improve sleep quality?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Maintain a regular schedule, limit late caffeine, keep a dark cool room, get daylight exposure, manage stress, and avoid heavy screens before bed.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const sleepForm = document.getElementById('sleepForm');
     const sleepResultContainer = document.getElementById('sleepResultContainer');
@@ -225,21 +288,21 @@
       durationGroup.style.display = mode === 'duration' ? 'block' : 'none';
     }));
 
-    function parseTime(hhmm){ if(!hhmm) return null; const [h,m] = hhmm.split(':').map(x=>parseInt(x,10)); return h*60+m; }
-    function formatTime(totalMinutes){ totalMinutes = (totalMinutes % (24*60) + 24*60) % (24*60); const h = Math.floor(totalMinutes/60); const m = totalMinutes%60; const h12 = ((h+11)%12)+1; const ampm = h<12 ? 'AM':'PM'; return `${h12}:${m.toString().padStart(2,'0')} ${ampm}`; }
+    function parseTime(hhmm) { if (!hhmm) return null; const [h, m] = hhmm.split(':').map(x => parseInt(x, 10)); return h * 60 + m; }
+    function formatTime(totalMinutes) { totalMinutes = (totalMinutes % (24 * 60) + 24 * 60) % (24 * 60); const h = Math.floor(totalMinutes / 60); const m = totalMinutes % 60; const h12 = ((h + 11) % 12) + 1; const ampm = h < 12 ? 'AM' : 'PM'; return `${h12}:${m.toString().padStart(2, '0')} ${ampm}`; }
 
-    function buildCycles(startMinutes, cycleLength, latency, countMin=3,countMax=7, direction='backward'){
+    function buildCycles(startMinutes, cycleLength, latency, countMin = 3, countMax = 7, direction = 'backward') {
       const cycles = [];
-      for(let c=countMin;c<=countMax;c++){
+      for (let c = countMin; c <= countMax; c++) {
         const totalSleep = c * cycleLength; // minutes of sleep only
-        if(direction==='backward'){
+        if (direction === 'backward') {
           const bed = startMinutes - latency - totalSleep; // bed time
-          const duration = totalSleep/60; // hours asleep
-          cycles.push({cycles:c, bedMinutes:bed, wakeMinutes:startMinutes, durationHours:duration});
-        } else if(direction==='forward') {
+          const duration = totalSleep / 60; // hours asleep
+          cycles.push({ cycles: c, bedMinutes: bed, wakeMinutes: startMinutes, durationHours: duration });
+        } else if (direction === 'forward') {
           const wake = startMinutes + latency + totalSleep; // wake time
-          const duration = totalSleep/60;
-            cycles.push({cycles:c, bedMinutes:startMinutes, wakeMinutes:wake, durationHours:duration});
+          const duration = totalSleep / 60;
+          cycles.push({ cycles: c, bedMinutes: startMinutes, wakeMinutes: wake, durationHours: duration });
         }
       }
       return cycles;
@@ -248,80 +311,81 @@
     sleepForm.addEventListener('submit', e => {
       e.preventDefault();
       const mode = document.querySelector('input[name=mode]:checked').value;
-      const latency = parseInt(document.getElementById('latency').value,10) || 0;
-      let cycleLength = parseInt(document.getElementById('cycleLength').value,10) || 90;
+      const latency = parseInt(document.getElementById('latency').value, 10) || 0;
+      let cycleLength = parseInt(document.getElementById('cycleLength').value, 10) || 90;
       cycleLength = Math.min(120, Math.max(70, cycleLength));
       const quality = document.getElementById('quality').value;
 
       cyclesList.innerHTML = '';
       let tip = '';
-      if(mode==='wake'){
+      if (mode === 'wake') {
         const wake = parseTime(document.getElementById('wakeTime').value);
-        if(wake==null){ return; }
+        if (wake == null) { return; }
         const sets = buildCycles(wake, cycleLength, latency, 3, 7, 'backward');
         sets.reverse(); // show longest first maybe nicer
         sets.forEach(s => {
           const li = document.createElement('div');
-          li.className='cycle-item';
+          li.className = 'cycle-item';
           li.innerHTML = `<span><strong>${s.cycles} cycles</strong> (${(s.durationHours).toFixed(1)} h sleep)</span><span class="cycle-count">Bed: ${formatTime(s.bedMinutes)}</span>`;
           cyclesList.appendChild(li);
         });
-        sleepPrimaryValue.textContent = formatTime(sets[Math.floor(sets.length/2)].bedMinutes);
+        sleepPrimaryValue.textContent = formatTime(sets[Math.floor(sets.length / 2)].bedMinutes);
         sleepPrimaryLabel.textContent = 'Mid Option Bed Time';
         tip = 'Choose a bed time that gives you 4–6 full cycles; allow latency before first cycle.';
-      } else if(mode==='bed') {
+      } else if (mode === 'bed') {
         const bed = parseTime(document.getElementById('bedTime').value);
-        if(bed==null){ return; }
+        if (bed == null) { return; }
         const sets = buildCycles(bed, cycleLength, latency, 3, 7, 'forward');
         sets.forEach(s => {
           const li = document.createElement('div');
-          li.className='cycle-item';
+          li.className = 'cycle-item';
           li.innerHTML = `<span><strong>${s.cycles} cycles</strong> (${(s.durationHours).toFixed(1)} h sleep)</span><span class="cycle-count">Wake: ${formatTime(s.wakeMinutes)}</span>`;
           cyclesList.appendChild(li);
         });
-        sleepPrimaryValue.textContent = formatTime(sets[Math.floor(sets.length/2)].wakeMinutes);
+        sleepPrimaryValue.textContent = formatTime(sets[Math.floor(sets.length / 2)].wakeMinutes);
         sleepPrimaryLabel.textContent = 'Mid Option Wake Time';
         tip = 'Aim to wake after a full cycle; avoid the middle of deep sleep (N3).';
       } else { // duration
         const targetHours = parseFloat(document.getElementById('targetHours').value) || 7.5;
-        const cyclesFloat = (targetHours*60)/cycleLength; // including only sleep time
+        const cyclesFloat = (targetHours * 60) / cycleLength; // including only sleep time
         const bestCycles = Math.round(cyclesFloat);
-        const actualSleep = bestCycles*cycleLength/60;
+        const actualSleep = bestCycles * cycleLength / 60;
         sleepPrimaryValue.textContent = `${bestCycles} cycles`;
-        sleepPrimaryLabel.textContent = `${actualSleep.toFixed(1)} h sleep (~${(actualSleep+latency/60).toFixed(1)} h in bed)`;
+        sleepPrimaryLabel.textContent = `${actualSleep.toFixed(1)} h sleep (~${(actualSleep + latency / 60).toFixed(1)} h in bed)`;
         tip = 'Adjust cycle length or latency if this differs from your actual experience.';
       }
 
       // Progress bar: map total recommended range 4.5h to 9h (sleep only)
       let representativeHours = 0;
-      if(mode==='duration'){
-        representativeHours = parseFloat(sleepPrimaryLabel.textContent)||0; // fallback
+      if (mode === 'duration') {
+        representativeHours = parseFloat(sleepPrimaryLabel.textContent) || 0; // fallback
       } else {
         // derive from middle selection cyclesList midpoint
         const items = cyclesList.querySelectorAll('.cycle-item');
-        if(items.length){
-          const mid = items[Math.floor(items.length/2)].innerText; // parse hours inside parentheses
+        if (items.length) {
+          const mid = items[Math.floor(items.length / 2)].innerText; // parse hours inside parentheses
           const match = mid.match(/\(([^h]+) h/);
-          if(match) representativeHours = parseFloat(match[1]);
+          if (match) representativeHours = parseFloat(match[1]);
         }
       }
       representativeHours = representativeHours || 7; // default if parsing failed
       const minH = 4.5, maxH = 9; const clampH = Math.min(maxH, Math.max(minH, representativeHours));
-      const percent = ((clampH - minH)/(maxH - minH))*100;
+      const percent = ((clampH - minH) / (maxH - minH)) * 100;
       sleepProgress.style.width = percent + '%';
       sleepProgress.style.background = percent < 33 ? '#2196f3' : percent < 66 ? '#4caf50' : '#ff9800';
 
       // Quality influence tip augmentation
-      if(quality==='poor') tip += ' Since recent sleep was poor, err toward +1 extra cycle if possible.';
-      else if(quality==='great') tip += ' Great recent sleep—consistency beats chasing more time.';
+      if (quality === 'poor') tip += ' Since recent sleep was poor, err toward +1 extra cycle if possible.';
+      else if (quality === 'great') tip += ' Great recent sleep—consistency beats chasing more time.';
       sleepTips.textContent = tip;
 
-      sleepResultContainer.style.display='flex';
-      setTimeout(()=>{ sleepResultContainer.classList.add('show'); sleepResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+      sleepResultContainer.style.display = 'flex';
+      setTimeout(() => { sleepResultContainer.classList.add('show'); sleepResultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Health","item":"https://freetoolsandcalculators.com/Health/Health.html"},{"@type":"ListItem","position":3,"name":"Sleep Cycle Calculator","item":"https://freetoolsandcalculators.com/Health/Tools/SleepCycleCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Health/Tools/SleepCycleCalculator.html","url":"https://freetoolsandcalculators.com/Health/Tools/SleepCycleCalculator.html","name":"Sleep Cycle Calculator | Bed & Wake Times by 90-Minute Cycles","description":"Free Sleep Cycle Calculator: enter wake or bed time to get optimal times aligned with 90-minute cycles. Adjust latency & cycle length for personalized planning.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Sleep Cycle Calculator","applicationCategory":"HealthApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Health/Tools/SleepCycleCalculator.html","description":"Generates optimal bed or wake times across 3–7 full sleep cycles using adjustable latency and cycle length.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the Sleep Cycle Calculator work?","acceptedAnswer":{"@type":"Answer","text":"Select a mode and the tool multiplies 90-minute cycles plus latency to list optimal times."}},{"@type":"Question","name":"Is a sleep cycle always 90 minutes?","acceptedAnswer":{"@type":"Answer","text":"No—range is about 80–110 minutes; 90 is an average you can adjust."}},{"@type":"Question","name":"How many sleep cycles should I aim for?","acceptedAnswer":{"@type":"Answer","text":"Most adults target 5–6 cycles for 7.5–9 hours in bed including latency."}},{"@type":"Question","name":"What is sleep latency?","acceptedAnswer":{"@type":"Answer","text":"Minutes it takes to fall asleep after going to bed. Commonly 10–20 minutes."}},{"@type":"Question","name":"Should I wake exactly at cycle end?","acceptedAnswer":{"@type":"Answer","text":"Use cycle end times as guides; consistency and adequate duration matter more."}},{"@type":"Question","name":"How can I improve sleep quality?","acceptedAnswer":{"@type":"Answer","text":"Keep a regular schedule, limit caffeine late, optimize environment, manage stress, reduce pre‑bed screens."}}]}]}
   </script>
 </body>
+
 </html>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Word & Character Counter | Instant Text Statistics (Words, Characters, Sentences)</title>
-  <meta name="description" content="Free Word & Character Counter: Live counts for words, characters (with & without spaces), sentences and lines. Paste or type text for instant SEO and writing metrics. All processing local.">
-  <meta name="keywords" content="word counter, character counter, text statistics, sentence count, line count, writing tool, SEO word counter, free online">
+  <meta name="description"
+    content="Free Word & Character Counter: Live counts for words, characters (with & without spaces), sentences and lines. Paste or type text for instant SEO and writing metrics. All processing local.">
+  <meta name="keywords"
+    content="word counter, character counter, text statistics, sentence count, line count, writing tool, SEO word counter, free online">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,7 +16,8 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Word & Character Counter | Instant Text Stats">
-  <meta property="og:description" content="Live word, character, sentence and line counts with local processing. Paste text for instant metrics.">
+  <meta property="og:description"
+    content="Live word, character, sentence and line counts with local processing. Paste text for instant metrics.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Utilities/Tools/WordCharacterCounter.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Utilities/word_character_counter.jpg">
@@ -24,120 +28,145 @@
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Utilities/word_character_counter.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="WordCharacterCounter.css" />
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Utilities.html">Utilities</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Word & Character Counter</span></li>
-        </ol>
-      </nav>
-      <main class="wcc-section" aria-labelledby="word-char-counter-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="wcc-card">
-        <div class="wcc-title-row">
-          <h1 class="wcc-title" id="word-char-counter-title">Word & Character Counter</h1>
-          <button type="button" class="wcc-info-trigger" aria-describedby="wccInfo" title="How counting works" tabindex="0">i</button>
-          <div class="wcc-info-flyout" id="wccInfo" role="tooltip" aria-hidden="true">
-            <h2>How Counting Works</h2>
-            <p>This tool counts words, characters, sentences, and more as you type or paste text. Useful for essays, tweets, SEO, and more.</p>
-            <ul>
-              <li>Counts words, characters, sentences, lines</li>
-              <li>Live updates as you type</li>
-              <li>Works fully in your browser</li>
-            </ul>
-            <p class="disclaimer">No data is sent anywhere. All counting is local.</p>
-          </div>
-        </div>
-        <div class="wcc-interaction-row">
-          <form id="wccForm" class="wcc-form" autocomplete="off" onsubmit="return false;">
-            <div class="input-group">
-              <label for="wccInput">Enter Text</label>
-              <div class="input-row">
-                <textarea id="wccInput" rows="7" placeholder="Type or paste your text here..." required></textarea>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Utilities.html">Utilities</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Word & Character Counter</span></li>
+          </ol>
+        </nav>
+        <main class="wcc-section" aria-labelledby="word-char-counter-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="wcc-card">
+            <div class="wcc-title-row">
+              <h1 class="wcc-title" id="word-char-counter-title">Word & Character Counter</h1>
+              <button type="button" class="wcc-info-trigger" aria-describedby="wccInfo" title="How counting works"
+                tabindex="0">i</button>
+              <div class="wcc-info-flyout" id="wccInfo" role="tooltip" aria-hidden="true">
+                <h2>How Counting Works</h2>
+                <p>This tool counts words, characters, sentences, and more as you type or paste text. Useful for essays,
+                  tweets, SEO, and more.</p>
+                <ul>
+                  <li>Counts words, characters, sentences, lines</li>
+                  <li>Live updates as you type</li>
+                  <li>Works fully in your browser</li>
+                </ul>
+                <p class="disclaimer">No data is sent anywhere. All counting is local.</p>
               </div>
             </div>
-          </form>
-          <div class="wcc-result-container" id="wccResult" style="display:none;">
-            <div class="wcc-main-result">
-              <span class="wcc-value" id="wccMain">0</span>
-              <span class="wcc-label">Words</span>
+            <div class="wcc-interaction-row">
+              <form id="wccForm" class="wcc-form" autocomplete="off" onsubmit="return false;">
+                <div class="input-group">
+                  <label for="wccInput">Enter Text</label>
+                  <div class="input-row">
+                    <textarea id="wccInput" rows="7" placeholder="Type or paste your text here..." required></textarea>
+                  </div>
+                </div>
+              </form>
+              <div class="wcc-result-container" id="wccResult" style="display:none;">
+                <div class="wcc-main-result">
+                  <span class="wcc-value" id="wccMain">0</span>
+                  <span class="wcc-label">Words</span>
+                </div>
+                <div class="wcc-breakdown" id="wccBreakdown"></div>
+                <div class="wcc-tips" id="wccTips"></div>
+                <div class="wcc-disclaimer">All counts are approximate. No text is stored or sent.</div>
+              </div>
             </div>
-            <div class="wcc-breakdown" id="wccBreakdown"></div>
-            <div class="wcc-tips" id="wccTips"></div>
-            <div class="wcc-disclaimer">All counts are approximate. No text is stored or sent.</div>
           </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-text-tools">
+            <h2 id="related-text-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
+              Related Utility & Text Tools</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="DateDifferenceCalculator.html" style="text-decoration:none;">Date Difference Calculator</a>
+              </li>
+              <li><a href="PasswordStrengthChecker.html" style="text-decoration:none;">Password Strength Checker</a>
+              </li>
+              <li><a href="QRCodeGenerator.html" style="text-decoration:none;">QR Code Generator</a></li>
+              <li><a href="RomanNumeralConverter.html" style="text-decoration:none;">Roman Numeral Converter</a></li>
+              <li><a href="UnitConverter.html" style="text-decoration:none;">Unit Converter</a></li>
+              <li><a href="AgeCalculator.html" style="text-decoration:none;">Age Calculator</a></li>
+            </ul>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="word-counter-faq-heading">
+            <h2 id="word-counter-faq-heading"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Word & Character Counter FAQ
+            </h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How are words counted?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Words are detected using word boundary matching
+                    (alphanumeric sequences) after trimming leading and trailing whitespace.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Do you send my text to a server?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">No. All counting logic runs locally in your browser;
+                    nothing is stored or transmitted.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why are my counts different from another tool?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Different tools define words or sentences differently
+                    (e.g., handling of hyphenated terms or ellipses), leading to slight variations.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What text lengths are supported?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Practically any length supported by your
+                    browser—thousands of words—performance remains fast for typical documents.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I use this for SEO?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Check keyword density, keep meta descriptions concise,
+                    and monitor readability by tracking sentence and word counts.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-text-tools">
-          <h2 id="related-text-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Utility & Text Tools</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="DateDifferenceCalculator.html" style="text-decoration:none;">Date Difference Calculator</a></li>
-            <li><a href="PasswordStrengthChecker.html" style="text-decoration:none;">Password Strength Checker</a></li>
-            <li><a href="QRCodeGenerator.html" style="text-decoration:none;">QR Code Generator</a></li>
-            <li><a href="RomanNumeralConverter.html" style="text-decoration:none;">Roman Numeral Converter</a></li>
-            <li><a href="UnitConverter.html" style="text-decoration:none;">Unit Converter</a></li>
-            <li><a href="AgeCalculator.html" style="text-decoration:none;">Age Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="word-counter-faq-heading">
-          <h2 id="word-counter-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Word & Character Counter FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How are words counted?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Words are detected using word boundary matching (alphanumeric sequences) after trimming leading and trailing whitespace.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Do you send my text to a server?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">No. All counting logic runs locally in your browser; nothing is stored or transmitted.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Why are my counts different from another tool?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Different tools define words or sentences differently (e.g., handling of hyphenated terms or ellipses), leading to slight variations.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What text lengths are supported?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Practically any length supported by your browser—thousands of words—performance remains fast for typical documents.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I use this for SEO?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Check keyword density, keep meta descriptions concise, and monitor readability by tracking sentence and word counts.</p></div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
-    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const inputEl = document.getElementById('wccInput');
     const resultBox = document.getElementById('wccResult');
@@ -151,12 +180,12 @@
       const words = (text.trim().match(/\b\w+\b/g) || []).length;
       const lines = text.split(/\r\n|\r|\n/).length;
       const sentences = (text.match(/[\w\)][.?!](\s|$)/g) || []).length;
-      return {chars, charsNoSpace, words, lines, sentences};
+      return { chars, charsNoSpace, words, lines, sentences };
     }
 
     function updateCounts() {
       const text = inputEl.value;
-      const {chars, charsNoSpace, words, lines, sentences} = countAll(text);
+      const { chars, charsNoSpace, words, lines, sentences } = countAll(text);
       mainValue.textContent = words;
       breakdownEl.innerHTML = `
         <div class="wcc-row"><span>Characters (with spaces)</span><span>${chars}</span></div>
@@ -166,7 +195,7 @@
       `;
       tipsEl.textContent = "Tip: Paste or type your text to get instant counts.";
       resultBox.style.display = 'flex';
-      setTimeout(()=>{resultBox.classList.add('show');},50);
+      setTimeout(() => { resultBox.classList.add('show'); }, 50);
     }
 
     inputEl.addEventListener('input', updateCounts);
@@ -175,4 +204,5 @@
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Utilities","item":"https://freetoolsandcalculators.com/Utilities/Utilities.html"},{"@type":"ListItem","position":3,"name":"Word & Character Counter","item":"https://freetoolsandcalculators.com/Utilities/Tools/WordCharacterCounter.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Utilities/Tools/WordCharacterCounter.html","url":"https://freetoolsandcalculators.com/Utilities/Tools/WordCharacterCounter.html","name":"Word & Character Counter | Instant Text Statistics","description":"Live word, character, sentence & line counts for pasted or typed text—fully local processing.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Word & Character Counter","applicationCategory":"ProductivityApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Utilities/Tools/WordCharacterCounter.html","description":"Provides instant counts for words, characters, sentences and lines for writing & SEO tasks.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How are words counted?","acceptedAnswer":{"@type":"Answer","text":"Word boundary regex after trimming whitespace."}},{"@type":"Question","name":"Do you send my text to a server?","acceptedAnswer":{"@type":"Answer","text":"No—everything executes locally."}},{"@type":"Question","name":"Why are my counts different from another tool?","acceptedAnswer":{"@type":"Answer","text":"Different definitions of words or sentences cause variations."}},{"@type":"Question","name":"What text lengths are supported?","acceptedAnswer":{"@type":"Answer","text":"Large texts supported; browser memory is the limit."}},{"@type":"Question","name":"How can I use this for SEO?","acceptedAnswer":{"@type":"Answer","text":"Monitor keyword density and readability metrics."}}]}]}
   </script>
 </body>
+
 </html>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Protein Intake Calculator | Daily Protein Needs by Goal & Activity</title>
-  <meta name="description" content="Free Protein Intake Calculator: Enter weight, goal (muscle gain, fat loss, health), training frequency & meals to get personalized daily protein ranges (g/day & per meal). Includes FAQs & related fitness calculators.">
-  <meta name="keywords" content="protein intake calculator, daily protein needs, muscle gain protein, fat loss protein, grams per kg, fitness nutrition tool, free online calculator">
+  <meta name="description"
+    content="Free Protein Intake Calculator: Enter weight, goal (muscle gain, fat loss, health), training frequency & meals to get personalized daily protein ranges (g/day & per meal). Includes FAQs & related fitness calculators.">
+  <meta name="keywords"
+    content="protein intake calculator, daily protein needs, muscle gain protein, fat loss protein, grams per kg, fitness nutrition tool, free online calculator">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,196 +16,225 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Protein Intake Calculator | Personalized Daily Protein">
-  <meta property="og:description" content="Calculate optimal daily protein (grams) based on body weight, goal & training frequency. Get per-meal guidance and ranges.">
+  <meta property="og:description"
+    content="Calculate optimal daily protein (grams) based on body weight, goal & training frequency. Get per-meal guidance and ranges.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Fitness/Tools/ProteinIntakeCalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Fitness/protein_intake_calculator.jpg">
   <meta property="og:image:alt" content="Protein intake calculator interface showing weight, goal and result bands">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Protein Intake Calculator | Personalized Daily Protein">
-  <meta name="twitter:description" content="Figure out how many grams of protein you need per day & per meal for your goal (health, muscle, fat loss).">
+  <meta name="twitter:description"
+    content="Figure out how many grams of protein you need per day & per meal for your goal (health, muscle, fat loss).">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Fitness/protein_intake_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="ProteinIntakeCalculator.css">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner">
-    
-  </header>
+    <header class="top-banner">
 
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-  <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
+    </header>
+
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Fitness.html">Fitness</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Protein Intake Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="protein-tool-section" aria-labelledby="protein-intake-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="protein-card">
+            <div class="protein-title-row">
+              <h1 class="protein-title" id="protein-intake-title">Protein Intake Calculator</h1>
+              <button type="button" class="protein-info-trigger" aria-describedby="proteinInfoPanel" title="About"
+                tabindex="0">i</button>
+              <div class="protein-info-flyout" id="proteinInfoPanel" role="tooltip" aria-hidden="true">
+                <h2>Why Protein?</h2>
+                <p>Protein supports muscle repair, hormonal signaling, immune function, satiety and metabolic health.
+                  Needs scale with lean mass, training stress, energy deficit and age.</p>
+                <p class="protein-sub">General Evidence-Based Ranges</p>
+                <p><strong>Minimal:</strong> 0.8 g/kg (RDA – prevents deficiency).<br><strong>General Health:</strong>
+                  1.0–1.4 g/kg.<br><strong>Muscle Gain / Active:</strong> 1.4–1.8 g/kg.<br><strong>Fat Loss (lean
+                    preservation):</strong> 1.6–2.2 g/kg.<br><strong>High Demand / Athletes:</strong> up to ~2.4 g/kg
+                  (sometimes transiently).</p>
+                <p class="protein-disclaimer">Individualization matters: consult a professional for medical or clinical
+                  conditions.</p>
+              </div>
+            </div>
+            <div class="protein-interaction-row">
+              <form id="proteinForm" class="protein-form">
+                <div class="input-group">
+                  <label for="sex">Sex (Optional)</label>
+                  <div class="input-row">
+                    <select id="sex" name="sex">
+                      <option value="">--</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="weight">Body Weight</label>
+                  <div class="input-row">
+                    <input type="number" id="weight" min="30" max="250" placeholder="Weight" required>
+                    <select id="weightUnit">
+                      <option value="kg">kg</option>
+                      <option value="lb">lb</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="goal">Primary Goal</label>
+                  <div class="input-row">
+                    <select id="goal" required>
+                      <option value="health">General Health</option>
+                      <option value="muscle">Build Muscle</option>
+                      <option value="fatloss">Fat Loss / Cut</option>
+                      <option value="performance">Performance</option>
+                      <option value="maintenance">Maintenance / Recomp</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="training">Training Frequency</label>
+                  <div class="input-row">
+                    <select id="training" required>
+                      <option value="low">0-2 days</option>
+                      <option value="moderate">3-4 days</option>
+                      <option value="high">5-6 days</option>
+                      <option value="veryhigh">Daily / 2-a-days</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="bodyfat">Body Fat % (Optional)</label>
+                  <div class="input-row">
+                    <input type="number" id="bodyfat" min="3" max="60" placeholder="%">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label>Show Bands</label>
+                  <div class="method-options" id="bandOptions">
+                    <label><input type="checkbox" value="low" checked> Low</label>
+                    <label><input type="checkbox" value="mid" checked> Mid</label>
+                    <label><input type="checkbox" value="high" checked> High</label>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="meals">Meals / Day</label>
+                  <div class="input-row">
+                    <input type="number" id="meals" min="1" max="10" value="3">
+                  </div>
+                </div>
+                <button type="submit" class="protein-btn">Calculate</button>
+              </form>
+              <div class="protein-result-container" id="proteinResultContainer" style="display:none;">
+                <div class="protein-result"><span class="protein-value" id="proteinPrimaryValue">--</span><span
+                    class="protein-label" id="proteinPrimaryLabel">Median g/day</span></div>
+                <div class="protein-progress-wrapper">
+                  <div class="protein-progress-bar">
+                    <div class="protein-progress" id="proteinProgress"></div>
+                  </div>
+                  <div class="protein-scale"><span>Lower</span><span>Higher</span></div>
+                </div>
+                <div class="protein-breakdown" id="proteinBreakdown"></div>
+                <div class="protein-extra" id="proteinExtra"></div>
+                <div class="protein-tips" id="proteinTips"></div>
+                <div class="protein-disclaimer-bottom">Adequate hydration & micronutrients support optimal protein
+                  utilization.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-fitness-calculators">
+            <h2 id="related-fitness-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Fitness & Health
+              Calculators</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="StepsToCalorieConverter.html" style="text-decoration:none;">Steps to Calories Converter</a>
+              </li>
+            </ul>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="protein-faq-heading">
+            <h2 id="protein-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">
+              Protein Intake Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How much protein do I need per day?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Most adults fall between about 1.0–1.8 g/kg. Higher
+                    ranges (1.6–2.4 g/kg) can help preserve lean mass during fat loss or intense training.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Does my goal change optimal protein?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Muscle gain and fat loss phases typically benefit
+                    from the upper half of the recommended range; general health or maintenance can use moderate values.
+                  </p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Should I eat the same protein on rest days?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Generally yes—muscle repair and remodeling continue
+                    off-day. You can slightly reduce if in surplus, but consistency aids recovery.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Plant vs animal protein: does it matter?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Both work. Ensure variety and sufficient leucine.
+                    Blending legumes, grains, soy, and seeds improves amino acid completeness.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can too much protein harm kidneys?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">In healthy individuals, higher intakes are generally
+                    well-tolerated. Those with kidney disease should follow medical guidance and may need moderated
+                    protein.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
 
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Fitness.html">Fitness</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Protein Intake Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="protein-tool-section" aria-labelledby="protein-intake-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="protein-card">
-        <div class="protein-title-row">
-          <h1 class="protein-title" id="protein-intake-title">Protein Intake Calculator</h1>
-          <button type="button" class="protein-info-trigger" aria-describedby="proteinInfoPanel" title="About" tabindex="0">i</button>
-          <div class="protein-info-flyout" id="proteinInfoPanel" role="tooltip" aria-hidden="true">
-            <h2>Why Protein?</h2>
-            <p>Protein supports muscle repair, hormonal signaling, immune function, satiety and metabolic health. Needs scale with lean mass, training stress, energy deficit and age.</p>
-            <p class="protein-sub">General Evidence-Based Ranges</p>
-            <p><strong>Minimal:</strong> 0.8 g/kg (RDA – prevents deficiency).<br><strong>General Health:</strong> 1.0–1.4 g/kg.<br><strong>Muscle Gain / Active:</strong> 1.4–1.8 g/kg.<br><strong>Fat Loss (lean preservation):</strong> 1.6–2.2 g/kg.<br><strong>High Demand / Athletes:</strong> up to ~2.4 g/kg (sometimes transiently).</p>
-            <p class="protein-disclaimer">Individualization matters: consult a professional for medical or clinical conditions.</p>
-          </div>
-        </div>
-        <div class="protein-interaction-row">
-          <form id="proteinForm" class="protein-form">
-            <div class="input-group">
-              <label for="sex">Sex (Optional)</label>
-              <div class="input-row">
-                <select id="sex" name="sex">
-                  <option value="">--</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="weight">Body Weight</label>
-              <div class="input-row">
-                <input type="number" id="weight" min="30" max="250" placeholder="Weight" required>
-                <select id="weightUnit">
-                  <option value="kg">kg</option>
-                  <option value="lb">lb</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="goal">Primary Goal</label>
-              <div class="input-row">
-                <select id="goal" required>
-                  <option value="health">General Health</option>
-                  <option value="muscle">Build Muscle</option>
-                  <option value="fatloss">Fat Loss / Cut</option>
-                  <option value="performance">Performance</option>
-                  <option value="maintenance">Maintenance / Recomp</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="training">Training Frequency</label>
-              <div class="input-row">
-                <select id="training" required>
-                  <option value="low">0-2 days</option>
-                  <option value="moderate">3-4 days</option>
-                  <option value="high">5-6 days</option>
-                  <option value="veryhigh">Daily / 2-a-days</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="bodyfat">Body Fat % (Optional)</label>
-              <div class="input-row">
-                <input type="number" id="bodyfat" min="3" max="60" placeholder="%">
-              </div>
-            </div>
-            <div class="input-group">
-              <label>Show Bands</label>
-              <div class="method-options" id="bandOptions">
-                <label><input type="checkbox" value="low" checked> Low</label>
-                <label><input type="checkbox" value="mid" checked> Mid</label>
-                <label><input type="checkbox" value="high" checked> High</label>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="meals">Meals / Day</label>
-              <div class="input-row">
-                <input type="number" id="meals" min="1" max="10" value="3">
-              </div>
-            </div>
-            <button type="submit" class="protein-btn">Calculate</button>
-          </form>
-          <div class="protein-result-container" id="proteinResultContainer" style="display:none;">
-            <div class="protein-result"><span class="protein-value" id="proteinPrimaryValue">--</span><span class="protein-label" id="proteinPrimaryLabel">Median g/day</span></div>
-            <div class="protein-progress-wrapper"><div class="protein-progress-bar"><div class="protein-progress" id="proteinProgress"></div></div><div class="protein-scale"><span>Lower</span><span>Higher</span></div></div>
-            <div class="protein-breakdown" id="proteinBreakdown"></div>
-            <div class="protein-extra" id="proteinExtra"></div>
-            <div class="protein-tips" id="proteinTips"></div>
-            <div class="protein-disclaimer-bottom">Adequate hydration & micronutrients support optimal protein utilization.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-fitness-calculators">
-          <h2 id="related-fitness-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Fitness & Health Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="StepsToCalorieConverter.html" style="text-decoration:none;">Steps to Calories Converter</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="protein-faq-heading">
-          <h2 id="protein-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Protein Intake Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How much protein do I need per day?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Most adults fall between about 1.0–1.8 g/kg. Higher ranges (1.6–2.4 g/kg) can help preserve lean mass during fat loss or intense training.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Does my goal change optimal protein?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes. Muscle gain and fat loss phases typically benefit from the upper half of the recommended range; general health or maintenance can use moderate values.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Should I eat the same protein on rest days?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Generally yes—muscle repair and remodeling continue off-day. You can slightly reduce if in surplus, but consistency aids recovery.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Plant vs animal protein: does it matter?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Both work. Ensure variety and sufficient leucine. Blending legumes, grains, soy, and seeds improves amino acid completeness.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Can too much protein harm kidneys?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">In healthy individuals, higher intakes are generally well-tolerated. Those with kidney disease should follow medical guidance and may need moderated protein.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-
-  <footer class="bottom-banner"></footer>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const proteinForm = document.getElementById('proteinForm');
     const proteinResultContainer = document.getElementById('proteinResultContainer');
@@ -213,45 +245,45 @@
     const proteinExtra = document.getElementById('proteinExtra');
     const proteinTips = document.getElementById('proteinTips');
 
-    function toKg(lb){ return lb*0.45359237; }
-    function median(vals){ const s=[...vals].sort((a,b)=>a-b); const n=s.length; return n? (n%2? s[(n-1)/2] : (s[n/2-1]+s[n/2])/2) : 0; }
+    function toKg(lb) { return lb * 0.45359237; }
+    function median(vals) { const s = [...vals].sort((a, b) => a - b); const n = s.length; return n ? (n % 2 ? s[(n - 1) / 2] : (s[n / 2 - 1] + s[n / 2]) / 2) : 0; }
 
     proteinForm.addEventListener('submit', e => {
       e.preventDefault();
-      let weight = parseFloat(document.getElementById('weight').value); if(!weight || weight<30){ proteinResultContainer.style.display='none'; proteinResultContainer.classList.remove('show'); return; }
-      if(document.getElementById('weightUnit').value==='lb') weight = toKg(weight);
+      let weight = parseFloat(document.getElementById('weight').value); if (!weight || weight < 30) { proteinResultContainer.style.display = 'none'; proteinResultContainer.classList.remove('show'); return; }
+      if (document.getElementById('weightUnit').value === 'lb') weight = toKg(weight);
       const goal = document.getElementById('goal').value;
       const training = document.getElementById('training').value;
       const bodyfat = parseFloat(document.getElementById('bodyfat').value) || null;
-      const meals = parseInt(document.getElementById('meals').value,10) || 3;
-      const selectedBands = [...document.querySelectorAll('#bandOptions input:checked')].map(c=>c.value);
-      if(selectedBands.length===0){ proteinBreakdown.innerHTML='<div class="row">Select at least one band.</div>'; proteinResultContainer.style.display='flex'; return; }
+      const meals = parseInt(document.getElementById('meals').value, 10) || 3;
+      const selectedBands = [...document.querySelectorAll('#bandOptions input:checked')].map(c => c.value);
+      if (selectedBands.length === 0) { proteinBreakdown.innerHTML = '<div class="row">Select at least one band.</div>'; proteinResultContainer.style.display = 'flex'; return; }
 
       // Base multipliers by goal
       const goalRanges = {
-        health:[1.0,1.4], muscle:[1.4,1.8], fatloss:[1.6,2.2], performance:[1.6,2.4], maintenance:[1.2,1.8]
+        health: [1.0, 1.4], muscle: [1.4, 1.8], fatloss: [1.6, 2.2], performance: [1.6, 2.4], maintenance: [1.2, 1.8]
       };
-      let range = goalRanges[goal] || [1.0,1.4];
+      let range = goalRanges[goal] || [1.0, 1.4];
 
       // Adjust for training frequency
-      const trainingAdj = {low:0, moderate:0.1, high:0.2, veryhigh:0.3};
+      const trainingAdj = { low: 0, moderate: 0.1, high: 0.2, veryhigh: 0.3 };
       const add = trainingAdj[training] || 0;
-      range = [range[0]+add, range[1]+add];
+      range = [range[0] + add, range[1] + add];
 
       // Adjust if very low or high body fat (lean mass proxy) – simplistic
-      if(bodyfat){
-        if(bodyfat < 12) range = [range[0]+0.1, range[1]+0.15];
-        else if(bodyfat > 30) range = [range[0]-0.1, range[1]-0.1];
+      if (bodyfat) {
+        if (bodyfat < 12) range = [range[0] + 0.1, range[1] + 0.15];
+        else if (bodyfat > 30) range = [range[0] - 0.1, range[1] - 0.1];
       }
 
       // Construct three bands: low (lower bound), mid (midpoint), high (upper bound)
-      const lowVal = range[0]*weight;
-      const highVal = range[1]*weight;
-      const midVal = (lowVal+highVal)/2;
+      const lowVal = range[0] * weight;
+      const highVal = range[1] * weight;
+      const midVal = (lowVal + highVal) / 2;
       const bands = { low: lowVal, mid: midVal, high: highVal };
-      const outputs = selectedBands.map(b=>({band:b, grams:bands[b]}));
+      const outputs = selectedBands.map(b => ({ band: b, grams: bands[b] }));
 
-      const med = median(outputs.map(o=>o.grams));
+      const med = median(outputs.map(o => o.grams));
       proteinPrimaryValue.textContent = Math.round(med) + ' g';
       proteinPrimaryLabel.textContent = 'Median g/day';
 
@@ -269,20 +301,21 @@
       `;
 
       // Progress mapping across 0.8 - 2.4 g/kg
-      const min=0.8*weight, max=2.4*weight; const clamp=Math.min(max, Math.max(min, med)); const pct=((clamp-min)/(max-min))*100; proteinProgress.style.width=pct+'%'; proteinProgress.style.background = pct<33? '#2196f3': pct<66? '#4caf50':'#ff9800';
+      const min = 0.8 * weight, max = 2.4 * weight; const clamp = Math.min(max, Math.max(min, med)); const pct = ((clamp - min) / (max - min)) * 100; proteinProgress.style.width = pct + '%'; proteinProgress.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
 
       let tip;
-      if(perMeal < 20) tip='Consider spreading protein to reach ~20–40 g per meal for muscle protein synthesis.';
-      else if(perMeal > 60) tip='Large single boluses may not yield extra benefit; consider distributing intake more evenly.';
-      else tip='Solid distribution. Pair each meal with quality leucine-rich sources.';
+      if (perMeal < 20) tip = 'Consider spreading protein to reach ~20–40 g per meal for muscle protein synthesis.';
+      else if (perMeal > 60) tip = 'Large single boluses may not yield extra benefit; consider distributing intake more evenly.';
+      else tip = 'Solid distribution. Pair each meal with quality leucine-rich sources.';
       proteinTips.textContent = tip;
 
-      proteinResultContainer.style.display='flex';
-      setTimeout(()=>{ proteinResultContainer.classList.add('show'); proteinResultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 40);
+      proteinResultContainer.style.display = 'flex';
+      setTimeout(() => { proteinResultContainer.classList.add('show'); proteinResultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Fitness","item":"https://freetoolsandcalculators.com/Fitness/Fitness.html"},{"@type":"ListItem","position":3,"name":"Protein Intake Calculator","item":"https://freetoolsandcalculators.com/Fitness/Tools/ProteinIntakeCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Fitness/Tools/ProteinIntakeCalculator.html","url":"https://freetoolsandcalculators.com/Fitness/Tools/ProteinIntakeCalculator.html","name":"Protein Intake Calculator | Daily Protein Needs","description":"Protein Intake Calculator computing optimal daily grams based on weight, goal, training & meals with per-meal guidance.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Protein Intake Calculator","applicationCategory":"HealthApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Fitness/Tools/ProteinIntakeCalculator.html","description":"Calculates evidence-based daily protein ranges with per-meal distribution and g/kg reference.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much protein do I need per day?","acceptedAnswer":{"@type":"Answer","text":"Most adults fall between about 1.0–1.8 g/kg. Higher ranges (1.6–2.4 g/kg) can help preserve lean mass during fat loss or intense training."}},{"@type":"Question","name":"Does my goal change optimal protein?","acceptedAnswer":{"@type":"Answer","text":"Yes. Muscle gain and fat loss phases typically benefit from the upper half of the recommended range; general health or maintenance can use moderate values."}},{"@type":"Question","name":"Should I eat the same protein on rest days?","acceptedAnswer":{"@type":"Answer","text":"Generally yes—muscle repair continues. Slight reductions are fine but consistency aids recovery."}},{"@type":"Question","name":"Plant vs animal protein: does it matter?","acceptedAnswer":{"@type":"Answer","text":"Both work. Ensure variety and leucine; blend legumes, grains, soy and seeds for completeness."}},{"@type":"Question","name":"Can too much protein harm kidneys?","acceptedAnswer":{"@type":"Answer","text":"Healthy individuals usually tolerate higher intakes; those with kidney disease need medical guidance."}}]}]}
   </script>
 </body>
+
 </html>

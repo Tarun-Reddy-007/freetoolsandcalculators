@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Date Difference Calculator | Compute Days Between Dates & Time Span Breakdown</title>
-  <meta name="description" content="Free Date Difference Calculator: Calculate the days between two dates with inclusive counting, leap year handling, business days, weeks, hours, minutes & seconds plus milestones and holidays.">
-  <meta name="keywords" content="date difference calculator, days between dates, business days calculator, time span, duration calculator, date interval, free online calculator">
+  <meta name="description"
+    content="Free Date Difference Calculator: Calculate the days between two dates with inclusive counting, leap year handling, business days, weeks, hours, minutes & seconds plus milestones and holidays.">
+  <meta name="keywords"
+    content="date difference calculator, days between dates, business days calculator, time span, duration calculator, date interval, free online calculator">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,215 +16,250 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Date Difference Calculator | Days Between Dates">
-  <meta property="og:description" content="Compute exact days, business days, weeks, hours & minutes between two dates. Optional holidays & milestone percentage.">
+  <meta property="og:description"
+    content="Compute exact days, business days, weeks, hours & minutes between two dates. Optional holidays & milestone percentage.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Utilities/Tools/DateDifferenceCalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
-  <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Utilities/date_difference_calculator.png">
-  <meta property="og:image:alt" content="Date difference calculator interface showing start and end date inputs plus results">
+  <meta property="og:image"
+    content="https://freetoolsandcalculators.com/Images/Utilities/date_difference_calculator.png">
+  <meta property="og:image:alt"
+    content="Date difference calculator interface showing start and end date inputs plus results">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Date Difference Calculator | Days Between Dates">
-  <meta name="twitter:description" content="Find days between dates with leap year handling & business days. Includes weeks, hours, minutes & milestone date.">
-  <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Utilities/date_difference_calculator.png">
+  <meta name="twitter:description"
+    content="Find days between dates with leap year handling & business days. Includes weeks, hours, minutes & milestone date.">
+  <meta name="twitter:image"
+    content="https://freetoolsandcalculators.com/Images/Utilities/date_difference_calculator.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="DateDifferenceCalculator.css" />
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Utilities.html">Utilities</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Date Difference Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="dd-section" aria-labelledby="date-diff-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="dd-card">
-        <div class="dd-title-row">
-          <h1 class="dd-title" id="date-diff-title">Date Difference Calculator</h1>
-          <button type="button" class="dd-info-trigger" aria-describedby="ddInfo" title="How difference is computed" tabindex="0">i</button>
-          <div class="dd-info-flyout" id="ddInfo" role="tooltip" aria-hidden="true">
-            <h2>About This Tool</h2>
-            <p>Computes the elapsed time between two calendar dates using exact year / month / day borrowing logic, accounting for leap years.</p>
-            <ul>
-              <li>Years / Months / Days breakdown</li>
-              <li>Total days, weeks, hours, minutes</li>
-              <li>Business days (Mon-Fri, optional holidays)</li>
-              <li>Progress through interval</li>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Utilities.html">Utilities</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Date Difference Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="dd-section" aria-labelledby="date-diff-title" itemscope itemtype="https://schema.org/WebPage">
+          <div class="dd-card">
+            <div class="dd-title-row">
+              <h1 class="dd-title" id="date-diff-title">Date Difference Calculator</h1>
+              <button type="button" class="dd-info-trigger" aria-describedby="ddInfo" title="How difference is computed"
+                tabindex="0">i</button>
+              <div class="dd-info-flyout" id="ddInfo" role="tooltip" aria-hidden="true">
+                <h2>About This Tool</h2>
+                <p>Computes the elapsed time between two calendar dates using exact year / month / day borrowing logic,
+                  accounting for leap years.</p>
+                <ul>
+                  <li>Years / Months / Days breakdown</li>
+                  <li>Total days, weeks, hours, minutes</li>
+                  <li>Business days (Mon-Fri, optional holidays)</li>
+                  <li>Progress through interval</li>
+                </ul>
+                <p class="disclaimer">For planning & reference only; not legal record.</p>
+              </div>
+            </div>
+            <div class="dd-interaction-row">
+              <form id="ddForm" class="dd-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="startDate">Start Date</label>
+                  <div class="input-row"><input type="date" id="startDate" required /></div>
+                </div>
+                <div class="input-group">
+                  <label for="endDate">End Date</label>
+                  <div class="input-row"><input type="date" id="endDate" required /></div>
+                  <div class="inline-toggle"><input type="checkbox" id="useTodayEnd" /> <label for="useTodayEnd">Use
+                      today as end</label></div>
+                </div>
+                <div class="input-group">
+                  <label for="holidayList">Holidays (comma YYYY-MM-DD)</label>
+                  <div class="input-row"><input type="text" id="holidayList" placeholder="2025-01-01,2025-12-25" />
+                  </div>
+                  <div class="inline-toggle"><input type="checkbox" id="countWeekends" checked /> <label
+                      for="countWeekends">Include weekends in totals</label></div>
+                </div>
+                <div class="input-group">
+                  <label for="milestonePct">Milestone % (optional)</label>
+                  <div class="input-row"><input type="number" id="milestonePct" min="1" max="99"
+                      placeholder="e.g. 50" /></div>
+                </div>
+                <button type="submit" class="dd-btn">Calculate Difference</button>
+              </form>
+              <div class="dd-result-container" id="ddResult" style="display:none;">
+                <div class="dd-main-result">
+                  <span class="dd-span-value" id="ddMain">--</span>
+                  <span class="dd-span-label">Total Days</span>
+                </div>
+                <div class="dd-progress-wrapper" id="ddProgressWrap" style="display:none;">
+                  <div class="dd-progress-bar">
+                    <div class="dd-progress" id="ddProgress"></div>
+                  </div>
+                  <div class="dd-scale"><span>Start</span><span>End</span></div>
+                </div>
+                <div class="dd-breakdown" id="ddBreakdown"></div>
+                <div class="dd-stats-grid" id="ddStats"></div>
+                <div class="dd-tips" id="ddTips"></div>
+                <div class="dd-disclaimer">Approximate; excludes leap seconds.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-date-tools">
+            <h2 id="related-date-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
+              Related Date & Time Tools</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="AgeCalculator.html" style="text-decoration:none;">Age Calculator</a></li>
+              <li><a href="PasswordStrengthChecker.html" style="text-decoration:none;">Password Strength Checker</a>
+              </li>
+              <li><a href="QRCodeGenerator.html" style="text-decoration:none;">QR Code Generator</a></li>
+              <li><a href="RomanNumeralConverter.html" style="text-decoration:none;">Roman Numeral Converter</a></li>
+              <li><a href="UnitConverter.html" style="text-decoration:none;">Unit Converter</a></li>
+              <li><a href="WordCharacterCounter.html" style="text-decoration:none;">Word & Character Counter</a></li>
             </ul>
-            <p class="disclaimer">For planning & reference only; not legal record.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="date-diff-faq-heading">
+            <h2 id="date-diff-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">
+              Date Difference Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Is the day count inclusive?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. The calculator adds one day so both the start and
+                    end dates are counted (inclusive interval).</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How are leap years handled?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Leap days naturally appear in the total because date math
+                    uses actual calendar days, so Feb 29 is included when in range.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What are business days?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Business days count Monday–Friday excluding any holidays
+                    you enter; weekends optionally excluded depending on your setting.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can I track a milestone date?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Enter a percentage to see the calendar date at that
+                    point between start and end.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why is my business day count different?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Differences arise if weekends are included or if holidays
+                    overlap weekends. Toggle weekend inclusion and verify holiday formats (YYYY-MM-DD).</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="dd-interaction-row">
-          <form id="ddForm" class="dd-form" autocomplete="off">
-            <div class="input-group">
-              <label for="startDate">Start Date</label>
-              <div class="input-row"><input type="date" id="startDate" required /></div>
-            </div>
-            <div class="input-group">
-              <label for="endDate">End Date</label>
-              <div class="input-row"><input type="date" id="endDate" required /></div>
-              <div class="inline-toggle"><input type="checkbox" id="useTodayEnd" /> <label for="useTodayEnd">Use today as end</label></div>
-            </div>
-            <div class="input-group">
-              <label for="holidayList">Holidays (comma YYYY-MM-DD)</label>
-              <div class="input-row"><input type="text" id="holidayList" placeholder="2025-01-01,2025-12-25" /></div>
-              <div class="inline-toggle"><input type="checkbox" id="countWeekends" checked /> <label for="countWeekends">Include weekends in totals</label></div>
-            </div>
-            <div class="input-group">
-              <label for="milestonePct">Milestone % (optional)</label>
-              <div class="input-row"><input type="number" id="milestonePct" min="1" max="99" placeholder="e.g. 50" /></div>
-            </div>
-            <button type="submit" class="dd-btn">Calculate Difference</button>
-          </form>
-          <div class="dd-result-container" id="ddResult" style="display:none;">
-            <div class="dd-main-result">
-              <span class="dd-span-value" id="ddMain">--</span>
-              <span class="dd-span-label">Total Days</span>
-            </div>
-            <div class="dd-progress-wrapper" id="ddProgressWrap" style="display:none;">
-              <div class="dd-progress-bar"><div class="dd-progress" id="ddProgress"></div></div>
-              <div class="dd-scale"><span>Start</span><span>End</span></div>
-            </div>
-            <div class="dd-breakdown" id="ddBreakdown"></div>
-            <div class="dd-stats-grid" id="ddStats"></div>
-            <div class="dd-tips" id="ddTips"></div>
-            <div class="dd-disclaimer">Approximate; excludes leap seconds.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-date-tools">
-          <h2 id="related-date-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Date & Time Tools</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="AgeCalculator.html" style="text-decoration:none;">Age Calculator</a></li>
-            <li><a href="PasswordStrengthChecker.html" style="text-decoration:none;">Password Strength Checker</a></li>
-            <li><a href="QRCodeGenerator.html" style="text-decoration:none;">QR Code Generator</a></li>
-            <li><a href="RomanNumeralConverter.html" style="text-decoration:none;">Roman Numeral Converter</a></li>
-            <li><a href="UnitConverter.html" style="text-decoration:none;">Unit Converter</a></li>
-            <li><a href="WordCharacterCounter.html" style="text-decoration:none;">Word & Character Counter</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="date-diff-faq-heading">
-          <h2 id="date-diff-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Date Difference Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Is the day count inclusive?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Yes. The calculator adds one day so both the start and end dates are counted (inclusive interval).</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How are leap years handled?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Leap days naturally appear in the total because date math uses actual calendar days, so Feb 29 is included when in range.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What are business days?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Business days count Monday–Friday excluding any holidays you enter; weekends optionally excluded depending on your setting.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Can I track a milestone date?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Yes. Enter a percentage to see the calendar date at that point between start and end.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Why is my business day count different?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Differences arise if weekends are included or if holidays overlap weekends. Toggle weekend inclusion and verify holiday formats (YYYY-MM-DD).</p></div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
-    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
-    const startEl=document.getElementById('startDate');
-    const endEl=document.getElementById('endDate');
-    const useTodayEndEl=document.getElementById('useTodayEnd');
-    const form=document.getElementById('ddForm');
-    const resultBox=document.getElementById('ddResult');
-    const mainVal=document.getElementById('ddMain');
-    const breakdownEl=document.getElementById('ddBreakdown');
-    const statsEl=document.getElementById('ddStats');
-    const tipsEl=document.getElementById('ddTips');
-    const progress=document.getElementById('ddProgress');
-    const progressWrap=document.getElementById('ddProgressWrap');
-    const holidayListEl=document.getElementById('holidayList');
-    const countWeekendsEl=document.getElementById('countWeekends');
-    const milestonePctEl=document.getElementById('milestonePct');
+    const startEl = document.getElementById('startDate');
+    const endEl = document.getElementById('endDate');
+    const useTodayEndEl = document.getElementById('useTodayEnd');
+    const form = document.getElementById('ddForm');
+    const resultBox = document.getElementById('ddResult');
+    const mainVal = document.getElementById('ddMain');
+    const breakdownEl = document.getElementById('ddBreakdown');
+    const statsEl = document.getElementById('ddStats');
+    const tipsEl = document.getElementById('ddTips');
+    const progress = document.getElementById('ddProgress');
+    const progressWrap = document.getElementById('ddProgressWrap');
+    const holidayListEl = document.getElementById('holidayList');
+    const countWeekendsEl = document.getElementById('countWeekends');
+    const milestonePctEl = document.getElementById('milestonePct');
 
     // Prefill end date with today
-    (function init(){const today=new Date();endEl.value=today.toISOString().substring(0,10);})();
-    useTodayEndEl.addEventListener('change',()=>{if(useTodayEndEl.checked){const t=new Date();endEl.value=t.toISOString().substring(0,10);endEl.disabled=true;}else{endEl.disabled=false;}});
+    (function init() { const today = new Date(); endEl.value = today.toISOString().substring(0, 10); })();
+    useTodayEndEl.addEventListener('change', () => { if (useTodayEndEl.checked) { const t = new Date(); endEl.value = t.toISOString().substring(0, 10); endEl.disabled = true; } else { endEl.disabled = false; } });
 
-    function diffDetailed(start,end){let y=end.getFullYear()-start.getFullYear();let m=end.getMonth()-start.getMonth();let d=end.getDate()-start.getDate();if(d<0){const prevMonth=new Date(end.getFullYear(),end.getMonth(),0);d+=prevMonth.getDate();m--;}if(m<0){m+=12;y--;}return {years:y,months:m,days:d};}
-    function totalDays(start,end){return Math.floor((end-start)/86400000);} // ms per day
-    function businessDays(start,end,holidays,settleWeekends){let count=0;let cur=new Date(start);while(cur<end){const day=cur.getDay();const iso=cur.toISOString().substring(0,10);const isWeekend=(day===0||day===6);if((settleWeekends||!isWeekend) && !holidays.has(iso)){count++;}cur.setDate(cur.getDate()+1);}return count;}
-    function parseHolidays(str){const set=new Set();if(!str) return set;str.split(',').map(s=>s.trim()).forEach(s=>{if(/^\d{4}-\d{2}-\d{2}$/.test(s)) set.add(s);});return set;}
-    function milestoneDate(start,end,pct){const span=end-start;return new Date(start.getTime()+span*(pct/100));}
+    function diffDetailed(start, end) { let y = end.getFullYear() - start.getFullYear(); let m = end.getMonth() - start.getMonth(); let d = end.getDate() - start.getDate(); if (d < 0) { const prevMonth = new Date(end.getFullYear(), end.getMonth(), 0); d += prevMonth.getDate(); m--; } if (m < 0) { m += 12; y--; } return { years: y, months: m, days: d }; }
+    function totalDays(start, end) { return Math.floor((end - start) / 86400000); } // ms per day
+    function businessDays(start, end, holidays, settleWeekends) { let count = 0; let cur = new Date(start); while (cur < end) { const day = cur.getDay(); const iso = cur.toISOString().substring(0, 10); const isWeekend = (day === 0 || day === 6); if ((settleWeekends || !isWeekend) && !holidays.has(iso)) { count++; } cur.setDate(cur.getDate() + 1); } return count; }
+    function parseHolidays(str) { const set = new Set(); if (!str) return set; str.split(',').map(s => s.trim()).forEach(s => { if (/^\d{4}-\d{2}-\d{2}$/.test(s)) set.add(s); }); return set; }
+    function milestoneDate(start, end, pct) { const span = end - start; return new Date(start.getTime() + span * (pct / 100)); }
 
-    form.addEventListener('submit',e=>{e.preventDefault();
-      if(!startEl.value||!endEl.value){return;}
-      const start=new Date(startEl.value+'T00:00:00');
-      let end=new Date(endEl.value+'T00:00:00');
-      if(useTodayEndEl.checked){const t=new Date();end=new Date(t.getFullYear(),t.getMonth(),t.getDate());}
-      if(end<start){alert('End date must be after start date.');return;}
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!startEl.value || !endEl.value) { return; }
+      const start = new Date(startEl.value + 'T00:00:00');
+      let end = new Date(endEl.value + 'T00:00:00');
+      if (useTodayEndEl.checked) { const t = new Date(); end = new Date(t.getFullYear(), t.getMonth(), t.getDate()); }
+      if (end < start) { alert('End date must be after start date.'); return; }
       // For inclusive handling choose difference end-start then add 1 day for total calendar days
-      const total=totalDays(start,end)+1;
-      mainVal.textContent=total.toLocaleString();
+      const total = totalDays(start, end) + 1;
+      mainVal.textContent = total.toLocaleString();
 
-      const det=diffDetailed(start,end);
-      breakdownEl.innerHTML='';
-      const breakdownData=[['Exact',det.years+'y '+det.months+'m '+det.days+'d'],['Months',det.years*12+det.months],['Weeks',Math.floor(total/7)],[ 'Days',total.toLocaleString()]];
-      breakdownData.forEach(r=>{const div=document.createElement('div');div.className='dd-row';div.innerHTML='<span>'+r[0]+'</span><span>'+r[1]+'</span>';breakdownEl.appendChild(div);});
+      const det = diffDetailed(start, end);
+      breakdownEl.innerHTML = '';
+      const breakdownData = [['Exact', det.years + 'y ' + det.months + 'm ' + det.days + 'd'], ['Months', det.years * 12 + det.months], ['Weeks', Math.floor(total / 7)], ['Days', total.toLocaleString()]];
+      breakdownData.forEach(r => { const div = document.createElement('div'); div.className = 'dd-row'; div.innerHTML = '<span>' + r[0] + '</span><span>' + r[1] + '</span>'; breakdownEl.appendChild(div); });
 
       // Stats
-      statsEl.innerHTML='';
-      const holidays=parseHolidays(holidayListEl.value);
-      const bizDays=businessDays(start,end,holidays,countWeekendsEl.checked); // end exclusive inside; ensure inclusive by adding last day if qualifies
-      const hrs=total*24; const mins=hrs*60; const secs=mins*60;
-      const milestonePct=parseFloat(milestonePctEl.value);
-      let milestoneInfo='';
-      if(milestonePct && milestonePct>0 && milestonePct<100){const md=milestoneDate(start,end,milestonePct);milestoneInfo=md.toISOString().substring(0,10);} 
-      const stats=[{lbl:'Business Days',val:bizDays.toLocaleString()},{lbl:'Hours',val:hrs.toLocaleString()},{lbl:'Minutes',val:mins.toLocaleString()},{lbl:'Seconds',val:secs.toLocaleString()}];
-      if(milestoneInfo) stats.push({lbl:milestonePct+'% Milestone',val:milestoneInfo});
-      stats.forEach(s=>{const card=document.createElement('div');card.className='dd-stat';card.innerHTML='<span class="val">'+s.val+'</span><span class="lbl">'+s.lbl+'</span>';statsEl.appendChild(card);});
+      statsEl.innerHTML = '';
+      const holidays = parseHolidays(holidayListEl.value);
+      const bizDays = businessDays(start, end, holidays, countWeekendsEl.checked); // end exclusive inside; ensure inclusive by adding last day if qualifies
+      const hrs = total * 24; const mins = hrs * 60; const secs = mins * 60;
+      const milestonePct = parseFloat(milestonePctEl.value);
+      let milestoneInfo = '';
+      if (milestonePct && milestonePct > 0 && milestonePct < 100) { const md = milestoneDate(start, end, milestonePct); milestoneInfo = md.toISOString().substring(0, 10); }
+      const stats = [{ lbl: 'Business Days', val: bizDays.toLocaleString() }, { lbl: 'Hours', val: hrs.toLocaleString() }, { lbl: 'Minutes', val: mins.toLocaleString() }, { lbl: 'Seconds', val: secs.toLocaleString() }];
+      if (milestoneInfo) stats.push({ lbl: milestonePct + '% Milestone', val: milestoneInfo });
+      stats.forEach(s => { const card = document.createElement('div'); card.className = 'dd-stat'; card.innerHTML = '<span class="val">' + s.val + '</span><span class="lbl">' + s.lbl + '</span>'; statsEl.appendChild(card); });
 
       // Progress: if end in future relative to today -> show progress today
-      const today=new Date(); const todayMid=new Date(today.getFullYear(),today.getMonth(),today.getDate());
-      if(todayMid>=start && todayMid<=end){const elapsed=totalDays(start,todayMid)+1;const pct=(elapsed/total)*100;progress.style.width=pct+'%';progress.style.background=pct<33?'#2196f3':pct<66?'#4caf50':'#ff9800';progressWrap.style.display='block';} else {progressWrap.style.display='none';}
+      const today = new Date(); const todayMid = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      if (todayMid >= start && todayMid <= end) { const elapsed = totalDays(start, todayMid) + 1; const pct = (elapsed / total) * 100; progress.style.width = pct + '%'; progress.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800'; progressWrap.style.display = 'block'; } else { progressWrap.style.display = 'none'; }
 
       // Tips
-      let tip='Inclusive day count shown (adds 1). '; tip+=countWeekendsEl.checked?'Weekends counted. ':'Weekends excluded from business days.'; if(holidayListEl.value.trim()) tip+=' Holidays excluded: '+holidayListEl.value.trim()+'.'; if(milestoneInfo) tip+=' '+milestonePct+'% milestone falls on '+milestoneInfo+'.'; tipsEl.textContent=tip;
+      let tip = 'Inclusive day count shown (adds 1). '; tip += countWeekendsEl.checked ? 'Weekends counted. ' : 'Weekends excluded from business days.'; if (holidayListEl.value.trim()) tip += ' Holidays excluded: ' + holidayListEl.value.trim() + '.'; if (milestoneInfo) tip += ' ' + milestonePct + '% milestone falls on ' + milestoneInfo + '.'; tipsEl.textContent = tip;
 
-      resultBox.style.display='flex'; setTimeout(()=>{resultBox.classList.add('show');resultBox.scrollIntoView({behavior:'smooth',block:'center'});},40);
+      resultBox.style.display = 'flex'; setTimeout(() => { resultBox.classList.add('show'); resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Utilities","item":"https://freetoolsandcalculators.com/Utilities/Utilities.html"},{"@type":"ListItem","position":3,"name":"Date Difference Calculator","item":"https://freetoolsandcalculators.com/Utilities/Tools/DateDifferenceCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Utilities/Tools/DateDifferenceCalculator.html","url":"https://freetoolsandcalculators.com/Utilities/Tools/DateDifferenceCalculator.html","name":"Date Difference Calculator | Days Between Dates","description":"Free date difference calculator with inclusive day counting, leap year logic, business days, weeks, hours, minutes & milestone date.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Date Difference Calculator","applicationCategory":"UtilityApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Utilities/Tools/DateDifferenceCalculator.html","description":"Computes duration between two dates: inclusive days, business days, weeks, hours, seconds & milestone percentage.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the day count inclusive?","acceptedAnswer":{"@type":"Answer","text":"Yes, both start and end dates are counted."}},{"@type":"Question","name":"How are leap years handled?","acceptedAnswer":{"@type":"Answer","text":"Leap days are included automatically in the date math."}},{"@type":"Question","name":"What are business days?","acceptedAnswer":{"@type":"Answer","text":"Monday–Friday excluding holidays you enter; weekends optional."}},{"@type":"Question","name":"Can I track a milestone date?","acceptedAnswer":{"@type":"Answer","text":"Enter a percentage to compute the milestone date."}},{"@type":"Question","name":"Why is my business day count different?","acceptedAnswer":{"@type":"Answer","text":"Weekend inclusion and holiday formatting can change the count."}}]}]}
   </script>
 </body>
+
 </html>

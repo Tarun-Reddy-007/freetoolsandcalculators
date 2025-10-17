@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loan EMI Calculator | Free Tools and Calculators for Monthly Payment & Interest</title>
-  <meta name="description" content="Free Loan EMI Calculator: Compute monthly EMI, total interest, processing fee impact and savings from extra payments. Supports tenure tweaks, extra payment start month and multiple currencies.">
-  <meta name="keywords" content="loan emi calculator, monthly loan payment, equated monthly installment, interest calculator, extra payment, processing fee, finance tools">
+  <meta name="description"
+    content="Free Loan EMI Calculator: Compute monthly EMI, total interest, processing fee impact and savings from extra payments. Supports tenure tweaks, extra payment start month and multiple currencies.">
+  <meta name="keywords"
+    content="loan emi calculator, monthly loan payment, equated monthly installment, interest calculator, extra payment, processing fee, finance tools">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,186 +16,209 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Loan EMI Calculator | Monthly Payment & Interest Tool">
-  <meta property="og:description" content="Instant EMI, interest, fee impact & extra payment savings. Explore related finance calculators.">
+  <meta property="og:description"
+    content="Instant EMI, interest, fee impact & extra payment savings. Explore related finance calculators.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Finance/Tools/LoanEMICalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Finance/loan_emi_calculator.jpg">
   <meta property="og:image:alt" content="Loan EMI calculator interface showing principal, rate, tenure and results">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Loan EMI Calculator | Monthly Payment Tool">
-  <meta name="twitter:description" content="Calculate EMI, interest, fee impact & extra payment savings. Compare finance calculators.">
+  <meta name="twitter:description"
+    content="Calculate EMI, interest, fee impact & extra payment savings. Compare finance calculators.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Finance/loan_emi_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="LoanEMICalculator.css" />
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
 
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Finance.html">Finance</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Loan EMI Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="emi-section" aria-labelledby="emi-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="emi-card">
-        <div class="emi-title-row">
-          <h1 class="emi-title" id="emi-main-title">Loan EMI Calculator</h1>
-          <button type="button" class="emi-info-trigger" aria-describedby="emiInfoPanel" tabindex="0">i</button>
-          <div id="emiInfoPanel" class="emi-info-flyout" role="tooltip" aria-hidden="true">
-            <h2>About EMI</h2>
-            <p>EMI (Equated Monthly Installment) is the fixed payment you make every month until the loan is repaid. It consists of principal + interest components that shift over time.</p>
-            <ul>
-              <li>Formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
-              <li>P = Principal, r = monthly interest rate, n = total months</li>
-              <li>Processing fee added to upfront cost; not part of principal (optionally)</li>
-              <li>Extra monthly payments reduce interest & shorten tenure</li>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Finance.html">Finance</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Loan EMI Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="emi-section" aria-labelledby="emi-main-title" itemscope itemtype="https://schema.org/WebPage">
+          <div class="emi-card">
+            <div class="emi-title-row">
+              <h1 class="emi-title" id="emi-main-title">Loan EMI Calculator</h1>
+              <button type="button" class="emi-info-trigger" aria-describedby="emiInfoPanel" tabindex="0">i</button>
+              <div id="emiInfoPanel" class="emi-info-flyout" role="tooltip" aria-hidden="true">
+                <h2>About EMI</h2>
+                <p>EMI (Equated Monthly Installment) is the fixed payment you make every month until the loan is repaid.
+                  It consists of principal + interest components that shift over time.</p>
+                <ul>
+                  <li>Formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
+                  <li>P = Principal, r = monthly interest rate, n = total months</li>
+                  <li>Processing fee added to upfront cost; not part of principal (optionally)</li>
+                  <li>Extra monthly payments reduce interest & shorten tenure</li>
+                </ul>
+                <p class="disclaimer">Approximation only. Actual schedules may vary by lender.</p>
+              </div>
+            </div>
+            <div class="emi-interaction-row">
+              <form id="emiForm" class="emi-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="currency">Currency</label>
+                  <div class="input-row">
+                    <select id="currency" name="currency">
+                      <option value="INR" selected>INR</option>
+                      <option value="USD">USD</option>
+                      <option value="EUR">EUR</option>
+                      <option value="GBP">GBP</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="principal">Loan Principal</label>
+                  <div class="input-row"><input type="number" id="principal" min="0" placeholder="e.g. 2500000"
+                      required /></div>
+                </div>
+                <div class="input-group">
+                  <label for="rate">Annual Interest Rate (%)</label>
+                  <div class="input-row"><input type="number" id="rate" min="0.1" step="0.01" placeholder="e.g. 8.25"
+                      required /></div>
+                </div>
+                <div class="input-group">
+                  <label for="tenure">Tenure (Years)</label>
+                  <div class="input-row"><input type="number" id="tenure" min="1" max="40" value="20" required /></div>
+                  <div class="emi-inline-buttons" data-group="tenureBtns">
+                    <button type="button" class="active" data-val="20">20y</button>
+                    <button type="button" data-val="25">25y</button>
+                    <button type="button" data-val="30">30y</button>
+                    <button type="button" data-val="15">15y</button>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="processingFee">Processing Fee (%)</label>
+                  <div class="input-row"><input type="number" id="processingFee" min="0" step="0.01" value="0" /></div>
+                </div>
+                <div class="input-group">
+                  <label for="extraPayment">Extra Monthly Payment (Optional)</label>
+                  <div class="input-row"><input type="number" id="extraPayment" min="0" value="0" /></div>
+                  <div class="emi-small-hint">Applied in addition to EMI each month</div>
+                </div>
+                <div class="input-group">
+                  <label for="startMonth">Start Month (for extra)</label>
+                  <div class="input-row"><input type="number" id="startMonth" min="1" value="1" /></div>
+                  <div class="emi-small-hint">Month number extra payment begins</div>
+                </div>
+                <button type="submit" class="emi-btn">Calculate EMI</button>
+              </form>
+              <div id="emiResultContainer" class="emi-result-container">
+                <div class="emi-main-result">
+                  <span id="emiValue" class="emi-main-value">--</span>
+                  <span class="emi-main-label">Monthly EMI</span>
+                  <span id="emiWithExtra" class="emi-sub-value" style="display:none;"></span>
+                </div>
+                <div class="emi-progress-wrapper">
+                  <div class="emi-progress-bar">
+                    <div id="emiProgress" class="emi-progress"></div>
+                  </div>
+                  <div class="emi-scale"><span>Low</span><span>High</span></div>
+                </div>
+                <div id="emiBreakdown" class="emi-breakdown"></div>
+                <div id="emiStats" class="emi-stats-grid"></div>
+                <div id="emiTips" class="emi-tips"></div>
+                <div class="emi-disclaimer">Illustrative only. Extra payment model approximated.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
+            <h2 id="related-finance-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators
+            </h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
+              <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
+              <li><a href="PersonalLoanEMICalculator.html" style="text-decoration:none;">Personal Loan EMI
+                  Calculator</a></li>
+              <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility
+                  Calculator</a></li>
+              <li><a href="LoanAffordabilityCalculator.html" style="text-decoration:none;">Loan Affordability
+                  Calculator</a></li>
+              <li><a href="CompoundSimpleInterestCalculator.html" style="text-decoration:none;">Compound & Simple
+                  Interest Calculator</a></li>
             </ul>
-            <p class="disclaimer">Approximation only. Actual schedules may vary by lender.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="emi-faq-heading">
+            <h2 id="emi-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Loan EMI
+              Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How is EMI calculated?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">EMI uses P * r * (1+r)^n / ((1+r)^n - 1) where P
+                    principal, r monthly interest (annual rate / 12 / 100) and n number of months.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What affects EMI amount?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Principal, interest rate, tenure length, processing fees
+                    (overall cost) and any extra monthly payments (reduce tenure & interest) impact EMI dynamics.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How do extra payments help?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Extra payments accelerate principal reduction, shortening
+                    loan duration and lowering total interest. The calculator estimates months and interest saved.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is a processing fee?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">A processing (origination) fee is a lender charge,
+                    usually a small percent of principal, increasing total cost; it is not part of principal for EMI
+                    formula.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can EMI change over time?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">For fixed-rate loans EMI stays constant. For variable or
+                    floating rates EMI or tenure may adjust when the rate resets.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="emi-interaction-row">
-          <form id="emiForm" class="emi-form" autocomplete="off">
-            <div class="input-group">
-              <label for="currency">Currency</label>
-              <div class="input-row">
-                <select id="currency" name="currency">
-                  <option value="INR" selected>INR</option>
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="principal">Loan Principal</label>
-              <div class="input-row"><input type="number" id="principal" min="0" placeholder="e.g. 2500000" required /></div>
-            </div>
-            <div class="input-group">
-              <label for="rate">Annual Interest Rate (%)</label>
-              <div class="input-row"><input type="number" id="rate" min="0.1" step="0.01" placeholder="e.g. 8.25" required /></div>
-            </div>
-            <div class="input-group">
-              <label for="tenure">Tenure (Years)</label>
-              <div class="input-row"><input type="number" id="tenure" min="1" max="40" value="20" required /></div>
-              <div class="emi-inline-buttons" data-group="tenureBtns">
-                <button type="button" class="active" data-val="20">20y</button>
-                <button type="button" data-val="25">25y</button>
-                <button type="button" data-val="30">30y</button>
-                <button type="button" data-val="15">15y</button>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="processingFee">Processing Fee (%)</label>
-              <div class="input-row"><input type="number" id="processingFee" min="0" step="0.01" value="0" /></div>
-            </div>
-            <div class="input-group">
-              <label for="extraPayment">Extra Monthly Payment (Optional)</label>
-              <div class="input-row"><input type="number" id="extraPayment" min="0" value="0" /></div>
-              <div class="emi-small-hint">Applied in addition to EMI each month</div>
-            </div>
-            <div class="input-group">
-              <label for="startMonth">Start Month (for extra)</label>
-              <div class="input-row"><input type="number" id="startMonth" min="1" value="1" /></div>
-              <div class="emi-small-hint">Month number extra payment begins</div>
-            </div>
-            <button type="submit" class="emi-btn">Calculate EMI</button>
-          </form>
-          <div id="emiResultContainer" class="emi-result-container">
-            <div class="emi-main-result">
-              <span id="emiValue" class="emi-main-value">--</span>
-              <span class="emi-main-label">Monthly EMI</span>
-              <span id="emiWithExtra" class="emi-sub-value" style="display:none;"></span>
-            </div>
-            <div class="emi-progress-wrapper">
-              <div class="emi-progress-bar"><div id="emiProgress" class="emi-progress"></div></div>
-              <div class="emi-scale"><span>Low</span><span>High</span></div>
-            </div>
-            <div id="emiBreakdown" class="emi-breakdown"></div>
-            <div id="emiStats" class="emi-stats-grid"></div>
-            <div id="emiTips" class="emi-tips"></div>
-            <div class="emi-disclaimer">Illustrative only. Extra payment model approximated.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
-          <h2 id="related-finance-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
-            <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
-            <li><a href="PersonalLoanEMICalculator.html" style="text-decoration:none;">Personal Loan EMI Calculator</a></li>
-            <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility Calculator</a></li>
-            <li><a href="LoanAffordabilityCalculator.html" style="text-decoration:none;">Loan Affordability Calculator</a></li>
-            <li><a href="CompoundSimpleInterestCalculator.html" style="text-decoration:none;">Compound & Simple Interest Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="emi-faq-heading">
-          <h2 id="emi-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Loan EMI Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How is EMI calculated?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">EMI uses P * r * (1+r)^n / ((1+r)^n - 1) where P principal, r monthly interest (annual rate / 12 / 100) and n number of months.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What affects EMI amount?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Principal, interest rate, tenure length, processing fees (overall cost) and any extra monthly payments (reduce tenure & interest) impact EMI dynamics.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How do extra payments help?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Extra payments accelerate principal reduction, shortening loan duration and lowering total interest. The calculator estimates months and interest saved.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is a processing fee?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">A processing (origination) fee is a lender charge, usually a small percent of principal, increasing total cost; it is not part of principal for EMI formula.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Can EMI change over time?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">For fixed-rate loans EMI stays constant. For variable or floating rates EMI or tenure may adjust when the rate resets.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const emiForm = document.getElementById('emiForm');
     const resultContainer = document.getElementById('emiResultContainer');
@@ -203,88 +229,89 @@
     const tipsEl = document.getElementById('emiTips');
     const progressEl = document.getElementById('emiProgress');
 
-    function currencySymbol(cur){ switch(cur){ case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
-    function fmtMoney(v, cur){ const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined,{maximumFractionDigits:0}); }
+    function currencySymbol(cur) { switch (cur) { case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
+    function fmtMoney(v, cur) { const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 }); }
 
-    function calcEmi(P, rateAnnual, years){ const r = (rateAnnual/100)/12; const n = years*12; if(r===0) return P/n; const pow = Math.pow(1+r, n); return P * r * pow / (pow - 1); }
+    function calcEmi(P, rateAnnual, years) { const r = (rateAnnual / 100) / 12; const n = years * 12; if (r === 0) return P / n; const pow = Math.pow(1 + r, n); return P * r * pow / (pow - 1); }
 
-    function simulateWithExtra(P, rateAnnual, years, extra, startMonth){
-      if(extra <= 0) return { months: years*12, interest: 0, interestSaved: 0 };
-      const r = (rateAnnual/100)/12; const n = years*12; const baseEmi = calcEmi(P, rateAnnual, years); let balance=P; let month=0; let interestPaid=0; while(balance>0 && month< n+600){ month++; const interest = balance*r; let pay = baseEmi + (month>=startMonth?extra:0); if(pay> balance+interest) pay = balance+interest; const principalComp = pay - interest; balance -= principalComp; interestPaid += interest; }
-      const totalBaseInterest = (baseEmi * n) - P; const interestSaved = totalBaseInterest - interestPaid; return { months: month, interest: interestPaid, interestSaved: interestSaved<0?0:interestSaved };
+    function simulateWithExtra(P, rateAnnual, years, extra, startMonth) {
+      if (extra <= 0) return { months: years * 12, interest: 0, interestSaved: 0 };
+      const r = (rateAnnual / 100) / 12; const n = years * 12; const baseEmi = calcEmi(P, rateAnnual, years); let balance = P; let month = 0; let interestPaid = 0; while (balance > 0 && month < n + 600) { month++; const interest = balance * r; let pay = baseEmi + (month >= startMonth ? extra : 0); if (pay > balance + interest) pay = balance + interest; const principalComp = pay - interest; balance -= principalComp; interestPaid += interest; }
+      const totalBaseInterest = (baseEmi * n) - P; const interestSaved = totalBaseInterest - interestPaid; return { months: month, interest: interestPaid, interestSaved: interestSaved < 0 ? 0 : interestSaved };
     }
 
-    function setActive(groupAttr, btn){ const selector='[data-group="'+groupAttr+'"] button'; document.querySelectorAll(selector).forEach(b=>b.classList.remove('active')); btn.classList.add('active'); }
-    document.querySelectorAll('[data-group="tenureBtns"] button').forEach(btn=>{ btn.addEventListener('click',()=>{ setActive('tenureBtns', btn); document.getElementById('tenure').value=btn.getAttribute('data-val'); }); });
+    function setActive(groupAttr, btn) { const selector = '[data-group="' + groupAttr + '"] button'; document.querySelectorAll(selector).forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
+    document.querySelectorAll('[data-group="tenureBtns"] button').forEach(btn => { btn.addEventListener('click', () => { setActive('tenureBtns', btn); document.getElementById('tenure').value = btn.getAttribute('data-val'); }); });
 
-    emiForm.addEventListener('submit', e=>{
+    emiForm.addEventListener('submit', e => {
       e.preventDefault();
       const currency = document.getElementById('currency').value;
-      const principal = parseFloat(document.getElementById('principal').value)||0;
-      const rate = parseFloat(document.getElementById('rate').value)||0;
-      const tenure = parseInt(document.getElementById('tenure').value,10)||0;
-      const processingFeePct = parseFloat(document.getElementById('processingFee').value)||0;
-      const extra = parseFloat(document.getElementById('extraPayment').value)||0;
-      const startMonth = parseInt(document.getElementById('startMonth').value,10)||1;
-      if(principal<=0 || rate<=0 || tenure<=0){ resultContainer.style.display='none'; resultContainer.classList.remove('show'); return; }
+      const principal = parseFloat(document.getElementById('principal').value) || 0;
+      const rate = parseFloat(document.getElementById('rate').value) || 0;
+      const tenure = parseInt(document.getElementById('tenure').value, 10) || 0;
+      const processingFeePct = parseFloat(document.getElementById('processingFee').value) || 0;
+      const extra = parseFloat(document.getElementById('extraPayment').value) || 0;
+      const startMonth = parseInt(document.getElementById('startMonth').value, 10) || 1;
+      if (principal <= 0 || rate <= 0 || tenure <= 0) { resultContainer.style.display = 'none'; resultContainer.classList.remove('show'); return; }
 
       const emi = calcEmi(principal, rate, tenure);
       emiValueEl.textContent = fmtMoney(Math.round(emi), currency);
 
-      const n = tenure*12; const totalPayment = emi * n; const totalInterest = totalPayment - principal;
-      const processingFeeAmount = principal * (processingFeePct/100);
+      const n = tenure * 12; const totalPayment = emi * n; const totalInterest = totalPayment - principal;
+      const processingFeeAmount = principal * (processingFeePct / 100);
       const totalCostWithFee = totalPayment + processingFeeAmount;
 
       // Extra payment simulation
       const sim = simulateWithExtra(principal, rate, tenure, extra, startMonth);
-      let emiExtraTxt='';
-      if(extra>0){
+      let emiExtraTxt = '';
+      if (extra > 0) {
         emiExtraTxt = '+ Extra: ' + fmtMoney(extra, currency) + ' (Int Saved ' + fmtMoney(sim.interestSaved, currency) + ', Months ' + sim.months + ')';
-        emiWithExtraEl.style.display='block';
+        emiWithExtraEl.style.display = 'block';
         emiWithExtraEl.textContent = emiExtraTxt;
-      } else { emiWithExtraEl.style.display='none'; }
+      } else { emiWithExtraEl.style.display = 'none'; }
 
       // Progress heuristic based on EMI size by currency
-      let scaleMax = 200000; if(currency==='USD' || currency==='EUR' || currency==='GBP') scaleMax = 5000; // adjust typical EMI scale
-      const pct = Math.min(100, (emi/scaleMax)*100); progressEl.style.width = pct + '%'; progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
+      let scaleMax = 200000; if (currency === 'USD' || currency === 'EUR' || currency === 'GBP') scaleMax = 5000; // adjust typical EMI scale
+      const pct = Math.min(100, (emi / scaleMax) * 100); progressEl.style.width = pct + '%'; progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
 
       // Breakdown
-      breakdownEl.innerHTML='';
+      breakdownEl.innerHTML = '';
       const rows = [
         ['Principal', fmtMoney(principal, currency)],
-        ['Annual Rate', rate.toFixed(2)+'%'],
+        ['Annual Rate', rate.toFixed(2) + '%'],
         ['Tenure (months)', n],
         ['Processing Fee', fmtMoney(processingFeeAmount, currency)],
         ['Total Cost (w/ fee)', fmtMoney(totalCostWithFee, currency)],
         ['Total Interest', fmtMoney(totalInterest, currency)]
       ];
-      rows.forEach(r=>{ const d=document.createElement('div'); d.className='emi-row'; d.innerHTML='<span>'+r[0]+'</span><span>'+r[1]+'</span>'; breakdownEl.appendChild(d); });
+      rows.forEach(r => { const d = document.createElement('div'); d.className = 'emi-row'; d.innerHTML = '<span>' + r[0] + '</span><span>' + r[1] + '</span>'; breakdownEl.appendChild(d); });
 
       // Stats
-      statsEl.innerHTML='';
-      const stats=[
-        {lbl:'Interest % of P', val: (totalInterest/principal*100).toFixed(1)+'%'},
-        {lbl:'Proc. Fee %', val: processingFeePct.toFixed(2)+'%'},
-        {lbl:'Monthly EMI', val: fmtMoney(Math.round(emi), currency)},
-        {lbl:'Total Pay', val: fmtMoney(Math.round(totalPayment), currency)},
-        {lbl:'Eff. Months', val: sim.months !== tenure*12 ? sim.months : n},
-        {lbl:'Saved Int', val: extra>0?fmtMoney(sim.interestSaved, currency):fmtMoney(0, currency)}
+      statsEl.innerHTML = '';
+      const stats = [
+        { lbl: 'Interest % of P', val: (totalInterest / principal * 100).toFixed(1) + '%' },
+        { lbl: 'Proc. Fee %', val: processingFeePct.toFixed(2) + '%' },
+        { lbl: 'Monthly EMI', val: fmtMoney(Math.round(emi), currency) },
+        { lbl: 'Total Pay', val: fmtMoney(Math.round(totalPayment), currency) },
+        { lbl: 'Eff. Months', val: sim.months !== tenure * 12 ? sim.months : n },
+        { lbl: 'Saved Int', val: extra > 0 ? fmtMoney(sim.interestSaved, currency) : fmtMoney(0, currency) }
       ];
-      stats.forEach(s=>{ const c=document.createElement('div'); c.className='emi-stat'; c.innerHTML='<span class="val">'+s.val+'</span><span class="lbl">'+s.lbl+'</span>'; statsEl.appendChild(c); });
+      stats.forEach(s => { const c = document.createElement('div'); c.className = 'emi-stat'; c.innerHTML = '<span class="val">' + s.val + '</span><span class="lbl">' + s.lbl + '</span>'; statsEl.appendChild(c); });
 
       // Tips
-      let tip='';
-      if(extra>0){ tip += 'Extra payments accelerate principal reduction; confirm lender allows prepayments without penalty. '; }
-      if(processingFeePct>0){ tip += 'Include processing fee in upfront budget planning. '; }
-      if(!tip) tip = 'Try adjusting tenure or rate to see impact on EMI & total interest.';
+      let tip = '';
+      if (extra > 0) { tip += 'Extra payments accelerate principal reduction; confirm lender allows prepayments without penalty. '; }
+      if (processingFeePct > 0) { tip += 'Include processing fee in upfront budget planning. '; }
+      if (!tip) tip = 'Try adjusting tenure or rate to see impact on EMI & total interest.';
       tipsEl.textContent = tip;
 
-      resultContainer.style.display='flex';
-      setTimeout(()=>{ resultContainer.classList.add('show'); resultContainer.scrollIntoView({behavior:'smooth',block:'center'}); },40);
+      resultContainer.style.display = 'flex';
+      setTimeout(() => { resultContainer.classList.add('show'); resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://freetoolsandcalculators.com/Finance/Finance.html"},{"@type":"ListItem","position":3,"name":"Loan EMI Calculator","item":"https://freetoolsandcalculators.com/Finance/Tools/LoanEMICalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Finance/Tools/LoanEMICalculator.html","url":"https://freetoolsandcalculators.com/Finance/Tools/LoanEMICalculator.html","name":"Loan EMI Calculator | Free Tools and Calculators","description":"Compute loan EMI, interest, processing fee impact and extra payment savings with tenure & currency flexibility.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Loan EMI Calculator","applicationCategory":"FinanceApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Finance/Tools/LoanEMICalculator.html","description":"Monthly loan EMI with breakdown, fee inclusion, extra payment interest savings estimation.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"Formula: EMI = P*r*(1+r)^n / ((1+r)^n - 1)."}},{"@type":"Question","name":"What affects EMI amount?","acceptedAnswer":{"@type":"Answer","text":"Principal, interest rate, tenure, fees and extra payments."}},{"@type":"Question","name":"How do extra payments help?","acceptedAnswer":{"@type":"Answer","text":"They reduce principal faster, cutting interest and months."}},{"@type":"Question","name":"What is a processing fee?","acceptedAnswer":{"@type":"Answer","text":"A lender fee added to total cost; not part of principal."}},{"@type":"Question","name":"Can EMI change over time?","acceptedAnswer":{"@type":"Answer","text":"Fixed-rate EMI stays constant; floating rates may adjust EMI or tenure."}}]}]}
   </script>
 </body>
+
 </html>

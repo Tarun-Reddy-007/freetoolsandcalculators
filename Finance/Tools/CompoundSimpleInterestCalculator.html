@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compound & Simple Interest Calculator | Free Tools and Calculators for Growth & Returns</title>
-  <meta name="description" content="Free Compound & Simple Interest Calculator: Compare growth, total interest, contributions, effective annualized return, and impact of compounding frequency & monthly additions.">
-  <meta name="keywords" content="compound interest calculator, simple interest calculator, investment growth, monthly contribution, effective annual return, finance tools, interest formula">
+  <meta name="description"
+    content="Free Compound & Simple Interest Calculator: Compare growth, total interest, contributions, effective annualized return, and impact of compounding frequency & monthly additions.">
+  <meta name="keywords"
+    content="compound interest calculator, simple interest calculator, investment growth, monthly contribution, effective annual return, finance tools, interest formula">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,207 +16,235 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Compound & Simple Interest Calculator | Growth & Return Tool">
-  <meta property="og:description" content="Calculate compound vs simple interest, contributions & effective annualized returns. Explore related finance calculators.">
-  <meta property="og:url" content="https://freetoolsandcalculators.com/Finance/Tools/CompoundSimpleInterestCalculator.html">
+  <meta property="og:description"
+    content="Calculate compound vs simple interest, contributions & effective annualized returns. Explore related finance calculators.">
+  <meta property="og:url"
+    content="https://freetoolsandcalculators.com/Finance/Tools/CompoundSimpleInterestCalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
-  <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Finance/compound_simple_interest_calculator.jpg">
-  <meta property="og:image:alt" content="Compound and simple interest calculator interface showing inputs and growth results">
+  <meta property="og:image"
+    content="https://freetoolsandcalculators.com/Images/Finance/compound_simple_interest_calculator.jpg">
+  <meta property="og:image:alt"
+    content="Compound and simple interest calculator interface showing inputs and growth results">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Compound & Simple Interest Calculator | Finance Growth Tool">
-  <meta name="twitter:description" content="Compare compound vs simple interest growth, monthly contributions and effective annualized returns.">
-  <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Finance/compound_simple_interest_calculator.jpg">
+  <meta name="twitter:description"
+    content="Compare compound vs simple interest growth, monthly contributions and effective annualized returns.">
+  <meta name="twitter:image"
+    content="https://freetoolsandcalculators.com/Images/Finance/compound_simple_interest_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="CompoundSimpleInterestCalculator.css" />
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner">
-    
-  </header>
+    <header class="top-banner">
 
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
+    </header>
 
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Finance.html">Finance</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Compound & Simple Interest Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="interest-tool-section" aria-labelledby="interest-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="interest-card">
-        <div class="interest-title-row">
-          <h1 class="interest-title" id="interest-main-title">Compound / Simple Interest Calculator</h1>
-          <button type="button" class="interest-info-trigger" aria-describedby="interestInfo" title="About Interest" tabindex="0">i</button>
-          <div class="interest-info-flyout" id="interestInfo" role="tooltip" aria-hidden="true">
-            <h2>How Interest Grows</h2>
-            <p><strong>Simple Interest:</strong> Interest only on the principal.</p>
-            <p><strong>Compound Interest:</strong> Interest on principal + accumulated interest.</p>
-            <ul>
-              <li><b>Simple:</b> A = P (1 + r t)</li>
-              <li><b>Compound:</b> A = P (1 + r / n)^(n t)</li>
-              <li>P = Principal, r = annual rate, n = compounds per year, t = years</li>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Finance.html">Finance</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Compound & Simple Interest Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="interest-tool-section" aria-labelledby="interest-main-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="interest-card">
+            <div class="interest-title-row">
+              <h1 class="interest-title" id="interest-main-title">Compound / Simple Interest Calculator</h1>
+              <button type="button" class="interest-info-trigger" aria-describedby="interestInfo" title="About Interest"
+                tabindex="0">i</button>
+              <div class="interest-info-flyout" id="interestInfo" role="tooltip" aria-hidden="true">
+                <h2>How Interest Grows</h2>
+                <p><strong>Simple Interest:</strong> Interest only on the principal.</p>
+                <p><strong>Compound Interest:</strong> Interest on principal + accumulated interest.</p>
+                <ul>
+                  <li><b>Simple:</b> A = P (1 + r t)</li>
+                  <li><b>Compound:</b> A = P (1 + r / n)^(n t)</li>
+                  <li>P = Principal, r = annual rate, n = compounds per year, t = years</li>
+                </ul>
+                <p class="info-disclaimer">Estimates only. Taxes, fees, inflation, and market volatility not factored.
+                </p>
+              </div>
+            </div>
+            <div class="interest-interaction-row">
+              <form id="interestForm" class="interest-form">
+                <div class="mode-toggle" id="modeToggle">
+                  <button type="button" data-mode="compound" class="active">Compound</button>
+                  <button type="button" data-mode="simple">Simple</button>
+                </div>
+                <div class="input-group">
+                  <label for="principal">Principal Amount</label>
+                  <div class="input-row">
+                    <input type="number" id="principal" min="1" step="any" placeholder="e.g. 10000" required />
+                    <select id="currency">
+                      <option value="USD">USD</option>
+                      <option value="EUR">EUR</option>
+                      <option value="GBP">GBP</option>
+                      <option value="INR">INR</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="annualRate">Annual Interest Rate (%)</label>
+                  <div class="input-row">
+                    <input type="number" id="annualRate" min="0.01" step="0.01" placeholder="e.g. 6.5" required />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="years">Time Period</label>
+                  <div class="input-row">
+                    <input type="number" id="years" min="0.1" step="0.1" placeholder="Years" required />
+                  </div>
+                </div>
+                <div class="input-group" id="compoundGroup">
+                  <label for="compoundsPerYear">Compounds Per Year</label>
+                  <div class="input-row">
+                    <select id="compoundsPerYear">
+                      <option value="1">Annually (1)</option>
+                      <option value="2">Semi-Annual (2)</option>
+                      <option value="4">Quarterly (4)</option>
+                      <option value="12" selected>Monthly (12)</option>
+                      <option value="24">Semi-Monthly (24)</option>
+                      <option value="26">Bi-Weekly (26)</option>
+                      <option value="52">Weekly (52)</option>
+                      <option value="365">Daily (365)</option>
+                    </select>
+                  </div>
+                  <div class="interest-inline-note">Compounding frequency</div>
+                </div>
+                <div class="input-group">
+                  <label for="monthlyContribution">Monthly Contribution (Optional)</label>
+                  <div class="input-row">
+                    <input type="number" id="monthlyContribution" min="0" step="10" placeholder="e.g. 200" />
+                  </div>
+                  <div class="interest-inline-note">Added at end of each month</div>
+                </div>
+                <div class="input-group">
+                  <label for="rateChange">Annual Rate Increase % (Optional)</label>
+                  <div class="input-row">
+                    <input type="number" id="rateChange" min="0" step="0.1" placeholder="e.g. 0.25" />
+                  </div>
+                  <div class="interest-inline-note">Model step-up returns</div>
+                </div>
+                <button type="submit" class="interest-btn">Calculate Growth</button>
+              </form>
+              <div class="interest-result-container" id="interestResultContainer" style="display:none;">
+                <div class="interest-primary-result">
+                  <span class="interest-value" id="interestValue">--</span>
+                  <span class="interest-label" id="interestLabel">Final Amount</span>
+                </div>
+                <div class="interest-progress-wrapper">
+                  <div class="interest-progress-bar">
+                    <div class="interest-progress" id="interestProgress"></div>
+                  </div>
+                  <div class="interest-scale"><span>Lower</span><span>Higher</span></div>
+                </div>
+                <div class="interest-breakdown" id="interestBreakdown"></div>
+                <div class="interest-extra-stats" id="interestExtraStats"></div>
+                <div class="interest-tips" id="interestTips"></div>
+                <div class="interest-disclaimer-box">Does not include taxes or inflation adjustments.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
+            <h2 id="related-finance-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators
+            </h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
+              <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
+              <li><a href="LoanEMICalculator.html" style="text-decoration:none;">Generic Loan EMI Calculator</a></li>
+              <li><a href="PersonalLoanEMICalculator.html" style="text-decoration:none;">Personal Loan EMI
+                  Calculator</a></li>
+              <li><a href="LoanAffordabilityCalculator.html" style="text-decoration:none;">Loan Affordability
+                  Calculator</a></li>
+              <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility
+                  Calculator</a></li>
             </ul>
-            <p class="info-disclaimer">Estimates only. Taxes, fees, inflation, and market volatility not factored.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="interest-faq-heading">
+            <h2 id="interest-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">
+              Interest Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is the difference between simple and compound
+                  interest?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Simple interest applies only to the original principal;
+                    compound interest applies to principal plus previously earned interest, creating exponential growth
+                    over time.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How do I calculate compound interest?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Use A = P (1 + r / n)^(n t) where P is principal, r
+                    annual rate, n compounds per year, and t years. The tool handles contributions and frequency
+                    automatically.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How do monthly contributions affect growth?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Regular contributions increase invested capital, allowing
+                    more interest to compound, significantly boosting final value vs no contributions.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What influences effective annualized return?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Compounding frequency, rate changes, contribution timing,
+                    and length of investment all affect the effective annualized growth percentage.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How often should interest be compounded?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">More frequent compounding (monthly, daily) generally
+                    raises returns slightly. Choose the frequency that matches your account or investment terms.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="interest-interaction-row">
-          <form id="interestForm" class="interest-form">
-            <div class="mode-toggle" id="modeToggle">
-              <button type="button" data-mode="compound" class="active">Compound</button>
-              <button type="button" data-mode="simple">Simple</button>
-            </div>
-            <div class="input-group">
-              <label for="principal">Principal Amount</label>
-              <div class="input-row">
-                <input type="number" id="principal" min="1" step="any" placeholder="e.g. 10000" required />
-                <select id="currency">
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                  <option value="INR">INR</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="annualRate">Annual Interest Rate (%)</label>
-              <div class="input-row">
-                <input type="number" id="annualRate" min="0.01" step="0.01" placeholder="e.g. 6.5" required />
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="years">Time Period</label>
-              <div class="input-row">
-                <input type="number" id="years" min="0.1" step="0.1" placeholder="Years" required />
-              </div>
-            </div>
-            <div class="input-group" id="compoundGroup">
-              <label for="compoundsPerYear">Compounds Per Year</label>
-              <div class="input-row">
-                <select id="compoundsPerYear">
-                  <option value="1">Annually (1)</option>
-                  <option value="2">Semi-Annual (2)</option>
-                  <option value="4">Quarterly (4)</option>
-                  <option value="12" selected>Monthly (12)</option>
-                  <option value="24">Semi-Monthly (24)</option>
-                  <option value="26">Bi-Weekly (26)</option>
-                  <option value="52">Weekly (52)</option>
-                  <option value="365">Daily (365)</option>
-                </select>
-              </div>
-              <div class="interest-inline-note">Compounding frequency</div>
-            </div>
-            <div class="input-group">
-              <label for="monthlyContribution">Monthly Contribution (Optional)</label>
-              <div class="input-row">
-                <input type="number" id="monthlyContribution" min="0" step="10" placeholder="e.g. 200" />
-              </div>
-              <div class="interest-inline-note">Added at end of each month</div>
-            </div>
-            <div class="input-group">
-              <label for="rateChange">Annual Rate Increase % (Optional)</label>
-              <div class="input-row">
-                <input type="number" id="rateChange" min="0" step="0.1" placeholder="e.g. 0.25" />
-              </div>
-              <div class="interest-inline-note">Model step-up returns</div>
-            </div>
-            <button type="submit" class="interest-btn">Calculate Growth</button>
-          </form>
-          <div class="interest-result-container" id="interestResultContainer" style="display:none;">
-            <div class="interest-primary-result">
-              <span class="interest-value" id="interestValue">--</span>
-              <span class="interest-label" id="interestLabel">Final Amount</span>
-            </div>
-            <div class="interest-progress-wrapper">
-              <div class="interest-progress-bar"><div class="interest-progress" id="interestProgress"></div></div>
-              <div class="interest-scale"><span>Lower</span><span>Higher</span></div>
-            </div>
-            <div class="interest-breakdown" id="interestBreakdown"></div>
-            <div class="interest-extra-stats" id="interestExtraStats"></div>
-            <div class="interest-tips" id="interestTips"></div>
-            <div class="interest-disclaimer-box">Does not include taxes or inflation adjustments.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
-          <h2 id="related-finance-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
-            <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
-            <li><a href="LoanEMICalculator.html" style="text-decoration:none;">Generic Loan EMI Calculator</a></li>
-            <li><a href="PersonalLoanEMICalculator.html" style="text-decoration:none;">Personal Loan EMI Calculator</a></li>
-            <li><a href="LoanAffordabilityCalculator.html" style="text-decoration:none;">Loan Affordability Calculator</a></li>
-            <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="interest-faq-heading">
-          <h2 id="interest-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Interest Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is the difference between simple and compound interest?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Simple interest applies only to the original principal; compound interest applies to principal plus previously earned interest, creating exponential growth over time.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How do I calculate compound interest?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Use A = P (1 + r / n)^(n t) where P is principal, r annual rate, n compounds per year, and t years. The tool handles contributions and frequency automatically.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How do monthly contributions affect growth?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Regular contributions increase invested capital, allowing more interest to compound, significantly boosting final value vs no contributions.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What influences effective annualized return?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Compounding frequency, rate changes, contribution timing, and length of investment all affect the effective annualized growth percentage.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How often should interest be compounded?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">More frequent compounding (monthly, daily) generally raises returns slightly. Choose the frequency that matches your account or investment terms.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
 
-  <footer class="bottom-banner"></footer>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
     const modeToggle = document.getElementById('modeToggle');
     let calcMode = 'compound';
-    modeToggle.addEventListener('click', e=>{ if(e.target.tagName==='BUTTON'){ calcMode = e.target.dataset.mode; [...modeToggle.querySelectorAll('button')].forEach(b=>b.classList.toggle('active', b.dataset.mode===calcMode)); document.getElementById('compoundGroup').style.display = calcMode==='compound' ? 'block':'none'; document.getElementById('interestLabel').textContent = calcMode==='compound' ? 'Final Amount' : 'Final Amount'; }});
+    modeToggle.addEventListener('click', e => { if (e.target.tagName === 'BUTTON') { calcMode = e.target.dataset.mode;[...modeToggle.querySelectorAll('button')].forEach(b => b.classList.toggle('active', b.dataset.mode === calcMode)); document.getElementById('compoundGroup').style.display = calcMode === 'compound' ? 'block' : 'none'; document.getElementById('interestLabel').textContent = calcMode === 'compound' ? 'Final Amount' : 'Final Amount'; } });
 
     const form = document.getElementById('interestForm');
     const resultContainer = document.getElementById('interestResultContainer');
@@ -223,101 +254,103 @@
     const extraStatsEl = document.getElementById('interestExtraStats');
     const tipsEl = document.getElementById('interestTips');
 
-    function currencySymbol(code){ switch(code){ case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; case 'INR': return '₹'; default: return code + ' '; } }
-    function formatMoney(v,c){ return currencySymbol(c) + Number(v).toLocaleString(undefined,{minimumFractionDigits:2, maximumFractionDigits:2}); }
+    function currencySymbol(code) { switch (code) { case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; case 'INR': return '₹'; default: return code + ' '; } }
+    function formatMoney(v, c) { return currencySymbol(c) + Number(v).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
 
-    function compoundFutureValue(P, rAnnual, years, n, monthlyContribution, rateStep){
-      const months = Math.round(years*12);
-      const monthlyRateStep = rateStep/100/12; // approx step for incremental growth
-      let balance = P; let yearlyBaseRate = rAnnual/100; let mrc = monthlyContribution||0; let totalContrib = P; let totalInterest=0;
-      for(let m=1;m<=months;m++){
+    function compoundFutureValue(P, rAnnual, years, n, monthlyContribution, rateStep) {
+      const months = Math.round(years * 12);
+      const monthlyRateStep = rateStep / 100 / 12; // approx step for incremental growth
+      let balance = P; let yearlyBaseRate = rAnnual / 100; let mrc = monthlyContribution || 0; let totalContrib = P; let totalInterest = 0;
+      for (let m = 1; m <= months; m++) {
         // adjust annual rate each year boundary (after month multiple of 12)
-        if(rateStep && m>1 && (m-1)%12===0){ yearlyBaseRate += rateStep/100; }
+        if (rateStep && m > 1 && (m - 1) % 12 === 0) { yearlyBaseRate += rateStep / 100; }
         const r = yearlyBaseRate / n; // per comp period
         // simulate comp periods inside the month
-        const periodsThisMonth = n/12; // if n divisible by 12 else approximate
+        const periodsThisMonth = n / 12; // if n divisible by 12 else approximate
         const subPeriods = Math.max(1, Math.round(periodsThisMonth));
-        for(let sp=0; sp<subPeriods; sp++){
+        for (let sp = 0; sp < subPeriods; sp++) {
           const subRate = yearlyBaseRate / n; // r per period
-          const interest = balance * subRate; balance += interest; totalInterest += interest; }
+          const interest = balance * subRate; balance += interest; totalInterest += interest;
+        }
         // add monthly contribution at end
-        if(mrc>0){ balance += mrc; totalContrib += mrc; }
+        if (mrc > 0) { balance += mrc; totalContrib += mrc; }
       }
       return { future: balance, totalContrib, totalInterest };
     }
 
-    function simpleFutureValue(P, rAnnual, years, monthlyContribution){
-      const months = Math.round(years*12); const r = rAnnual/100; let totalContrib = P; let balance = P; let totalInterest=0; const mrc = monthlyContribution||0;
-      for(let m=1;m<=months;m++){
+    function simpleFutureValue(P, rAnnual, years, monthlyContribution) {
+      const months = Math.round(years * 12); const r = rAnnual / 100; let totalContrib = P; let balance = P; let totalInterest = 0; const mrc = monthlyContribution || 0;
+      for (let m = 1; m <= months; m++) {
         // interest only on original principal
-        const interest = P * (r/12); totalInterest += interest; balance += interest; if(mrc>0){ balance += mrc; totalContrib += mrc; }
+        const interest = P * (r / 12); totalInterest += interest; balance += interest; if (mrc > 0) { balance += mrc; totalContrib += mrc; }
       }
       return { future: balance, totalContrib, totalInterest };
     }
 
-    form.addEventListener('submit', e=>{
+    form.addEventListener('submit', e => {
       e.preventDefault();
       const currency = document.getElementById('currency').value;
       const P = parseFloat(document.getElementById('principal').value);
       const rAnnual = parseFloat(document.getElementById('annualRate').value);
       const years = parseFloat(document.getElementById('years').value);
-      const n = parseInt(document.getElementById('compoundsPerYear').value,10);
-      const monthlyContribution = parseFloat(document.getElementById('monthlyContribution').value)||0;
-      const rateChange = parseFloat(document.getElementById('rateChange').value)||0;
-      if(!P || !rAnnual || !years){ resultContainer.style.display='none'; resultContainer.classList.remove('show'); return; }
+      const n = parseInt(document.getElementById('compoundsPerYear').value, 10);
+      const monthlyContribution = parseFloat(document.getElementById('monthlyContribution').value) || 0;
+      const rateChange = parseFloat(document.getElementById('rateChange').value) || 0;
+      if (!P || !rAnnual || !years) { resultContainer.style.display = 'none'; resultContainer.classList.remove('show'); return; }
 
-      let res; if(calcMode==='compound'){ res = compoundFutureValue(P, rAnnual, years, n, monthlyContribution, rateChange); } else { res = simpleFutureValue(P, rAnnual, years, monthlyContribution); }
+      let res; if (calcMode === 'compound') { res = compoundFutureValue(P, rAnnual, years, n, monthlyContribution, rateChange); } else { res = simpleFutureValue(P, rAnnual, years, monthlyContribution); }
 
       valueEl.textContent = formatMoney(res.future, currency);
 
       const growth = res.future - res.totalContrib; // pure interest growth
       const percentReturn = (growth / res.totalContrib) * 100;
       // progress scale heuristic (returns % from 0 to 400%)
-      const min=0, max=400; const clamped = Math.min(max, Math.max(min, percentReturn));
-      const pct = ((clamped-min)/(max-min))*100; progressEl.style.width = pct + '%';
+      const min = 0, max = 400; const clamped = Math.min(max, Math.max(min, percentReturn));
+      const pct = ((clamped - min) / (max - min)) * 100; progressEl.style.width = pct + '%';
       progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
 
       // Breakdown
-      breakdownEl.innerHTML='';
+      breakdownEl.innerHTML = '';
       const breakdownRows = [
         ['Principal', formatMoney(P, currency)],
         ['Total Contributions', formatMoney(res.totalContrib, currency)],
         ['Total Interest', formatMoney(res.totalInterest, currency)],
         ['Net Growth', formatMoney(growth, currency)],
-        ['Return on Contributions', percentReturn.toFixed(2)+'%'],
+        ['Return on Contributions', percentReturn.toFixed(2) + '%'],
         ['Years', years.toFixed(2)]
       ];
-      if(calcMode==='compound'){ breakdownRows.splice(3,0,['Mode','Compound']); } else { breakdownRows.splice(3,0,['Mode','Simple']); }
-      breakdownRows.forEach(r=>{ const d=document.createElement('div'); d.className='interest-breakdown-row'; d.innerHTML=`<span>${r[0]}</span><span class="value">${r[1]}</span>`; breakdownEl.appendChild(d); });
+      if (calcMode === 'compound') { breakdownRows.splice(3, 0, ['Mode', 'Compound']); } else { breakdownRows.splice(3, 0, ['Mode', 'Simple']); }
+      breakdownRows.forEach(r => { const d = document.createElement('div'); d.className = 'interest-breakdown-row'; d.innerHTML = `<span>${r[0]}</span><span class="value">${r[1]}</span>`; breakdownEl.appendChild(d); });
 
       // Extra stats
-      extraStatsEl.innerHTML='';
-      const annualized = Math.pow(res.future / res.totalContrib, 1/years) - 1; // rough effective return vs contributions
+      extraStatsEl.innerHTML = '';
+      const annualized = Math.pow(res.future / res.totalContrib, 1 / years) - 1; // rough effective return vs contributions
       const stats = [
-        { label:'Effective Annualized', val: isFinite(annualized)? (annualized*100).toFixed(2)+'%':'—'},
-        { label:'Monthly Contrib', val: monthlyContribution? formatMoney(monthlyContribution, currency):'—'},
-        { label:'Interest Share', val: (res.totalInterest/res.future*100).toFixed(1)+'%' },
-        { label:'Contribution Share', val: (res.totalContrib/res.future*100).toFixed(1)+'%' }
+        { label: 'Effective Annualized', val: isFinite(annualized) ? (annualized * 100).toFixed(2) + '%' : '—' },
+        { label: 'Monthly Contrib', val: monthlyContribution ? formatMoney(monthlyContribution, currency) : '—' },
+        { label: 'Interest Share', val: (res.totalInterest / res.future * 100).toFixed(1) + '%' },
+        { label: 'Contribution Share', val: (res.totalContrib / res.future * 100).toFixed(1) + '%' }
       ];
-      if(calcMode==='compound' && rateChange>0){ stats.push({ label:'Rate Step / Yr', val: rateChange.toFixed(2)+'%' }); }
-      stats.forEach(s=>{ const el=document.createElement('div'); el.className='interest-stat'; el.innerHTML=`<span class="label">${s.label}</span><span class="val">${s.val}</span>`; extraStatsEl.appendChild(el); });
+      if (calcMode === 'compound' && rateChange > 0) { stats.push({ label: 'Rate Step / Yr', val: rateChange.toFixed(2) + '%' }); }
+      stats.forEach(s => { const el = document.createElement('div'); el.className = 'interest-stat'; el.innerHTML = `<span class="label">${s.label}</span><span class="val">${s.val}</span>`; extraStatsEl.appendChild(el); });
 
       // Tips
       let tip;
-      if(calcMode==='compound'){
-        if(rateChange>0) tip = 'Compound growth with increasing rate accelerates long-term returns.'; else tip = 'Regular contributions + compounding amplify exponential growth.';
+      if (calcMode === 'compound') {
+        if (rateChange > 0) tip = 'Compound growth with increasing rate accelerates long-term returns.'; else tip = 'Regular contributions + compounding amplify exponential growth.';
       } else {
         tip = 'Simple interest grows linearly. Switching to compounding or adding contributions enhances growth.';
       }
-      if(monthlyContribution>0) tip += ' Consistent monthly contributions significantly raise ending value.';
+      if (monthlyContribution > 0) tip += ' Consistent monthly contributions significantly raise ending value.';
       tipsEl.textContent = tip;
 
-      resultContainer.style.display='flex';
-      setTimeout(()=>{ resultContainer.classList.add('show'); resultContainer.scrollIntoView({behavior:'smooth', block:'center'}); }, 50);
+      resultContainer.style.display = 'flex';
+      setTimeout(() => { resultContainer.classList.add('show'); resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://freetoolsandcalculators.com/Finance/Finance.html"},{"@type":"ListItem","position":3,"name":"Compound & Simple Interest Calculator","item":"https://freetoolsandcalculators.com/Finance/Tools/CompoundSimpleInterestCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Finance/Tools/CompoundSimpleInterestCalculator.html","url":"https://freetoolsandcalculators.com/Finance/Tools/CompoundSimpleInterestCalculator.html","name":"Compound & Simple Interest Calculator | Free Tools and Calculators","description":"Compare compound vs simple interest growth, contributions, effective annualized return and compounding frequency impact.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Compound & Simple Interest Calculator","applicationCategory":"FinanceApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Finance/Tools/CompoundSimpleInterestCalculator.html","description":"Calculates compound or simple interest growth with contributions, rate step-ups and effective annualized return.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between simple and compound interest?","acceptedAnswer":{"@type":"Answer","text":"Simple interest is on original principal; compound interest on principal plus accumulated interest."}},{"@type":"Question","name":"How do I calculate compound interest?","acceptedAnswer":{"@type":"Answer","text":"Formula: A = P (1 + r / n)^(n t)."}},{"@type":"Question","name":"How do monthly contributions affect growth?","acceptedAnswer":{"@type":"Answer","text":"They boost invested capital so more interest compounds, increasing final value."}},{"@type":"Question","name":"What influences effective annualized return?","acceptedAnswer":{"@type":"Answer","text":"Frequency, rate changes, contribution timing and investment duration."}},{"@type":"Question","name":"How often should interest be compounded?","acceptedAnswer":{"@type":"Answer","text":"More frequent compounding slightly increases returns; depends on account terms."}}]}]}
   </script>
 </body>
+
 </html>

@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI Calculator | Free Tools and Calculators for Accurate Body Mass Index</title>
-  <meta name="description" content="Free BMI Calculator: Calculate Body Mass Index instantly using metric or imperial units. Get category, health tips, and related health calculators (BMR, Ideal Weight, Body Fat, Water Intake).">
-  <meta name="keywords" content="BMI calculator, body mass index, health calculator, weight tools, underweight, overweight, obese, healthy weight, free online calculators">
+  <meta name="description"
+    content="Free BMI Calculator: Calculate Body Mass Index instantly using metric or imperial units. Get category, health tips, and related health calculators (BMR, Ideal Weight, Body Fat, Water Intake).">
+  <meta name="keywords"
+    content="BMI calculator, body mass index, health calculator, weight tools, underweight, overweight, obese, healthy weight, free online calculators">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -14,162 +16,177 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="BMI Calculator | Free Body Mass Index Tool">
-  <meta property="og:description" content="Instant BMI calculation with category, tips, and links to BMR, Ideal Weight, Body Fat, and Water Intake calculators.">
+  <meta property="og:description"
+    content="Instant BMI calculation with category, tips, and links to BMR, Ideal Weight, Body Fat, and Water Intake calculators.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Health/bmi_calculator.jpg">
   <meta property="og:image:alt" content="BMI Calculator interface showing input fields and result category">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BMI Calculator | Free Body Mass Index Tool">
-  <meta name="twitter:description" content="Calculate your BMI fast. Get classification plus health tips. Try related health calculators.">
+  <meta name="twitter:description"
+    content="Calculate your BMI fast. Get classification plus health tips. Try related health calculators.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Health/bmi_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="BMICalculator.css">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-  <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-  <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Health.html">Health</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>BMI Calculator</span></li>
-        </ol>
-      </nav>
-  <main class="bmi-tool-section" aria-labelledby="bmi-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="bmi-card">
-        <div class="bmi-title-row">
-          <h1 class="bmi-title" id="bmi-main-title">BMI Calculator</h1>
-          <button type="button" class="bmi-info-trigger" aria-describedby="bmiInfoPanel" title="What is BMI?" tabindex="0">i</button>
-          <div class="bmi-info-flyout" id="bmiInfoPanel" role="tooltip" aria-hidden="true">
-            <h2>What is BMI?</h2>
-            <p>BMI (Body Mass Index) estimates body fat using height & weight. It helps classify: underweight, normal, overweight or obese.</p>
-            <ul class="bmi-categories-inline">
-              <li><span class="bmi-cat under">Under</span> &lt; 18.5</li>
-              <li><span class="bmi-cat normal">Normal</span> 18.5-24.9</li>
-              <li><span class="bmi-cat over">Over</span> 25-29.9</li>
-              <li><span class="bmi-cat obese">Obese</span> ≥ 30</li>
-            </ul>
-            <p class="bmi-disclaimer">BMI is a screening metric; consult a professional for full assessment.</p>
-          </div>
-        </div>
-  <div class="bmi-interaction-row">
-  <form id="bmiForm" class="bmi-form">
-          <div class="input-group">
-            <label for="height">Height</label>
-            <div class="input-row">
-              <input type="number" id="height" name="height" min="50" max="250" placeholder="Height" required>
-              <select id="heightUnit" name="heightUnit">
-                <option value="cm">cm</option>
-                <option value="ft">ft/in</option>
-              </select>
-            </div>
-            <div class="input-row" id="inchesRow" style="display:none;">
-              <input type="number" id="heightInches" name="heightInches" min="0" max="11" placeholder="Inches">
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="weight">Weight</label>
-            <div class="input-row">
-              <input type="number" id="weight" name="weight" min="20" max="300" placeholder="Weight" required>
-              <select id="weightUnit" name="weightUnit">
-                <option value="kg">kg</option>
-                <option value="lb">lb</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="bmi-btn">Calculate BMI</button>
-        </form>
-        <div class="bmi-result-container" id="bmiResultContainer" style="display:none;">
-          <div class="bmi-result">
-            <span class="bmi-value" id="bmiValue">--</span>
-            <span class="bmi-category" id="bmiCategory">--</span>
-          </div>
-          <div class="bmi-progress-bar">
-            <div class="bmi-progress" id="bmiProgress"></div>
-          </div>
-          <div class="bmi-tips" id="bmiTips"></div>
-        </div>
-  </div>
-      </main> 
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
-          <h2 id="related-health-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-            <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
-            <li><a href="IdealWeightCalculator.html" style="text-decoration:none;">Ideal Weight Calculator</a></li>
-            <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
-            <li><a href="WaterIntakeCalculator.html" style="text-decoration:none;">Daily Water Intake Calculator</a></li>
-            <li><a href="SleepCycleCalculator.html" style="text-decoration:none;">Sleep Cycle Calculator</a></li>
-            <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="bmi-faq-heading">
-          <h2 id="bmi-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">BMI Calculator FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How do I calculate BMI?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Enter height and weight, choose units, then press Calculate. BMI = weight (kg) / [height (m)]². The tool converts ft/in and lb automatically.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Is BMI accurate for everyone?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">BMI is a screening tool, not a diagnostic measure. Muscular individuals, children, seniors, and pregnant people may need professional assessment beyond BMI.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What BMI range is considered healthy?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">A normal BMI range for most adults is 18.5 to 24.9. Below 18.5 is underweight, 25–29.9 overweight, and 30+ obese.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How often should I check my BMI?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">You can recalc anytime your weight changes significantly or at major health checkpoints (e.g., annual physical). Track trends rather than single values.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I improve an unhealthy BMI?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Adopt balanced nutrition, consistent physical activity, quality sleep, hydration, and consult a healthcare professional for personalized guidance.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
       </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Health.html">Health</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>BMI Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="bmi-tool-section" aria-labelledby="bmi-main-title" itemscope itemtype="https://schema.org/WebPage">
+          <div class="bmi-card">
+            <div class="bmi-title-row">
+              <h1 class="bmi-title" id="bmi-main-title">BMI Calculator</h1>
+              <button type="button" class="bmi-info-trigger" aria-describedby="bmiInfoPanel" title="What is BMI?"
+                tabindex="0">i</button>
+              <div class="bmi-info-flyout" id="bmiInfoPanel" role="tooltip" aria-hidden="true">
+                <h2>What is BMI?</h2>
+                <p>BMI (Body Mass Index) estimates body fat using height & weight. It helps classify: underweight,
+                  normal, overweight or obese.</p>
+                <ul class="bmi-categories-inline">
+                  <li><span class="bmi-cat under">Under</span> &lt; 18.5</li>
+                  <li><span class="bmi-cat normal">Normal</span> 18.5-24.9</li>
+                  <li><span class="bmi-cat over">Over</span> 25-29.9</li>
+                  <li><span class="bmi-cat obese">Obese</span> ≥ 30</li>
+                </ul>
+                <p class="bmi-disclaimer">BMI is a screening metric; consult a professional for full assessment.</p>
+              </div>
+            </div>
+            <div class="bmi-interaction-row">
+              <form id="bmiForm" class="bmi-form">
+                <div class="input-group">
+                  <label for="height">Height</label>
+                  <div class="input-row">
+                    <input type="number" id="height" name="height" min="50" max="250" placeholder="Height" required>
+                    <select id="heightUnit" name="heightUnit">
+                      <option value="cm">cm</option>
+                      <option value="ft">ft/in</option>
+                    </select>
+                  </div>
+                  <div class="input-row" id="inchesRow" style="display:none;">
+                    <input type="number" id="heightInches" name="heightInches" min="0" max="11" placeholder="Inches">
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="weight">Weight</label>
+                  <div class="input-row">
+                    <input type="number" id="weight" name="weight" min="20" max="300" placeholder="Weight" required>
+                    <select id="weightUnit" name="weightUnit">
+                      <option value="kg">kg</option>
+                      <option value="lb">lb</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="bmi-btn">Calculate BMI</button>
+              </form>
+              <div class="bmi-result-container" id="bmiResultContainer" style="display:none;">
+                <div class="bmi-result">
+                  <span class="bmi-value" id="bmiValue">--</span>
+                  <span class="bmi-category" id="bmiCategory">--</span>
+                </div>
+                <div class="bmi-progress-bar">
+                  <div class="bmi-progress" id="bmiProgress"></div>
+                </div>
+                <div class="bmi-tips" id="bmiTips"></div>
+              </div>
+            </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
+            <h2 id="related-health-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+              <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
+              <li><a href="IdealWeightCalculator.html" style="text-decoration:none;">Ideal Weight Calculator</a></li>
+              <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
+              <li><a href="WaterIntakeCalculator.html" style="text-decoration:none;">Daily Water Intake Calculator</a>
+              </li>
+              <li><a href="SleepCycleCalculator.html" style="text-decoration:none;">Sleep Cycle Calculator</a></li>
+              <li><a href="HeartRateZoneCalculator.html" style="text-decoration:none;">Heart Rate Zone Calculator</a>
+              </li>
+            </ul>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="bmi-faq-heading">
+            <h2 id="bmi-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">BMI
+              Calculator FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How do I calculate BMI?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Enter height and weight, choose units, then press
+                    Calculate. BMI = weight (kg) / [height (m)]². The tool converts ft/in and lb automatically.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Is BMI accurate for everyone?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">BMI is a screening tool, not a diagnostic measure.
+                    Muscular individuals, children, seniors, and pregnant people may need professional assessment beyond
+                    BMI.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What BMI range is considered healthy?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">A normal BMI range for most adults is 18.5 to 24.9. Below
+                    18.5 is underweight, 25–29.9 overweight, and 30+ obese.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How often should I check my BMI?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">You can recalc anytime your weight changes significantly
+                    or at major health checkpoints (e.g., annual physical). Track trends rather than single values.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I improve an unhealthy BMI?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Adopt balanced nutrition, consistent physical activity,
+                    quality sleep, hydration, and consult a healthcare professional for personalized guidance.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
     function toggleMenu() {
-      document.getElementById("navLinks").classList.toggle("active"); 
+      document.getElementById("navLinks").classList.toggle("active");
     }
 
     const heightUnit = document.getElementById('heightUnit');
@@ -182,7 +199,7 @@
     const bmiProgress = document.getElementById('bmiProgress');
     const bmiTips = document.getElementById('bmiTips');
 
-    heightUnit.addEventListener('change', function() {
+    heightUnit.addEventListener('change', function () {
       if (heightUnit.value === 'ft') {
         inchesRow.style.display = 'flex';
         heightInput.placeholder = 'Feet';
@@ -192,7 +209,7 @@
       }
     });
 
-    bmiForm.addEventListener('submit', function(e) {
+    bmiForm.addEventListener('submit', function (e) {
       e.preventDefault();
       let heightCm;
       if (heightUnit.value === 'cm') {
@@ -252,4 +269,5 @@
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Health","item":"https://freetoolsandcalculators.com/Health/Health.html"},{"@type":"ListItem","position":3,"name":"BMI Calculator","item":"https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html","url":"https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html","name":"BMI Calculator | Free Tools and Calculators","description":"Free BMI Calculator to compute Body Mass Index with metric or imperial units and get health category plus tips.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"BMI Calculator","applicationCategory":"HealthApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html","description":"Instant BMI calculation providing category, progress indicator, and personalized tips.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate BMI?","acceptedAnswer":{"@type":"Answer","text":"Enter height and weight, choose units, then press Calculate. BMI = weight (kg) / [height (m)]²."}},{"@type":"Question","name":"Is BMI accurate for everyone?","acceptedAnswer":{"@type":"Answer","text":"BMI is a screening tool; muscular individuals, children, seniors, and pregnant people may need further assessment."}},{"@type":"Question","name":"What BMI range is considered healthy?","acceptedAnswer":{"@type":"Answer","text":"Normal adult BMI is 18.5–24.9; under 18.5 underweight; 25–29.9 overweight; 30+ obese."}},{"@type":"Question","name":"How often should I check my BMI?","acceptedAnswer":{"@type":"Answer","text":"Recalculate after notable weight changes or during annual health evaluations."}},{"@type":"Question","name":"How can I improve an unhealthy BMI?","acceptedAnswer":{"@type":"Answer","text":"Use balanced nutrition, regular exercise, quality sleep, hydration, and professional guidance."}}]}]}
   </script>
 </body>
+
 </html>

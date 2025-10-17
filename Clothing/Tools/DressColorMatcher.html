@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Dress Color Matcher | Outfit Color Combination Suggestion Tool</title>
-  <meta name="description" content="Free Dress Color Matcher: Pick a top or bottom color and instantly get harmonious, contrast and accent pairing suggestions using fashion color theory.">
-  <meta name="keywords" content="dress color matcher,color combination tool,outfit color matcher,what colors go together,fashion color pairing,clothing color combinations,style tool">
+  <meta name="description"
+    content="Free Dress Color Matcher: Pick a top or bottom color and instantly get harmonious, contrast and accent pairing suggestions using fashion color theory.">
+  <meta name="keywords"
+    content="dress color matcher,color combination tool,outfit color matcher,what colors go together,fashion color pairing,clothing color combinations,style tool">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,270 +16,301 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dress Color Matcher | Outfit Color Pairing Tool">
-  <meta property="og:description" content="Select a garment color and get smart pairing suggestions (neutrals, harmony, contrast & accents).">
+  <meta property="og:description"
+    content="Select a garment color and get smart pairing suggestions (neutrals, harmony, contrast & accents).">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Clothing/Tools/DressColorMatcher.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
   <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Clothing/dress_color_matcher.jpg">
   <meta property="og:image:alt" content="Dress color matcher interface showing palette and matched colors">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dress Color Matcher | Outfit Color Pairing Tool">
-  <meta name="twitter:description" content="Instant color pairing suggestions for tops & bottoms using fashion color theory.">
+  <meta name="twitter:description"
+    content="Instant color pairing suggestions for tops & bottoms using fashion color theory.">
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Clothing/dress_color_matcher.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="DressColorMatcher.css" />
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../Clothing.html">Clothing</a>
-      <a href="../../Finance/Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Clothing.html">Clothing</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Dress Color Matcher</span></li>
-        </ol>
-      </nav>
-      <main class="dcm-section" aria-labelledby="dress-color-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="dcm-card">
-        <div class="dcm-title-row">
-          <h1 class="dcm-title" id="dress-color-main-title">Dress Color Matcher</h1>
-          <button type="button" class="dcm-info-trigger" aria-describedby="dcmInfo" title="How color matching works" tabindex="0">i</button>
-          <div class="dcm-info-flyout" id="dcmInfo" role="tooltip" aria-hidden="true">
-            <h2>How Dress Color Matching Works</h2>
-            <p>Select whether you want to match a top or a bottom, then pick a color. The tool will suggest a range of colors that go well with your selection, based on color theory and fashion best practices.</p>
-            <ul>
-              <li>Choose to match a top or bottom</li>
-              <li>Pick a color from the color grid</li>
-              <li>Get a range of matching suggestions</li>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../Clothing.html">Clothing</a>
+        <a href="../../Finance/Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Clothing.html">Clothing</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Dress Color Matcher</span></li>
+          </ol>
+        </nav>
+        <main class="dcm-section" aria-labelledby="dress-color-main-title" itemscope
+          itemtype="https://schema.org/WebPage">
+          <div class="dcm-card">
+            <div class="dcm-title-row">
+              <h1 class="dcm-title" id="dress-color-main-title">Dress Color Matcher</h1>
+              <button type="button" class="dcm-info-trigger" aria-describedby="dcmInfo" title="How color matching works"
+                tabindex="0">i</button>
+              <div class="dcm-info-flyout" id="dcmInfo" role="tooltip" aria-hidden="true">
+                <h2>How Dress Color Matching Works</h2>
+                <p>Select whether you want to match a top or a bottom, then pick a color. The tool will suggest a range
+                  of colors that go well with your selection, based on color theory and fashion best practices.</p>
+                <ul>
+                  <li>Choose to match a top or bottom</li>
+                  <li>Pick a color from the color grid</li>
+                  <li>Get a range of matching suggestions</li>
+                </ul>
+                <p class="disclaimer">For style inspiration. Always consider your personal taste and occasion!</p>
+              </div>
+            </div>
+            <div class="dcm-interaction-row">
+              <form id="colorForm" class="dcm-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="matchType">I want to find a matching...</label>
+                  <div class="input-row">
+                    <select id="matchType" required>
+                      <option value="bottom">Bottom (for my top)</option>
+                      <option value="top">Top (for my bottom)</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="colorGrid">Choose your color</label>
+                  <div class="color-grid" id="colorGrid">
+                  </div>
+                </div>
+                <input type="hidden" id="selectedColor" required>
+                <button type="submit" class="dcm-btn" disabled id="dcmSubmit">Show Matching Colors</button>
+              </form>
+              <div class="dcm-result-container" id="dcmResult" style="display:none;">
+                <div class="dcm-main-result">
+                  <span class="dcm-match-label" id="dcmMatchLabel">Matching Colors</span>
+                </div>
+                <div class="dcm-matches" id="dcmMatches"></div>
+                <div class="dcm-tips" id="dcmTips"></div>
+                <div class="dcm-disclaimer">For inspiration only. Style is personal!</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:0;width:100%;" aria-labelledby="related-clothing-tools">
+            <h2 id="related-clothing-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
+              Related Clothing Tools</h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
+              <li><a href="ClothesSizeConverter.html" style="text-decoration:none;">Clothes Size Converter</a></li>
+              <li><a href="ShoesSizeConverter.html" style="text-decoration:none;">Shoe Size Converter</a></li>
             </ul>
-            <p class="disclaimer">For style inspiration. Always consider your personal taste and occasion!</p>
-          </div>
-        </div>
-        <div class="dcm-interaction-row">
-          <form id="colorForm" class="dcm-form" autocomplete="off">
-            <div class="input-group">
-              <label for="matchType">I want to find a matching...</label>
-              <div class="input-row">
-                <select id="matchType" required>
-                  <option value="bottom">Bottom (for my top)</option>
-                  <option value="top">Top (for my bottom)</option>
-                </select>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="dress-color-faq-heading">
+            <h2 id="dress-color-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">
+              Dress Color Matcher FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How does the dress color matcher choose pairings?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">It references a curated palette mapping neutrals,
+                    harmonious hues (analogous), complementary contrasts and accent pops for balanced outfits.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can I use these suggestions for both casual and formal
+                  outfits?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Neutrals + one accent suit formal; broader contrast
+                    or brighter triads lean casual or evening statement looks.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why do some colors have many matches while others fewer?
+                </h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Neutral and mid‑tone hues pair broadly; saturated or
+                    niche shades require restrained companions to avoid visual clash.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I build a capsule wardrobe with color theory?
+                </h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Anchor with versatile neutrals (black, navy, beige,
+                    white) then add 2–3 accent families that harmonize (e.g. sage + rust + mauve).</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Do lighting and fabric affect perceived color matches?
+                </h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes—texture, sheen and warm vs cool lighting shift
+                    appearance; always evaluate combinations in real light before deciding.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Should I use exact hex codes when shopping?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Not necessary. Aim for close tonal families; slight shade
+                    variation creates depth while preserving harmony.</p>
+                </div>
               </div>
             </div>
-            <div class="input-group">
-              <label for="colorGrid">Choose your color</label>
-              <div class="color-grid" id="colorGrid">
-                <!-- Color swatches will be injected here -->
-              </div>
-            </div>
-            <input type="hidden" id="selectedColor" required>
-            <button type="submit" class="dcm-btn" disabled id="dcmSubmit">Show Matching Colors</button>
-          </form>
-          <div class="dcm-result-container" id="dcmResult" style="display:none;">
-            <div class="dcm-main-result">
-              <span class="dcm-match-label" id="dcmMatchLabel">Matching Colors</span>
-            </div>
-            <div class="dcm-matches" id="dcmMatches"></div>
-            <div class="dcm-tips" id="dcmTips"></div>
-            <div class="dcm-disclaimer">For inspiration only. Style is personal!</div>
-          </div>
+          </section>
         </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:0;width:100%;" aria-labelledby="related-clothing-tools">
-          <h2 id="related-clothing-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Clothing Tools</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
-            <li><a href="ClothesSizeConverter.html" style="text-decoration:none;">Clothes Size Converter</a></li>
-            <li><a href="ShoesSizeConverter.html" style="text-decoration:none;">Shoe Size Converter</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="dress-color-faq-heading">
-          <h2 id="dress-color-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Dress Color Matcher FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How does the dress color matcher choose pairings?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">It references a curated palette mapping neutrals, harmonious hues (analogous), complementary contrasts and accent pops for balanced outfits.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Can I use these suggestions for both casual and formal outfits?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Yes. Neutrals + one accent suit formal; broader contrast or brighter triads lean casual or evening statement looks.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Why do some colors have many matches while others fewer?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Neutral and mid‑tone hues pair broadly; saturated or niche shades require restrained companions to avoid visual clash.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I build a capsule wardrobe with color theory?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Anchor with versatile neutrals (black, navy, beige, white) then add 2–3 accent families that harmonize (e.g. sage + rust + mauve).</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Do lighting and fabric affect perceived color matches?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Yes—texture, sheen and warm vs cool lighting shift appearance; always evaluate combinations in real light before deciding.</p></div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Should I use exact hex codes when shopping?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Not necessary. Aim for close tonal families; slight shade variation creates depth while preserving harmony.</p></div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
-    function toggleMenu(){document.getElementById('navLinks').classList.toggle('active');}
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     // Color palette and matching logic
     const colorOptions = [
-  // Neutrals
-  {name: 'White', hex: '#FFFFFF'},
-  {name: 'Ivory', hex: '#FFFFF0'},
-  {name: 'Beige', hex: '#F5F5DC'},
-  {name: 'Cream', hex: '#FFFDD0'},
-  {name: 'Taupe', hex: '#B38B6D'},
-  {name: 'Khaki', hex: '#F0E68C'},
-  {name: 'Tan', hex: '#D2B48C'},
-  {name: 'Brown', hex: '#795548'},
-  {name: 'Chocolate', hex: '#7B3F00'},
-  {name: 'Charcoal', hex: '#424242'},
-  {name: 'Grey', hex: '#757575'},
-  {name: 'Black', hex: '#222222'},
-  {name: 'Silver', hex: '#C0C0C0'},
+      // Neutrals
+      { name: 'White', hex: '#FFFFFF' },
+      { name: 'Ivory', hex: '#FFFFF0' },
+      { name: 'Beige', hex: '#F5F5DC' },
+      { name: 'Cream', hex: '#FFFDD0' },
+      { name: 'Taupe', hex: '#B38B6D' },
+      { name: 'Khaki', hex: '#F0E68C' },
+      { name: 'Tan', hex: '#D2B48C' },
+      { name: 'Brown', hex: '#795548' },
+      { name: 'Chocolate', hex: '#7B3F00' },
+      { name: 'Charcoal', hex: '#424242' },
+      { name: 'Grey', hex: '#757575' },
+      { name: 'Black', hex: '#222222' },
+      { name: 'Silver', hex: '#C0C0C0' },
 
-  // Blues
-  {name: 'Navy', hex: '#1A237E'},
-  {name: 'Denim_Blue', hex: '#1560BD'},
-  {name: 'Royal_Blue', hex: '#4169E1'},
-  {name: 'Cobalt_Blue', hex: '#0047AB'},
-  {name: 'Sky_Blue', hex: '#87CEEB'},
-  {name: 'Powder_Blue', hex: '#B0E0E6'},
-  {name: 'Dusty_Blue', hex: '#6699CC'},
+      // Blues
+      { name: 'Navy', hex: '#1A237E' },
+      { name: 'Denim_Blue', hex: '#1560BD' },
+      { name: 'Royal_Blue', hex: '#4169E1' },
+      { name: 'Cobalt_Blue', hex: '#0047AB' },
+      { name: 'Sky_Blue', hex: '#87CEEB' },
+      { name: 'Powder_Blue', hex: '#B0E0E6' },
+      { name: 'Dusty_Blue', hex: '#6699CC' },
 
-  // Greens
-  {name: 'Sage_Green', hex: '#9DC183'},
-  {name: 'Olive', hex: '#808000'},
-  {name: 'Emerald', hex: '#50C878'},
-  {name: 'Teal', hex: '#008080'},
-  {name: 'Mint', hex: '#AAF0D1'},
-  {name: 'Forest_Green', hex: '#228B22'},
-  {name: 'Moss_Green', hex: '#8A9A5B'},
+      // Greens
+      { name: 'Sage_Green', hex: '#9DC183' },
+      { name: 'Olive', hex: '#808000' },
+      { name: 'Emerald', hex: '#50C878' },
+      { name: 'Teal', hex: '#008080' },
+      { name: 'Mint', hex: '#AAF0D1' },
+      { name: 'Forest_Green', hex: '#228B22' },
+      { name: 'Moss_Green', hex: '#8A9A5B' },
 
-  // Reds & Pinks
-  {name: 'Red', hex: '#D32F2F'},
-  {name: 'Crimson', hex: '#DC143C'},
-  {name: 'Maroon', hex: '#800000'},
-  {name: 'Burgundy', hex: '#800020'},
-  {name: 'Blush', hex: '#DE5D83'},
-  {name: 'Rose', hex: '#E0AFA0'},
-  {name: 'Fuchsia', hex: '#FF77FF'},
-  {name: 'Dusty_Rose', hex: '#C48189'},
-  {name: 'Pink', hex: '#E91E63'},
-  {name: 'Mauve', hex: '#E0B0FF'},
+      // Reds & Pinks
+      { name: 'Red', hex: '#D32F2F' },
+      { name: 'Crimson', hex: '#DC143C' },
+      { name: 'Maroon', hex: '#800000' },
+      { name: 'Burgundy', hex: '#800020' },
+      { name: 'Blush', hex: '#DE5D83' },
+      { name: 'Rose', hex: '#E0AFA0' },
+      { name: 'Fuchsia', hex: '#FF77FF' },
+      { name: 'Dusty_Rose', hex: '#C48189' },
+      { name: 'Pink', hex: '#E91E63' },
+      { name: 'Mauve', hex: '#E0B0FF' },
 
-  // Yellows & Oranges
-  {name: 'Mustard', hex: '#FFD54F'},
-  {name: 'Amber', hex: '#FFBF00'},
-  {name: 'Gold', hex: '#FFD700'},
-  {name: 'Coral', hex: '#FF7F50'},
-  {name: 'Peach', hex: '#FFDAB9'},
-  {name: 'Terracotta', hex: '#E2725B'},
-  {name: 'Rust', hex: '#B7410E'},
+      // Yellows & Oranges
+      { name: 'Mustard', hex: '#FFD54F' },
+      { name: 'Amber', hex: '#FFBF00' },
+      { name: 'Gold', hex: '#FFD700' },
+      { name: 'Coral', hex: '#FF7F50' },
+      { name: 'Peach', hex: '#FFDAB9' },
+      { name: 'Terracotta', hex: '#E2725B' },
+      { name: 'Rust', hex: '#B7410E' },
 
-  // Purples
-  {name: 'Lavender', hex: '#B39DDB'},
-  {name: 'Lilac', hex: '#C8A2C8'},
-  {name: 'Violet', hex: '#8F00FF'},
-  {name: 'Plum', hex: '#673147'},
+      // Purples
+      { name: 'Lavender', hex: '#B39DDB' },
+      { name: 'Lilac', hex: '#C8A2C8' },
+      { name: 'Violet', hex: '#8F00FF' },
+      { name: 'Plum', hex: '#673147' },
 
-  // Others
-  {name: 'Cyan', hex: '#00B7EB'},
-  {name: 'Turquoise', hex: '#40E0D0'},
-  {name: 'Aqua', hex: '#00FFFF'},
-  {name: 'Cream_White', hex: '#FAF9F6'},
-];
+      // Others
+      { name: 'Cyan', hex: '#00B7EB' },
+      { name: 'Turquoise', hex: '#40E0D0' },
+      { name: 'Aqua', hex: '#00FFFF' },
+      { name: 'Cream_White', hex: '#FAF9F6' },
+    ];
 
 
     const colorMatches = {
-  White: ['Black','Beige','Navy','Olive','Rust','Mauve','Emerald','Charcoal','Denim_Blue'],
-  Ivory: ['Brown','Olive','Terracotta','Charcoal','Sage_Green','Dusty_Rose','Navy'],
-  Beige: ['Navy','Emerald','Terracotta','Mauve','Black','Olive','Rust','White'],
-  Cream: ['Navy','Forest_Green','Burgundy','Rust','Olive','Denim_Blue'],
-  Taupe: ['Cream','Sage_Green','White','Mauve','Olive','Navy'],
-  Khaki: ['Black','White','Navy','Sage_Green','Rust','Burgundy'],
-  Tan: ['White','Denim_Blue','Olive','Charcoal','Sage_Green','Coral'],
-  Brown: ['White','Beige','Sage_Green','Powder_Blue','Rust','Mauve'],
-  Chocolate: ['Cream','Olive','Rust','Gold','Mauve'],
-  Charcoal: ['White','Sage_Green','Dusty_Rose','Mustard','Ivory','Peach'],
-  Grey: ['White','Navy','Lavender','Dusty_Rose','Olive','Amber','Mauve'],
-  Black: ['White','Gold','Beige','Coral','Dusty_Rose','Mustard','Emerald'],
+      White: ['Black', 'Beige', 'Navy', 'Olive', 'Rust', 'Mauve', 'Emerald', 'Charcoal', 'Denim_Blue'],
+      Ivory: ['Brown', 'Olive', 'Terracotta', 'Charcoal', 'Sage_Green', 'Dusty_Rose', 'Navy'],
+      Beige: ['Navy', 'Emerald', 'Terracotta', 'Mauve', 'Black', 'Olive', 'Rust', 'White'],
+      Cream: ['Navy', 'Forest_Green', 'Burgundy', 'Rust', 'Olive', 'Denim_Blue'],
+      Taupe: ['Cream', 'Sage_Green', 'White', 'Mauve', 'Olive', 'Navy'],
+      Khaki: ['Black', 'White', 'Navy', 'Sage_Green', 'Rust', 'Burgundy'],
+      Tan: ['White', 'Denim_Blue', 'Olive', 'Charcoal', 'Sage_Green', 'Coral'],
+      Brown: ['White', 'Beige', 'Sage_Green', 'Powder_Blue', 'Rust', 'Mauve'],
+      Chocolate: ['Cream', 'Olive', 'Rust', 'Gold', 'Mauve'],
+      Charcoal: ['White', 'Sage_Green', 'Dusty_Rose', 'Mustard', 'Ivory', 'Peach'],
+      Grey: ['White', 'Navy', 'Lavender', 'Dusty_Rose', 'Olive', 'Amber', 'Mauve'],
+      Black: ['White', 'Gold', 'Beige', 'Coral', 'Dusty_Rose', 'Mustard', 'Emerald'],
 
-  Navy: ['White','Beige','Mustard','Blush','Terracotta','Gold','Mint','Emerald'],
-  Denim_Blue: ['White','Beige','Amber','Olive','Rust','Peach'],
-  Royal_Blue: ['White','Gold','Coral','Beige','Sage_Green','Grey'],
-  Cobalt_Blue: ['White','Mustard','Tan','Peach','Ivory'],
-  Sky_Blue: ['White','Beige','Grey','Dusty_Rose','Terracotta'],
-  Powder_Blue: ['White','Khaki','Taupe','Olive','Coral'],
-  Dusty_Blue: ['White','Mauve','Beige','Cream','Blush'],
+      Navy: ['White', 'Beige', 'Mustard', 'Blush', 'Terracotta', 'Gold', 'Mint', 'Emerald'],
+      Denim_Blue: ['White', 'Beige', 'Amber', 'Olive', 'Rust', 'Peach'],
+      Royal_Blue: ['White', 'Gold', 'Coral', 'Beige', 'Sage_Green', 'Grey'],
+      Cobalt_Blue: ['White', 'Mustard', 'Tan', 'Peach', 'Ivory'],
+      Sky_Blue: ['White', 'Beige', 'Grey', 'Dusty_Rose', 'Terracotta'],
+      Powder_Blue: ['White', 'Khaki', 'Taupe', 'Olive', 'Coral'],
+      Dusty_Blue: ['White', 'Mauve', 'Beige', 'Cream', 'Blush'],
 
-  Sage_Green: ['Ivory','Taupe','Terracotta','Mauve','Dusty_Rose','Gold'],
-  Olive: ['White','Mustard','Cream','Terracotta','Coral','Lavender'],
-  Emerald: ['Ivory','Gold','Black','Peach','Rust','Mauve'],
-  Teal: ['Beige','White','Rust','Amber','Peach'],
-  Mint: ['White','Beige','Dusty_Rose','Lavender','Brown'],
-  Forest_Green: ['White','Cream','Terracotta','Gold'],
-  Moss_Green: ['Ivory','Beige','Burgundy','Mauve','Rust'],
+      Sage_Green: ['Ivory', 'Taupe', 'Terracotta', 'Mauve', 'Dusty_Rose', 'Gold'],
+      Olive: ['White', 'Mustard', 'Cream', 'Terracotta', 'Coral', 'Lavender'],
+      Emerald: ['Ivory', 'Gold', 'Black', 'Peach', 'Rust', 'Mauve'],
+      Teal: ['Beige', 'White', 'Rust', 'Amber', 'Peach'],
+      Mint: ['White', 'Beige', 'Dusty_Rose', 'Lavender', 'Brown'],
+      Forest_Green: ['White', 'Cream', 'Terracotta', 'Gold'],
+      Moss_Green: ['Ivory', 'Beige', 'Burgundy', 'Mauve', 'Rust'],
 
-  Red: ['White','Black','Beige','Charcoal','Navy','Gold'],
-  Crimson: ['White','Ivory','Gold','Navy','Charcoal'],
-  Maroon: ['Ivory','Beige','Dusty_Rose','Gold'],
-  Burgundy: ['Cream','Gold','White','Olive','Dusty_Rose'],
-  Blush: ['White','Olive','Navy','Charcoal','Denim_Blue'],
-  Rose: ['Beige','Olive','Taupe','Ivory','Grey'],
-  Fuchsia: ['White','Grey','Navy','Beige','Black'],
-  Dusty_Rose: ['Ivory','Taupe','Sage_Green','Charcoal','Cream'],
-  Pink: ['White','Olive','Grey','Beige','Mint'],
-  Mauve: ['Beige','White','Olive','Terracotta','Sage_Green'],
+      Red: ['White', 'Black', 'Beige', 'Charcoal', 'Navy', 'Gold'],
+      Crimson: ['White', 'Ivory', 'Gold', 'Navy', 'Charcoal'],
+      Maroon: ['Ivory', 'Beige', 'Dusty_Rose', 'Gold'],
+      Burgundy: ['Cream', 'Gold', 'White', 'Olive', 'Dusty_Rose'],
+      Blush: ['White', 'Olive', 'Navy', 'Charcoal', 'Denim_Blue'],
+      Rose: ['Beige', 'Olive', 'Taupe', 'Ivory', 'Grey'],
+      Fuchsia: ['White', 'Grey', 'Navy', 'Beige', 'Black'],
+      Dusty_Rose: ['Ivory', 'Taupe', 'Sage_Green', 'Charcoal', 'Cream'],
+      Pink: ['White', 'Olive', 'Grey', 'Beige', 'Mint'],
+      Mauve: ['Beige', 'White', 'Olive', 'Terracotta', 'Sage_Green'],
 
-  Mustard: ['Navy','Black','White','Olive','Brown','Denim_Blue'],
-  Amber: ['Navy','Black','White','Olive','Emerald'],
-  Gold: ['Black','Navy','Emerald','White','Rust'],
-  Coral: ['White','Beige','Denim_Blue','Olive','Taupe'],
-  Peach: ['White','Navy','Olive','Terracotta','Brown'],
-  Terracotta: ['White','Beige','Olive','Sage_Green','Cream'],
-  Rust: ['Ivory','Sage_Green','Navy','Mauve','Beige'],
+      Mustard: ['Navy', 'Black', 'White', 'Olive', 'Brown', 'Denim_Blue'],
+      Amber: ['Navy', 'Black', 'White', 'Olive', 'Emerald'],
+      Gold: ['Black', 'Navy', 'Emerald', 'White', 'Rust'],
+      Coral: ['White', 'Beige', 'Denim_Blue', 'Olive', 'Taupe'],
+      Peach: ['White', 'Navy', 'Olive', 'Terracotta', 'Brown'],
+      Terracotta: ['White', 'Beige', 'Olive', 'Sage_Green', 'Cream'],
+      Rust: ['Ivory', 'Sage_Green', 'Navy', 'Mauve', 'Beige'],
 
-  Lavender: ['White','Navy','Olive','Dusty_Rose','Gold'],
-  Lilac: ['Beige','White','Moss_Green','Taupe'],
-  Violet: ['White','Gold','Olive','Cream'],
-  Plum: ['Ivory','Taupe','Gold','Dusty_Rose'],
+      Lavender: ['White', 'Navy', 'Olive', 'Dusty_Rose', 'Gold'],
+      Lilac: ['Beige', 'White', 'Moss_Green', 'Taupe'],
+      Violet: ['White', 'Gold', 'Olive', 'Cream'],
+      Plum: ['Ivory', 'Taupe', 'Gold', 'Dusty_Rose'],
 
-  Cyan: ['White','Navy','Beige','Coral'],
-  Turquoise: ['White','Beige','Brown','Coral','Gold'],
-  Aqua: ['White','Beige','Brown','Coral','Gold'],
-  Cream_White: ['Navy','Burgundy','Olive','Dusty_Rose','Emerald'],
-};
+      Cyan: ['White', 'Navy', 'Beige', 'Coral'],
+      Turquoise: ['White', 'Beige', 'Brown', 'Coral', 'Gold'],
+      Aqua: ['White', 'Beige', 'Brown', 'Coral', 'Gold'],
+      Cream_White: ['Navy', 'Burgundy', 'Olive', 'Dusty_Rose', 'Emerald'],
+    };
 
 
     // Render color grid
@@ -299,7 +333,7 @@
       if (Math.floor(idx / swatchesPerRow) % 2 === 1) {
         swatch.classList.add('hex-row-offset');
       }
-      swatch.onclick = function() {
+      swatch.onclick = function () {
         document.querySelectorAll('.color-swatch.selected').forEach(btn => btn.classList.remove('selected'));
         swatch.classList.add('selected');
         selectedColor = col.name;
@@ -325,7 +359,7 @@
       // Get matches
       let matches = colorMatches[color] || [];
       // If 'Any bright color', expand to a few brights
-      matches = matches.flatMap(m => m === 'Any bright color' ? ['Red','Yellow','Pink','Orange','Coral'] : m);
+      matches = matches.flatMap(m => m === 'Any bright color' ? ['Red', 'Yellow', 'Pink', 'Orange', 'Coral'] : m);
 
       // Build result
       matchesEl.innerHTML = '';
@@ -348,7 +382,7 @@
       resultBox.style.display = 'flex';
       setTimeout(() => {
         resultBox.classList.add('show');
-        resultBox.scrollIntoView({behavior:'smooth',block:'center'});
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 50);
     });
   </script>
@@ -356,4 +390,5 @@
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Clothing","item":"https://freetoolsandcalculators.com/Clothing/Clothing.html"},{"@type":"ListItem","position":3,"name":"Dress Color Matcher","item":"https://freetoolsandcalculators.com/Clothing/Tools/DressColorMatcher.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Clothing/Tools/DressColorMatcher.html","url":"https://freetoolsandcalculators.com/Clothing/Tools/DressColorMatcher.html","name":"Dress Color Matcher | Outfit Color Combination Suggestion Tool","description":"Select garment color and receive harmonious, contrast and accent pairing suggestions based on fashion color theory.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Dress Color Matcher","applicationCategory":"Utility","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Clothing/Tools/DressColorMatcher.html","description":"Generates recommended color pairings for clothing items using curated palette mappings.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does the dress color matcher choose pairings?","acceptedAnswer":{"@type":"Answer","text":"It uses a curated palette of neutral, analogous, complementary and accent relationships."}},{"@type":"Question","name":"Can I use these suggestions for both casual and formal outfits?","acceptedAnswer":{"@type":"Answer","text":"Yes; neutral + accent fits formal while broader contrasts suit casual or statement looks."}},{"@type":"Question","name":"Why do some colors have many matches while others fewer?","acceptedAnswer":{"@type":"Answer","text":"Neutrals and mid tones are versatile; saturated or niche hues need restraint to avoid clashes."}},{"@type":"Question","name":"How can I build a capsule wardrobe with color theory?","acceptedAnswer":{"@type":"Answer","text":"Start with core neutrals then add 2–3 accent families that harmonize for mix & match depth."}},{"@type":"Question","name":"Do lighting and fabric affect perceived color matches?","acceptedAnswer":{"@type":"Answer","text":"Yes; texture and lighting shift tone so verify combinations in natural light."}},{"@type":"Question","name":"Should I use exact hex codes when shopping?","acceptedAnswer":{"@type":"Answer","text":"No; close tonal families suffice and slight variation adds visual interest."}}]}]}
   </script>
 </body>
+
 </html>

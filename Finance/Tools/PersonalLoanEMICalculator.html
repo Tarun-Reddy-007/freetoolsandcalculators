@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Personal Loan EMI Calculator | Free Tools and Calculators for Monthly Payment & Interest</title>
-  <meta name="description" content="Free Personal Loan EMI Calculator: Compute monthly EMI, total interest, processing fee impact, and savings from extra prepayments. Supports different tenures, start month for extra payment, and multiple currencies.">
-  <meta name="keywords" content="personal loan emi calculator, unsecured loan payment, monthly installment, prepayment savings, processing fee, interest rate, finance calculator">
+  <meta name="description"
+    content="Free Personal Loan EMI Calculator: Compute monthly EMI, total interest, processing fee impact, and savings from extra prepayments. Supports different tenures, start month for extra payment, and multiple currencies.">
+  <meta name="keywords"
+    content="personal loan emi calculator, unsecured loan payment, monthly installment, prepayment savings, processing fee, interest rate, finance calculator">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,183 +16,207 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Personal Loan EMI Calculator | Monthly Payment & Interest Tool">
-  <meta property="og:description" content="Instant personal loan EMI, interest, fee impact & extra prepayment savings. Explore related finance calculators.">
+  <meta property="og:description"
+    content="Instant personal loan EMI, interest, fee impact & extra prepayment savings. Explore related finance calculators.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
-  <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Finance/personal_loan_emi_calculator.jpg">
-  <meta property="og:image:alt" content="Personal loan EMI calculator interface showing amount, rate, tenure and results">
+  <meta property="og:image"
+    content="https://freetoolsandcalculators.com/Images/Finance/personal_loan_emi_calculator.jpg">
+  <meta property="og:image:alt"
+    content="Personal loan EMI calculator interface showing amount, rate, tenure and results">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Personal Loan EMI Calculator | Monthly Payment Tool">
-  <meta name="twitter:description" content="Calculate EMI, total interest, fee impact & prepayment savings. Compare finance calculators.">
-  <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Finance/personal_loan_emi_calculator.jpg">
+  <meta name="twitter:description"
+    content="Calculate EMI, total interest, fee impact & prepayment savings. Compare finance calculators.">
+  <meta name="twitter:image"
+    content="https://freetoolsandcalculators.com/Images/Finance/personal_loan_emi_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="PersonalLoanEMICalculator.css" />
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Finance.html">Finance</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Personal Loan EMI Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="plemi-section" aria-labelledby="plemi-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="plemi-card">
-        <div class="plemi-title-row">
-          <h1 class="plemi-title" id="plemi-main-title">Personal Loan EMI Calculator</h1>
-          <button type="button" class="plemi-info-trigger" aria-describedby="plemiInfoPanel" tabindex="0">i</button>
-          <div id="plemiInfoPanel" class="plemi-info-flyout" role="tooltip" aria-hidden="true">
-            <h2>How Personal Loan EMI Works</h2>
-            <p>Personal loan EMIs are usually at higher interest rates and shorter tenures than secured loans. This tool shows monthly EMI, total interest, and lets you explore prepayment impact.</p>
-            <ul>
-              <li>Formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
-              <li>Optional flat processing fee percent is added as upfront cost</li>
-              <li>Extra monthly prepayment reduces interest & tenure (approximate)</li>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Finance.html">Finance</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Personal Loan EMI Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="plemi-section" aria-labelledby="plemi-main-title" itemscope itemtype="https://schema.org/WebPage">
+          <div class="plemi-card">
+            <div class="plemi-title-row">
+              <h1 class="plemi-title" id="plemi-main-title">Personal Loan EMI Calculator</h1>
+              <button type="button" class="plemi-info-trigger" aria-describedby="plemiInfoPanel" tabindex="0">i</button>
+              <div id="plemiInfoPanel" class="plemi-info-flyout" role="tooltip" aria-hidden="true">
+                <h2>How Personal Loan EMI Works</h2>
+                <p>Personal loan EMIs are usually at higher interest rates and shorter tenures than secured loans. This
+                  tool shows monthly EMI, total interest, and lets you explore prepayment impact.</p>
+                <ul>
+                  <li>Formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
+                  <li>Optional flat processing fee percent is added as upfront cost</li>
+                  <li>Extra monthly prepayment reduces interest & tenure (approximate)</li>
+                </ul>
+                <p class="disclaimer">Indicative only. Check lender terms & prepayment penalties.</p>
+              </div>
+            </div>
+            <div class="plemi-interaction-row">
+              <form id="plemiForm" class="plemi-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="currency">Currency</label>
+                  <div class="input-row">
+                    <select id="currency" name="currency">
+                      <option value="INR" selected>INR</option>
+                      <option value="USD">USD</option>
+                      <option value="EUR">EUR</option>
+                      <option value="GBP">GBP</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="principal">Loan Amount</label>
+                  <div class="input-row"><input type="number" id="principal" min="0" placeholder="e.g. 500000"
+                      required /></div>
+                </div>
+                <div class="input-group">
+                  <label for="rate">Annual Interest Rate (%)</label>
+                  <div class="input-row"><input type="number" id="rate" min="0.1" step="0.01" placeholder="e.g. 14.5"
+                      required /></div>
+                </div>
+                <div class="input-group">
+                  <label for="tenure">Tenure (Months)</label>
+                  <div class="input-row"><input type="number" id="tenure" min="1" max="120" value="60" required /></div>
+                  <div class="plemi-inline-buttons" data-group="tenureBtns">
+                    <button type="button" class="active" data-val="12">12m</button>
+                    <button type="button" data-val="24">24m</button>
+                    <button type="button" data-val="36">36m</button>
+                    <button type="button" data-val="48">48m</button>
+                    <button type="button" data-val="60">60m</button>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="processingFee">Processing Fee (%)</label>
+                  <div class="input-row"><input type="number" id="processingFee" min="0" step="0.01" value="0" /></div>
+                </div>
+                <div class="input-group">
+                  <label for="extraPayment">Extra Monthly Prepayment</label>
+                  <div class="input-row"><input type="number" id="extraPayment" min="0" value="0" /></div>
+                  <div class="plemi-small-hint">Optional extra toward principal</div>
+                </div>
+                <div class="input-group">
+                  <label for="startMonth">Extra Starts At (Month #)</label>
+                  <div class="input-row"><input type="number" id="startMonth" min="1" value="1" /></div>
+                </div>
+                <button type="submit" class="plemi-btn">Calculate EMI</button>
+              </form>
+              <div id="plemiResultContainer" class="plemi-result-container">
+                <div class="plemi-main-result">
+                  <span id="emiValue" class="plemi-main-value">--</span>
+                  <span class="plemi-main-label">Monthly EMI</span>
+                  <span id="emiWithExtra" class="plemi-sub-value" style="display:none;"></span>
+                </div>
+                <div class="plemi-progress-wrapper">
+                  <div class="plemi-progress-bar">
+                    <div id="plemiProgress" class="plemi-progress"></div>
+                  </div>
+                  <div class="plemi-scale"><span>Low</span><span>High</span></div>
+                </div>
+                <div id="plemiBreakdown" class="plemi-breakdown"></div>
+                <div id="plemiStats" class="plemi-stats-grid"></div>
+                <div id="plemiTips" class="plemi-tips"></div>
+                <div class="plemi-disclaimer">Illustrative; extra prepayment simulation approximate.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
+            <h2 id="related-finance-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators
+            </h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
+              <li><a href="LoanEMICalculator.html" style="text-decoration:none;">Generic Loan EMI Calculator</a></li>
+              <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
+              <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility
+                  Calculator</a></li>
+              <li><a href="LoanAffordabilityCalculator.html" style="text-decoration:none;">Loan Affordability
+                  Calculator</a></li>
+              <li><a href="CompoundSimpleInterestCalculator.html" style="text-decoration:none;">Compound & Simple
+                  Interest Calculator</a></li>
             </ul>
-            <p class="disclaimer">Indicative only. Check lender terms & prepayment penalties.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="plemi-faq-heading">
+            <h2 id="plemi-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">
+              Personal Loan EMI FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How is personal loan EMI calculated?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Using EMI = P * r * (1+r)^n / ((1+r)^n - 1) where P
+                    principal, r monthly interest (annual / 12 / 100), n total months in tenure.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What interest rates are typical for personal loans?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Unsecured personal loans often carry higher rates than
+                    secured loans; ranges vary by market and credit score. Compare APR including fees.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I reduce my EMI burden?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Choose a longer tenure, negotiate a lower rate, improve
+                    credit score, or make principal part prepayments to cut remaining EMI duration.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Do extra monthly prepayments always save interest?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes, if applied to principal and no penalty applies. They
+                    shorten tenure and reduce total interest. Confirm lender prepayment policy first.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is a processing fee?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">A one-time lender charge (percent of principal) added
+                    upfront. It raises effective APR but is not part of principal for EMI math.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="plemi-interaction-row">
-          <form id="plemiForm" class="plemi-form" autocomplete="off">
-            <div class="input-group">
-              <label for="currency">Currency</label>
-              <div class="input-row">
-                <select id="currency" name="currency">
-                  <option value="INR" selected>INR</option>
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="principal">Loan Amount</label>
-              <div class="input-row"><input type="number" id="principal" min="0" placeholder="e.g. 500000" required /></div>
-            </div>
-            <div class="input-group">
-              <label for="rate">Annual Interest Rate (%)</label>
-              <div class="input-row"><input type="number" id="rate" min="0.1" step="0.01" placeholder="e.g. 14.5" required /></div>
-            </div>
-            <div class="input-group">
-              <label for="tenure">Tenure (Months)</label>
-              <div class="input-row"><input type="number" id="tenure" min="1" max="120" value="60" required /></div>
-              <div class="plemi-inline-buttons" data-group="tenureBtns">
-                <button type="button" class="active" data-val="12">12m</button>
-                <button type="button" data-val="24">24m</button>
-                <button type="button" data-val="36">36m</button>
-                <button type="button" data-val="48">48m</button>
-                <button type="button" data-val="60">60m</button>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="processingFee">Processing Fee (%)</label>
-              <div class="input-row"><input type="number" id="processingFee" min="0" step="0.01" value="0" /></div>
-            </div>
-            <div class="input-group">
-              <label for="extraPayment">Extra Monthly Prepayment</label>
-              <div class="input-row"><input type="number" id="extraPayment" min="0" value="0" /></div>
-              <div class="plemi-small-hint">Optional extra toward principal</div>
-            </div>
-            <div class="input-group">
-              <label for="startMonth">Extra Starts At (Month #)</label>
-              <div class="input-row"><input type="number" id="startMonth" min="1" value="1" /></div>
-            </div>
-            <button type="submit" class="plemi-btn">Calculate EMI</button>
-          </form>
-          <div id="plemiResultContainer" class="plemi-result-container">
-            <div class="plemi-main-result">
-              <span id="emiValue" class="plemi-main-value">--</span>
-              <span class="plemi-main-label">Monthly EMI</span>
-              <span id="emiWithExtra" class="plemi-sub-value" style="display:none;"></span>
-            </div>
-            <div class="plemi-progress-wrapper">
-              <div class="plemi-progress-bar"><div id="plemiProgress" class="plemi-progress"></div></div>
-              <div class="plemi-scale"><span>Low</span><span>High</span></div>
-            </div>
-            <div id="plemiBreakdown" class="plemi-breakdown"></div>
-            <div id="plemiStats" class="plemi-stats-grid"></div>
-            <div id="plemiTips" class="plemi-tips"></div>
-            <div class="plemi-disclaimer">Illustrative; extra prepayment simulation approximate.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
-          <h2 id="related-finance-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
-            <li><a href="LoanEMICalculator.html" style="text-decoration:none;">Generic Loan EMI Calculator</a></li>
-            <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
-            <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility Calculator</a></li>
-            <li><a href="LoanAffordabilityCalculator.html" style="text-decoration:none;">Loan Affordability Calculator</a></li>
-            <li><a href="CompoundSimpleInterestCalculator.html" style="text-decoration:none;">Compound & Simple Interest Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="plemi-faq-heading">
-          <h2 id="plemi-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Personal Loan EMI FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How is personal loan EMI calculated?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Using EMI = P * r * (1+r)^n / ((1+r)^n - 1) where P principal, r monthly interest (annual / 12 / 100), n total months in tenure.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What interest rates are typical for personal loans?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Unsecured personal loans often carry higher rates than secured loans; ranges vary by market and credit score. Compare APR including fees.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I reduce my EMI burden?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Choose a longer tenure, negotiate a lower rate, improve credit score, or make principal part prepayments to cut remaining EMI duration.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Do extra monthly prepayments always save interest?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes, if applied to principal and no penalty applies. They shorten tenure and reduce total interest. Confirm lender prepayment policy first.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is a processing fee?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">A one-time lender charge (percent of principal) added upfront. It raises effective APR but is not part of principal for EMI math.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-  <footer class="bottom-banner"></footer>
+      </section>
+    </div>
+    <footer class="bottom-banner"></footer>
   </div>
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const form = document.getElementById('plemiForm');
     const resultContainer = document.getElementById('plemiResultContainer');
@@ -200,47 +227,48 @@
     const tipsEl = document.getElementById('plemiTips');
     const progressEl = document.getElementById('plemiProgress');
 
-    function currencySymbol(cur){ switch(cur){ case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
-    function fmtMoney(v, cur){ const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined,{maximumFractionDigits:0}); }
-    function calcEmi(P, annualRate, months){ const r=(annualRate/100)/12; const n=months; if(r===0) return P/n; const pow=Math.pow(1+r,n); return P * r * pow / (pow - 1); }
-    function simulateWithExtra(P, annualRate, months, extra, startMonth){ if(extra<=0) return {months:months, interest:0, interestSaved:0}; const r=(annualRate/100)/12; const baseEmi=calcEmi(P, annualRate, months); let bal=P; let m=0; let interestPaid=0; while(bal>0 && m< months+600){ m++; const interest=bal*r; let pay = baseEmi + (m>=startMonth?extra:0); if(pay> bal+interest) pay = bal+interest; const principalComp = pay - interest; bal -= principalComp; interestPaid += interest; } const baseInterest = (baseEmi*months)-P; return { months:m, interest:interestPaid, interestSaved: Math.max(0, baseInterest - interestPaid)}; }
-    function setActive(groupAttr, btn){ const selector='[data-group="'+groupAttr+'"] button'; document.querySelectorAll(selector).forEach(b=>b.classList.remove('active')); btn.classList.add('active'); }
-    document.querySelectorAll('[data-group="tenureBtns"] button').forEach(btn=>{ btn.addEventListener('click',()=>{ setActive('tenureBtns', btn); document.getElementById('tenure').value = btn.getAttribute('data-val'); }); });
+    function currencySymbol(cur) { switch (cur) { case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
+    function fmtMoney(v, cur) { const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 }); }
+    function calcEmi(P, annualRate, months) { const r = (annualRate / 100) / 12; const n = months; if (r === 0) return P / n; const pow = Math.pow(1 + r, n); return P * r * pow / (pow - 1); }
+    function simulateWithExtra(P, annualRate, months, extra, startMonth) { if (extra <= 0) return { months: months, interest: 0, interestSaved: 0 }; const r = (annualRate / 100) / 12; const baseEmi = calcEmi(P, annualRate, months); let bal = P; let m = 0; let interestPaid = 0; while (bal > 0 && m < months + 600) { m++; const interest = bal * r; let pay = baseEmi + (m >= startMonth ? extra : 0); if (pay > bal + interest) pay = bal + interest; const principalComp = pay - interest; bal -= principalComp; interestPaid += interest; } const baseInterest = (baseEmi * months) - P; return { months: m, interest: interestPaid, interestSaved: Math.max(0, baseInterest - interestPaid) }; }
+    function setActive(groupAttr, btn) { const selector = '[data-group="' + groupAttr + '"] button'; document.querySelectorAll(selector).forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
+    document.querySelectorAll('[data-group="tenureBtns"] button').forEach(btn => { btn.addEventListener('click', () => { setActive('tenureBtns', btn); document.getElementById('tenure').value = btn.getAttribute('data-val'); }); });
 
-    form.addEventListener('submit', function(e){
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
       const currency = document.getElementById('currency').value;
-      const principal = parseFloat(document.getElementById('principal').value)||0;
-      const rate = parseFloat(document.getElementById('rate').value)||0;
-      const months = parseInt(document.getElementById('tenure').value,10)||0;
-      const processingFeePct = parseFloat(document.getElementById('processingFee').value)||0;
-      const extra = parseFloat(document.getElementById('extraPayment').value)||0;
-      const startMonth = parseInt(document.getElementById('startMonth').value,10)||1;
-      if(principal<=0 || rate<=0 || months<=0){ resultContainer.style.display='none'; resultContainer.classList.remove('show'); return; }
+      const principal = parseFloat(document.getElementById('principal').value) || 0;
+      const rate = parseFloat(document.getElementById('rate').value) || 0;
+      const months = parseInt(document.getElementById('tenure').value, 10) || 0;
+      const processingFeePct = parseFloat(document.getElementById('processingFee').value) || 0;
+      const extra = parseFloat(document.getElementById('extraPayment').value) || 0;
+      const startMonth = parseInt(document.getElementById('startMonth').value, 10) || 1;
+      if (principal <= 0 || rate <= 0 || months <= 0) { resultContainer.style.display = 'none'; resultContainer.classList.remove('show'); return; }
 
       const emi = calcEmi(principal, rate, months);
       emiValueEl.textContent = fmtMoney(Math.round(emi), currency);
-      const totalPayment = emi * months; const totalInterest = totalPayment - principal; const processingFeeAmount = principal * (processingFeePct/100); const totalCostWithFee = totalPayment + processingFeeAmount;
+      const totalPayment = emi * months; const totalInterest = totalPayment - principal; const processingFeeAmount = principal * (processingFeePct / 100); const totalCostWithFee = totalPayment + processingFeeAmount;
 
       const sim = simulateWithExtra(principal, rate, months, extra, startMonth);
-      if(extra>0){ emiWithExtraEl.style.display='block'; emiWithExtraEl.textContent = '+ Extra ' + fmtMoney(extra, currency) + ' → Saved ' + fmtMoney(sim.interestSaved, currency) + ' | Months ' + sim.months; } else { emiWithExtraEl.style.display='none'; }
+      if (extra > 0) { emiWithExtraEl.style.display = 'block'; emiWithExtraEl.textContent = '+ Extra ' + fmtMoney(extra, currency) + ' → Saved ' + fmtMoney(sim.interestSaved, currency) + ' | Months ' + sim.months; } else { emiWithExtraEl.style.display = 'none'; }
 
       // Progress (scale smaller typical personal EMIs) 
-      let scaleMax = 100000; if(currency==='USD' || currency==='EUR' || currency==='GBP') scaleMax = 3000; const pct = Math.min(100, (emi/scaleMax)*100); progressEl.style.width=pct+'%'; progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
+      let scaleMax = 100000; if (currency === 'USD' || currency === 'EUR' || currency === 'GBP') scaleMax = 3000; const pct = Math.min(100, (emi / scaleMax) * 100); progressEl.style.width = pct + '%'; progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
 
-      breakdownEl.innerHTML='';
-      [ ['Loan Amount', fmtMoney(principal, currency)], ['Annual Rate', rate.toFixed(2)+'%'], ['Tenure (months)', months], ['Processing Fee', fmtMoney(processingFeeAmount, currency)], ['Total Cost (w/ fee)', fmtMoney(totalCostWithFee, currency)], ['Total Interest', fmtMoney(totalInterest, currency)] ].forEach(r=>{ const d=document.createElement('div'); d.className='plemi-row'; d.innerHTML='<span>'+r[0]+'</span><span>'+r[1]+'</span>'; breakdownEl.appendChild(d); });
+      breakdownEl.innerHTML = '';
+      [['Loan Amount', fmtMoney(principal, currency)], ['Annual Rate', rate.toFixed(2) + '%'], ['Tenure (months)', months], ['Processing Fee', fmtMoney(processingFeeAmount, currency)], ['Total Cost (w/ fee)', fmtMoney(totalCostWithFee, currency)], ['Total Interest', fmtMoney(totalInterest, currency)]].forEach(r => { const d = document.createElement('div'); d.className = 'plemi-row'; d.innerHTML = '<span>' + r[0] + '</span><span>' + r[1] + '</span>'; breakdownEl.appendChild(d); });
 
-      statsEl.innerHTML='';
-      [ {lbl:'Interest % of P', val:(totalInterest/principal*100).toFixed(1)+'%'}, {lbl:'Proc. Fee %', val:processingFeePct.toFixed(2)+'%'}, {lbl:'Monthly EMI', val:fmtMoney(Math.round(emi), currency)}, {lbl:'Total Pay', val:fmtMoney(Math.round(totalPayment), currency)}, {lbl:'Eff. Months', val:sim.months !== months? sim.months: months}, {lbl:'Saved Int', val:extra>0?fmtMoney(sim.interestSaved, currency):fmtMoney(0, currency)} ].forEach(s=>{ const c=document.createElement('div'); c.className='plemi-stat'; c.innerHTML='<span class="val">'+s.val+'</span><span class="lbl">'+s.lbl+'</span>'; statsEl.appendChild(c); });
+      statsEl.innerHTML = '';
+      [{ lbl: 'Interest % of P', val: (totalInterest / principal * 100).toFixed(1) + '%' }, { lbl: 'Proc. Fee %', val: processingFeePct.toFixed(2) + '%' }, { lbl: 'Monthly EMI', val: fmtMoney(Math.round(emi), currency) }, { lbl: 'Total Pay', val: fmtMoney(Math.round(totalPayment), currency) }, { lbl: 'Eff. Months', val: sim.months !== months ? sim.months : months }, { lbl: 'Saved Int', val: extra > 0 ? fmtMoney(sim.interestSaved, currency) : fmtMoney(0, currency) }].forEach(s => { const c = document.createElement('div'); c.className = 'plemi-stat'; c.innerHTML = '<span class="val">' + s.val + '</span><span class="lbl">' + s.lbl + '</span>'; statsEl.appendChild(c); });
 
-      let tip=''; if(extra>0) tip+='Prepaying lowers interest; verify no penalties. '; if(processingFeePct>0) tip+='Factor fee into APR comparison. '; if(!tip) tip='Shorter tenure raises EMI but saves interest.'; tipsEl.textContent = tip;
+      let tip = ''; if (extra > 0) tip += 'Prepaying lowers interest; verify no penalties. '; if (processingFeePct > 0) tip += 'Factor fee into APR comparison. '; if (!tip) tip = 'Shorter tenure raises EMI but saves interest.'; tipsEl.textContent = tip;
 
-      resultContainer.style.display='flex'; setTimeout(()=>{ resultContainer.classList.add('show'); resultContainer.scrollIntoView({behavior:'smooth',block:'center'}); },40);
+      resultContainer.style.display = 'flex'; setTimeout(() => { resultContainer.classList.add('show'); resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://freetoolsandcalculators.com/Finance/Finance.html"},{"@type":"ListItem","position":3,"name":"Personal Loan EMI Calculator","item":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html","url":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html","name":"Personal Loan EMI Calculator | Free Tools and Calculators","description":"Compute personal loan EMI, total interest, processing fee impact and prepayment savings with tenure & currency flexibility.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Personal Loan EMI Calculator","applicationCategory":"FinanceApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html","description":"Monthly personal loan EMI with breakdown, fee inclusion and extra prepayment interest savings estimation.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is personal loan EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"Formula: EMI = P*r*(1+r)^n / ((1+r)^n - 1)."}},{"@type":"Question","name":"What interest rates are typical for personal loans?","acceptedAnswer":{"@type":"Answer","text":"Rates vary by credit profile and market; unsecured loans usually higher than secured."}},{"@type":"Question","name":"How can I reduce my EMI burden?","acceptedAnswer":{"@type":"Answer","text":"Extend tenure, lower rate, improve credit, or prepay principal."}},{"@type":"Question","name":"Do extra monthly prepayments always save interest?","acceptedAnswer":{"@type":"Answer","text":"They reduce principal faster, saving interest if no penalty applies."}},{"@type":"Question","name":"What is a processing fee?","acceptedAnswer":{"@type":"Answer","text":"A one-time upfront lender charge increasing effective APR."}}]}]}
   </script>
 </body>
+
 </html>

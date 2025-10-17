@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Loan Affordability Calculator | Free Tools and Calculators for Maximum Principal & EMI</title>
-  <meta name="description" content="Free Loan Affordability Calculator: Estimate the maximum principal you can safely borrow based on income, existing EMIs, target DTI, interest rate, tenure and down payment. Shows property price, total interest and optimization tips.">
-  <meta name="keywords" content="loan affordability calculator, how much loan can I afford, maximum loan amount, DTI ratio, debt to income, EMI calculator, finance tools">
+  <meta name="description"
+    content="Free Loan Affordability Calculator: Estimate the maximum principal you can safely borrow based on income, existing EMIs, target DTI, interest rate, tenure and down payment. Shows property price, total interest and optimization tips.">
+  <meta name="keywords"
+    content="loan affordability calculator, how much loan can I afford, maximum loan amount, DTI ratio, debt to income, EMI calculator, finance tools">
   <meta name="author" content="FreeToolsandCalculators">
   <meta name="publisher" content="FreeToolsandCalculators">
   <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
@@ -13,203 +16,231 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Loan Affordability Calculator | Maximum Principal & EMI Tool">
-  <meta property="og:description" content="Estimate affordable principal using income, existing EMIs, DTI target, interest rate & tenure. View interest & property price.">
+  <meta property="og:description"
+    content="Estimate affordable principal using income, existing EMIs, DTI target, interest rate & tenure. View interest & property price.">
   <meta property="og:url" content="https://freetoolsandcalculators.com/Finance/Tools/LoanAffordabilityCalculator.html">
   <meta property="og:site_name" content="FreeToolsandCalculators">
-  <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Finance/loan_affordability_calculator.jpg">
-  <meta property="og:image:alt" content="Loan affordability calculator interface showing income and EMI inputs with result">
+  <meta property="og:image"
+    content="https://freetoolsandcalculators.com/Images/Finance/loan_affordability_calculator.jpg">
+  <meta property="og:image:alt"
+    content="Loan affordability calculator interface showing income and EMI inputs with result">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Loan Affordability Calculator | Maximum Principal Tool">
-  <meta name="twitter:description" content="Find the loan amount you can afford based on DTI, EMIs, rate & tenure. Includes property price and tips.">
-  <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Finance/loan_affordability_calculator.jpg">
+  <meta name="twitter:description"
+    content="Find the loan amount you can afford based on DTI, EMIs, rate & tenure. Includes property price and tips.">
+  <meta name="twitter:image"
+    content="https://freetoolsandcalculators.com/Images/Finance/loan_affordability_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="LoanAffordabilityCalculator.css" />
 </head>
+
 <body>
   <div class="layout-shell">
-  <header class="top-banner"></header>
-  <nav class="navbar">
-    <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-    <div class="nav-links" id="navLinks">
-      <a href="../../index.html">Home</a>
-      <a href="../../Health/Health.html">Health</a>
-      <a href="../../Fitness/Fitness.html">Fitness</a>
-      <a href="../../Sports/Sports.html">Sports</a>
-      <a href="../../Clothing/Clothing.html">Clothing</a>
-      <a href="../Finance.html">Finance</a>
-      <a href="../../Utilities/Utilities.html">Utilities</a>
-      <a href="../../Education/Education.html">Education</a>
-      <a href="../../Media/Media.html">Media</a>
-    </div>
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </nav>
+    <header class="top-banner"></header>
+    <nav class="navbar">
+      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
+      <div class="nav-links" id="navLinks">
+        <a href="../../index.html">Home</a>
+        <a href="../../Health/Health.html">Health</a>
+        <a href="../../Fitness/Fitness.html">Fitness</a>
+        <a href="../../Sports/Sports.html">Sports</a>
+        <a href="../../Clothing/Clothing.html">Clothing</a>
+        <a href="../Finance.html">Finance</a>
+        <a href="../../Utilities/Utilities.html">Utilities</a>
+        <a href="../../Education/Education.html">Education</a>
+        <a href="../../Media/Media.html">Media</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav>
 
-  <div class="content-row">
-    <aside class="left-banner"></aside>
-    <section class="scroll-panel">
-      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-          <li><a href="../../index.html">Home</a></li>
-          <li aria-hidden="true">›</li>
-          <li><a href="../Finance.html">Finance</a></li>
-          <li aria-hidden="true">›</li>
-          <li><span>Loan Affordability Calculator</span></li>
-        </ol>
-      </nav>
-      <main class="la-section" aria-labelledby="la-main-title" itemscope itemtype="https://schema.org/WebPage">
-      <div class="la-card">
-        <div class="la-title-row">
-          <h1 class="la-title" id="la-main-title">Loan Affordability Calculator</h1>
-          <button type="button" class="la-info-trigger" aria-describedby="laInfoPanel" tabindex="0">i</button>
-          <div id="laInfoPanel" class="la-info-flyout" role="tooltip" aria-hidden="true">
-            <h2>How affordability is estimated</h2>
-            <p>This tool estimates the maximum loan principal you can afford based on your income, obligations, desired Debt-To-Income (DTI) ratio and loan terms. It inverts the EMI formula to solve for principal.</p>
-            <ul>
-              <li>Monthly surplus = Net Income * (Target DTI %) - Existing EMIs</li>
-              <li>EMI formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
-              <li>Inversion yields: P = EMI * ((1+r)^n - 1)/(r*(1+r)^n)</li>
-              <li>Property price = (Principal + Down Payment)</li>
+    <div class="content-row">
+      <aside class="left-banner"></aside>
+      <section class="scroll-panel">
+        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+            <li><a href="../../index.html">Home</a></li>
+            <li aria-hidden="true">›</li>
+            <li><a href="../Finance.html">Finance</a></li>
+            <li aria-hidden="true">›</li>
+            <li><span>Loan Affordability Calculator</span></li>
+          </ol>
+        </nav>
+        <main class="la-section" aria-labelledby="la-main-title" itemscope itemtype="https://schema.org/WebPage">
+          <div class="la-card">
+            <div class="la-title-row">
+              <h1 class="la-title" id="la-main-title">Loan Affordability Calculator</h1>
+              <button type="button" class="la-info-trigger" aria-describedby="laInfoPanel" tabindex="0">i</button>
+              <div id="laInfoPanel" class="la-info-flyout" role="tooltip" aria-hidden="true">
+                <h2>How affordability is estimated</h2>
+                <p>This tool estimates the maximum loan principal you can afford based on your income, obligations,
+                  desired Debt-To-Income (DTI) ratio and loan terms. It inverts the EMI formula to solve for principal.
+                </p>
+                <ul>
+                  <li>Monthly surplus = Net Income * (Target DTI %) - Existing EMIs</li>
+                  <li>EMI formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
+                  <li>Inversion yields: P = EMI * ((1+r)^n - 1)/(r*(1+r)^n)</li>
+                  <li>Property price = (Principal + Down Payment)</li>
+                </ul>
+                <p class="disclaimer">Approximate guidance only. Consult a financial advisor.</p>
+              </div>
+            </div>
+
+            <div class="la-interaction-row">
+              <form id="laForm" class="la-form" autocomplete="off">
+                <div class="input-group">
+                  <label for="currency">Currency</label>
+                  <div class="input-row">
+                    <select id="currency" name="currency">
+                      <option value="INR" selected>INR</option>
+                      <option value="USD">USD</option>
+                      <option value="EUR">EUR</option>
+                      <option value="GBP">GBP</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="netIncome">Monthly Net Income</label>
+                  <div class="input-row"><input type="number" id="netIncome" min="0" placeholder="e.g. 120000"
+                      required /></div>
+                </div>
+                <div class="input-group">
+                  <label for="existingEmi">Existing Monthly EMIs</label>
+                  <div class="input-row"><input type="number" id="existingEmi" min="0" value="0" /></div>
+                </div>
+                <div class="input-group">
+                  <label for="targetDti">Target DTI % (All debt vs income)</label>
+                  <div class="input-row"><input type="number" id="targetDti" min="5" max="90" value="40" required />
+                  </div>
+                  <div class="la-inline-buttons" data-group="dtiBtns">
+                    <button type="button" data-val="30">30%</button>
+                    <button type="button" data-val="35">35%</button>
+                    <button type="button" class="active" data-val="40">40%</button>
+                    <button type="button" data-val="45">45%</button>
+                    <button type="button" data-val="50">50%</button>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="rate">Annual Interest Rate (%)</label>
+                  <div class="input-row"><input type="number" id="rate" min="1" max="25" step="0.01"
+                      placeholder="e.g. 8.5" required /></div>
+                </div>
+                <div class="input-group">
+                  <label for="tenure">Tenure (Years)</label>
+                  <div class="input-row"><input type="number" id="tenure" min="1" max="40" value="20" required /></div>
+                  <div class="la-inline-buttons" data-group="tenureBtns">
+                    <button type="button" class="active" data-val="20">20y</button>
+                    <button type="button" data-val="25">25y</button>
+                    <button type="button" data-val="30">30y</button>
+                    <button type="button" data-val="15">15y</button>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="downPayment">Planned Down Payment</label>
+                  <div class="input-row"><input type="number" id="downPayment" min="0" value="0" /></div>
+                </div>
+                <div class="input-group">
+                  <label>Buffer / Stress Test</label>
+                  <div class="la-inline-buttons" data-group="bufferBtns">
+                    <button type="button" class="active" data-val="0">None</button>
+                    <button type="button" data-val="-5">-5% (Conservative)</button>
+                    <button type="button" data-val="-10">-10% (More Safe)</button>
+                    <button type="button" data-val="5">+5% Aggressive</button>
+                  </div>
+                  <div class="la-small-hint">Adjusts affordable principal by %</div>
+                </div>
+                <button type="submit" class="la-btn">Calculate Affordability</button>
+              </form>
+
+              <div id="laResultContainer" class="la-result-container">
+                <div class="la-main-result">
+                  <span id="affordablePrincipal" class="la-main-value">--</span>
+                  <span class="la-main-label">Affordable Principal</span>
+                </div>
+                <div class="la-progress-wrapper">
+                  <div class="la-progress-bar">
+                    <div id="laProgress" class="la-progress"></div>
+                  </div>
+                  <div class="la-scale"><span>Low</span><span>High</span></div>
+                </div>
+                <div class="la-breakdown" id="laBreakdown"></div>
+                <div class="la-stats-grid" id="laStats"></div>
+                <div class="la-tips" id="laTips"></div>
+                <div class="la-disclaimer">Estimates only. Lenders use additional criteria.</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+          <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
+            <h2 id="related-finance-calculators"
+              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators
+            </h2>
+            <ul
+              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
+              <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
+              <li><a href="LoanEMICalculator.html" style="text-decoration:none;">Generic Loan EMI Calculator</a></li>
+              <li><a href="PersonalLoanEMICalculator.html" style="text-decoration:none;">Personal Loan EMI
+                  Calculator</a></li>
+              <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility
+                  Calculator</a></li>
+              <li><a href="CompoundSimpleInterestCalculator.html" style="text-decoration:none;">Compound & Simple
+                  Interest Calculator</a></li>
             </ul>
-            <p class="disclaimer">Approximate guidance only. Consult a financial advisor.</p>
-          </div>
+          </section>
+          <section style="margin-top:42px;width:100%;" aria-labelledby="la-faq-heading">
+            <h2 id="la-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Loan
+              Affordability FAQ</h2>
+            <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How is loan affordability calculated?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Affordable principal is derived from the maximum EMI
+                    allowed by your target DTI ratio: EMI capacity inverted through the standard amortization formula to
+                    yield principal.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What is DTI (Debt-To-Income) ratio?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">DTI compares total monthly debt payments (existing EMIs
+                    plus proposed loan EMI) to gross or net income. Lower DTI indicates stronger repayment capacity.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How can I improve loan affordability?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Reduce existing debt, increase income, lengthen tenure,
+                    secure a lower interest rate, or add a larger down payment to decrease required EMI.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Does down payment affect affordability?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. A higher down payment reduces financed principal,
+                    lowers EMI, improves DTI and may enhance approval odds or rate offers.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Should I use net or gross income?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Lenders often use gross income for underwriting. This
+                    calculator uses net by default if entered; ensure consistency with your market when comparing
+                    results.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+      </section>
+    </div>
 
-        <div class="la-interaction-row">
-          <form id="laForm" class="la-form" autocomplete="off">
-            <div class="input-group">
-              <label for="currency">Currency</label>
-              <div class="input-row">
-                <select id="currency" name="currency">
-                  <option value="INR" selected>INR</option>
-                  <option value="USD">USD</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="netIncome">Monthly Net Income</label>
-              <div class="input-row"><input type="number" id="netIncome" min="0" placeholder="e.g. 120000" required /></div>
-            </div>
-            <div class="input-group">
-              <label for="existingEmi">Existing Monthly EMIs</label>
-              <div class="input-row"><input type="number" id="existingEmi" min="0" value="0" /></div>
-            </div>
-            <div class="input-group">
-              <label for="targetDti">Target DTI % (All debt vs income)</label>
-              <div class="input-row"><input type="number" id="targetDti" min="5" max="90" value="40" required /></div>
-              <div class="la-inline-buttons" data-group="dtiBtns">
-                <button type="button" data-val="30">30%</button>
-                <button type="button" data-val="35">35%</button>
-                <button type="button" class="active" data-val="40">40%</button>
-                <button type="button" data-val="45">45%</button>
-                <button type="button" data-val="50">50%</button>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="rate">Annual Interest Rate (%)</label>
-              <div class="input-row"><input type="number" id="rate" min="1" max="25" step="0.01" placeholder="e.g. 8.5" required /></div>
-            </div>
-            <div class="input-group">
-              <label for="tenure">Tenure (Years)</label>
-              <div class="input-row"><input type="number" id="tenure" min="1" max="40" value="20" required /></div>
-              <div class="la-inline-buttons" data-group="tenureBtns">
-                <button type="button" class="active" data-val="20">20y</button>
-                <button type="button" data-val="25">25y</button>
-                <button type="button" data-val="30">30y</button>
-                <button type="button" data-val="15">15y</button>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="downPayment">Planned Down Payment</label>
-              <div class="input-row"><input type="number" id="downPayment" min="0" value="0" /></div>
-            </div>
-            <div class="input-group">
-              <label>Buffer / Stress Test</label>
-              <div class="la-inline-buttons" data-group="bufferBtns">
-                <button type="button" class="active" data-val="0">None</button>
-                <button type="button" data-val="-5">-5% (Conservative)</button>
-                <button type="button" data-val="-10">-10% (More Safe)</button>
-                <button type="button" data-val="5">+5% Aggressive</button>
-              </div>
-              <div class="la-small-hint">Adjusts affordable principal by %</div>
-            </div>
-            <button type="submit" class="la-btn">Calculate Affordability</button>
-          </form>
-
-          <div id="laResultContainer" class="la-result-container">
-            <div class="la-main-result">
-              <span id="affordablePrincipal" class="la-main-value">--</span>
-              <span class="la-main-label">Affordable Principal</span>
-            </div>
-            <div class="la-progress-wrapper">
-              <div class="la-progress-bar"><div id="laProgress" class="la-progress"></div></div>
-              <div class="la-scale"><span>Low</span><span>High</span></div>
-            </div>
-            <div class="la-breakdown" id="laBreakdown"></div>
-            <div class="la-stats-grid" id="laStats"></div>
-            <div class="la-tips" id="laTips"></div>
-            <div class="la-disclaimer">Estimates only. Lenders use additional criteria.</div>
-          </div>
-        </div>
-      </div>
-      </main>
-      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-        <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
-          <h2 id="related-finance-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators</h2>
-          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
-            <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
-            <li><a href="LoanEMICalculator.html" style="text-decoration:none;">Generic Loan EMI Calculator</a></li>
-            <li><a href="PersonalLoanEMICalculator.html" style="text-decoration:none;">Personal Loan EMI Calculator</a></li>
-            <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility Calculator</a></li>
-            <li><a href="CompoundSimpleInterestCalculator.html" style="text-decoration:none;">Compound & Simple Interest Calculator</a></li>
-          </ul>
-        </section>
-        <section style="margin-top:42px;width:100%;" aria-labelledby="la-faq-heading">
-          <h2 id="la-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Loan Affordability FAQ</h2>
-          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How is loan affordability calculated?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Affordable principal is derived from the maximum EMI allowed by your target DTI ratio: EMI capacity inverted through the standard amortization formula to yield principal.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">What is DTI (Debt-To-Income) ratio?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">DTI compares total monthly debt payments (existing EMIs plus proposed loan EMI) to gross or net income. Lower DTI indicates stronger repayment capacity.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">How can I improve loan affordability?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Reduce existing debt, increase income, lengthen tenure, secure a lower interest rate, or add a larger down payment to decrease required EMI.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Does down payment affect affordability?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Yes. A higher down payment reduces financed principal, lowers EMI, improves DTI and may enhance approval odds or rate offers.</p>
-              </div>
-            </div>
-            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-              <h3 itemprop="name" style="font-size:1.05rem;">Should I use net or gross income?</h3>
-              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <p itemprop="text" style="font-size:.92rem;">Lenders often use gross income for underwriting. This calculator uses net by default if entered; ensure consistency with your market when comparing results.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </div>
-
-  <footer class="bottom-banner"></footer>
+    <footer class="bottom-banner"></footer>
   </div>
 
   <script>
-    function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
 
     const form = document.getElementById('laForm');
     const resultContainer = document.getElementById('laResultContainer');
@@ -219,55 +250,55 @@
     const tipsEl = document.getElementById('laTips');
     const progressEl = document.getElementById('laProgress');
 
-    function currencySymbol(cur){ switch(cur){ case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
-    function fmtMoney(v, cur){ const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined,{maximumFractionDigits:0}); }
+    function currencySymbol(cur) { switch (cur) { case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
+    function fmtMoney(v, cur) { const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 }); }
 
-    function invertEmi(emi, annualRate, years){ const r = (annualRate/100)/12; const n = years*12; if(r===0) return emi * n; const pow = Math.pow(1+r, n); return emi * ( (pow - 1) / (r * pow) ); }
-    function emiFromPrincipal(P, annualRate, years){ const r=(annualRate/100)/12; const n=years*12; if(r===0) return P/n; const pow=Math.pow(1+r,n); return P * r * pow / (pow - 1); }
+    function invertEmi(emi, annualRate, years) { const r = (annualRate / 100) / 12; const n = years * 12; if (r === 0) return emi * n; const pow = Math.pow(1 + r, n); return emi * ((pow - 1) / (r * pow)); }
+    function emiFromPrincipal(P, annualRate, years) { const r = (annualRate / 100) / 12; const n = years * 12; if (r === 0) return P / n; const pow = Math.pow(1 + r, n); return P * r * pow / (pow - 1); }
 
-    function setActive(groupAttr, btn){
+    function setActive(groupAttr, btn) {
       var selector = '[data-group="' + groupAttr + '"] button';
-      document.querySelectorAll(selector).forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll(selector).forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
     }
-    document.querySelectorAll('.la-inline-buttons').forEach(function(wrapper){
-      wrapper.addEventListener('click', function(e){
-        if(e.target && e.target.tagName === 'BUTTON'){
+    document.querySelectorAll('.la-inline-buttons').forEach(function (wrapper) {
+      wrapper.addEventListener('click', function (e) {
+        if (e.target && e.target.tagName === 'BUTTON') {
           setActive(wrapper.getAttribute('data-group'), e.target);
           var id = wrapper.getAttribute('data-group');
-            if(id === 'dtiBtns'){ document.getElementById('targetDti').value = e.target.getAttribute('data-val'); }
-            if(id === 'tenureBtns'){ document.getElementById('tenure').value = e.target.getAttribute('data-val'); }
-            if(id === 'bufferBtns'){ /* handled separately but keeping consistency */ }
+          if (id === 'dtiBtns') { document.getElementById('targetDti').value = e.target.getAttribute('data-val'); }
+          if (id === 'tenureBtns') { document.getElementById('tenure').value = e.target.getAttribute('data-val'); }
+          if (id === 'bufferBtns') { /* handled separately but keeping consistency */ }
         }
       });
     });
-    document.querySelectorAll('[data-group="bufferBtns"] button').forEach(function(btn){
-      btn.addEventListener('click', function(){ setActive('bufferBtns', btn); });
+    document.querySelectorAll('[data-group="bufferBtns"] button').forEach(function (btn) {
+      btn.addEventListener('click', function () { setActive('bufferBtns', btn); });
     });
 
-    form.addEventListener('submit', e=>{
+    form.addEventListener('submit', e => {
       e.preventDefault();
       const currency = document.getElementById('currency').value;
-      const income = parseFloat(document.getElementById('netIncome').value)||0;
-      const existing = parseFloat(document.getElementById('existingEmi').value)||0;
-      const targetDti = parseFloat(document.getElementById('targetDti').value)||0; // percent
-      const rate = parseFloat(document.getElementById('rate').value)||0;
-      const tenure = parseInt(document.getElementById('tenure').value,10)||0;
-      const downPayment = parseFloat(document.getElementById('downPayment').value)||0;
+      const income = parseFloat(document.getElementById('netIncome').value) || 0;
+      const existing = parseFloat(document.getElementById('existingEmi').value) || 0;
+      const targetDti = parseFloat(document.getElementById('targetDti').value) || 0; // percent
+      const rate = parseFloat(document.getElementById('rate').value) || 0;
+      const tenure = parseInt(document.getElementById('tenure').value, 10) || 0;
+      const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
       const bufferBtn = document.querySelector('[data-group="bufferBtns"] button.active');
       const bufferPct = bufferBtn ? parseFloat(bufferBtn.dataset.val) : 0;
 
-      if(income<=0 || rate<=0 || tenure<=0 || targetDti<=0){ resultContainer.style.display='none'; resultContainer.classList.remove('show'); return; }
+      if (income <= 0 || rate <= 0 || tenure <= 0 || targetDti <= 0) { resultContainer.style.display = 'none'; resultContainer.classList.remove('show'); return; }
 
       // Maximum total debt service allowed
-      const allowedTotalDebt = income * (targetDti/100);
+      const allowedTotalDebt = income * (targetDti / 100);
       const maxNewEmi = Math.max(0, allowedTotalDebt - existing);
-      if(maxNewEmi <= 0){ resultContainer.style.display='none'; resultContainer.classList.remove('show'); return; }
+      if (maxNewEmi <= 0) { resultContainer.style.display = 'none'; resultContainer.classList.remove('show'); return; }
 
       // Invert EMI to get principal
       let basePrincipal = invertEmi(maxNewEmi, rate, tenure);
       // Apply buffer (negative reduces principal, positive increases)
-      const adjustedPrincipal = basePrincipal * (1 + bufferPct/100);
+      const adjustedPrincipal = basePrincipal * (1 + bufferPct / 100);
       const principal = Math.max(0, adjustedPrincipal);
       const propertyPrice = principal + downPayment;
 
@@ -275,14 +306,14 @@
       const resultingEmi = emiFromPrincipal(principal, rate, tenure);
       const totalPaid = resultingEmi * tenure * 12;
       const interestTotal = totalPaid - principal;
-      const effectiveDtiAfter = ( (existing + resultingEmi) / income ) * 100;
+      const effectiveDtiAfter = ((existing + resultingEmi) / income) * 100;
 
       principalEl.textContent = fmtMoney(principal, currency);
 
       // Progress heuristic (adjusted by currency typical scales)
-  let scaleMax = 10000000; // 10 Million (INR) default
-  if(currency==='USD' || currency==='EUR' || currency==='GBP') scaleMax = 2000000; // 2M
-      const pct = Math.min(100, (principal/scaleMax)*100);
+      let scaleMax = 10000000; // 10 Million (INR) default
+      if (currency === 'USD' || currency === 'EUR' || currency === 'GBP') scaleMax = 2000000; // 2M
+      const pct = Math.min(100, (principal / scaleMax) * 100);
       progressEl.style.width = pct + '%';
       progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
 
@@ -297,34 +328,35 @@
         ['Down Payment', fmtMoney(downPayment, currency)],
         ['Property Price', fmtMoney(propertyPrice, currency)]
       ];
-      rows.forEach(r=>{ const div=document.createElement('div'); div.className='la-row'; div.innerHTML = `<span>${r[0]}</span><span>${r[1]}</span>`; breakdownEl.appendChild(div); });
+      rows.forEach(r => { const div = document.createElement('div'); div.className = 'la-row'; div.innerHTML = `<span>${r[0]}</span><span>${r[1]}</span>`; breakdownEl.appendChild(div); });
 
       // Stats
       statsEl.innerHTML = '';
       const stats = [
-        {lbl:'Total Interest', val: fmtMoney(interestTotal, currency)},
-        {lbl:'Total Paid', val: fmtMoney(totalPaid, currency)},
-        {lbl:'Eff. DTI %', val: effectiveDtiAfter.toFixed(1)+'%'},
-        {lbl:'EMI / Income %', val: ((resultingEmi/income)*100).toFixed(1)+'%'},
-        {lbl:'Tenure (mo)', val: (tenure*12)},
-        {lbl:'Rate %', val: rate.toFixed(2)}
+        { lbl: 'Total Interest', val: fmtMoney(interestTotal, currency) },
+        { lbl: 'Total Paid', val: fmtMoney(totalPaid, currency) },
+        { lbl: 'Eff. DTI %', val: effectiveDtiAfter.toFixed(1) + '%' },
+        { lbl: 'EMI / Income %', val: ((resultingEmi / income) * 100).toFixed(1) + '%' },
+        { lbl: 'Tenure (mo)', val: (tenure * 12) },
+        { lbl: 'Rate %', val: rate.toFixed(2) }
       ];
-      stats.forEach(s=>{ const c=document.createElement('div'); c.className='la-stat'; c.innerHTML=`<span class="val">${s.val}</span><span class="lbl">${s.lbl}</span>`; statsEl.appendChild(c); });
+      stats.forEach(s => { const c = document.createElement('div'); c.className = 'la-stat'; c.innerHTML = `<span class="val">${s.val}</span><span class="lbl">${s.lbl}</span>`; statsEl.appendChild(c); });
 
       // Tips
       let tip = '';
-      if(bufferPct < 0) tip += 'Conservative buffer reduces risk; you can remove it to see higher potential.';
-      else if(bufferPct > 0) tip += 'Aggressive buffer increases exposure; keep emergency funds ready. ';
-      if(effectiveDtiAfter > targetDti + 1) tip += ' Effective DTI slightly exceeds target due to rounding.';
-      if(!tip) tip = 'Adjust DTI or tenure to see how affordability changes.';
+      if (bufferPct < 0) tip += 'Conservative buffer reduces risk; you can remove it to see higher potential.';
+      else if (bufferPct > 0) tip += 'Aggressive buffer increases exposure; keep emergency funds ready. ';
+      if (effectiveDtiAfter > targetDti + 1) tip += ' Effective DTI slightly exceeds target due to rounding.';
+      if (!tip) tip = 'Adjust DTI or tenure to see how affordability changes.';
       tipsEl.textContent = tip;
 
-      resultContainer.style.display='flex';
-      setTimeout(()=>{ resultContainer.classList.add('show'); resultContainer.scrollIntoView({behavior:'smooth', block:'center'}); },40);
+      resultContainer.style.display = 'flex';
+      setTimeout(() => { resultContainer.classList.add('show'); resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     });
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://freetoolsandcalculators.com/Finance/Finance.html"},{"@type":"ListItem","position":3,"name":"Loan Affordability Calculator","item":"https://freetoolsandcalculators.com/Finance/Tools/LoanAffordabilityCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Finance/Tools/LoanAffordabilityCalculator.html","url":"https://freetoolsandcalculators.com/Finance/Tools/LoanAffordabilityCalculator.html","name":"Loan Affordability Calculator | Free Tools and Calculators","description":"Estimate maximum loan principal based on income, existing EMIs, target DTI, rate, tenure and down payment.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Loan Affordability Calculator","applicationCategory":"FinanceApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Finance/Tools/LoanAffordabilityCalculator.html","description":"Calculates affordable principal using DTI, existing EMIs, interest rate, tenure and down payment inputs.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is loan affordability calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI capacity from target DTI is inverted to principal via amortization formula."}},{"@type":"Question","name":"What is DTI (Debt-To-Income) ratio?","acceptedAnswer":{"@type":"Answer","text":"DTI compares total monthly debt service to income; lower is better."}},{"@type":"Question","name":"How can I improve loan affordability?","acceptedAnswer":{"@type":"Answer","text":"Reduce debt, increase income, extend tenure, lower rate, add down payment."}},{"@type":"Question","name":"Does down payment affect affordability?","acceptedAnswer":{"@type":"Answer","text":"Higher down payment lowers financed amount and EMI, improving DTI."}},{"@type":"Question","name":"Should I use net or gross income?","acceptedAnswer":{"@type":"Answer","text":"Underwriting often uses gross; calculator works with your provided figure."}}]}]}
   </script>
 </body>
+
 </html>

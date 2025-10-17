@@ -59,7 +59,7 @@
   color: #000000;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .tools-section {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -254,7 +254,7 @@ html {
   }
 }
 
-@media (min-width:900px) {
+@media (min-width:850px) {
   .bottom-banner {
     display: none;
   }

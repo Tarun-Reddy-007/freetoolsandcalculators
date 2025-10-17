@@ -542,7 +542,7 @@ html {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .left-banner {
     display: none;
   }
@@ -585,19 +585,19 @@ html {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .left-banner {
     display: none;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 850px) {
   .bottom-banner {
     display: none;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
   .hamburger {
     display: block;
   }

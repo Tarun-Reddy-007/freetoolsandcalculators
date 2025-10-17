@@ -463,7 +463,7 @@ body {
     text-align: center;
 }
 
-@media (min-width:900px) {
+@media (min-width:850px) {
     .bottom-banner {
         display: none;
     }

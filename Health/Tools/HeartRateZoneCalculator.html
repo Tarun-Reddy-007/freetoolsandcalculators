@@ -3,7 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FreeOnlineCalculators</title>
+  <title>Heart Rate Zone Calculator | Training Zones, HRmax, Karvonen & Tips</title>
+  <meta name="description" content="Free Heart Rate Zone Calculator using 220-Age, Tanaka and Karvonen (HRR) methods. Estimate HRmax, personalized training zones, and get endurance & performance tips.">
+  <meta name="keywords" content="heart rate zone calculator, HRmax, Karvonen, heart rate reserve, training zones, endurance training, VO2 max, fitness calculator">
+  <meta name="author" content="FreeToolsandCalculators">
+  <meta name="publisher" content="FreeToolsandCalculators">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://freetoolsandcalculators.com/Health/Tools/HeartRateZoneCalculator.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Heart Rate Zone Calculator | Personalized Training Zones">
+  <meta property="og:description" content="Calculate heart rate zones with multiple formulas (220-Age, Tanaka, Karvonen). Get HRmax, HRR and zone guidance.">
+  <meta property="og:url" content="https://freetoolsandcalculators.com/Health/Tools/HeartRateZoneCalculator.html">
+  <meta property="og:site_name" content="FreeToolsandCalculators">
+  <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Health/heart_rate_zone_calculator.jpg">
+  <meta property="og:image:alt" content="Heart rate zone calculator interface with inputs and zone ranges">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Heart Rate Zone Calculator | Personalized Training Zones">
+  <meta name="twitter:description" content="Estimate HRmax and training zones using 220-Age, Tanaka & Karvonen (HRR) methods.">
+  <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Health/heart_rate_zone_calculator.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="HeartRateZoneCalculator.css">
@@ -29,10 +47,19 @@
   <div class="content-row">
     <aside class="left-banner"></aside>
     <section class="scroll-panel">
-      <div class="hrz-tool-section">
+      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+          <li><a href="../../index.html">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="../Health.html">Health</a></li>
+          <li aria-hidden="true">›</li>
+          <li><span>Heart Rate Zone Calculator</span></li>
+        </ol>
+      </nav>
+      <main class="hrz-tool-section" aria-labelledby="hrz-main-title" itemscope itemtype="https://schema.org/WebPage">
       <div class="hrz-card">
         <div class="hrz-title-row">
-          <h1 class="hrz-title">Heart Rate Zone Calculator</h1>
+          <h1 class="hrz-title" id="hrz-main-title">Heart Rate Zone Calculator</h1>
           <button type="button" class="hrz-info-trigger" aria-describedby="hrzInfoPanel" title="About" tabindex="0">i</button>
           <div class="hrz-info-flyout" id="hrzInfoPanel" role="tooltip" aria-hidden="true">
             <h2>About Zones</h2>
@@ -85,6 +112,44 @@
           </div>
         </div>
       </div>
+      </main>
+      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+        <section style="margin-top:0;width:100%;" aria-labelledby="related-health-calculators">
+          <h2 id="related-health-calculators" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Health Calculators</h2>
+          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+            <li><a href="BMICalculator.html" style="text-decoration:none;">BMI Calculator</a></li>
+            <li><a href="BMRCalculator.html" style="text-decoration:none;">BMR Calculator</a></li>
+            <li><a href="BodyFatPercentCalculator.html" style="text-decoration:none;">Body Fat % Calculator</a></li>
+            <li><a href="IdealWeightCalculator.html" style="text-decoration:none;">Ideal Weight Calculator</a></li>
+            <li><a href="SleepCycleCalculator.html" style="text-decoration:none;">Sleep Cycle Calculator</a></li>
+            <li><a href="WaterIntakeCalculator.html" style="text-decoration:none;">Daily Water Intake Calculator</a></li>
+          </ul>
+        </section>
+        <section style="margin-top:42px;width:100%;" aria-labelledby="hrz-faq-heading">
+          <h2 id="hrz-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Heart Rate Zone Calculator FAQ</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">How are heart rate zones determined?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Zones are calculated as percentages of HRmax or heart rate reserve (HRR) when resting heart rate is provided (Karvonen method).</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">What formula is most accurate for HRmax?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Tanaka (208 - 0.7 × Age) often improves over 220 - Age; lab tests or field max efforts are more precise.</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">Why include resting heart rate?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Resting HR personalizes zones using HRR, reflecting fitness adaptations better than %HRmax alone.</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">How can I train in Zone 2 effectively?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Maintain conversational pace near 60–70% HRmax or 60–70% HRR for aerobic base and fat oxidation gains.</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">How often should zones be recalculated?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Every 6–8 weeks or after noticeable fitness improvements or testing changes; update resting HR when it declines.</p></div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   </div>
@@ -171,4 +236,7 @@
     });
   </script>
 </body>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Health","item":"https://freetoolsandcalculators.com/Health/Health.html"},{"@type":"ListItem","position":3,"name":"Heart Rate Zone Calculator","item":"https://freetoolsandcalculators.com/Health/Tools/HeartRateZoneCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Health/Tools/HeartRateZoneCalculator.html","url":"https://freetoolsandcalculators.com/Health/Tools/HeartRateZoneCalculator.html","name":"Heart Rate Zone Calculator | Training Zones & HRmax","description":"Heart Rate Zone Calculator using 220-Age, Tanaka and Karvonen (HRR) methods to estimate HRmax and personalized zones.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Heart Rate Zone Calculator","applicationCategory":"HealthApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Health/Tools/HeartRateZoneCalculator.html","description":"Generate heart rate training zones via multiple HRmax formulas and Karvonen personalization.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How are heart rate zones determined?","acceptedAnswer":{"@type":"Answer","text":"Zones are percentages of HRmax or HRR when resting heart rate is provided (Karvonen method)."}},{"@type":"Question","name":"What formula is most accurate for HRmax?","acceptedAnswer":{"@type":"Answer","text":"Tanaka (208 - 0.7 × Age) may be closer for many; direct testing is more precise."}},{"@type":"Question","name":"Why include resting heart rate?","acceptedAnswer":{"@type":"Answer","text":"Resting HR enables HRR-based zones, tailoring intensity to individual fitness."}},{"@type":"Question","name":"How can I train in Zone 2 effectively?","acceptedAnswer":{"@type":"Answer","text":"Maintain conversational pace (~60–70% HRmax or HRR) to build aerobic capacity and fat oxidation."}},{"@type":"Question","name":"How often should zones be recalculated?","acceptedAnswer":{"@type":"Answer","text":"Every 6–8 weeks or after major fitness changes; update resting HR periodically."}}]}]}
+</script>
 </html>

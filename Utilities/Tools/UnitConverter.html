@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>FreeOnlineCalculators</title>
+  <title>Unit Converter | Convert Length, Mass, Temperature, Area & Volume</title>
+  <meta name="description" content="Free Unit Converter: Instantly convert length, mass, temperature, area and volume values with transparent formulas. All calculations local & fast.">
+  <meta name="keywords" content="unit converter, length conversion, mass conversion, temperature converter, area, volume, metric to imperial, online conversion">
+  <meta name="author" content="FreeToolsandCalculators">
+  <meta name="publisher" content="FreeToolsandCalculators">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+  <link rel="canonical" href="https://freetoolsandcalculators.com/Utilities/Tools/UnitConverter.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Unit Converter | Length, Mass, Temperature & More">
+  <meta property="og:description" content="Convert units for length, mass, temperature, area and volume quickly with clear formulas. Free & local.">
+  <meta property="og:url" content="https://freetoolsandcalculators.com/Utilities/Tools/UnitConverter.html">
+  <meta property="og:site_name" content="FreeToolsandCalculators">
+  <meta property="og:image" content="https://freetoolsandcalculators.com/Images/Utilities/unit_converter.png">
+  <meta property="og:image:alt" content="Unit converter interface showing category and result output">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unit Converter | Length, Mass, Temperature & More">
+  <meta name="twitter:description" content="Instant multi-category unit conversion with formulas. Length, mass, temperature, area & volume.">
+  <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Utilities/unit_converter.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="UnitConverter.css" />
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237022176069616" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="layout-shell">
@@ -29,10 +48,19 @@
   <div class="content-row">
     <aside class="left-banner"></aside>
     <section class="scroll-panel">
-      <div class="uc-section">
+      <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
+        <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
+          <li><a href="../../index.html">Home</a></li>
+          <li aria-hidden="true">›</li>
+          <li><a href="../Utilities.html">Utilities</a></li>
+          <li aria-hidden="true">›</li>
+          <li><span>Unit Converter</span></li>
+        </ol>
+      </nav>
+      <main class="uc-section" aria-labelledby="unit-converter-title" itemscope itemtype="https://schema.org/WebPage">
       <div class="uc-card">
         <div class="uc-title-row">
-          <h1 class="uc-title">Unit Converter</h1>
+          <h1 class="uc-title" id="unit-converter-title">Unit Converter</h1>
           <button type="button" class="uc-info-trigger" aria-describedby="ucInfo" title="How conversion works" tabindex="0">i</button>
           <div class="uc-info-flyout" id="ucInfo" role="tooltip" aria-hidden="true">
             <h2>How Conversion Works</h2>
@@ -90,6 +118,44 @@
           </div>
         </div>
       </div>
+      </main>
+      <div style="width:100%;padding:0 24px 40px 24px;display:block;">
+        <section style="margin-top:0;width:100%;" aria-labelledby="related-unit-tools">
+          <h2 id="related-unit-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Utility & Conversion Tools</h2>
+          <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
+            <li><a href="DateDifferenceCalculator.html" style="text-decoration:none;">Date Difference Calculator</a></li>
+            <li><a href="PasswordStrengthChecker.html" style="text-decoration:none;">Password Strength Checker</a></li>
+            <li><a href="QRCodeGenerator.html" style="text-decoration:none;">QR Code Generator</a></li>
+            <li><a href="RomanNumeralConverter.html" style="text-decoration:none;">Roman Numeral Converter</a></li>
+            <li><a href="AgeCalculator.html" style="text-decoration:none;">Age Calculator</a></li>
+            <li><a href="WordCharacterCounter.html" style="text-decoration:none;">Word & Character Counter</a></li>
+          </ul>
+        </section>
+        <section style="margin-top:42px;width:100%;" aria-labelledby="unit-converter-faq-heading">
+          <h2 id="unit-converter-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Unit Converter FAQ</h2>
+          <div style="display:flex;flex-direction:column;gap:14px;" itemscope itemtype="https://schema.org/FAQPage">
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">How accurate are the conversions?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">They use standard conversion factors; floating precision is rounded for readability. Critical engineering uses should verify independently.</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">Why do temperature conversions differ from others?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Temperature scales involve offsets (e.g., °F to °C subtract 32 before scaling) unlike multiplicative-only conversions for length or mass.</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">Can I convert negative temperatures?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">Yes, negative Celsius or Fahrenheit values are valid and converted with the same formulas.</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">Why is the result rounded?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">To prevent long repeating decimals. Internal precision remains high; display is trimmed for clarity.</p></div>
+            </div>
+            <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <h3 itemprop="name" style="font-size:1.05rem;">Are conversions done online?</h3>
+              <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.92rem;">No—everything runs locally in your browser, preserving privacy and speed.</p></div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   </div>
@@ -175,7 +241,7 @@
     // Initial population
     populateUnits(ucCategory.value);
 
-    ucForm.addEventListener('submit', function(e){
+  ucForm.addEventListener('submit', function(e){
       e.preventDefault();
       const val = parseFloat(ucValue.value);
       const cat = ucCategory.value;
@@ -205,6 +271,9 @@
       resultBox.style.display = 'flex';
       setTimeout(()=>{resultBox.classList.add('show');resultBox.scrollIntoView({behavior:'smooth',block:'center'});},50);
     });
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Utilities","item":"https://freetoolsandcalculators.com/Utilities/Utilities.html"},{"@type":"ListItem","position":3,"name":"Unit Converter","item":"https://freetoolsandcalculators.com/Utilities/Tools/UnitConverter.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Utilities/Tools/UnitConverter.html","url":"https://freetoolsandcalculators.com/Utilities/Tools/UnitConverter.html","name":"Unit Converter | Length, Mass, Temperature & More","description":"Instant conversion of length, mass, temperature, area & volume with transparent formulas and local processing.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Unit Converter","applicationCategory":"UtilityApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Utilities/Tools/UnitConverter.html","description":"Converts between common measurement units (length, mass, temperature, area, volume) locally with formula clarity.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate are the conversions?","acceptedAnswer":{"@type":"Answer","text":"Standard factors with display rounding for readability."}},{"@type":"Question","name":"Why do temperature conversions differ from others?","acceptedAnswer":{"@type":"Answer","text":"Temperature involves offsets unlike pure scaling."}},{"@type":"Question","name":"Can I convert negative temperatures?","acceptedAnswer":{"@type":"Answer","text":"Yes, formulas handle negatives."}},{"@type":"Question","name":"Why is the result rounded?","acceptedAnswer":{"@type":"Answer","text":"Long decimals trimmed; internal precision remains."}},{"@type":"Question","name":"Are conversions done online?","acceptedAnswer":{"@type":"Answer","text":"All logic runs locally in the browser."}}]}]}
   </script>
 </body>
 </html>

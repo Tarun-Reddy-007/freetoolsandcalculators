@@ -279,5 +279,5 @@ html {
   min-width: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 0 0 8px 0;
+  padding: 0 0 30% 0;
 }

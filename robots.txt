@@ -1,0 +1,24 @@
+# robots.txt for FreeToolsandCalculators
+# Last updated: 2025-10-18
+# Purpose: Provide clear crawl directives and assist search engines in efficiently indexing public calculator pages.
+# Notes:
+# 1. All category and tool pages are meant to be indexed.
+# 2. 404 page is marked noindex via meta; we also disallow it to reduce crawl waste.
+# 3. If you add a sitemap.xml later, update the Sitemap directive below (uncomment it).
+
+User-agent: *
+# Allow everything by default
+Allow: /
+
+# Optional: prevent indexing of the custom 404 document
+Disallow: /404.html
+
+# Block Firebase config file from being indexed (not useful to users)
+Disallow: /firebase.json
+
+Sitemap: https://freetoolsandcalculators.com/sitemap.xml
+
+# Performance: Avoid setting crawl-delay unless your server becomes overloaded.
+# If you ever need it, add (example): Crawl-delay: 2
+
+# End of file

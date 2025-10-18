@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core pages -->
+  <url><loc>https://freetoolsandcalculators.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Health/Health.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Fitness/Fitness.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Finance/Finance.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Utilities.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Education/Education.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Media/Media.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Clothing/Clothing.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Sports/Sports.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Health tools -->
+  <url><loc>https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html</loc><priority>0.85</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://freetoolsandcalculators.com/Health/Tools/BMRCalculator.html</loc><priority>0.7</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Health/Tools/IdealWeightCalculator.html</loc><priority>0.7</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Health/Tools/BodyFatPercentCalculator.html</loc><priority>0.7</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Health/Tools/HeartRateZoneCalculator.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Health/Tools/WaterIntakeCalculator.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Health/Tools/SleepCycleCalculator.html</loc><priority>0.5</priority></url>
+
+  <!-- Fitness tools -->
+  <url><loc>https://freetoolsandcalculators.com/Fitness/Tools/ProteinIntakeCalculator.html</loc><priority>0.7</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Fitness/Tools/StepsToCalorieConverter.html</loc><priority>0.7</priority></url>
+
+  <!-- Finance tools -->
+  <url><loc>https://freetoolsandcalculators.com/Finance/Tools/LoanAffordabilityCalculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Finance/Tools/CompoundSimpleInterestCalculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Finance/Tools/LoanEMICalculator.html</loc><priority>0.85</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Finance/Tools/CarLoanEMICalculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html</loc><priority>0.75</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Finance/Tools/HomeLoanEligibilityCalculator.html</loc><priority>0.8</priority></url>
+
+  <!-- Utilities tools -->
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Tools/UnitConverter.html</loc><priority>0.85</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Tools/DateDifferenceCalculator.html</loc><priority>0.75</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Tools/PasswordStrengthChecker.html</loc><priority>0.7</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Tools/RomanNumeralConverter.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Tools/WordCharacterCounter.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Tools/AgeCalculator.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Utilities/Tools/QRCodeGenerator.html</loc><priority>0.5</priority></url>
+
+  <!-- Education tools -->
+  <url><loc>https://freetoolsandcalculators.com/Education/Tools/AsciiArtGenerator.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Education/Tools/DigitalLogicConverter.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Education/Tools/TruthTableGenerator.html</loc><priority>0.6</priority></url>
+
+  <!-- Media tools -->
+  <url><loc>https://freetoolsandcalculators.com/Media/Tools/ColorCodeConverter.html</loc><priority>0.6</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Media/Tools/GradientGenerator.html</loc><priority>0.6</priority></url>
+
+  <!-- Clothing tools -->
+  <url><loc>https://freetoolsandcalculators.com/Clothing/Tools/ClothesSizeConverter.html</loc><priority>0.55</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Clothing/Tools/ShoesSizeConverter.html</loc><priority>0.55</priority></url>
+  <url><loc>https://freetoolsandcalculators.com/Clothing/Tools/DressColorMatcher.html</loc><priority>0.55</priority></url>
+
+  <!-- Sports tools -->
+  <url><loc>https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html</loc><priority>0.65</priority></url>
+</urlset>

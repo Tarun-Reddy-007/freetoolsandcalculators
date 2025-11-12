@@ -12,7 +12,7 @@ body {
 
 .top-banner,
 .bottom-banner {
-  height: 44vh;
+  height: 200vh;
   background: #f2f2f2;
   display: flex;
   align-items: center;
@@ -68,7 +68,7 @@ body {
 }
 
 .left-banner {
-  width: 400px;
+  width: 400px;;
   background: #f2f2f2;
   display: flex;
   align-items: center;
@@ -200,7 +200,7 @@ body {
 
 .water-form {
   width: 100%;
-  max-width: 360px;
+  max-width: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -281,7 +281,6 @@ body {
 .water-result-container {
   margin-top: 0;
   width: 100%;
-  max-width: 300px;
   background: linear-gradient(140deg, #f0f9ff 0%, #ffffff 100%);
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, .08);

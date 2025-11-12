@@ -12,7 +12,7 @@ body {
 
 .top-banner,
 .bottom-banner {
-    height: 44vh;
+    height: 200vh;
     background: #f2f2f2;
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@ body {
 }
 
 .left-banner {
-    width: 400px;
+    width: 1000px;;
     background: #f2f2f2;
     display: flex;
     align-items: center;
@@ -212,7 +212,6 @@ body {
 
 .steps-form {
     width: 100%;
-    max-width: 460px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -310,7 +309,6 @@ body {
 .steps-result-container {
     margin-top: 0;
     width: 100%;
-    max-width: 460px;
     background: linear-gradient(140deg, #f0f7ff 0%, #ffffff 100%);
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, .08);

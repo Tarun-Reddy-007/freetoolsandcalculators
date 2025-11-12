@@ -12,7 +12,7 @@ html {
 
 .top-banner,
 .bottom-banner {
-    height: 44vh;
+    height: 200vh;
     background: #f2f2f2;
     display: flex;
     align-items: center;
@@ -211,7 +211,6 @@ html {
 
 .hle-form {
     width: 100%;
-    max-width: 430px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -328,7 +327,7 @@ html {
 
 .hle-result-container {
     width: 100%;
-    max-width: 400px;
+    max-width: auto;;
     background: linear-gradient(140deg, #f0f7ff 0%, #ffffff 100%);
     border-radius: 18px;
     padding: 20px 18px 18px;

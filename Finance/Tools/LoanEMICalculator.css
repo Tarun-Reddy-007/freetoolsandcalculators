@@ -12,7 +12,7 @@ body {
 
 .top-banner,
 .bottom-banner {
-    height: 44vh;
+    height: 200vh;
     background: #f2f2f2;
     display: flex;
     align-items: center;
@@ -206,7 +206,7 @@ body {
 
 .emi-form {
     width: 100%;
-    max-width: 400px;
+    max-width: auto;;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -315,7 +315,6 @@ body {
 
 .emi-result-container {
     width: 100%;
-    max-width: 340px;
     background: linear-gradient(140deg, #f0f7ff 0%, #ffffff 100%);
     border-radius: 16px;
     padding: 18px 16px 16px;

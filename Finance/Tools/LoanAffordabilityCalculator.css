@@ -12,7 +12,7 @@ body {
 
 .top-banner,
 .bottom-banner {
-    height: 44vh;
+    height: 200vh;
     background: #f2f2f2;
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@ body {
 }
 
 .left-banner {
-    width: 400px;
+    width: 1000px;;
     background: #f2f2f2;
     display: flex;
     align-items: center;
@@ -87,7 +87,7 @@ body {
 
 .la-card {
     background: none;
-    max-width: 1000px;
+    max-width: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -206,7 +206,6 @@ body {
 
 .la-form {
     width: 100%;
-    max-width: 390px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -315,7 +314,6 @@ body {
 
 .la-result-container {
     width: 100%;
-    max-width: 330px;
     background: linear-gradient(140deg, #f0f7ff 0%, #ffffff 100%);
     border-radius: 16px;
     padding: 18px 16px 16px;

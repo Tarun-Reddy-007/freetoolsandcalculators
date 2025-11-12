@@ -86,7 +86,7 @@ html {
 
 .top-banner,
 .bottom-banner {
-  height: 50vh;
+  height: 200vh;;
   background: #f2f2f2;
   display: flex;
   align-items: center;
@@ -169,7 +169,7 @@ html {
 }
 
 .left-banner {
-  width: 400px;
+  width: 1000px;;
   background: #f2f2f2;
   display: flex;
   align-items: center;

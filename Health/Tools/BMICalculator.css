@@ -35,7 +35,7 @@ html {
 
 .top-banner,
 .bottom-banner {
-  height: 44vh;
+  height: 200vh;
   background: #f2f2f2;
   display: flex;
   align-items: center;
@@ -89,7 +89,7 @@ html {
 }
 
 .left-banner {
-  width: 400px;
+  width: 1000px;;
   background: #f2f2f2;
   display: flex;
   align-items: center;
@@ -111,7 +111,7 @@ html {
   border-radius: 0;
   box-shadow: none;
   padding: 0;
-  max-width: 500px;
+  max-width: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -241,7 +241,7 @@ html {
 
 .bmi-form {
   width: 100%;
-  max-width: 300px;
+  max-width: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -321,7 +321,6 @@ html {
 .bmi-result-container {
   margin-top: 0;
   width: 100%;
-  max-width: 260px;
   background: linear-gradient(140deg, #f0f7ff 0%, #ffffff 100%);
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
@@ -429,11 +428,11 @@ html {
   }
 
   .bmi-form {
-    flex: 0 0 320px;
+    flex: 0 0 auto;
   }
 
   .bmi-result-container {
-    flex: 0 0 260px;
+    flex: 0 0 auto;
   }
 }
 

@@ -134,10 +134,7 @@
                 <div class="cs-disclaimer">For guidance only. Sizing may vary by brand.</div>
               </div>
             </div>
-          </div>
-        </main>
-        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-          <section style="margin-top:0;width:100%;" aria-labelledby="related-clothing-tools">
+            <section style="margin-top:0;width:100%;" aria-labelledby="related-clothing-tools">
             <h2 id="related-clothing-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
               Related Clothing Tools</h2>
             <ul
@@ -146,6 +143,59 @@
               <li><a href="ShoesSizeConverter.html" style="text-decoration:none;">Shoe Size Converter</a></li>
             </ul>
           </section>
+            <!-- BEGIN Long-form Guide Content for Clothes Size Converter -->
+            <section id="clothes-size-guide" style="margin-top:32px;line-height:1.65;font-size:.95rem;color:#333;">
+              <h2 style="font-size:1.55rem;color:#0066cc;font-weight:600;margin:0 0 20px;">Comprehensive Guide to Using the Clothes Size Converter (International Clothing Size Conversion)</h2>
+              <p>The <strong>Clothes Size Converter</strong> (also called a <strong>clothing size converter</strong>, <strong>international clothing size conversion tool</strong>, <strong>apparel size converter</strong>, or <strong>global garment size chart utility</strong>) helps you instantly translate apparel sizing across the most commonly referenced regional standards: <strong>US sizes</strong>, <strong>UK sizes</strong>, <strong>EU sizes</strong>, and <strong>JP (Japanese) sizes</strong>. Whether you are shopping for men’s shirts, women’s dresses, kids’ pants, or general apparel from an overseas retailer, size translation reduces guesswork, minimizes return risk, and boosts confidence in cross‑border fashion purchases.</p>
+              <p>International apparel shopping exploded with e‑commerce marketplaces and global shipping. However, comparison friction remains because each region evolved its own numbering convention. A US women’s size 8 differs from a UK size 8 and an EU size 38 even though consumers often assume direct parity. Our <em>clothes size converter</em> normalizes this by using curated mapping rows. You select <strong>category (Men / Women / Kids)</strong>, <strong>garment type (Shirt, Pants, Dress)</strong>, origin region and your size; the tool computes equivalent size representations instantly.</p>
+              <p><strong>Why a dedicated clothing size converter matters:</strong> (1) Avoid ordering duplicates trying to guess the right international size; (2) Lower carbon impact from fewer returns; (3) Enable smarter wardrobe planning when mixing brands from multiple regions; (4) Improve resale accuracy when listing garments on peer‑to‑peer marketplaces by adding international equivalents; (5) Provide baseline for tailoring decisions—knowing typical conversions reveals if a piece is fundamentally mismatched or only needs minor adjustments.</p>
+              <p><strong>Core concepts behind international clothing size conversion:</strong> Each system expresses a proxy for body measurements—chest, waist, hip, or standardized garment dimensions. US women’s sizes are ascending even numbers (2, 4, 6, …) historically tied to body measurements that drift due to vanity sizing. UK women’s sizes appear numerically larger (US 8 ≈ UK 12) because of a different baseline pattern block. EU sizes often match approximate bust/hip circumference divided by a factor or drawn from historic metric sizing tables (34, 36, 38, 40, 42…). Japanese sizing routinely references a numeric code derived from metric body measurement bands (e.g., 9, 11, 13 for women; 87, 91, 95 for men’s chest). The <strong>Clothes Size Converter</strong> tool abstracts these origins, letting you handle conversion without learning each system’s heritage.</p>
+              <p><strong>Men’s vs Women’s vs Kids’ conversions:</strong> Men’s apparel often mixes letter sizes (S/M/L/XL) with numeric widths (e.g., pants waist 32). Women’s clothing uses structured numeric sequences plus lettered vanity sizes (XS–XL). Kids’ clothing—especially in EU and JP—leans heavily on height or age proxies (EU 116 ≈ 6–7 years). Converting children’s sizes requires extra caution: growth spurts mean two kids of the same age may need different heights; use conversion as a directional estimate and confirm with actual measurements when possible.</p>
+              <p><strong>Limitations of any clothing size converter:</strong> (a) Brand fit philosophy (slim, relaxed, oversized) shifts final garment measurements; (b) Fabric stretch and recovery (denim vs jersey vs woven) produce wearing ease differences; (c) Vanity sizing gradually inflates numeric labels over decades; (d) Regional threshold variance—for example, EU 40 may correspond to a range of actual bust measurements. Treat conversions as a <em>starting anchor</em>, then refine with brand charts and user reviews mentioning fit.</p>
+              <p><strong>Practical workflow for international shopping using this clothes size converter:</strong></p>
+              <ol style="margin:12px 0 22px;padding-left:22px;">
+                <li>Identify your most reliable base size in one region (e.g., US Women’s 8 dress, Men’s 32 waist pants).</li>
+                <li>Open the converter: select category (Women/Men/Kids), garment type, origin region (US), and size (8).</li>
+                <li>Obtain equivalent UK/EU/JP sizes (e.g., UK 12, EU 40, JP 11).</li>
+                <li>Navigate retailer’s site filtering or searching using the converted local size string.</li>
+                <li>Review detailed product measurements if provided (bust, waist, hip, inseam). Confirm tolerance (difference between your measurement and garment). Aim for 2–4 cm allowance in woven garments, 1–2 cm in stretch items.</li>
+                <li>Cross-check reviews for “runs small” or “runs large.” Adjust one size up or down accordingly.</li>
+              </ol>
+              <p><strong>Expanding conversions beyond the four displayed regions:</strong> Many shoppers also need AU (Australia), CN (China), KR (Korea), MX (Mexico) or FR (France – though FR often equates to EU). While the current implementation centers on US/UK/EU/JP, the same pattern can be extended by inserting additional mapping objects. If you code future enhancements, maintain consistent property keys (e.g., <code>au</code>, <code>cn</code>) and update the UI with dynamic column injection for responsive layout.</p>
+              <p><strong>Data hygiene & normalization inside the tool:</strong> Note the use of a <code>normalizeSize()</code> helper to upper‑case and strip spaces. This prevents user entry variance or dataset irregularities from breaking row matching. In more complex clothing size converter implementations you might also sanitize hyphenated ranges (e.g., “10-12”) or letter‑number hybrids ("M/38").</p>
+              <p><strong>Enhancing the result panel for deeper apparel insight:</strong> The current output summarizes equivalent sizes. Advanced versions of a <em>clothes size converter</em> could append a “Fit Advisory” box aggregating crowd-sourced adjectives: slim shoulders, generous sleeve length, narrow waist. This descriptor layer transforms static numeric conversion into practical purchase guidance. Another enhancement: linking each converted size to a micro chart showing average body measurement bands (e.g., EU 40 bust 88–92 cm, waist 70–74 cm, hip 94–98 cm).</p>
+              <p><strong>Integrating measurement input:</strong> Some advanced international clothing size conversion tools let users enter raw body measurements (chest/bust, waist, hip) then algorithmically suggest target sizes per region. This hybrid approach addresses vanity sizing drift. Implementation pattern: store threshold arrays, run a binary or linear search mapping measurement to region’s size label, then reuse existing mapping table to display equivalents. Doing so evolves the <em>clothes size converter</em> from a static look‑up to a semi‑intelligent fit advisor.</p>
+              <p><strong>Edge cases in apparel conversion:</strong> (1) Plus sizes: Extended ranges (US 16–28) often require different grading rules; (2) Petite/Tall variants: Number may match but vertical proportions (rise, inseam) diverge; (3) Unisex garments: Size bridging may bias toward men’s block—watch chest vs hip ratios; (4) Performance compression wear: Intentional negative ease means labeled size might appear smaller than everyday clothing; (5) Children’s transitional sizes overlapping two growth stages produce ambiguous mapping (size “8” vs “8–10”). Always combine conversion with item spec sheet when available.</p>
+              <p><strong>SEO keyword cluster strategy embedded in this guide:</strong> Repeated, contextually relevant phrases—“clothes size converter,” “clothing size converter,” “international clothing size conversion,” “US UK EU JP sizes,” “men’s clothing size chart,” “women’s clothing size chart,” “kids clothing size conversion,” “shirt size converter,” “pants size converter,” “dress size converter”—strengthen semantic signals for search indexing while remaining helpful, not spammy. Each keyword appears in actionable sentences offering value, aligning with modern search engine guidelines that reward usefulness over hollow repetition.</p>
+              <p><strong>Understanding numeric progression differences:</strong> US women’s even-number sequence increments roughly every 2 units; EU increments every 2 as well but offset baseline by measurement rounding; UK uses numbers larger by 4 compared to US until mid ranges. Japanese women’s sizing often uses odd numbers (5, 7, 9, 11, 13) representing body measurement categories. These translation offsets form the fundamental mapping rows in the clothing size converter table.</p>
+              <p><strong>Garment type specificity:</strong> A “dress size converter” row might differ slightly from a “shirt size converter” row in advanced datasets because dresses need integrated bust/waist/hip balancing, while shirts emphasize chest and shoulder. Pants size converters center on waist and inseam. The simplified demonstration here reuses consistent mappings for clarity, yet production tools can store separate arrays per garment with tuned equivalence definitions.</p>
+              <p><strong>Implementing responsive accessibility:</strong> Ensure any extended clothing size converter table uses proper semantic markup. Add <code>aria-labelledby</code> relations, maintain adequate contrast in size badges, and permit keyboard navigation among select boxes and buttons. A truly inclusive international clothing size conversion experience must remain operable for assistive technologies while scaling across mobile screens.</p>
+              <p><strong>Return reduction impact:</strong> Apparel industry studies show that a major proportion of international returns stem from incorrect size selection. A robust clothes size converter reduces waste packaging, reverse logistics emissions, and customer frustration. Including guidance tips like “Check brand chart,” “Read reviews for fit cues,” and “Consider fabric stretch” inside the converter card supports sustainable shopping behavior.</p>
+              <p><strong>Common user mistakes when converting sizes:</strong> (a) Confusing men’s and women’s numeric sequences; (b) Assuming letter sizes mean the same numeric chest globally; (c) Not accounting for regional cut differences (e.g., Japanese men’s sizes narrower through waist); (d) Skipping measurement verification after large fitness changes; (e) Overlooking that kids’ labeling may be age or height driven. The clothing size converter mitigates these missteps by foregrounding explicit region equivalence side by side.</p>
+              <p><strong>Maintaining and updating size tables:</strong> It is wise to version your mapping dataset. If authoritative standards adjust or you add more regions (AU, CN), keep a changelog noting revision date, source references, and impacted garment types. For open-source deployments, transparent documentation increases trust and encourages community contributions—especially valuable for niche categories (maternity wear, adaptive clothing, plus size expansions).</p>
+              <p><strong>Potential advanced features roadmap for this clothes size converter:</strong></p>
+              <ul style="margin:14px 0 24px;padding-left:22px;">
+                <li>Live measurement input with dynamic predicted size per region.</li>
+                <li>Body shape advisory (e.g., athletic, pear, rectangle) influencing garment type recommendations.</li>
+                <li>Brand deviation overlays highlighting which popular brands tend to run small/large vs baseline mapping.</li>
+                <li>Confidence score indicating reliability of each equivalence (high for mid-range sizes, moderate for extremes).</li>
+                <li>Printable international clothing size chart summarizing your personalized conversion snapshot.</li>
+              </ul>
+              <p><strong>Combining clothes size conversion with wardrobe analytics:</strong> When tracking which converted sizes produced successful fits, you can compile a “personal conversion profile.” Over time, the tool could highlight anomalies—e.g., EU 40 usually fits, but a specific brand’s EU 40 dress historically returns—suggesting a systemic brand offset. This adds data-driven personalization to a basic apparel size conversion utility.</p>
+              <p><strong>Security & privacy assurances:</strong> This particular implementation is fully client-side: the clothing size converter does not transmit size inputs or category selections to a server. Expanding with measurement tracking can still preserve privacy by storing preferences in localStorage with explicit user consent and a clear reset mechanism.</p>
+              <p><strong>Cross-category synergy:</strong> Pairing the clothes size converter with a <em>shoe size converter</em> and a <em>dress color matcher</em> (as other tools on this site) forms a holistic fashion toolkit: determine correct international clothing size; match footwear size across regions; coordinate outfit colors for cohesive styling. This integrated workflow reduces friction from idea (need new outfit) to execution (confident purchase) for international shoppers.</p>
+              <p><strong>Measurement tips before using a clothing size converter:</strong> Use a flexible tailor’s tape; measure over thin clothing; keep tape level and snug but not tight. Record: bust/chest (fullest part), waist (narrowest natural crease), hip (fullest around seat), and for pants add inseam (crotch seam to floor in bare feet). Re-measure every 6–12 months or after significant fitness changes. Consistent tracking improves accuracy of international clothing size conversion over time.</p>
+              <p><strong>Understanding tolerance and ease:</strong> Garments include ease—extra space beyond the exact body measurement for comfort and movement. Structured garments (blazers, woven dresses) have less stretch and rely on precise shaping; knit t‑shirts or leggings incorporate mechanical or fiber stretch. When using the clothes size converter for borderline measurements, prefer the smaller size if high stretch exists; consider sizing up when the fabric has negligible give and your measurement falls at the upper edge of a size band.</p>
+              <p><strong>Kids’ growth forecasting:</strong> For children approaching a growth spurt, you may decide between present perfect fit and near-future usability. A strategy: use international clothing size conversion to identify current size across regions, then preview one size up equivalences to decide whether to buy multi-season garments—especially outerwear and specialty items (formal wear). Documenting current converted sizes helps caregivers simplify future scaling decisions.</p>
+              <p><strong>Handling out-of-range sizes:</strong> If your measurement or label isn’t found in the current clothing size converter mapping, treat that as an opportunity to (a) consult brand-specific extended charts; (b) explore specialized retailers; (c) consider custom tailoring. Adding a user feedback component letting visitors request additional rows helps evolve coverage inclusively (e.g., extended plus sizes, adaptive clothing, maternity modifications).</p>
+              <p><strong>Globalization & evolving standards:</strong> As cross-border fashion commerce grows, there are sporadic efforts to promote unified labeling (e.g., one global metric-based code). Until then, tools like this clothes size converter remain indispensable. Maintaining transparent algorithms and accessible explanations fosters trust; disclaimers remind users that conversion is guidance, not a guarantee of identical fit.</p>
+              <p><strong>Summary:</strong> This long-form documentation supports the <em>Clothes Size Converter</em> by explaining international sizing complexity, best usage practices, limitations, enhancement ideas, and sustainable shopping strategies. By combining structured mapping with practical context, the clothing size converter becomes a strategic asset for online apparel decisions, bridging regional labeling gaps and empowering informed, eco-conscious purchases.</p>
+              <p style="font-size:.85rem;color:#555;margin-top:24px;">Disclaimer: All international clothing size conversion outputs are approximations based on typical industry mappings. Always verify with brand charts, measurement guides, and user reviews for optimal fit. The clothes size converter does not replace professional tailoring or medical sizing advice for adaptive garments.</p>
+            </section>
+            <!-- END Long-form Guide Content -->
+          </div>
+        </main>
+        <div style="width:100%;padding:0 24px 40px 24px;display:block;">
           <section style="margin-top:42px;width:100%;" aria-labelledby="clothes-faq-heading">
             <h2 id="clothes-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">
               Clothes Size Converter FAQ</h2>
@@ -194,6 +244,140 @@
                     fit, and your measurements to minimize return risk.</p>
                 </div>
               </div>
+              <!-- Added Extended FAQ Items -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Is the clothes size converter accurate for every brand?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">No single clothing size converter can capture brand-specific pattern quirks. Treat conversions as baseline then fine-tune using brand charts and reviews.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What measurements should I record before using an international clothing size conversion tool?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Record chest or bust, waist, hip and for pants inseam. Accurate tape measurements dramatically improve clothing size converter guidance.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why do US and UK women’s sizes differ by roughly four numbers?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">They were derived from different historical pattern blocks and grading increments—hence US 8 ≈ UK 12, a common conversion row in clothing size converters.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Do vanity sizing trends affect international clothing size conversion?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Vanity sizing inflates actual garment measurements over time, meaning numeric labels may shift. A clothing size converter offers typical equivalence, not brand-time drift compensation.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How should I convert men’s letter sizes (M, L) to EU numbers?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Approximate chest mapping: US M ≈ EU 48, US L ≈ EU 50, but verify with brand charts—our clothes size converter uses representative mapping rows.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why do Japanese men’s shirt sizes show numbers like 87 or 91?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">They reference chest circumference bands in centimeters. The clothing size converter correlates these numeric codes to US/UK/EU labels.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can I use the clothes size converter for plus sizes?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Current mapping focuses on core ranges. Plus size conversions require extended tables; treat results as approximate until expanded dataset support is added.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Does fabric stretch affect which converted size I should pick?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Stretch fabrics (jersey, elastane blends) can tolerate closer fits; rigid woven garments may need a size with extra ease beyond the basic international clothing size conversion.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How often should I re-measure my body for accurate conversions?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Every 6–12 months or after significant fitness changes. Up-to-date measurements improve clothing size converter precision.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why do kids’ EU sizes look like height numbers?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">EU children’s clothing often uses approximate height in centimeters. The clothes size converter translates those to US/UK labels for reference.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Should I size up for layering when using a jacket size conversion?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">If you plan heavy layering, choose the converted size plus one increment for structured jackets; for lightweight shells, your converted size typically suffices.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can the clothing size converter help with sustainable shopping?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Yes. Accurate international clothing size conversion reduces return shipments, packaging waste, and carbon footprint.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">What if my size isn’t listed in the converter dropdown?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">It may be outside current mapping. Check brand extended chart or request additional rows. International clothing size conversion coverage expands over time.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Are letter sizes (XS-XL) consistent globally?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">No. Letter sizes vary widely. A clothing size converter should anchor to numeric or measurement-based equivalence instead of assuming universal letter parity.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Does the converter store any personal data?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">No. The clothes size converter runs client-side; sizes are processed locally and not transmitted.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How do I convert between US men’s waist sizes and EU numbers?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Common mapping: US 32 ≈ EU 48, US 34 ≈ EU 50, US 36 ≈ EU 52. The clothing size converter table lists representative equivalences.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Will adding more regions (AU, CN) change existing results?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">No; existing mapping stays. New region columns simply append additional equivalence data to the clothing size converter output.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Do I need different conversions for athletic compression wear?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Compression garments target closer fits; you may retain your converted size even if ordinary apparel suggests sizing up. Check brand fit intent.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Does inseam factor into this clothing size converter?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Current mapping focuses on waist/overall garment size. Inseam varies separately—consult product measurements for full pants fit accuracy.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">How reliable are kids’ size conversions for gifting?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">They provide directional guidance. For gifts, consider one size up for longevity unless growth charts indicate stability.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Can I export or print my converted clothing sizes?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Not yet. Future enhancements might add a printable international clothing size chart summary or PDF export.</p>
+                </div>
+              </div>
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name" style="font-size:1.05rem;">Why does my usual US size sometimes map to two EU sizes?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                  <p itemprop="text" style="font-size:.92rem;">Borderline measurements span two EU size bands. The clothes size converter selects the most common equivalence but brand charts refine the choice.</p>
+                </div>
+              </div>
+              <!-- End Extended FAQ Items -->
             </div>
           </section>
         </div>

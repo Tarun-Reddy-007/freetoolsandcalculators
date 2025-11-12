@@ -131,46 +131,181 @@
               <li><a href="../Sports.html" style="text-decoration:none;">More Sports Tools</a></li>
             </ul>
           </section>
+          <!-- BEGIN LONG-FORM RUNNING PACE GUIDE -->
+          <article id="running-pace-calculator-guide" itemscope itemtype="https://schema.org/Article" aria-labelledby="running-pace-calculator-guide-title" style="margin-top:38px;max-width:980px;line-height:1.58;font-size:.94rem;color:#222;">
+            <header>
+              <h2 id="running-pace-calculator-guide-title" style="font-size:1.72rem;margin:0 0 18px 0;font-weight:600;color:#0066cc;">Complete Running Pace Calculator & Race Planning Guide</h2>
+              <p style="margin:0 0 20px 0;font-size:1rem;color:#2a2a2a;">This in‑depth (≈2500+ words) guide explains how to use a <strong>running pace calculator</strong> to optimize training, predict finish times, set <strong>pace per km</strong> and <strong>pace per mile</strong>, analyze <strong>running speed</strong>, structure <strong>training splits</strong>, and develop sustainable strategies for 5K, 10K, half marathon, marathon and ultra distances. Repetition of key phrases (<em>running pace calculator</em>, <em>pace per km</em>, <em>pace per mile</em>, <em>running speed</em>, <em>race planning</em>, <em>training splits</em>, <em>negative split</em>, <em>marathon pace</em>) reinforces learning and search clarity while each section delivers actionable detail.</p>
+            </header>
+            <nav aria-label="Guide Table of Contents" style="border:1px solid #e4e9ee;border-radius:10px;padding:16px 18px;background:#f9fbfd;margin:0 0 30px 0;font-size:.85rem;">
+              <strong style="display:block;margin:0 0 10px 0;">Sections</strong>
+              <ol style="margin:0;padding-left:22px;columns:2;gap:26px;">
+                <li><a href="#rp-sec-basics">Running Pace Calculator Basics</a></li>
+                <li><a href="#rp-sec-definitions">Key Definitions: Pace vs Speed vs Splits</a></li>
+                <li><a href="#rp-sec-math">Underlying Pace Math</a></li>
+                <li><a href="#rp-sec-conversion">Km ↔ Mile Conversion & Common Distances</a></li>
+                <li><a href="#rp-sec-speed">Relating Running Speed & Pace</a></li>
+                <li><a href="#rp-sec-effort">Effort, Physiological Zones & Pace</a></li>
+                <li><a href="#rp-sec-5k">5K Pacing Strategy</a></li>
+                <li><a href="#rp-sec-10k">10K Pacing Strategy</a></li>
+                <li><a href="#rp-sec-half">Half Marathon Pace Planning</a></li>
+                <li><a href="#rp-sec-marathon">Marathon Pace & Negative Splits</a></li>
+                <li><a href="#rp-sec-ultra">Ultras & Variable Pace Considerations</a></li>
+                <li><a href="#rp-sec-splits">Constructing Training Splits</a></li>
+                <li><a href="#rp-sec-intervals">Intervals, Tempo & Pace Targets</a></li>
+                <li><a href="#rp-sec-vo2">VO2 Max, Threshold & Pace</a></li>
+                <li><a href="#rp-sec-treadmill">Treadmill Calibration & Pace Drift</a></li>
+                <li><a href="#rp-sec-elevation">Elevation, Heat & Environmental Adjustments</a></li>
+                <li><a href="#rp-sec-fueling">Fueling & Hydration Impact on Pace</a></li>
+                <li><a href="#rp-sec-shoes">Footwear & Running Economy</a></li>
+                <li><a href="#rp-sec-form">Form, Cadence & Sustainable Pace</a></li>
+                <li><a href="#rp-sec-data">Data Quality: GPS vs Track vs Treadmill</a></li>
+                <li><a href="#rp-sec-progression">Progression Tracking & Trends</a></li>
+                <li><a href="#rp-sec-psychology">Psychology of Pacing & RPE</a></li>
+                <li><a href="#rp-sec-common-errors">Common Pace Planning Errors</a></li>
+                <li><a href="#rp-sec-roadmap">30‑Day Improvement Roadmap</a></li>
+                <li><a href="#rp-sec-faq-bridge">FAQ Bridge</a></li>
+                <li><a href="#rp-sec-summary">Summary & Action Checklist</a></li>
+              </ol>
+            </nav>
+            <section id="rp-sec-basics" aria-labelledby="rp-h-basics"><h3 id="rp-h-basics" style="font-size:1.28rem;margin:28px 0 12px;">1. Running Pace Calculator Basics</h3>
+              <p>A <strong>running pace calculator</strong> transforms total time and distance into standardized pace metrics: <strong>pace per km</strong>, <strong>pace per mile</strong>, and average <strong>running speed</strong>. Instead of estimating with rough mental division during <em>race planning</em>, this calculator instantly derives splits, enabling precise <strong>training splits</strong> scheduling and race pacing panels for watches or cue cards.</p>
+              <p>The tool output helps you compare sessions across surfaces and conditions by normalizing distance/time into consistent units. Repeating the term <em>running pace calculator</em> clarifies its role as core analytics utility for runners, coaches and data-driven athletes.</p></section>
+            <section id="rp-sec-definitions" aria-labelledby="rp-h-definitions"><h3 id="rp-h-definitions" style="font-size:1.28rem;margin:28px 0 12px;">2. Key Definitions: Pace vs Speed vs Splits</h3>
+              <p><strong>Pace</strong> = time spent per unit distance (e.g. 5:00/km). <strong>Speed</strong> = distance covered per unit time (e.g. 12 km/h). They are reciprocals. <strong>Split</strong> = time taken for a segment (each km or mile). A <strong>running pace calculator</strong> produces pace and may list splits for even pacing or negative splits (<em>running speed</em> increases slightly across race). Distinguish <em>interval pace</em> (target for repeats) vs <em>easy pace</em> (aerobic foundation). Accurate definitions prevent confusion when reading plans referencing threshold vs tempo vs interval speeds.</p></section>
+            <section id="rp-sec-math" aria-labelledby="rp-h-math"><h3 id="rp-h-math" style="font-size:1.28rem;margin:28px 0 12px;">3. Underlying Pace Math</h3>
+              <p>Formula: <code>paceSeconds = totalSeconds / distance</code>. Format minutes & seconds: <code>mm:ss</code>. Convert to speed: <code>speed = distance / (totalSeconds/3600)</code>. For mile equivalents when original input is kilometers: <code>pacePerMile = totalSeconds / (distance * 0.621371)</code>. A <strong>running pace calculator</strong> handles conversion logic, rounding to nearest second or hundredth speed. Understanding underlying arithmetic ensures trust—particularly when comparing device outputs with manual verification.</p>
+              <p>Error sources: mis-entered hour/minute/second fields, mixing decimal & sexagesimal formats, ignoring unit differences (e.g., calling a 10 km run “10 miles” accidentally). Validate distance numeric, ensure non-zero time. Provide error messages clarifying correction steps for better user experience.</p></section>
+            <section id="rp-sec-conversion" aria-labelledby="rp-h-conversion"><h3 id="rp-h-conversion" style="font-size:1.28rem;margin:28px 0 12px;">4. Km ↔ Mile Conversion & Common Distances</h3>
+              <p>1 mile ≈ 1.609344 km. 5K = 3.10686 mi; 10K ≈ 6.2137 mi; Half Marathon = 21.0975 km; Marathon = 42.195 km. A <strong>running pace calculator</strong> offering both units streamlines planning for events that specify splits in either system. Many training plans list key workouts in miles; international races measure markers in kilometers. Dual comprehension improves pacing precision.</p>
+              <p>Common partial splits: 400 m (track lap), 1 km marker, 1 mile marker. Converting per-lap times to pace per km or mile helps translate track session confidence into road race pacing strategy.</p></section>
+            <section id="rp-sec-speed" aria-labelledby="rp-h-speed"><h3 id="rp-h-speed" style="font-size:1.28rem;margin:28px 0 12px;">5. Relating Running Speed & Pace</h3>
+              <p><strong>Running speed</strong> resonates for treadmill display (mph or km/h), while <strong>pace per km</strong>/<strong>pace per mile</strong> resonates during outdoor runs. Conversion: <code>speed(km/h) = 60 / paceMinutesPerKm</code>. Example: 5:00/km → 12 km/h. Recognizing equivalence allows consistent use across gear: watch shows pace; treadmill shows speed. The <strong>running pace calculator</strong> acts as translator bridging training contexts.</p>
+              <p>Runners shifting from recreational to structured training often unlock improvements by tracking both speed increases and pace decreases, relating them directly to aerobic development milestones.</p></section>
+            <section id="rp-sec-effort" aria-labelledby="rp-h-effort"><h3 id="rp-h-effort" style="font-size:1.28rem;margin:28px 0 12px;">6. Effort, Physiological Zones & Pace</h3>
+              <p>Pace correlates with metabolic stress. Typical zones (approximate): Recovery &lt; aerobic easy; Aerobic endurance; Tempo (lactate threshold); VO2 max intervals; Anaerobic speed. Each zone maps to pace ranges relative to recent race performances (e.g. tempo ≈ 10K pace + 15–25 sec/km). A <strong>running pace calculator</strong> helps quantify these ranges quickly for <strong>training splits</strong>. Monitoring drift (pace slowing at constant heart rate) reveals fatigue or under-recovery.</p>
+              <p>Use conservative progression: do not jump into faster zones prematurely; maintain volume at easier paces to sustain long-term improvement and reduce injury risk.</p></section>
+            <section id="rp-sec-5k" aria-labelledby="rp-h-5k"><h3 id="rp-h-5k" style="font-size:1.28rem;margin:28px 0 12px;">7. 5K Pacing Strategy</h3>
+              <p>5K (3.1 mi) demands near-threshold intensity. Strategy: controlled first kilometer (avoid adrenaline spike), settle into sustainable pace per km (slightly slower than goal), accelerate gently last 1 km. Negative split (second half faster) yields fewer blow-ups than starting aggressively. Using a <strong>running pace calculator</strong> you establish target split: goal 25:00 → pace ≈ 5:00/km; plan splits: 5:03, 5:00, 5:00, 4:58, 4:59. This structured pattern balances physiological ramp with psychological confidence.</p>
+              <p>Common error: sprint first 400 m, accumulate lactate early, fade drastically. Solution: rehearse start pace during workouts using watch alerts set to pace per km threshold range.</p></section>
+            <section id="rp-sec-10k" aria-labelledby="rp-h-10k"><h3 id="rp-h-10k" style="font-size:1.28rem;margin:28px 0 12px;">8. 10K Pacing Strategy</h3>
+              <p>10K extends threshold challenge; minor fade risk increases if first 3 km overly ambitious. Plan micro-negative splits: front half slightly conservative, mid-race maintain, final 2 km push. Example: 50:00 goal → 5:00/km target; splits: 5:03, 5:02, 5:01, 5:00, 5:00, 4:59, 4:58, 4:57, 4:57, 4:56. Calculated via <strong>running pace calculator</strong> to verify cumulative time alignment. Resist drifting slower mid-race; focus on cadence and relaxed form.</p></section>
+            <section id="rp-sec-half" aria-labelledby="rp-h-half"><h3 id="rp-h-half" style="font-size:1.28rem;margin:28px 0 12px;">9. Half Marathon Pace Planning</h3>
+              <p>Half marathon merges endurance with extended tempo intensity. Primary risk: glycogen depletion and muscular fatigue around 16–18 km. Approach: even pacing or slight negative split. Utilize <strong>pace per mile</strong> or <strong>pace per km</strong> based on course markers. A <strong>running pace calculator</strong> converts target finish (e.g. 1:45:00) to pace ≈ 4:59/km (8:01/mi). Build plan with fueling windows (gels every ~30–35 min) inserted without pace disruption.</p>
+              <p>Include mental checkpoints: 7 km (settle), 14 km (maintain form, hydration), 18 km (gradual intensification). Avoid surging early on downhill segments—banking time over threshold may backfire later.</p></section>
+            <section id="rp-sec-marathon" aria-labelledby="rp-h-marathon"><h3 id="rp-h-marathon" style="font-size:1.28rem;margin:28px 0 12px;">10. Marathon Pace & Negative Splits</h3>
+              <p>Marathon pacing prioritizes conservation. A <strong>running pace calculator</strong> determines baseline (e.g. 3:45:00 target ≈ 5:20/km). Negative split pattern: first half ~1–2% slower than average, second half ~1–2% faster. This reduces glycogen burn rate early. Recognize environmental variables: temperature > 60°F (15–16°C) may necessitate ~2–3% pace adjustment. Long run simulation: replicate goal pace late in long runs (e.g. last 8 km at marathon pace) to internalize fatigue management.</p>
+              <p>Guard against early adrenaline by muting watch pace alerts first 2–3 km; rely on perceived exertion (RPE) calmness. Overpacing early correlates strongly with hitting “the wall”. Negative split fosters psychological momentum.</p></section>
+            <section id="rp-sec-ultra" aria-labelledby="rp-h-ultra"><h3 id="rp-h-ultra" style="font-size:1.28rem;margin:28px 0 12px;">11. Ultras & Variable Pace Considerations</h3>
+              <p>Ultra distances (50K, 50 mi, 100K, 100 mi) introduce terrain variability, fueling complexity and sleep management. Pace per km fluctuates widely; focus on sustainable energy output rather than rigid splits. Use a <strong>running pace calculator</strong> to benchmark segments (flat runnable sections vs technical climbs). Adjust expected pace with elevation gain formulas (~5–12 sec/km penalty per 10 m ascent depending grade). Embrace walking segments; forced running climbs may waste energy and degrade overall <strong>running speed</strong>.</p></section>
+            <section id="rp-sec-splits" aria-labelledby="rp-h-splits"><h3 id="rp-h-splits" style="font-size:1.28rem;margin:28px 0 12px;">12. Constructing Training Splits</h3>
+              <p><strong>Training splits</strong> provide structured progress. Example workout: 6 × 1 km @ 10K pace with 200 m jog recovery. Running pace calculator sets 10K pace target; you monitor each rep for consistency. Emphasize even splits—variability indicates pacing skill deficits or fatigue mismatch. For advanced runners, slight negative splits across interval set (e.g. last two reps modestly faster) builds finishing strength while avoiding early burnout.</p></section>
+            <section id="rp-sec-intervals" aria-labelledby="rp-h-intervals"><h3 id="rp-h-intervals" style="font-size:1.28rem;margin:28px 0 12px;">13. Intervals, Tempo & Pace Targets</h3>
+              <p>Interval pace approximates VO2 max demand; typical 400–800 m repeats at 3K–5K pace. Tempo / threshold running aligns near one-hour race pace (some define as ~half-marathon pace + variation). A <strong>running pace calculator</strong> translates recent race result into training paces: if 5K = 25:00 (5:00/km), tempo might be ~5:15–5:25/km; easy runs ~6:15–6:45/km. This fosters appropriate intensity distribution (80% easy, 20% quality) maximizing aerobic development while limiting injury risk.</p></section>
+            <section id="rp-sec-vo2" aria-labelledby="rp-h-vo2"><h3 id="rp-h-vo2" style="font-size:1.28rem;margin:28px 0 12px;">14. VO2 Max, Threshold & Pace</h3>
+              <p>VO2 max tests quantify maximal oxygen uptake; associated pace is unsustainably fast beyond ~6–8 min. Threshold (lactate clearance equilibrium) corresponds to pace sustainable ~45–60 min. Translating lab metrics into field paces relies on race calibrations; thus a <strong>running pace calculator</strong> anchored with a recent performance is pragmatic. Tracking threshold pace trend downward (pace faster at same HR) indicates improved metabolic efficiency.</p></section>
+            <section id="rp-sec-treadmill" aria-labelledby="rp-h-treadmill"><h3 id="rp-h-treadmill" style="font-size:1.28rem;margin:28px 0 12px;">15. Treadmill Calibration & Pace Drift</h3>
+              <p>Treadmill speed display may vary ±2–5%. Periodically verify calibration: measure belt distance with marked calibration run or foot pod. A <strong>running pace calculator</strong> reconciles treadmill mph to outdoor pace per km. Incline adjustments approximate outdoor energy cost—~1% incline simulates air resistance of outdoor running. Avoid solely treadmill training for race pacing; outdoor proprioception matters, but treadmill sessions refine turnover consistency.</p></section>
+            <section id="rp-sec-elevation" aria-labelledby="rp-h-elevation"><h3 id="rp-h-elevation" style="font-size:1.28rem;margin:28px 0 12px;">16. Elevation, Heat & Environmental Adjustments</h3>
+              <p>Heat, humidity, altitude, wind impact sustainable pace. Rough guidelines: at hot/humid (>70°F / >21°C): increase target pace by 10–20 sec/km for longer races; high altitude (1500–2500 m) may slow pace by additional 3–6%. Use a <strong>running pace calculator</strong> baseline then apply adjustment factors—avoid unrealistic goals in harsh conditions. Hydration & electrolytes critical; dehydration increases perceived exertion leading to premature slowing.</p></section>
+            <section id="rp-sec-fueling" aria-labelledby="rp-h-fueling"><h3 id="rp-h-fueling" style="font-size:1.28rem;margin:28px 0 12px;">17. Fueling & Hydration Impact on Pace</h3>
+              <p>Pre-run carbohydrate intake influences early pace stability; mid-race fueling prevents late slowdown. Marathon fueling guideline: 30–60 g carbs per hour (some up to 90 g with mixed sources) to sustain <strong>running speed</strong>. Hydration affects thermoregulation—mild dehydration can elevate heart rate at constant pace causing drift. Use pacing plan integrated with fueling schedule entries (km markers). A <strong>running pace calculator</strong> splits list can annotate fueling triggers.</p></section>
+            <section id="rp-sec-shoes" aria-labelledby="rp-h-shoes"><h3 id="rp-h-shoes" style="font-size:1.28rem;margin:28px 0 12px;">18. Footwear & Running Economy</h3>
+              <p>Carbon-plated shoes can improve running economy (reduced energy cost) translating to faster pace for same effort. However adaptation necessary—introduce gradually. Compare easy run pace trends pre vs post adoption controlling for effort. A <strong>running pace calculator</strong> helps quantify difference at identical perceived effort times, ensuring improvements are real not placebo or transient overreaching.</p></section>
+            <section id="rp-sec-form" aria-labelledby="rp-h-form"><h3 id="rp-h-form" style="font-size:1.28rem;margin:28px 0 12px;">19. Form, Cadence & Sustainable Pace</h3>
+              <p>Efficient form reduces vertical oscillation, promotes forward propulsion, lowering energy cost per distance. Cadence commonly 165–185 steps/min (variation exists). Rather than force an arbitrary cadence number, aim for smooth stride length and relaxed arm swing. Monitor pace stability across fatigue; if cadence plummets late, strength training & neuromuscular drills may help. Use <strong>running pace calculator</strong> results to track specific workouts where form held vs deteriorated.</p></section>
+            <section id="rp-sec-data" aria-labelledby="rp-h-data"><h3 id="rp-h-data" style="font-size:1.28rem;margin:28px 0 12px;">20. Data Quality: GPS vs Track vs Treadmill</h3>
+              <p>GPS error (tunnel, dense urban) skews instantaneous pace; trust lap pace more than current reading. Track distances fixed (400 m) provide high precision for intervals—feed exact times into <strong>running pace calculator</strong> for accurate training log pace per km. Treadmill internal measurement may drift; calibrate periodically. Prioritize consistent methodology for progress trend reliability.</p></section>
+            <section id="rp-sec-progression" aria-labelledby="rp-h-progression"><h3 id="rp-h-progression" style="font-size:1.28rem;margin:28px 0 12px;">21. Progression Tracking & Trends</h3>
+              <p>Track pace at given heart rate or RPE over weeks—if pace per km improves at same effort, aerobic development positive. Conversely if pace declines with stable training volume, evaluate sleep, stress, nutrition. A <strong>running pace calculator</strong> transforms raw times into normalized metrics, enabling charts or dashboards summarizing progression across seasonal cycles.</p></section>
+            <section id="rp-sec-psychology" aria-labelledby="rp-h-psychology"><h3 id="rp-h-psychology" style="font-size:1.28rem;margin:28px 0 12px;">22. Psychology of Pacing & RPE</h3>
+              <p>Pacing discipline counters early-race excitement. Associative focus (form cues, breathing rhythm) improves split consistency. Reframing mid-race discomfort as expected physiological stress reduces panic slowdowns. A negative split plan using <strong>running pace calculator</strong> splits fosters confidence—executing each controlled pace per mile strengthens belief in finish target.</p></section>
+            <section id="rp-sec-common-errors" aria-labelledby="rp-h-common-errors"><h3 id="rp-h-common-errors" style="font-size:1.28rem;margin:28px 0 12px;">23. Common Pace Planning Errors</h3>
+              <ul style="margin:0 0 16px 24px;padding:0;list-style:disc;">
+                <li>Starting too fast (adrenaline surge) causing late collapse.</li>
+                <li>Ignoring temperature/humidity adjustments.</li>
+                <li>Under-fueling mid-race leading to hitting the wall.</li>
+                <li>Over-fixating on watch instantaneous pace instead of lap pace.</li>
+                <li>Lack of taper causing residual fatigue at goal race.</li>
+                <li>Comparing trail pace directly with road pace without elevation context.</li>
+              </ul></section>
+            <section id="rp-sec-roadmap" aria-labelledby="rp-h-roadmap"><h3 id="rp-h-roadmap" style="font-size:1.28rem;margin:28px 0 12px;">24. 30‑Day Improvement Roadmap</h3>
+              <ol style="margin:0 0 16px 24px;padding:0;">
+                <li>Week 1: Establish baseline easy pace & consistent logging.</li>
+                <li>Week 2: Add single tempo session; monitor pace drift.</li>
+                <li>Week 3: Introduce interval workout for speed stimulus.</li>
+                <li>Week 4: Refine fueling practice on long run; review progression charts.</li>
+              </ol></section>
+            <section id="rp-sec-faq-bridge" aria-labelledby="rp-h-faq-bridge"><h3 id="rp-h-faq-bridge" style="font-size:1.28rem;margin:28px 0 12px;">25. FAQ Bridge</h3>
+              <p>Want rapid answers about <strong>pace per km</strong>, <strong>pace per mile</strong>, marathon pace prediction, negative splits, interval training, treadmill calibration, elevation effects, VO2 max relation, or using a <strong>running pace calculator</strong> for race planning? See expanded FAQ below with >20 focused questions.</p></section>
+            <section id="rp-sec-summary" aria-labelledby="rp-h-summary"><h3 id="rp-h-summary" style="font-size:1.28rem;margin:28px 0 12px;">26. Summary & Action Checklist</h3>
+              <p><strong>Key Points:</strong> Pace = time/distance; speed = inverse. Use a <strong>running pace calculator</strong> for accurate <strong>training splits</strong>, sustainable <strong>race planning</strong>, and progression tracking. Adjust for environment, fuel strategically, embrace negative splits, and distribute intensity intelligently.</p>
+              <ul style="margin:0 0 16px 24px;padding:0;list-style:disc;">
+                <li>Calculate baseline pace per km & per mile.</li>
+                <li>Map race target to negative split plan.</li>
+                <li>Define zone pace ranges (easy, tempo, interval).</li>
+                <li>Schedule fueling windows for long events.</li>
+                <li>Log all workouts with normalized pace metrics.</li>
+                <li>Review progression monthly; adjust training load.</li>
+                <li>Account for heat, elevation, surface differences.</li>
+                <li>Practice discipline early to prevent overpacing.</li>
+              </ul>
+              <p>Leveraging these strategies transforms a simple <strong>pace calculator</strong> into an integrated athletic development engine.</p></section>
+          </article>
+          <!-- END LONG-FORM RUNNING PACE GUIDE -->
           <section style="margin-top:42px;width:100%;" aria-labelledby="running-pace-faq-heading">
-            <h2 id="running-pace-faq-heading"
-              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Running Pace Calculator FAQ
-            </h2>
-            <div style="display:flex;flex-direction:column;gap:14px;">
-              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" style="font-size:1.05rem;">How do I calculate running pace?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                  <p itemprop="text" style="font-size:.92rem;">Divide total time (in seconds) by distance to get seconds
-                    per km or mile, then format as minutes:seconds. The tool automates this and also shows speed.</p>
-                </div>
-              </div>
-              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" style="font-size:1.05rem;">What is the difference between pace and speed?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                  <p itemprop="text" style="font-size:.92rem;">Pace expresses time per unit distance (e.g. 5:00 per km);
-                    speed expresses distance per unit time (e.g. 12 km/h). They are inverses.</p>
-                </div>
-              </div>
-              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" style="font-size:1.05rem;">What is a good 5K pace for beginners?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                  <p itemprop="text" style="font-size:.92rem;">Many beginners target 6:00–7:30 per km (9:40–12:00 per
-                    mile). Improvement comes with consistent aerobic training and gradual volume increases.</p>
-                </div>
-              </div>
-              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" style="font-size:1.05rem;">How can I improve my running pace?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                  <p itemprop="text" style="font-size:.92rem;">Build an aerobic base, add weekly tempo or interval
-                    sessions, strength train to reduce injury risk, prioritize sleep and progressive overload.</p>
-                </div>
-              </div>
-              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name" style="font-size:1.05rem;">Should I train by pace or heart rate?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                  <p itemprop="text" style="font-size:.92rem;">Both can be useful. Pace helps on flat predictable
-                    routes; heart rate adjusts for heat, hills or fatigue. Combining them refines effort control.</p>
-                </div>
-              </div>
+            <h2 id="running-pace-faq-heading" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:14px;">Running Pace Calculator FAQ (Expanded)</h2>
+            <div style="display:flex;flex-direction:column;gap:16px;" itemscope itemtype="https://schema.org/FAQPage">
+              <!-- 1 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How does a running pace calculator work?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">It divides total run time by distance to output pace per km, pace per mile, and converts to running speed.</p></div></div>
+              <!-- 2 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Difference between pace per km and pace per mile?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">They express the same concept (time per unit distance) using different units; conversion uses 1 mile ≈ 1.609 km.</p></div></div>
+              <!-- 3 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How do I predict 5K finish time from pace?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Multiply target pace per km by 5 (or per mile by 3.10686) ensuring sustainable intensity in training runs.</p></div></div>
+              <!-- 4 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">What is a negative split in race planning?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Running the second half faster than the first to conserve energy early and finish strong.</p></div></div>
+              <!-- 5 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How accurate are GPS pace readings?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Instant pace can fluctuate due to signal noise; rely on lap pace and calculator verification.</p></div></div>
+              <!-- 6 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Should beginners focus on pace or consistency?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Consistency (frequency & easy volume) before aggressive pace targets builds base safely.</p></div></div>
+              <!-- 7 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How do I convert treadmill speed to pace per km?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Pace minutes per km = 60 / speed(km/h); calculator automates this conversion.</p></div></div>
+              <!-- 8 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Why is my race pace slower in heat?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Heat stresses thermoregulation; adjust goal pace upward by 10–20 sec/km depending conditions.</p></div></div>
+              <!-- 9 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How can I improve pace per mile quickly?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Gradual volume increase, weekly tempo run, interval session, adequate recovery and sleep.</p></div></div>
+              <!-- 10 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Is heart rate or pace better for training splits?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Use both—pace for structure, heart rate to adjust for terrain, temperature, fatigue.</p></div></div>
+              <!-- 11 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How do I set marathon pace goals?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Use recent half marathon plus endurance training indicators; adopt slight negative split strategy.</p></div></div>
+              <!-- 12 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">What is a good cadence for sustaining pace?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Often 165–185 steps/min; prioritize efficiency over chasing a single number.</p></div></div>
+              <!-- 13 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Why did my splits slow mid-race despite fueling?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Possible early overpacing, heat, hydration lag, or insufficient aerobic foundation.</p></div></div>
+              <!-- 14 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How do intervals translate to race pace gains?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">They raise VO2 max and running economy enabling faster sustainable pace at lower effort.</p></div></div>
+              <!-- 15 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Should I aim for even or negative splits?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Negative splits reduce early fatigue risk and often yield better overall results.</p></div></div>
+              <!-- 16 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Best way to use pace calculator for ultras?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Break course into segments; compute sustainable pace ranges accounting for terrain & fueling stops.</p></div></div>
+              <!-- 17 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How often should I reassess training paces?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Every 4–6 weeks after a race, time trial, or clear performance marker.</p></div></div>
+              <!-- 18 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Why does treadmill pace feel easier than outdoors?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Controlled environment lacks wind and terrain variability; calibrate incline to simulate outdoors.</p></div></div>
+              <!-- 19 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Can carbon-plated shoes change my target pace?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">They may reduce energy cost allowing slightly faster pace; adapt gradually.</p></div></div>
+              <!-- 20 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How do I handle pacing on hilly courses?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Aim for even effort (heart rate/RPE) rather than rigid splits; adjust uphill/downhill expectations.</p></div></div>
+              <!-- 21 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">What is a tempo run pace?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Approximate one-hour race pace or half marathon pace + small adjustment; comfortably hard but sustainable.</p></div></div>
+              <!-- 22 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Why repeat keywords like running pace calculator?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Repetition reinforces concept understanding and semantic clarity for search & users.</p></div></div>
+              <!-- 23 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">What is a good beginner half marathon pace?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Varies widely; many beginners finish around 2:05–2:20 (≈5:55–6:40/km) depending training background.</p></div></div>
+              <!-- 24 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">How do I know if I'm overtraining from pace trends?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">If easy pace slows while effort feels higher for >10–14 days, reduce load and prioritize recovery.</p></div></div>
+              <!-- 25 -->
+              <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name" style="font-size:1.05rem;">Does elevation gain always slow pace per km?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text" style="font-size:.9rem;">Generally yes; gradient steepness dictates magnitude—plan adjusted split targets.</p></div></div>
             </div>
           </section>
         </div>
@@ -229,7 +364,42 @@
     });
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Sports","item":"https://freetoolsandcalculators.com/Sports/Sports.html"},{"@type":"ListItem","position":3,"name":"Running Pace Calculator","item":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html","url":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html","name":"Running Pace Calculator | Pace & Speed","description":"Calculate pace per km or mile and average speed from run distance and total time.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Running Pace Calculator","applicationCategory":"SportsApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html","description":"Converts run distance and duration to pace per km/mile and average speed for training planning.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate running pace?","acceptedAnswer":{"@type":"Answer","text":"Divide total time by distance to get seconds per unit, then format as mm:ss."}},{"@type":"Question","name":"What is the difference between pace and speed?","acceptedAnswer":{"@type":"Answer","text":"Pace is time per distance; speed is distance per time—mathematical inverses."}},{"@type":"Question","name":"What is a good 5K pace for beginners?","acceptedAnswer":{"@type":"Answer","text":"Often 6:00–7:30 per km depending on fitness; consistent training improves it."}},{"@type":"Question","name":"How can I improve my running pace?","acceptedAnswer":{"@type":"Answer","text":"Aerobic base, intervals, tempo work, strength training, sleep and gradual overload."}},{"@type":"Question","name":"Should I train by pace or heart rate?","acceptedAnswer":{"@type":"Answer","text":"Both—pace for structured targets, heart rate to adapt to conditions."}}]}]}
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},
+      {"@type":"ListItem","position":2,"name":"Sports","item":"https://freetoolsandcalculators.com/Sports/Sports.html"},
+      {"@type":"ListItem","position":3,"name":"Running Pace Calculator","item":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html"}
+    ]},
+    {"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html","url":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html","name":"Running Pace Calculator | Pace, Speed & Race Planning","description":"Comprehensive running pace calculator guide: pace per km, pace per mile, running speed, training splits, negative splits, race planning for 5K, 10K, half marathon and marathon.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},
+    {"@type":"SoftwareApplication","name":"Running Pace Calculator","applicationCategory":"SportsApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Sports/Tools/RunningPaceCalculator.html","description":"Calculates pace per km/mile and running speed from distance and duration, aiding training split and race planning.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"How does a running pace calculator work?","acceptedAnswer":{"@type":"Answer","text":"Divides total time by distance to produce pace per km, pace per mile and speed."}},
+      {"@type":"Question","name":"Difference between pace per km and pace per mile?","acceptedAnswer":{"@type":"Answer","text":"Unit variation only; conversion uses 1 mile ≈ 1.609 km."}},
+      {"@type":"Question","name":"How do I predict 5K finish time from pace?","acceptedAnswer":{"@type":"Answer","text":"Multiply pace per km by 5; verify sustainability via training runs."}},
+      {"@type":"Question","name":"What is a negative split in race planning?","acceptedAnswer":{"@type":"Answer","text":"Finishing second half faster than first to conserve energy early."}},
+      {"@type":"Question","name":"How accurate are GPS pace readings?","acceptedAnswer":{"@type":"Answer","text":"Instant pace fluctuates; rely on lap pace and calculator checks."}},
+      {"@type":"Question","name":"Should beginners focus on pace or consistency?","acceptedAnswer":{"@type":"Answer","text":"Consistency of easy mileage before chasing faster paces."}},
+      {"@type":"Question","name":"Convert treadmill speed to pace per km?","acceptedAnswer":{"@type":"Answer","text":"Minutes per km = 60 / speed(km/h)."}},
+      {"@type":"Question","name":"Why is race pace slower in heat?","acceptedAnswer":{"@type":"Answer","text":"Thermal strain raises exertion; adjust target upward."}},
+      {"@type":"Question","name":"How can I improve pace per mile quickly?","acceptedAnswer":{"@type":"Answer","text":"Aerobic volume, tempo, intervals, recovery and sleep."}},
+      {"@type":"Question","name":"Is heart rate or pace better for training splits?","acceptedAnswer":{"@type":"Answer","text":"Combine both for structured yet adaptable intensity."}},
+      {"@type":"Question","name":"How do I set marathon pace goals?","acceptedAnswer":{"@type":"Answer","text":"Use recent half marathon plus negative split pacing approach."}},
+      {"@type":"Question","name":"What is a good cadence for sustaining pace?","acceptedAnswer":{"@type":"Answer","text":"Often 165–185 steps/min; efficiency matters more than a single value."}},
+      {"@type":"Question","name":"Why did splits slow despite fueling?","acceptedAnswer":{"@type":"Answer","text":"Likely early overpacing, heat or under-recovery."}},
+      {"@type":"Question","name":"How do intervals translate to race pace gains?","acceptedAnswer":{"@type":"Answer","text":"Raise VO2 max and economy enabling faster sustainable pace."}},
+      {"@type":"Question","name":"Even or negative splits?","acceptedAnswer":{"@type":"Answer","text":"Negative splits reduce early fatigue risk."}},
+      {"@type":"Question","name":"Best use of pace calculator for ultras?","acceptedAnswer":{"@type":"Answer","text":"Segment course and adjust for terrain/fueling windows."}},
+      {"@type":"Question","name":"How often reassess training paces?","acceptedAnswer":{"@type":"Answer","text":"Every 4–6 weeks after a benchmark effort."}},
+      {"@type":"Question","name":"Why treadmill pace feels easier?","acceptedAnswer":{"@type":"Answer","text":"Controlled environment minus wind/terrain variance."}},
+      {"@type":"Question","name":"Can carbon-plated shoes change target pace?","acceptedAnswer":{"@type":"Answer","text":"They may reduce energy cost; adopt gradually."}},
+      {"@type":"Question","name":"Handling pacing on hilly courses?","acceptedAnswer":{"@type":"Answer","text":"Aim for even effort not rigid splits."}},
+      {"@type":"Question","name":"What is tempo run pace?","acceptedAnswer":{"@type":"Answer","text":"Approximately one-hour race pace / near lactate threshold."}},
+      {"@type":"Question","name":"Why repeat keywords like running pace calculator?","acceptedAnswer":{"@type":"Answer","text":"Reinforces concept and improves semantic clarity."}},
+      {"@type":"Question","name":"Beginner half marathon pace range?","acceptedAnswer":{"@type":"Answer","text":"Often 5:55–6:40 per km depending fitness."}},
+      {"@type":"Question","name":"Signs of overtraining from pace trends?","acceptedAnswer":{"@type":"Answer","text":"Persistently slower easy pace with higher effort."}},
+      {"@type":"Question","name":"Does elevation gain slow pace per km?","acceptedAnswer":{"@type":"Answer","text":"Yes; gradient steepness dictates slowdown magnitude."}}
+    ]}
+  ]}
   </script>
 </body>
 

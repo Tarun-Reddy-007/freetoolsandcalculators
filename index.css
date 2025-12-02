@@ -11,13 +11,16 @@ body, html {
 }
 
 .top-banner, .bottom-banner {
-  height: 200vh;
+  min-height: 90px;
+  max-height: 250px;
   background: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
+/* Hide bottom banner on desktop (850px and above) */
 @media (min-width:850px) {
     .bottom-banner {
         display: none;
@@ -94,11 +97,14 @@ background: linear-gradient(120deg, #e3f2fd 0%, #f5f5f5 100%);
 }
 
 .left-banner {
-  width: 100rem;
+  min-width: 160px;
+  max-width: 300px;
   background: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
 }
 
 .cards-container {
@@ -179,9 +185,17 @@ background: linear-gradient(120deg, #e3f2fd 0%, #f5f5f5 100%);
   }
 }
 
+/* Hide left banner on mobile (below 850px) */
 @media (max-width: 850px) {
   .left-banner {
     display: none;
+  }
+}
+
+/* Show bottom banner on mobile (below 850px) */
+@media (max-width: 849px) {
+  .bottom-banner {
+    display: flex;
   }
 }
 

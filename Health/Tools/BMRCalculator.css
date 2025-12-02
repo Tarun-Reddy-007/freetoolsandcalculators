@@ -35,11 +35,13 @@ html {
 
 .top-banner,
 .bottom-banner {
-  height: 200vh;
+  min-height: 90px;
+  max-height: 250px;
   background: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 
 .ad-space {
@@ -89,11 +91,14 @@ html {
 }
 
 .left-banner {
-  width: 1000px;;
+  min-width: 160px;
+  max-width: 300px;
   background: #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
 }
 
 .bmr-tool-section {
@@ -592,19 +597,28 @@ html {
   }
 }
 
+/* Hide left banner on mobile (below 850px) */
 @media (max-width: 850px) {
   .left-banner {
     display: none;
   }
 }
 
+/* Show bottom banner on mobile (below 850px) */
+@media (max-width: 849px) {
+  .bottom-banner {
+    display: flex;
+  }
+}
+
+/* Hide bottom banner on desktop (850px and above) */
 @media (min-width: 850px) {
   .bottom-banner {
     display: none;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width:850px) {
   .hamburger {
     display: block;
   }

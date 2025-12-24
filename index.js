@@ -49,7 +49,31 @@ const toolsData = {
   ]
 };
 
-document.querySelectorAll(".card").forEach(card => {
+// Optimize image loading with Intersection Observer (lazy load)
+const lazyLoadImages = () => {
+  const cards = document.querySelectorAll(".card");
+  
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          initializeCard(card);
+          observer.unobserve(card);
+        }
+      });
+    }, {
+      rootMargin: '50px' // Start loading 50px before card is visible
+    });
+
+    cards.forEach(card => imageObserver.observe(card));
+  } else {
+    // Fallback for older browsers
+    cards.forEach(card => initializeCard(card));
+  }
+};
+
+function initializeCard(card) {
   const category = card.dataset.category;
   const toolNameEl = card.querySelector(".tool-name");
   const toolLinkEl = card.querySelector(".tool-link");
@@ -61,7 +85,14 @@ document.querySelectorAll(".card").forEach(card => {
     const tool = tools[index];
     toolNameEl.textContent = tool.name;
     toolLinkEl.href = tool.link;
-    card.style.backgroundImage = `url('${tool.img}')`;
+    
+    // Preload image before setting background
+    const img = new Image();
+    img.onload = () => {
+      card.style.backgroundImage = `url('${tool.img}')`;
+    };
+    img.src = tool.img;
+    
     card.setAttribute('aria-label', tool.alt || tool.name);
     card.setAttribute('title', tool.alt || tool.name);
     index = (index + 1) % tools.length;
@@ -69,7 +100,14 @@ document.querySelectorAll(".card").forEach(card => {
 
   updateTool();
   setInterval(updateTool, 4000);
-});
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', lazyLoadImages);
+} else {
+  lazyLoadImages();
+}
 
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");

@@ -1,9 +1,11 @@
-# Force HTTPS
+# Force HTTPS and non-www (canonical URL)
 RewriteEngine On
+
+# Force HTTPS first
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Force non-www
+# Force non-www (redirect www to non-www)
 RewriteCond %{HTTP_HOST} ^www\.freetoolsandcalculators\.com [NC]
 RewriteRule ^(.*)$ https://freetoolsandcalculators.com/$1 [L,R=301]
 

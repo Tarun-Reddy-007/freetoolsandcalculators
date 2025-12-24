@@ -20,6 +20,20 @@ body, html {
   padding: 10px;
 }
 
+/* Reserve space for ads to prevent CLS (Cumulative Layout Shift) */
+.top-banner ins.adsbygoogle,
+.bottom-banner ins.adsbygoogle {
+  min-height: 90px !important;
+  display: block !important;
+  width: 100%;
+}
+
+.left-banner ins.adsbygoogle {
+  min-height: 250px !important;
+  min-width: 160px !important;
+  display: block !important;
+}
+
 /* Hide bottom banner on desktop (850px and above) */
 @media (min-width:850px) {
     .bottom-banner {

@@ -1,0 +1,101 @@
+<!-- 
+  STRUCTURED DATA TEMPLATE FOR CALCULATOR PAGES
+  Add this script tag in the <head> section of each calculator page
+  Replace the placeholder values with actual content for each page
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "BMI Calculator",
+      "description": "Free online BMI calculator to calculate your Body Mass Index instantly",
+      "url": "https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Calculate BMI instantly",
+        "Support for metric and imperial units",
+        "Health category classification",
+        "Privacy-friendly (no data stored)"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://freetoolsandcalculators.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Health Calculators",
+          "item": "https://freetoolsandcalculators.com/Health/Health.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "BMI Calculator",
+          "item": "https://freetoolsandcalculators.com/Health/Tools/BMICalculator.html"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "name": "FreeToolsandCalculators",
+      "url": "https://freetoolsandcalculators.com/",
+      "logo": "https://freetoolsandcalculators.com/Images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://twitter.com/yourhandle"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "FreeToolsandCalculators",
+      "url": "https://freetoolsandcalculators.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://freetoolsandcalculators.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- For Finance Calculator pages, use this variant: -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Loan EMI Calculator",
+  "description": "Calculate your loan EMI with detailed breakdown of principal and interest",
+  "url": "https://freetoolsandcalculators.com/Finance/Tools/LoanEMICalculator.html",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- 
+  INSTRUCTIONS:
+  1. Copy the appropriate schema type for each page
+  2. Update the name, description, and URL
+  3. Add to the <head> section before </head>
+  4. Test with: https://search.google.com/test/rich-results
+-->

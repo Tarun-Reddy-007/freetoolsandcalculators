@@ -18,6 +18,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 100%;
+}
+
+/* Ensure ad container has width */
+.top-banner ins.adsbygoogle,
+.bottom-banner ins.adsbygoogle {
+    min-width: 320px;
+    min-height: 50px;
 }
 
 .ad-space {
@@ -74,6 +82,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Ensure left banner ad has width */
+.left-banner ins.adsbygoogle {
+    min-width: 160px;
+    min-height: 200px;
 }
 
 .wcc-section {
@@ -451,6 +465,11 @@ body {
 
     .nav-links.active {
         display: flex;
+    }
+
+    /* Hide left banner ad on mobile to prevent width=0 error */
+    .left-banner {
+        display: none;
     }
 }
 

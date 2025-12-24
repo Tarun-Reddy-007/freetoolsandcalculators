@@ -22,29 +22,12 @@
   <meta name="twitter:title" content="Free Online Calculators & Tools" />
   <meta name="twitter:description" content="Fast, accurate free calculators across health, finance, fitness, utilities & more." />
   <meta name="twitter:image" content="https://freetoolsandcalculators.com/Images/Health/bmi_calculator.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* Self-hosted fonts - no render blocking */
-    @font-face {
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
-    }
-    @font-face {
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
-    }
-    @font-face {
-      font-family: 'Poppins';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
-    }
     /* Critical CSS - Above the fold content for mobile */
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
     body,html{height:100%}
@@ -60,11 +43,6 @@
     .intro{max-width:850px;text-align:left;margin:0 auto 40px}
     .intro h1{font-size:2.4rem;font-weight:600;color:#0066cc;margin-bottom:16px}
     .intro p{font-size:.95rem;line-height:1.48;color:#444}
-    /* Reserve space for ads to prevent layout shift */
-    .top-banner,.bottom-banner{min-height:90px;max-height:250px}
-    .left-banner{min-width:160px;max-width:300px}
-    .top-banner ins.adsbygoogle,.bottom-banner ins.adsbygoogle{min-height:90px;display:block!important}
-    .left-banner ins.adsbygoogle{min-height:250px;min-width:160px;display:block!important}
     @media(max-width:850px){.hamburger{display:block}.nav-links{display:none;flex-direction:column;gap:10px;position:absolute;top:157px;width:30%;padding:10px 0 10px 14px;z-index:100}.nav-links.active{display:flex}.left-banner{display:none}}
   </style>
   <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">

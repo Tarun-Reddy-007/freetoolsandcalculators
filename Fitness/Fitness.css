@@ -142,17 +142,6 @@ html {
   min-height: 66vh;
 }
 
-.left-banner {
-  min-width: 160px;
-  max-width: 300px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  flex-shrink: 0;
-}
-
 .cards-container {
   flex: 1;
   display: grid;
@@ -228,20 +217,6 @@ html {
 @media (max-width: 600px) {
   .cards-container {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Hide left banner on mobile (below 850px) */
-@media (max-width: 850px) {
-  .left-banner {
-    display: none;
-  }
-}
-
-/* Show bottom banner on mobile (below 850px) */
-@media (max-width: 849px) {
-  .bottom-banner {
-    display: flex;
   }
 }
 

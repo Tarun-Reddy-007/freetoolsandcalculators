@@ -10,26 +10,6 @@ body {
     height: 100%;
 }
 
-.top-banner,
-.bottom-banner {
-    height: 200vh;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ad-space {
-    background: #ddd;
-    color: #333;
-    border: 1px dashed #888;
-    width: 95%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -64,14 +44,6 @@ body {
 .main-container {
     display: flex;
     min-height: 66vh;
-}
-
-.left-banner {
-    width: 1000px;;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .cs-section {

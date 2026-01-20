@@ -9,25 +9,6 @@ body,
 html {
     height: 100%;
 }
-
-.top-banner,
-.bottom-banner {
-    min-height: 90px;
-    max-height: 250px;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.ad-space {
-    background: #ddd;
-    color: #333;
-    border: 1px dashed #888;
-    width: 95%;
-    height: 80%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -68,16 +49,6 @@ html {
     min-height: 66vh;
 }
 
-.left-banner {
-    min-width: 160px;
-    max-width: 300px;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    flex-shrink: 0;
-}
 
 .hle-tool-section {
     flex: 1;

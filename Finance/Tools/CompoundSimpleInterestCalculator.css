@@ -9,25 +9,6 @@ body,
 html {
     height: 100%;
 }
-
-.top-banner,
-.bottom-banner {
-    min-height: 90px;
-    max-height: 250px;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.ad-space {
-    background: #ddd;
-    color: #333;
-    border: 1px dashed #888;
-    width: 95%;
-    height: 80%;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -66,17 +47,6 @@ html {
 .main-container {
     display: flex;
     min-height: 66vh;
-}
-
-.left-banner {
-    min-width: 160px;
-    max-width: 300px;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    flex-shrink: 0;
 }
 
 .interest-tool-section {
@@ -490,16 +460,7 @@ html {
     }
 }
 
-/* Hide left banner on mobile (below 900px) */
-@media (max-width:900px) {
-    .left-banner {
-        display: none;
-    }
-
-    /* Show bottom banner on mobile */
-    .bottom-banner {
-        display: flex;
-    }
+/* Show bottom banner on mobile */
 
     .interest-tool-section {
         padding: 30px 18px 18px;
@@ -640,12 +601,6 @@ html {
 @media (max-width:600px) {
     .cards-container {
         grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width:850px) {
-    .left-banner {
-        display: none;
     }
 }
 

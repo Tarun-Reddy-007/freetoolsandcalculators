@@ -416,17 +416,7 @@ body {
     }
 }
 
-@media (min-width:850px) {
-    .bottom-banner {
-        display: none;
-    }
-}
-
 @media (max-width:900px) {
-    .left-banner {
-        display: none;
-    }
-
     .wcc-section {
         padding: 30px 14px;
     }

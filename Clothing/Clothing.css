@@ -84,24 +84,6 @@ html {
   height: 100%;
 }
 
-.top-banner,
-.bottom-banner {
-  min-height: 90px;
-  max-height: 250px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-/* Hide bottom banner on desktop (850px and above) */
-@media (min-width:850px) {
-  .bottom-banner {
-    display: none;
-  }
-}
-
 .layout-shell {
   height: 100vh;
   display: flex;
@@ -169,17 +151,6 @@ html {
 .main-container {
   display: flex;
   min-height: 66vh;
-}
-
-.left-banner {
-  min-width: 160px;
-  max-width: 300px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  flex-shrink: 0;
 }
 
 .cards-container {

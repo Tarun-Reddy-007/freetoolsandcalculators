@@ -10,28 +10,6 @@ body {
     height: 100%;
 }
 
-.top-banner,
-.bottom-banner {
-    min-height: 90px;
-    max-height: 250px;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.ad-space {
-    background: #ddd;
-    color: #333;
-    border: 1px dashed #888;
-    width: 95%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .navbar {
     display: flex;
     align-items: center;
@@ -66,17 +44,6 @@ body {
 .main-container {
     display: flex;
     min-height: 66vh;
-}
-
-.left-banner {
-    min-width: 160px;
-    max-width: 300px;
-    background: #f2f2f2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    flex-shrink: 0;
 }
 
 .dlc-section {
@@ -392,21 +359,6 @@ body {
     }
 }
 
-/* Hide left banner on mobile (below 900px) */
-@media (max-width:900px) {
-    .left-banner {
-        display: none;
-    }
-
-    /* Show bottom banner on mobile */
-    .bottom-banner {
-        display: flex;
-    }
-
-    .dlc-section {
-        padding: 30px 18px 18px;
-    }
-}
 
 @media (max-width:700px) {
     .dlc-form {

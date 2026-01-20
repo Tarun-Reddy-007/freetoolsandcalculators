@@ -33,28 +33,6 @@ html {
   padding: 0 0 30% 0;
 }
 
-.top-banner,
-.bottom-banner {
-  min-height: 90px;
-  max-height: 250px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.ad-space {
-  background: #ddd;
-  color: #333;
-  border: 1px dashed #888;
-  width: 95%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .navbar {
   display: flex;
   align-items: center;
@@ -88,17 +66,6 @@ html {
 
 .main-container {
   display: none;
-}
-
-.left-banner {
-  min-width: 160px;
-  max-width: 300px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  flex-shrink: 0;
 }
 
 .bmr-tool-section {
@@ -594,27 +561,6 @@ html {
 @media (max-width: 600px) {
   .cards-container {
     grid-template-columns: 1fr;
-  }
-}
-
-/* Hide left banner on mobile (below 850px) */
-@media (max-width: 850px) {
-  .left-banner {
-    display: none;
-  }
-}
-
-/* Show bottom banner on mobile (below 850px) */
-@media (max-width: 849px) {
-  .bottom-banner {
-    display: flex;
-  }
-}
-
-/* Hide bottom banner on desktop (850px and above) */
-@media (min-width: 850px) {
-  .bottom-banner {
-    display: none;
   }
 }
 

@@ -84,27 +84,6 @@ html {
   height: 100%;
 }
 
-.top-banner,
-.bottom-banner {
-  min-height: 90px;
-  max-height: 250px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ad-space {
-  background: #ddd;
-  color: #333;
-  border: 1px dashed #888;
-  width: 95%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .navbar {
   display: flex;
   align-items: center;
@@ -139,15 +118,6 @@ html {
 .main-container {
   display: flex;
   min-height: 66vh;
-}
-
-.left-banner {
-  min-width: 160px;
-  max-width: 300px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .cards-container {
@@ -229,12 +199,6 @@ html {
 }
 
 @media (max-width: 850px) {
-  .left-banner {
-    display: none;
-  }
-}
-
-@media (max-width: 850px) {
   .hamburger {
     display: block;
   }
@@ -253,12 +217,6 @@ html {
 
   .nav-links.active {
     display: flex;
-  }
-}
-
-@media (min-width:850px) {
-  .bottom-banner {
-    display: none;
   }
 }
 

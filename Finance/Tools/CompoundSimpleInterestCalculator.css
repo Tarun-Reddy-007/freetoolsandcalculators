@@ -9,9 +9,6 @@ body,
 html {
     height: 100%;
 }
-    align-items: center;
-    justify-content: center;
-}
 
 .navbar {
     display: flex;
@@ -465,7 +462,6 @@ html {
     .interest-tool-section {
         padding: 30px 18px 18px;
     }
-}
 
 @media (max-width:700px) {
     .interest-form {

@@ -8,7 +8,6 @@
 body,
 html {
     height: 100%;
-}
     align-items: center;
     justify-content: center;
 }
@@ -64,7 +63,7 @@ html {
 .hle-card {
     background: none;
     padding: 0;
-    max-width: 1150px;
+    max-width: auto;
     width: 100%;
     display: flex;
     flex-direction: column;

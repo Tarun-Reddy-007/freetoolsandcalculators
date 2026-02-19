@@ -112,6 +112,56 @@
               <li><a href="DigitalLogicConverter.html" style="text-decoration:none;">Digital Logic Converter</a></li>
             </ul>
           </section>
+          <section style="margin:48px 24px 0;" aria-labelledby="about-truth-table">
+            <h2 id="about-truth-table" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">About Our Truth Table Generator</h2>
+            <p style="margin:0 0 12px;font-size:0.95rem;line-height:1.6;color:#555;">Truth tables are the foundation of boolean logic and digital circuit design. They systematically list all possible input combinations and their corresponding output values, making them essential for understanding logic gates, boolean algebra, and circuit behavior. Our free Truth Table Generator automates this process, instantly creating complete and accurate truth tables from any boolean expression you provide.</p>
+            <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Whether you're studying computer science, designing digital circuits, or learning propositional logic, this tool eliminates manual enumeration errors and helps you visualize complex boolean relationships. Simply enter your variables (A, B, C, etc.) and your logical expression using standard operators (AND, OR, NOT, XOR), and instantly see all 2^n possible combinations evaluated. Perfect for students, educators, and engineers working with logic design.</p>
+          </section>
+          <section style="margin:32px 24px 0;" aria-labelledby="truth-table-faqs">
+            <h2 id="truth-table-faqs" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">Frequently Asked Questions</h2>
+            <div style="margin-top:16px;">
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What boolean operators does this generator support?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">The generator supports AND (&), OR (|), NOT (!), and XOR (^) operators. These are the fundamental boolean operations used in logic design. You can also use parentheses to control operator precedence, allowing complex nested expressions.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">How many variables can I use in my boolean expression?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Up to 5 variables are supported, generating a truth table with 2^5 = 32 rows. This is typically sufficient for most educational and circuit design purposes. Expressions with more variables would create tables too large for practical visualization.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What's the difference between AND and OR in boolean logic?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">AND returns true only when both inputs are true (A & B requires both true). OR returns true when at least one input is true (A | B is true if either or both are true). Understanding this distinction is crucial for boolean logic and digital circuit design.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">How does XOR differ from OR?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">XOR (exclusive OR) is true when exactly one input is true, but false when both are true. Regular OR is true when at least one input is true. For example: (1 XOR 1) = 0, but (1 OR 1) = 1. XOR is essential for arithmetic circuits and error detection.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Can I use parentheses in my expressions?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Yes! Parentheses control operator precedence, allowing you to build complex expressions like (A & B) | (!C & D). Without parentheses, standard precedence applies: NOT > AND > OR > XOR. Parentheses let you override this order.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Why is a truth table useful for digital circuit design?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Truth tables verify that your boolean logic behaves correctly for all possible input combinations. They're essential for validation before physically implementing circuits, testing software logic, and proving that circuits perform their intended function under all conditions.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What is De Morgan's Law and how do I test it here?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">De Morgan's Laws state: NOT(A & B) = (NOT A) OR (NOT B), and NOT(A | B) = (NOT A) AND (NOT B). Try generating truth tables for both forms with the same variables—you'll see identical results, confirming the laws. This demonstrates important logic equivalences.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">How do I know if my boolean expression is correct?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Generate the truth table and verify it matches your expectations. Check a few specific input combinations manually to confirm. Use this tool to test variations of your expression to see how changes in operators or variable arrangements affect the output.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Can I use this to learn boolean algebra simplification?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Absolutely! Generate truth tables for complex expressions and then test simplified versions. If their truth tables match, your simplification is correct. This is an excellent way to verify boolean algebra techniques and build confidence in your understanding.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Is my data stored or logged when I use this tool?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">No. All truth table generation happens entirely in your browser. Your variables and expressions are never sent to any server, never stored, and never logged. Your work remains completely private and confidential.</p>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
     </div>

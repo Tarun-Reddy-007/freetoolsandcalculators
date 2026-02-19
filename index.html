@@ -82,7 +82,7 @@
         <main aria-labelledby="home-main-title" itemscope itemtype="https://schema.org/WebPage">
           <h1 id="home-main-title" style="margin:24px 24px 8px;font-size:1.9rem;font-weight:600;color:#333;">Free Online Calculators & Tools</h1>
           <p style="margin:0 24px 28px;font-size:.95rem;line-height:1.48;color:#444;">Browse a growing collection of fast, accurate, privacy-friendly calculators and utilities. All computations run locally in your browser—no account, no data storage. Explore categories below to calculate BMI & BMR, loan EMIs & affordability, convert units & dates, generate ASCII art, build truth tables, assess password strength, and more.</p>
-          <section class="cards-container" aria-label="Tool Categories">
+          <section class="cards-container" aria-label="Tool Categories" aria-labelledby="tool-categories-heading">
           <div class="card" data-category="Health">
             <div class="card-overlay">
               <p>Health</p>
@@ -156,7 +156,42 @@
             </div>
           </div>
           </section>
-        </main>
+          <section style="margin:42px 24px 0;" aria-labelledby="tool-categories-heading">
+            <h2 id="tool-categories-heading" style="font-size:1.25rem;color:#333;font-weight:600;margin-bottom:12px;">Our Categories</h2>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;">
+              <li><a href="Health/Health.html" style="text-decoration:none;">Health Calculators</a></li>
+              <li><a href="Fitness/Fitness.html" style="text-decoration:none;">Fitness Tools</a></li>
+              <li><a href="Finance/Finance.html" style="text-decoration:none;">Finance Calculators</a></li>
+              <li><a href="Sports/Sports.html" style="text-decoration:none;">Sports Tools</a></li>
+              <li><a href="Clothing/Clothing.html" style="text-decoration:none;">Clothing Tools</a></li>
+              <li><a href="Utilities/Utilities.html" style="text-decoration:none;">Utilities</a></li>
+              <li><a href="Education/Education.html" style="text-decoration:none;">Education Tools</a></li>
+              <li><a href="Media/Media.html" style="text-decoration:none;">Media Tools</a></li>
+            </ul>
+          </section>
+          <section style="margin:48px 24px 0;" aria-labelledby="about-calculators">
+            <h2 id="about-calculators" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">About Our Free Calculators & Tools</h2>
+            <p style="margin:0 0 12px;font-size:0.95rem;line-height:1.6;color:#555;">Welcome to Free Online Calculators & Tools—a comprehensive suite of browser-based utilities designed for instant calculations across health, finance, fitness, sports, education, media, clothing, and more. Whether you need to assess body composition, plan loan payments, convert measurements, generate content, or analyze logic circuits, our tools provide fast, accurate results without requiring signup or storing your data.</p>
+            <p style="margin:0 0 12px;font-size:0.95rem;line-height:1.6;color:#555;">Every calculator runs entirely on your device, processing inputs locally for maximum speed and privacy. Our collection spans personal health metrics (BMI, BMR, body fat %, hydration), financial planning (loan EMI, compound interest, affordability), fitness tracking (calorie conversion, pace calculation), educational tools (logic converters, truth tables, ASCII art), and specialized utilities (password strength, color matching, date calculations). Whether you're a student, professional, athlete, or everyday user, you'll find tools tailored to your needs.</p>
+            <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">All tools are completely free—no hidden fees, no premium tiers, no data harvesting. Use them as often as you need, on any device, in any browser. Bookmark your favorites and return anytime.</p>
+          </section>
+          <section style="margin:32px 24px 0;" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">Frequently Asked Questions</h2>
+            <div style="margin-top:16px;">
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Are all calculators and tools really free?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Yes—100% free with no registration, paywalls, or premium tiers. Use every tool as often as needed.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Do you store or transmit my input data?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">No. All calculations run locally in your browser. We don't collect, store, transmit, or track your inputs. Complete privacy.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Are the tools mobile friendly?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Yes. All tools feature responsive designs that adapt seamlessly to phones, tablets, and desktops.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">How accurate are the calculators?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Our health and finance tools use industry-standard formulas. For critical decisions (medical, financial), verify results with professionals.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Can I use calculators offline?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">After initial load, most tools continue to work offline since they don't require external API calls.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Are there ads on the site?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Light, non-intrusive ads support development. No invasive tracking of your personal inputs.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Which browsers are supported?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Modern versions of Chrome, Firefox, Safari, and Edge all work seamlessly.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Can I request a new calculator or feature?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Absolutely. Submit feature requests through our contact page or GitHub repository.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">How often are tools updated?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Regular updates enhance accuracy, add features, and improve accessibility based on user feedback.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Are results stored for history or analytics?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">No. Results exist only in your current session. We collect zero personal analytics.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What makes these tools different from other sites?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Local-first processing (speed & privacy), zero signup friction, comprehensive tool library, clean interface, and genuine commitment to user privacy set us apart.</p></div>
+              <div style="margin-bottom:16px;"><h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Can I embed a tool on my website?</h3><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Currently, link directly to specific tool pages. Embedding capability is under consideration for future releases.</p></div>
+            </div>
+          </section>
       </section>
     </div>
   </div>

@@ -115,14 +115,55 @@
           </div>
         </main>
         <div style="width:100%;padding:0 24px 40px 24px;display:block;">
-          <section style="margin-top:0;width:100%;" aria-labelledby="related-media-tools">
-            <h2 id="related-media-tools" style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">
-              Related Design & Media Tools</h2>
-            <ul
-              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;">
-              <li><a href="Clothing/Tools/GradientGenerator.html" style="text-decoration:none;">Gradient Generator</a>
-              </li>
-            </ul>
+          <section style="margin:48px 24px 0;" aria-labelledby="about-color-code">
+            <h2 id="about-color-code" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">About Our Color Code Converter</h2>
+            <p style="margin:0 0 12px;font-size:0.95rem;line-height:1.6;color:#555;">Color codes are fundamental to web design and digital media. Whether working with HEX codes from design tools or RGB values from stylesheets, seamless conversion between formats is essential for developers and designers. Our Color Code Converter instantly transforms between HEX and RGB formats with live preview, validation, and support for shorthand HEX codes—all processed locally in your browser.</p>
+            <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">The converter intelligently expands 3-digit shorthand HEX codes to full 6-digit format, validates input to prevent errors, and displays the actual color preview for visual confirmation. Whether optimizing style sheets, comparing color palettes, or converting design specifications to code, this tool streamlines your workflow. Perfect for front-end developers, UI designers, and anyone working with digital colors.</p>
+          </section>
+          <section style="margin:32px 24px 0;" aria-labelledby="color-faqs">
+            <h2 id="color-faqs" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">Frequently Asked Questions</h2>
+            <div style="margin-top:16px;">
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What is HEX color format and when is it used?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">HEX (hexadecimal) uses 6 characters to represent color: #RRGGBB where RR, GG, BB are red, green, blue values in base-16. Most common in CSS, web design, and digital tools. Compact and widely supported.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What is RGB color format and when is it used?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">RGB lists decimal values (0-255) for red, green, and blue components. Format: rgb(R, G, B). More intuitive than HEX for understanding color composition. Used in CSS, design tools, and programming.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What is the 3-digit HEX shorthand format?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Shorthand like #ABC expands to #AABBCC by doubling each character. Only works when hex digits repeat pairs. This converter automatically expands shorthand to full format for accuracy.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Why might my color look different in different tools?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Display calibration, color space assumptions, and monitor settings affect perceived color. The numerical values are identical; appearance varies by device. Always test colors on target devices.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What's the most common mistake when entering RGB values?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Values outside 0-255 range. Each RGB component must be 0-255. Common errors: missing commas, using percentages instead of integers, or exceeding 255. This converter validates automatically.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Can I include alpha (transparency) in conversions?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Yes. RGBA format is rgb(R, G, B, A) where A is 0-1 opacity. HEX supports 8-digit format #RRGGBBAA for opacity. This converter focuses on basic HEX/RGB; transparency needs additional tools.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Is HEX or RGB better for CSS stylesheets?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Both are equivalent in CSS and produce identical results. HEX is more compact; RGB is more readable. Modern CSS also supports HSL, named colors, and newer formats. Choose based on preference and maintainability.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">How do I convert colors between other formats like HSL?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">This converter handles HEX ↔ RGB. For HSL conversions, use dedicated color tools. However, knowing HEX/RGB provides foundation for understanding all color formats.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Is the conversion mathematically lossless?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Absolutely. HEX and RGB represent the same 24-bit color space (16.7 million colors). Conversion between them is perfect with zero loss. RGB values directly map to HEX bytes.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Is my color data stored when I use this converter?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">No. All processing happens in your browser. Color values you enter are never sent to servers or stored. Your complete privacy is protected during all conversions.</p>
+              </div>
+            </div>
           </section>
         </div>
       </section>

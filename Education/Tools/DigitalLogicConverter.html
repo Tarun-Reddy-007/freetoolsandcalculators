@@ -117,6 +117,56 @@
               <li><a href="TruthTableGenerator.html" style="text-decoration:none;">Truth Table Generator</a></li>
             </ul>
           </section>
+          <section style="margin:48px 24px 0;" aria-labelledby="about-digital-logic">
+            <h2 id="about-digital-logic" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">About Our Digital Logic Converter</h2>
+            <p style="margin:0 0 12px;font-size:0.95rem;line-height:1.6;color:#555;">Understanding number systems is fundamental to computer science, programming, and digital electronics. Binary, octal, decimal, and hexadecimal systems form the backbone of how computers represent and process data. Our free Digital Logic Converter eliminates the confusion and manual calculations, allowing students, developers, and engineers to instantly convert between all major number bases with complete accuracy.</p>
+            <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Whether you're studying computer architecture, debugging firmware, working with color codes, or understanding memory addresses, this tool provides instant conversions with detailed breakdowns. The integrated validation ensures only valid inputs are processed, making it perfect for educational environments and professional development workflows. All conversions happen locally in your browser for maximum speed and privacy.</p>
+          </section>
+          <section style="margin:32px 24px 0;" aria-labelledby="digital-logic-faqs">
+            <h2 id="digital-logic-faqs" style="font-size:1.3rem;color:#333;font-weight:600;margin-bottom:16px;">Frequently Asked Questions</h2>
+            <div style="margin-top:16px;">
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Why do computers use binary instead of decimal?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Binary (base-2) perfectly matches how computer hardware works: transistors have two states (on/off), which map directly to 1 and 0. This alignment makes binary the most natural and efficient representation for all digital systems, despite being harder for humans to read than decimal.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">When and why is hexadecimal used instead of binary?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Hexadecimal (base-16) is used because it represents 4 bits per digit, making it a human-friendly shorthand for binary. Instead of writing long strings of 1s and 0s, developers use hex for memory addresses, color codes (like #FF5733), and binary dumps. It's compact and widely recognized in programming.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What is the purpose of the octal number system in modern computing?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Octal (base-8) was historically important for representing binary in a more readable form. While less common today than hexadecimal, it still appears in Unix file permissions (like chmod 755) and some legacy systems. It represents 3 bits per digit, making it a natural grouping of binary data.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Does this converter handle very large numbers?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">The converter works perfectly for all numbers within JavaScript's safe integer range (up to 2^53-1). For extremely large numbers used in cryptography or specialized applications, precision may be limited. For most educational and professional use cases, the converter handles full accuracy.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">How does positional notation work in different number bases?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">In any base system, each position represents a power of that base. In decimal (base-10), the rightmost digit is 10^0, the next is 10^1, then 10^2, etc. In binary, it's 2^0, 2^1, 2^2. Understanding this concept unlocks how all number system conversions work mathematically.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">What validation does this converter perform on input?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">For binary, only 0 and 1 are valid. For octal, digits 0-7. For decimal, digits 0-9. For hexadecimal, digits 0-9 and letters A-F (case insensitive). Invalid characters are rejected before conversion to prevent errors. This ensures accurate results every time.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Why is hexadecimal used for RGB color codes?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Each color channel (Red, Green, Blue) uses 8 bits (0-255 in decimal), which perfectly converts to 2 hexadecimal digits (00-FF). So a color needs 6 hex digits total (#RRGGBB). Hex is compact, universally recognized in web development, and maps directly to byte values.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Can I use this tool for programming assignments and homework?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Yes! This converter is perfect for verifying your manual calculations, understanding different approaches to number conversion, and checking your work. Using it to learn is encouraged; just make sure you understand the underlying concepts for your studies and exams.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Is there a standard notation for indicating the base of a number?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">Yes! Common notations include: 0b for binary (0b1010), 0o for octal (0o12), no prefix for decimal (10), and 0x for hexadecimal (0xA). Programming languages often support these prefixes, so 0x10 and 16 represent the same value in different bases.</p>
+              </div>
+              <div style="margin-bottom:16px;">
+                <h3 style="font-size:1rem;color:#333;font-weight:600;margin-bottom:8px;">Is my data stored or tracked when I use this converter?</h3>
+                <p style="margin:0;font-size:0.95rem;line-height:1.6;color:#555;">No. All conversions occur entirely in your browser using JavaScript. Nothing is sent to our servers, nothing is stored, and we don't track your conversions. Your privacy is completely protected while using this tool.</p>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
     </div>

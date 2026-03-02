@@ -5,13 +5,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "redirects": [
-      {
-        "source": "/**",
-        "destination": "https://free-tools-and-calculators.web.app:443",
-        "type": 301
-      }
     ]
   }
 }

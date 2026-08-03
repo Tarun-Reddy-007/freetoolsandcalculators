@@ -1,228 +1,557 @@
-<!DOCTYPE html>
-<html lang="en">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Loan EMI Calculator | Free Tools and Calculators for Monthly Payment & Interest</title>
-  <meta name="description"
-    content="Free Personal Loan EMI Calculator: Compute monthly EMI, total interest, processing fee impact, and savings from extra prepayments. Supports different tenures, start month for extra payment, and multiple currencies.">
-  <meta name="keywords"
-    content="personal loan emi calculator, unsecured loan payment, monthly installment, prepayment savings, processing fee, interest rate, finance calculator">
-  <meta name="author" content="FreeToolsandCalculators">
-  <meta name="publisher" content="FreeToolsandCalculators">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <link rel="canonical" href="https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Personal Loan EMI Calculator | Monthly Payment & Interest Tool">
-  <meta property="og:description"
-    content="Instant personal loan EMI, interest, fee impact & extra prepayment savings. Explore related finance calculators.">
-  <meta property="og:url" content="https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator">
-  <meta property="og:site_name" content="FreeToolsandCalculators">
-  <meta property="og:image"
-    content="https://freetoolsandcalculators.com/Images/Finance/personal_loan_emi_calculator.jpg">
-  <meta property="og:image:alt"
-    content="Personal loan EMI calculator interface showing amount, rate, tenure and results">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Personal Loan EMI Calculator | Monthly Payment Tool">
-  <meta name="twitter:description"
-    content="Calculate EMI, total interest, fee impact & prepayment savings. Compare finance calculators.">
-  <meta name="twitter:image"
-    content="https://freetoolsandcalculators.com/Images/Finance/personal_loan_emi_calculator.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5711869378485531"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="PersonalLoanEMICalculator.css" />
-</head>
+html,
+body {
+    height: 100%;
+}
 
-<body>
-  <div class="layout-shell">
-    <nav class="navbar">
-      <div class="nav-links"><a href="../../index.html">FreeToolsandCalculators.com</a></div>
-      <div class="nav-links" id="navLinks">
-        <a href="../../index.html">Home</a>
-        <a href="../../Health/Health.html">Health</a>
-        <a href="../../Fitness/Fitness.html">Fitness</a>
-        <a href="../../Sports/Sports.html">Sports</a>
-        <a href="../../Clothing/Clothing.html">Clothing</a>
-        <a href="../Finance.html">Finance</a>
-        <a href="../../Utilities/Utilities.html">Utilities</a>
-        <a href="../../Education/Education.html">Education</a>
-        <a href="../../Media/Media.html">Media</a>
-      </div>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </nav>
-    <div class="content-row">
-      <section class="scroll-panel">
-        <nav aria-label="Breadcrumb" style="margin:16px 24px 0 24px;font-size:.85rem;">
-          <ol style="list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;">
-            <li><a href="../../index.html">Home</a></li>
-            <li aria-hidden="true">›</li>
-            <li><a href="../Finance.html">Finance</a></li>
-            <li aria-hidden="true">›</li>
-            <li><span>Personal Loan EMI Calculator</span></li>
-          </ol>
-        </nav>
-        <main class="plemi-section" aria-labelledby="plemi-main-title" itemscope itemtype="https://schema.org/WebPage">
-          <div class="plemi-card">
-            <div class="plemi-title-row">
-              <h1 class="plemi-title" id="plemi-main-title">Personal Loan EMI Calculator</h1>
-              <button type="button" class="plemi-info-trigger" aria-describedby="plemiInfoPanel" tabindex="0">i</button>
-              <div id="plemiInfoPanel" class="plemi-info-flyout" role="tooltip" aria-hidden="true">
-                <h2>How Personal Loan EMI Works</h2>
-                <p>Personal loan EMIs are usually at higher interest rates and shorter tenures than secured loans. This
-                  tool shows monthly EMI, total interest, and lets you explore prepayment impact.</p>
-                <ul>
-                  <li>Formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)</li>
-                  <li>Optional flat processing fee percent is added as upfront cost</li>
-                  <li>Extra monthly prepayment reduces interest & tenure (approximate)</li>
-                </ul>
-                <p class="disclaimer">Indicative only. Check lender terms & prepayment penalties.</p>
-              </div>
-            </div>
-            <div class="plemi-interaction-row">
-              <form id="plemiForm" class="plemi-form" autocomplete="off">
-                <div class="input-group">
-                  <label for="currency">Currency</label>
-                  <div class="input-row">
-                    <select id="currency" name="currency">
-                      <option value="INR" selected>INR</option>
-                      <option value="USD">USD</option>
-                      <option value="EUR">EUR</option>
-                      <option value="GBP">GBP</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="input-group">
-                  <label for="principal">Loan Amount</label>
-                  <div class="input-row"><input type="number" id="principal" min="0" placeholder="e.g. 500000"
-                      required /></div>
-                </div>
-                <div class="input-group">
-                  <label for="rate">Annual Interest Rate (%)</label>
-                  <div class="input-row"><input type="number" id="rate" min="0.1" step="0.01" placeholder="e.g. 14.5"
-                      required /></div>
-                </div>
-                <div class="input-group">
-                  <label for="tenure">Tenure (Months)</label>
-                  <div class="input-row"><input type="number" id="tenure" min="1" max="120" value="60" required /></div>
-                  <div class="plemi-inline-buttons" data-group="tenureBtns">
-                    <button type="button" class="active" data-val="12">12m</button>
-                    <button type="button" data-val="24">24m</button>
-                    <button type="button" data-val="36">36m</button>
-                    <button type="button" data-val="48">48m</button>
-                    <button type="button" data-val="60">60m</button>
-                  </div>
-                </div>
-                <div class="input-group">
-                  <label for="processingFee">Processing Fee (%)</label>
-                  <div class="input-row"><input type="number" id="processingFee" min="0" step="0.01" value="0" /></div>
-                </div>
-                <div class="input-group">
-                  <label for="extraPayment">Extra Monthly Prepayment</label>
-                  <div class="input-row"><input type="number" id="extraPayment" min="0" value="0" /></div>
-                  <div class="plemi-small-hint">Optional extra toward principal</div>
-                </div>
-                <div class="input-group">
-                  <label for="startMonth">Extra Starts At (Month #)</label>
-                  <div class="input-row"><input type="number" id="startMonth" min="1" value="1" /></div>
-                </div>
-                <button type="submit" class="plemi-btn">Calculate EMI</button>
-              </form>
-              <div id="plemiResultContainer" class="plemi-result-container">
-                <div class="plemi-main-result">
-                  <span id="emiValue" class="plemi-main-value">--</span>
-                  <span class="plemi-main-label">Monthly EMI</span>
-                  <span id="emiWithExtra" class="plemi-sub-value" style="display:none;"></span>
-                </div>
-                <div class="plemi-progress-wrapper">
-                  <div class="plemi-progress-bar">
-                    <div id="plemiProgress" class="plemi-progress"></div>
-                  </div>
-                  <div class="plemi-scale"><span>Low</span><span>High</span></div>
-                </div>
-                <div id="plemiBreakdown" class="plemi-breakdown"></div>
-                <div id="plemiStats" class="plemi-stats-grid"></div>
-                <div id="plemiTips" class="plemi-tips"></div>
-                <div class="plemi-disclaimer">Illustrative; extra prepayment simulation approximate.</div>
-              </div>
-            </div>
-            <section style="margin-top:32px;width:100%;" aria-labelledby="related-finance-calculators">
-            <h2 id="related-finance-calculators"
-              style="font-size:1.4rem;color:#0066cc;font-weight:600;margin-bottom:12px;">Related Finance Calculators
-            </h2>
-            <ul
-              style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;">
-              <li><a href="LoanEMICalculator.html" style="text-decoration:none;">Generic Loan EMI Calculator</a></li>
-              <li><a href="CarLoanEMICalculator.html" style="text-decoration:none;">Car Loan EMI Calculator</a></li>
-              <li><a href="HomeLoanEligibilityCalculator.html" style="text-decoration:none;">Home Loan Eligibility
-                  Calculator</a></li>
-              <li><a href="LoanAffordabilityCalculator.html" style="text-decoration:none;">Loan Affordability
-                  Calculator</a></li>
-              <li><a href="CompoundSimpleInterestCalculator.html" style="text-decoration:none;">Compound & Simple
-                  Interest Calculator</a></li>
-            </ul>
-          </section>
-        </div>
-      </section>
-    </div>
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0066cc;
+    color: #fff;
+    padding: 10px 20px;
+}
 
-  </div>
-  <script>
-    function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
 
-    const form = document.getElementById('plemiForm');
-    const resultContainer = document.getElementById('plemiResultContainer');
-    const emiValueEl = document.getElementById('emiValue');
-    const emiWithExtraEl = document.getElementById('emiWithExtra');
-    const breakdownEl = document.getElementById('plemiBreakdown');
-    const statsEl = document.getElementById('plemiStats');
-    const tipsEl = document.getElementById('plemiTips');
-    const progressEl = document.getElementById('plemiProgress');
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color .3s;
+}
 
-    function currencySymbol(cur) { switch (cur) { case 'USD': return '$'; case 'EUR': return '€'; case 'GBP': return '£'; default: return '₹'; } }
-    function fmtMoney(v, cur) { const sym = currencySymbol(cur); return sym + Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 }); }
-    function calcEmi(P, annualRate, months) { const r = (annualRate / 100) / 12; const n = months; if (r === 0) return P / n; const pow = Math.pow(1 + r, n); return P * r * pow / (pow - 1); }
-    function simulateWithExtra(P, annualRate, months, extra, startMonth) { if (extra <= 0) return { months: months, interest: 0, interestSaved: 0 }; const r = (annualRate / 100) / 12; const baseEmi = calcEmi(P, annualRate, months); let bal = P; let m = 0; let interestPaid = 0; while (bal > 0 && m < months + 600) { m++; const interest = bal * r; let pay = baseEmi + (m >= startMonth ? extra : 0); if (pay > bal + interest) pay = bal + interest; const principalComp = pay - interest; bal -= principalComp; interestPaid += interest; } const baseInterest = (baseEmi * months) - P; return { months: m, interest: interestPaid, interestSaved: Math.max(0, baseInterest - interestPaid) }; }
-    function setActive(groupAttr, btn) { const selector = '[data-group="' + groupAttr + '"] button'; document.querySelectorAll(selector).forEach(b => b.classList.remove('active')); btn.classList.add('active'); }
-    document.querySelectorAll('[data-group="tenureBtns"] button').forEach(btn => { btn.addEventListener('click', () => { setActive('tenureBtns', btn); document.getElementById('tenure').value = btn.getAttribute('data-val'); }); });
+.nav-links a:hover {
+    color: #010056;
+}
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const currency = document.getElementById('currency').value;
-      const principal = parseFloat(document.getElementById('principal').value) || 0;
-      const rate = parseFloat(document.getElementById('rate').value) || 0;
-      const months = parseInt(document.getElementById('tenure').value, 10) || 0;
-      const processingFeePct = parseFloat(document.getElementById('processingFee').value) || 0;
-      const extra = parseFloat(document.getElementById('extraPayment').value) || 0;
-      const startMonth = parseInt(document.getElementById('startMonth').value, 10) || 1;
-      if (principal <= 0 || rate <= 0 || months <= 0) { resultContainer.style.display = 'none'; resultContainer.classList.remove('show'); return; }
+.hamburger {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
 
-      const emi = calcEmi(principal, rate, months);
-      emiValueEl.textContent = fmtMoney(Math.round(emi), currency);
-      const totalPayment = emi * months; const totalInterest = totalPayment - principal; const processingFeeAmount = principal * (processingFeePct / 100); const totalCostWithFee = totalPayment + processingFeeAmount;
+.main-container {
+    display: flex;
+    min-height: 66vh;
+}
 
-      const sim = simulateWithExtra(principal, rate, months, extra, startMonth);
-      if (extra > 0) { emiWithExtraEl.style.display = 'block'; emiWithExtraEl.textContent = '+ Extra ' + fmtMoney(extra, currency) + ' → Saved ' + fmtMoney(sim.interestSaved, currency) + ' | Months ' + sim.months; } else { emiWithExtraEl.style.display = 'none'; }
+.left-banner {
+    min-width: 160px;
+    max-width: 300px;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
 
-      // Progress (scale smaller typical personal EMIs) 
-      let scaleMax = 100000; if (currency === 'USD' || currency === 'EUR' || currency === 'GBP') scaleMax = 3000; const pct = Math.min(100, (emi / scaleMax) * 100); progressEl.style.width = pct + '%'; progressEl.style.background = pct < 33 ? '#2196f3' : pct < 66 ? '#4caf50' : '#ff9800';
+.plemi-section {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 24px 24px;
+    background: linear-gradient(120deg, #e3f2fd 0%, #f5f5f5 100%);
+}
 
-      breakdownEl.innerHTML = '';
-      [['Loan Amount', fmtMoney(principal, currency)], ['Annual Rate', rate.toFixed(2) + '%'], ['Tenure (months)', months], ['Processing Fee', fmtMoney(processingFeeAmount, currency)], ['Total Cost (w/ fee)', fmtMoney(totalCostWithFee, currency)], ['Total Interest', fmtMoney(totalInterest, currency)]].forEach(r => { const d = document.createElement('div'); d.className = 'plemi-row'; d.innerHTML = '<span>' + r[0] + '</span><span>' + r[1] + '</span>'; breakdownEl.appendChild(d); });
+.plemi-card {
+    background: none;
+    max-width: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-      statsEl.innerHTML = '';
-      [{ lbl: 'Interest % of P', val: (totalInterest / principal * 100).toFixed(1) + '%' }, { lbl: 'Proc. Fee %', val: processingFeePct.toFixed(2) + '%' }, { lbl: 'Monthly EMI', val: fmtMoney(Math.round(emi), currency) }, { lbl: 'Total Pay', val: fmtMoney(Math.round(totalPayment), currency) }, { lbl: 'Eff. Months', val: sim.months !== months ? sim.months : months }, { lbl: 'Saved Int', val: extra > 0 ? fmtMoney(sim.interestSaved, currency) : fmtMoney(0, currency) }].forEach(s => { const c = document.createElement('div'); c.className = 'plemi-stat'; c.innerHTML = '<span class="val">' + s.val + '</span><span class="lbl">' + s.lbl + '</span>'; statsEl.appendChild(c); });
+.plemi-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    position: relative;
+    flex-wrap: wrap;
+}
 
-      let tip = ''; if (extra > 0) tip += 'Prepaying lowers interest; verify no penalties. '; if (processingFeePct > 0) tip += 'Factor fee into APR comparison. '; if (!tip) tip = 'Shorter tenure raises EMI but saves interest.'; tipsEl.textContent = tip;
+.plemi-title {
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #0066cc;
+}
 
-      resultContainer.style.display = 'flex'; setTimeout(() => { resultContainer.classList.add('show'); resultContainer.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
-    });
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://freetoolsandcalculators.com/"},{"@type":"ListItem","position":2,"name":"Finance","item":"https://freetoolsandcalculators.com/Finance/Finance.html"},{"@type":"ListItem","position":3,"name":"Personal Loan EMI Calculator","item":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html"}]},{"@type":"WebPage","@id":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html","url":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html","name":"Personal Loan EMI Calculator | Free Tools and Calculators","description":"Unsecured personal loan EMI, interest breakdown, processing fee impact, prepayment savings and tenure strategy guidance.","isPartOf":{"@type":"WebSite","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"},"inLanguage":"en-US"},{"@type":"SoftwareApplication","name":"Personal Loan EMI Calculator","applicationCategory":"FinanceApplication","operatingSystem":"All","url":"https://freetoolsandcalculators.com/Finance/Tools/PersonalLoanEMICalculator.html","description":"Calculates personal loan EMI, total interest, fee cost and prepayment benefits with multi-tenure options.","publisher":{"@type":"Organization","name":"FreeToolsandCalculators","url":"https://freetoolsandcalculators.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is personal loan EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"Formula: EMI = P * r * (1+r)^n / ((1+r)^n - 1)."}},{"@type":"Question","name":"What interest rates are typical for personal loans?","acceptedAnswer":{"@type":"Answer","text":"Unsecured loans carry higher rates that vary by market, credit score and lender risk models."}},{"@type":"Question","name":"How can I reduce my EMI burden?","acceptedAnswer":{"@type":"Answer","text":"Extend tenure, negotiate lower rate, improve credit profile, or make principal prepayments."}},{"@type":"Question","name":"Do extra monthly prepayments always save interest?","acceptedAnswer":{"@type":"Answer","text":"Yes if applied to principal without penalty; they shorten tenure and cut interest."}},{"@type":"Question","name":"What is a processing fee?","acceptedAnswer":{"@type":"Answer","text":"Upfront lender charge (percentage of principal) increasing effective APR."}},{"@type":"Question","name":"Why are personal loan interest rates higher than secured loans?","acceptedAnswer":{"@type":"Answer","text":"Loans are unsecured; lender lacks collateral, so pricing includes higher risk premium."}},{"@type":"Question","name":"Does improving my credit score lower EMI?","acceptedAnswer":{"@type":"Answer","text":"Lower interest rate from stronger credit reduces EMI and total interest."}},{"@type":"Question","name":"Can I refinance a personal loan to save interest?","acceptedAnswer":{"@type":"Answer","text":"Yes—refinance when interest savings exceed new fees and penalties over planned term."}},{"@type":"Question","name":"Is it better to reduce EMI or tenure after prepayment?","acceptedAnswer":{"@type":"Answer","text":"Reducing tenure maximizes interest saved; lowering EMI improves monthly cash flow."}},{"@type":"Question","name":"Do extra payments early save more than later?","acceptedAnswer":{"@type":"Answer","text":"Earlier principal reduction cuts interest over more remaining months increasing savings."}},{"@type":"Question","name":"What is the difference between nominal rate and APR?","acceptedAnswer":{"@type":"Answer","text":"Nominal excludes fees; APR incorporates fees/timing for true cost comparison."}},{"@type":"Question","name":"Can prepayment have penalties on personal loans?","acceptedAnswer":{"@type":"Answer","text":"Some contracts charge penalties; always review terms prior to prepaying."}},{"@type":"Question","name":"How do I evaluate a consolidation loan?","acceptedAnswer":{"@type":"Answer","text":"Compare new loan interest + fees vs projected interest on existing debts; aim for net savings."}},{"@type":"Question","name":"Should I invest excess cash or prepay loan?","acceptedAnswer":{"@type":"Answer","text":"Compare expected after-tax investment return to loan rate; choose option with higher net benefit."}},{"@type":"Question","name":"Does tenure length affect credit score?","acceptedAnswer":{"@type":"Answer","text":"Tenure itself not; consistent on-time EMI builds positive payment history."}},{"@type":"Question","name":"What happens if I miss an EMI?","acceptedAnswer":{"@type":"Answer","text":"Late fees, extra interest and negative credit reporting may occur—contact lender quickly."}},{"@type":"Question","name":"Is bi-weekly payment useful for personal loans?","acceptedAnswer":{"@type":"Answer","text":"26 half payments per year add ~1 extra monthly payment accelerating payoff modestly."}},{"@type":"Question","name":"Can I negotiate processing fees?","acceptedAnswer":{"@type":"Answer","text":"Often yes—competitive offers and strong credit may secure lower or waived fees."}},{"@type":"Question","name":"Does refinancing reset my credit age?","acceptedAnswer":{"@type":"Answer","text":"New account may reduce average age slightly; savings can outweigh minor score impact."}},{"@type":"Question","name":"Why simulate a stress rate increase?","acceptedAnswer":{"@type":"Answer","text":"Shows resilience if variable or promotional rate rises in future cycles."}},{"@type":"Question","name":"Is my input data stored or shared externally?","acceptedAnswer":{"@type":"Answer","text":"No—calculations occur client-side only preserving privacy."}},{"@type":"Question","name":"Do multiple prepayments harm credit score?","acceptedAnswer":{"@type":"Answer","text":"Regular on-time payments and balance reduction are generally positive for credit health."}},{"@type":"Question","name":"When is a shorter tenure preferable despite higher EMI?","acceptedAnswer":{"@type":"Answer","text":"When stable income & emergency fund exist and interest savings significantly exceed alternatives."}},{"@type":"Question","name":"How do I compare two personal loan offers quickly?","acceptedAnswer":{"@type":"Answer","text":"Compute EMI, total interest, include fees for effective APR; choose lower effective cost with flexibility."}}]}]}
-  </script>
-</body>
+.plemi-info-trigger {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0066cc;
+    background: radial-gradient(circle at 30% 30%, #ffffff 0%, #e3f2fd 70%);
+    color: #0066cc;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+    transition: transform .35s, box-shadow .35s;
+}
 
-</html>
+.plemi-info-trigger:hover,
+.plemi-info-trigger:focus-visible {
+    transform: translateY(-3px) scale(1.06);
+    outline: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .18);
+}
+
+.plemi-info-trigger:active {
+    transform: scale(.93);
+}
+
+.plemi-info-flyout {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: #ffffffee;
+    backdrop-filter: blur(6px);
+    border: 1px solid #c5d8e6;
+    border-radius: 18px;
+    padding: 18px 20px 16px;
+    width: min(600px, 90vw);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px) scale(.98);
+    transition: opacity .55s, transform .55s;
+    z-index: 40;
+}
+
+.plemi-title-row:hover .plemi-info-flyout,
+.plemi-info-trigger:focus+.plemi-info-flyout,
+.plemi-info-trigger:focus-visible+.plemi-info-flyout {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.plemi-info-flyout h2 {
+    font-size: 1.15rem;
+    color: #0066cc;
+    margin-bottom: 6px;
+}
+
+.plemi-info-flyout p {
+    font-size: .9rem;
+    color: #222;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.plemi-info-flyout ul {
+    list-style: disc;
+    margin: 0 0 10px 18px;
+    padding: 0;
+    font-size: .8rem;
+}
+
+.plemi-info-flyout .disclaimer {
+    font-size: .62rem;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    opacity: .85;
+}
+
+.plemi-interaction-row {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+@media (min-width:980px) {
+    .plemi-interaction-row {
+        flex-wrap: nowrap;
+    }
+}
+
+.plemi-form {
+    width: 100%;
+    max-width: auto;;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #e3f2fd;
+    border-radius: 14px;
+    padding: 18px 16px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+}
+
+.plemi-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.plemi-form label {
+    font-size: .95rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.plemi-form .input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.plemi-form input[type=number],
+.plemi-form select {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #b0bec5;
+    font-size: .95rem;
+    background: #f7fafd;
+    color: #222;
+    transition: border .3s;
+}
+
+.plemi-form select {
+    background: #e3f2fd;
+}
+
+.plemi-form input:focus,
+.plemi-form select:focus {
+    border: 1.5px solid #0066cc;
+    outline: none;
+}
+
+.plemi-btn {
+    margin-top: 4px;
+    padding: 11px 0;
+    background: linear-gradient(90deg, #0066cc 60%, #333 100%);
+    color: #fff;
+    font-size: 1.02rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    transition: background .35s, transform .25s;
+}
+
+.plemi-btn:hover {
+    background: linear-gradient(90deg, #004a94 60%, #111 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.plemi-inline-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.plemi-inline-buttons button {
+    flex: 1;
+    min-width: 60px;
+    padding: 6px 8px;
+    background: #ffffff;
+    border: 1.5px solid #8fb6d6;
+    color: #004a94;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .3s, transform .25s;
+}
+
+.plemi-inline-buttons button:hover {
+    background: #e0eef9;
+}
+
+.plemi-inline-buttons button.active {
+    background: #0066cc;
+    color: #fff;
+    border-color: #004a94;
+}
+
+.plemi-small-hint {
+    font-size: .6rem;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: #555;
+}
+
+.plemi-result-container {
+    width: 100%;
+    max-width: 340px;
+    background: linear-gradient(140deg, #f0f7ff 0%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 18px 16px 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: scale(.95) translateY(40px);
+    pointer-events: none;
+    transition: opacity .7s cubic-bezier(.42, 0, .58, 1), transform .7s cubic-bezier(.42, 0, .58, 1);
+}
+
+.plemi-result-container.show {
+    display: flex;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+    animation: plemiPop 1.05s cubic-bezier(.42, 0, .58, 1);
+}
+
+.plemi-main-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 14px;
+    width: 100%;
+}
+
+.plemi-main-value {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #222;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    animation: fadeInNum 1.1s;
+}
+
+.plemi-main-label {
+    font-size: .72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #0066cc;
+    letter-spacing: .6px;
+}
+
+.plemi-sub-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #444;
+    margin-top: -4px;
+}
+
+.plemi-progress-wrapper {
+    width: 100%;
+}
+
+.plemi-progress-bar {
+    height: 14px;
+    background: #cfd8dc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    position: relative;
+}
+
+.plemi-progress {
+    height: 100%;
+    width: 0;
+    background: #2196f3;
+    border-radius: 10px;
+    transition: width 1.2s cubic-bezier(.42, 0, .58, 1), background .35s;
+}
+
+.plemi-scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: .6rem;
+    color: #555;
+    letter-spacing: .5px;
+    margin-top: -2px;
+}
+
+.plemi-breakdown {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.plemi-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: .72rem;
+    background: #e8f3fb;
+    padding: 6px 8px;
+    border-radius: 8px;
+    letter-spacing: .4px;
+    color: #1d3f55;
+}
+
+.plemi-row span:last-child {
+    font-weight: 600;
+}
+
+.plemi-stats-grid {
+    width: 100%;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 8px;
+}
+
+.plemi-stat {
+    background: #ffffffd2;
+    border: 1px solid #d2e5f2;
+    padding: 8px 6px 6px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    animation: fadeInTips .9s;
+}
+
+.plemi-stat .val {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.plemi-stat .lbl {
+    font-size: .55rem;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.plemi-tips {
+    margin-top: 10px;
+    font-size: .7rem;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    animation: fadeInTips 1s;
+}
+
+.plemi-disclaimer {
+    margin-top: 10px;
+    font-size: .55rem;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #555;
+    text-align: center;
+}
+
+@keyframes plemiPop {
+    0% {
+        opacity: 0;
+        transform: scale(.8) translateY(60px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fadeInNum {
+    from {
+        opacity: 0;
+        transform: scale(.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInTips {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:700px) {
+    .plemi-form {
+        max-width: 100%;
+    }
+
+    .plemi-result-container {
+        max-width: 100%;
+    }
+
+    .plemi-title {
+        font-size: 1.65rem;
+    }
+}
+
+@media (max-width:850px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #0066cc;
+        position: absolute;
+        top: 157px;
+        width: 30%;
+        padding: 10px 0 10px 14px;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.layout-shell {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content-row {
+    flex: 1 1 auto;
+    display: flex;
+    min-height: 0;
+}
+
+.scroll-panel {
+    background: linear-gradient(120deg, #e3f2fd 0%, #f5f5f5 100%);
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0 0 30% 0;
+}
